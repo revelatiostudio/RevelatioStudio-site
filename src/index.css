@@ -10,6 +10,7 @@
   max-width: 116.25rem;
   margin: 0 auto;
   padding: 0px 30px;
+  position: relative;
 }
 
 :root{

@@ -4,17 +4,18 @@ import './home.css'
 
 import homeImg from '../../assets/img/home/home_img.jpg'
 import logo from '../../assets/img/home/logo.svg'
+import revelatio from '../../assets/img/home/name_revelatio.svg'
 
 export default function Home() {
   return (
     <section className='home'>
       <img src={homeImg} alt='' />
       <div className='grid'>
-      
+
         <nav className='navhome'>
 
           <div className='logo'>
-            <img src={logo} alt='' />
+            <a href='/'> <img src={logo} alt='' /></a>
           </div>
 
           <div>
@@ -30,6 +31,41 @@ export default function Home() {
           </div>
 
         </nav>
+
+        <div className='middle'>
+          <div className='left_part'>
+
+            <div className='top_part'>
+              <p>(SOCIAL MEDIA)</p>
+            </div>
+
+            <div className='bottom_part'>
+              <p>INSTAGRAM</p>
+              <p>BEHANCE</p>
+            </div>
+
+          </div>
+
+          <div className='right_part'>
+            <div className='time_text'>
+              <p>(CURRENTLY TIME)</p>
+            </div>
+            
+            <div className='time'>
+              <p>RECIFE,BRA <a>[12:46PM]</a></p>
+              <p>NEW YORK,EUA <a>[12:46PM]</a></p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+        <div className='img_revelatio'>
+          <img src={revelatio} alt='' />
+
+        </div>
 
       </div>
 
