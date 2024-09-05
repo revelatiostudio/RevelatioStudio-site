@@ -5,9 +5,23 @@
   text-decoration: none;
   
 }
+.grid{
+  width: 100%;
+  max-width: 116.25rem;
+  margin: 0 auto;
+  padding: 0px 30px;
+}
 
 :root{
   --color-gray-500: #808080;
   --color-gray-900: #E6E6E6;
   --color-white: #FFFFFF
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+p{
+  font-family: "NeueHaasLight";
 }

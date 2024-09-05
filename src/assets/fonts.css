@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'NeueHaasMediu';
+    src: local('NeueHaasDisplayMediu'), url('./fonts/NeueHaasDisplayMediu.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'NeueHaasLight';
+    src: local('NeueHaasDisplayLight'), url('./fonts/NeueHaasDisplayLight.ttf') format('truetype');
+  }

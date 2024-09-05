@@ -1,0 +1,41 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.home img {
+    object-position: 50% 30%;
+    z-index: -1;
+    position: absolute;
+}
+.navhome{
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 120rem;
+    height: 46px;
+    align-items: center;
+    color: var(--color-white);
+
+}
+
+.navhome p{
+    color: var(--color-gray-900);
+    font-size: 14px;
+    gap: 32px;
+   
+}
+.navhome .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navhome .logo img{
+    width: 100%;
+    max-width: 22px;
+    height: 22px;
+}
