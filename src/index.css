@@ -5,3 +5,9 @@
   text-decoration: none;
   
 }
+
+:root{
+  --color-gray-500: #808080;
+  --color-gray-900: #E6E6E6;
+  --color-white: #FFFFFF
+}
