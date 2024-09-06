@@ -76,7 +76,7 @@ export default function Home() {
 
       </section>
       <Solucoes/>
-      {/* <Services/> */}
+      <Services/>
 
     </>
 

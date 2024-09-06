@@ -1,0 +1,56 @@
+/* imagem do meio */
+.image_service img {
+    max-width: 100%;
+    width: 123.75rem;
+}
+
+.images_services {
+    display: flex;
+    flex-direction: column;
+    margin-top: 9.25rem;
+}
+
+.images_services .lista_images {
+    position: relative;
+    display: flex;
+    border-bottom: 1px var(--color-gray-900) solid;
+    color: var(--color-gray-900);
+    transition: color 0.5s ease, border-bottom 0.5s ease;
+    padding-top: 3.125rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.images_services .lista_images h1 {
+    font-size: 96px;
+    font-weight: 500;
+}
+
+
+.images_services .lista_images:hover {
+    color: var(--color-gray-100);
+    border-color: var(--color-gray-100);
+}
+
+.images img {
+    transition: opacity 0.5s ease;
+    /* Transição suave para a propriedade opacidade */
+    opacity: 0;
+    /* Estado inicial da opacidade quando não está hover */
+    width: 100%;
+    max-width: 16.375rem;
+    height: 11rem;
+    padding-bottom: 20px;
+}
+
+.images_services:hover .images img {
+    opacity: 1;
+    /* Quando .images_services é hover, a imagem se torna visível */
+}
+
+/* texto da direita */
+.text_solutions {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
