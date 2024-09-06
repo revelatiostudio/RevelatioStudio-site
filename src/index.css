@@ -17,6 +17,9 @@
 :root{
   --color-gray-500: #808080;
   --color-gray-900: #E6E6E6;
+  --color-gray-600: #666666;
+  --color-gray-200: #333333;
+  --color-gray-100: #191919;
   --color-white: #FFFFFF
 }
 img {
@@ -24,6 +27,6 @@ img {
   height: 100%;
   object-fit: cover;
 }
-p, h1{
+p, h1, h2, a{
   font-family: "NeueHaasLight";
 }

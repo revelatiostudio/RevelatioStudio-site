@@ -1,3 +1,4 @@
+/* div principal  */
 .herofirst{
     margin-top: 138px;
     display: flex;
@@ -9,6 +10,7 @@
     font-size: 88px;
     font-weight: 450;
 }
+/* texto da esquerda */
 .left_text{
     display: flex;
     flex-direction: column;
@@ -16,6 +18,8 @@
     max-width: 725px;
     height: 151px;
 }
+
+/* parte da direita */
 
 .right_part_solucoes{
     width: 100%;
@@ -35,10 +39,95 @@
     align-items: end;
     
 }
+
+/* borda */
 .border{
     width: 100%;
     max-width: 542px;
     padding-top: 42px;
     border-bottom: 1px var(--color-gray-900) solid;
+
+}
+
+/* segunda parte */
+.herosecond{
+    margin: 72px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.herosecond h1{
+    font-size: 88px;
+    font-weight: 450;
+}
+
+/* parte final  */
+.herofinal{
+    width: 100%;
+    max-width: 120rem;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.herofinal .border{
+    padding-top: 0px;
+    width: 100%;
+    max-width: 650px;
+}
+
+
+.texts_studio{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: space-between;
+}
+.texts_studio h2{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-gray-600);
+    padding-top: 38px;
+    padding-bottom: 30px;
+}
+
+.texts_studio p{
+    color: var(--color-gray-600);
+    font-weight: 400;
+    font-size: 16px;
+}
+.texts_studio a{
+    margin-top: 68px;
+    color: var(--color-gray-200);
+    font-weight: 400;
+    font-size: 16px;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    margin-left: 5px;
+
+    
+}
+
+.seecases{
+    padding-top: 66px;
+}
+
+.studio_left{
+    padding-top: 85px;
+}
+.studio_left .p1{
+    color: var(--color-gray-100);
+    
+}
+
+.studio_img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.studio_img img{
+    width: 330px;
+    height: 258px;
 
 }
