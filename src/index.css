@@ -30,3 +30,6 @@ img {
 p, h1, h2, a{
   font-family: "NeueHaasLight";
 }
+html, body{
+  overflow-x: hidden; 
+}

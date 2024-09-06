@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
-    
 }
 .herofirst h1{
     font-size: 88px;
@@ -25,7 +24,7 @@
     width: 100%;
     max-width: 592px;
     height: 73px;
-    color: var(--color-gray-900);
+    color: var(--color-gray-900); 
 }
 
 

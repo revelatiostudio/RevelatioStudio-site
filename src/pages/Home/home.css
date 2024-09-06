@@ -11,6 +11,7 @@
     object-position: 50% 30%;
     z-index: -1;
     position: absolute;
+    
 }
 
 
@@ -25,6 +26,7 @@
     height: 46px;
     align-items: center;
     color: var(--color-white);
+    
 
 }
 
@@ -53,7 +55,7 @@
     display: flex;
     justify-content: space-between;
     top: 23.75rem;
-    position: relative
+    position: relative;
 }
 .middle .left_part{
     width: 100%;
