@@ -68,7 +68,7 @@ export default function Services() {
           >
             <h1>+200</h1>
             <div className='text_solutions'>
-              <p>Projetos realizados ao  </p>
+              <p>Projetos realizados ao </p>
               <p>redor do mundo</p>
             </div>
           </div>

@@ -20,7 +20,8 @@
   --color-gray-600: #666666;
   --color-gray-200: #333333;
   --color-gray-100: #191919;
-  --color-white: #FFFFFF
+  --color-white: #FFFFFF;
+  --color-black: #000000
 }
 img {
   width: 100%;
