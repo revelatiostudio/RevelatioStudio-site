@@ -28,8 +28,6 @@ export default function Solucoes() {
             </div>
             <div className='herofinal'>
 
-                {/* <div className='border'></div> */}
-
                 <div className='texts_studio'>
                     <div>
                         <h2>[NOSSO ESTÚDIO]</h2>
