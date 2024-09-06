@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+
   
 }
 .grid{
@@ -23,6 +24,6 @@ img {
   height: 100%;
   object-fit: cover;
 }
-p{
+p, h1{
   font-family: "NeueHaasLight";
 }
