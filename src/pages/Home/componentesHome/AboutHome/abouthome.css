@@ -10,7 +10,7 @@
     line-height: 72.96px;
     width: 100%;
 }
-.container_about span{
+.first_text span{
     margin-right: 150px;
 }
 .first_text span:first-child {
@@ -20,7 +20,7 @@
 .about_home{
     width: 100%;
     max-width: 116.25rem;
-    height: 700px;
+    height: auto;
     display: flex;
     justify-content: space-between;
     padding-top: 134px;
@@ -55,6 +55,6 @@
     padding-top: 100px;
     padding-bottom: 30px;
 }
-.text_white{
+.about_text .text_white{
     color: var(--color-white);
 }

@@ -9,6 +9,7 @@ import logo from '../../assets/img/home/logo.svg'
 import revelatio from '../../assets/img/home/name_revelatio.svg'
 import Services from './componentesHome/Services'
 import AboutHome from './componentesHome/AboutHome'
+import Ideias from '../../componentes/Ideias'
 
 export default function Home() {
   return (
@@ -80,6 +81,7 @@ export default function Home() {
       <Services/>
       {/* Cases   -> vamos colocar o componente de cases aqui*/}  
       <AboutHome/>
+      <Ideias/>
 
     </>
 
