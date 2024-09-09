@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3.75rem;
 }
 .head h1{
     font-size: 64px;
@@ -15,4 +16,18 @@
 .head img{
     width: 22px;
     height: 22px;
+}
+
+
+.galeria img{
+    width:500px;
+    height: 800px;
+}
+
+@media(max-width: 1440px) {
+    .galeria img{
+        width:23.1875rem;
+        height: 36.125rem;
+    }
+  
 }
