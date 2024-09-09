@@ -14,7 +14,7 @@
     align-items: start;
     padding-top: 32px;
     border-top: 1px var(--color-gray-100) solid;
-    transition: color 0.5s;
+    transition: color 0.5s ease;
     color: var(--color-gray-200);
 }
 
