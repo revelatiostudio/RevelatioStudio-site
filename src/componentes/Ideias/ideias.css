@@ -12,6 +12,10 @@
     padding-top: 32px;
     border-top: 1px var(--color-gray-100) solid;
 }
+.options{
+    width: 100%;
+    max-width: 28.75rem;
+}
 .options span {
     color: var(--color-gray-200);
     margin-right: 2px;

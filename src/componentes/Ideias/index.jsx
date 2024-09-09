@@ -6,8 +6,15 @@ export default function ideias() {
     <div className='container_ideias'>
         <div className='grid'>
             <div className='sections'>
-                <p>01</p>
-                <p>Ideias & Estratégias</p>
+                <div className='options'>
+                    <p>01</p>
+                </div>
+                <div className='options'>
+                    <p>Ideias & Estratégias</p>
+
+                </div>
+                
+                
                 <div className='options'>
                     <p><span>↗</span> Posicionamento</p>
                     <p><span>↗</span> Estratégia de Marca</p>
@@ -26,8 +33,12 @@ export default function ideias() {
 
             </div>
             <div className='sections sections_gray'>
-                <p>02</p>
-                <p>Criação & Design</p>
+                <div className='options'>
+                    <p>02</p>
+                </div>
+                <div className='options'>
+                    <p>Criação & Design</p>
+                </div>
                 <div className='options'>
                     <p><span>↗</span> Logo System</p>
                     <p><span>↗</span> Identidade Visual</p>
@@ -46,8 +57,13 @@ export default function ideias() {
 
             </div>
             <div className='sections sections_last sections_gray'>
-                <p>03</p>
-                <p>Tecnologia</p>
+                <div className='options'>
+                    <p>03</p>
+                </div>
+                <div className='options'>
+                    <p>Tecnologia</p>
+                </div>
+                
                 <div className='options'>
                     <p><span>↗</span> Front End</p>
                     <p><span>↗</span> Back End</p>
