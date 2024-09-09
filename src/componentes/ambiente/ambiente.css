@@ -1,0 +1,18 @@
+.container_ambiente{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding-top: 10.75rem;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head h1{
+    font-size: 64px;
+    font-weight: 450;
+}
+.head img{
+    width: 22px;
+    height: 22px;
+}
