@@ -39,7 +39,6 @@ export default function Ambiente() {
             slidesPerView={3.5}
             spaceBetween={30}
             freeMode={true}
-            loop={true}
             modules={[FreeMode, Pagination]}
             pagination={{
               clickable: true,
