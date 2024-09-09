@@ -53,6 +53,7 @@
 }
 .text_ladder .p3{
     padding-top: 100px;
+    padding-bottom: 30px;
 }
 .text_white{
     color: var(--color-white);
