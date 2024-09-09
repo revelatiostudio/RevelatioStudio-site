@@ -11,6 +11,7 @@ import Services from './componentesHome/Services'
 import AboutHome from './componentesHome/AboutHome'
 import Ideias from '../../componentes/Ideias'
 import Ambiente from '../../componentes/ambiente/Ambiente'
+import BottomHome from './componentesHome/BottomHome'
 
 export default function Home() {
   return (
@@ -84,6 +85,7 @@ export default function Home() {
       <AboutHome/>
       <Ideias/>
       <Ambiente/>
+      <BottomHome/>
 
     </>
 

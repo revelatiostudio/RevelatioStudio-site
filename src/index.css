@@ -21,6 +21,7 @@
   --color-gray-200: #333333;
   --color-gray-100: #191919;
   --color-gray-700: #B3B3B3;
+  --color-gray-800: #CCCCCC;
   --color-white: #FFFFFF;
   --color-black: #000000
 }
@@ -29,7 +30,7 @@ img {
   height: 100%;
   object-fit: cover;
 }
-p, h1, h2, a{
+p, h1, h2, a, span{
   font-family: "NeueHaasLight";
 }
 html, body{

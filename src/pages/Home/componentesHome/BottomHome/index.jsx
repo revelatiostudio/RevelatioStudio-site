@@ -1,0 +1,56 @@
+import React from 'react'
+import './bottomhome.css'
+
+import prop from '../../../../assets/img/home/prop.png'
+
+export default function BottomHome() {
+    return (
+        <div className='container_bottom'>
+            <div className='grid'>
+                <div className='hero_bottom'>
+                    <div className='left_bottom'>
+                        <p><span>[Escritório]</span></p>
+                        <div className='adress'>
+                            <p>Estrada Encanamento,846.</p>
+                            <p>Room306</p>
+                            <p>Recife,Brasil</p>
+
+                        </div>
+                        <img src={prop} alt='cartão' />
+
+
+                    </div>
+
+                    <div className='right_bottom'>
+                        <div>
+                            <p><span>[Links]</span></p>
+                            <div className='links'>
+                                <p>Home</p>
+                                <p>Sobre</p>
+                                <p>Cases</p>
+                                <p>Contato</p>
+                                <p>Galeria</p>
+                            </div>
+
+                        </div>
+                        <div className='social'>
+                            <p><span>[Redes Sociais]</span></p>
+                            <div className='links'>
+                                <p>Instagram</p>
+                                <p>Linkedin</p>
+                                <p>Behance</p>
+                                <p>Awwwards</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    )
+}
