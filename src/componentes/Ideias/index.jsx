@@ -32,7 +32,7 @@ export default function ideias() {
                     </div>
 
                 </div>
-                <div className='sections sections_gray'>
+                <div className='sections '>
                     <div className='options'>
                         <p>02</p>
                     </div>
@@ -56,7 +56,7 @@ export default function ideias() {
                     </div>
 
                 </div>
-                <div className='sections sections_last sections_gray'>
+                <div className='sections sections_last '>
                     <div className='options'>
                         <p>03</p>
                     </div>
