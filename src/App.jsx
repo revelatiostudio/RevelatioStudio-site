@@ -1,5 +1,9 @@
 import Home from './pages/Home'
+import About from './pages/About'
 import Lenis from '@studio-freight/lenis'
+
+import { Route, Routes } from 'react-router-dom'
+
 
 function App() {
   const lenis = new Lenis()
@@ -17,7 +21,11 @@ function App() {
 
   return (
     <>
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/sobre' element={<About />} />
+      </Routes>
+
     </>
   )
 }
