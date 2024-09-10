@@ -20,8 +20,7 @@ export default function Home() {
       <section className='home'>
         <img src={homeImg} alt='' />
         <div className='grid'>
-
-          <NavBar />
+          <NavBar color='white'/>
 
           <div className='middle'>
             <div className='left_part'>

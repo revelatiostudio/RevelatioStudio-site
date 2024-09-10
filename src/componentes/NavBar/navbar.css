@@ -1,5 +1,8 @@
-/* Nav Bar */
-.navhome{
+:root {
+    --navbar-color: var(--color-gray-900); /* Cor padrão */
+  }
+/* Nav Bar branca */
+.navbar{
     z-index: 10;
     position: relative;
     display: flex;
@@ -8,24 +11,34 @@
     max-width: 120rem;
     height: 46px;
     align-items: center;
-    color: var(--color-white);
+    color: var(--navbar-color);
     
+}
+
+/* Muda a cor da navbar */
+
+.white{
+    --navbar-color: var(--color-gray-900)
+
+}
+.black{
+    --navbar-color: var(--color-gray-100)
 
 }
 
-.navhome p{
-    color: var(--color-gray-900);
+.navbar p{
     font-size: 14px;
     gap: 32px;
    
 }
-.navhome .logo a{
+.navbar .logo a{
     display: flex;
     align-items: center;
 }
 
-.navhome .logo img{
+.navbar .logo img{
     width: 100%;
     max-width: 22px;
     height: 22px;
 }
+

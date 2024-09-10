@@ -1,14 +1,23 @@
 import React from 'react'
 import './navbar.css'
 
-import logo from '../../assets/img/home/logo.svg'
+import logo_white from '../../assets/img/home/logo.svg'
+import logo_black from '../../assets/img/home/logo_black.svg'
 
-export default function NavBar() {
+export default function NavBar({color}) {
+    console.log(color)
     return (
-        <nav className='navhome'>
+        <nav className={`navbar ${color}`}>
 
             <div className='logo'>
-                <a href='/'> <img src={logo} alt='' /></a>
+                {color == 'white' ?
+                <a href='/'> <img src={logo_white} alt='' /></a> 
+                :
+                <a href='/'> <img src={logo_black} alt='' /></a>
+
+                
+            }
+                
             </div>
 
             <div>
