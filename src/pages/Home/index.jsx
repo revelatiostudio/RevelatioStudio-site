@@ -5,13 +5,13 @@ import Solucoes from '../../componentes/Solucoes'
 
 
 import homeImg from '../../assets/img/home/home_img.jpg'
-import logo from '../../assets/img/home/logo.svg'
 import revelatio from '../../assets/img/home/name_revelatio.svg'
 import Services from './componentesHome/Services'
 import AboutHome from './componentesHome/AboutHome'
 import Ideias from '../../componentes/Ideias'
 import Ambiente from '../../componentes/ambiente/Ambiente'
 import BottomHome from './componentesHome/BottomHome'
+import NavBar from '../../componentes/NavBar'
 
 export default function Home() {
   return (
@@ -21,25 +21,7 @@ export default function Home() {
         <img src={homeImg} alt='' />
         <div className='grid'>
 
-          <nav className='navhome'>
-
-            <div className='logo'>
-              <a href='/'> <img src={logo} alt='' /></a>
-            </div>
-
-            <div>
-              <p>Revelamos o âmago dos negócios.</p>
-            </div>
-
-            <div>
-              <p>PT|EN</p>
-            </div>
-
-            <div>
-              <p>[Menu]</p>
-            </div>
-
-          </nav>
+          <NavBar />
 
           <div className='middle'>
             <div className='left_part'>
@@ -79,13 +61,13 @@ export default function Home() {
         </div>
 
       </section>
-      <Solucoes/>
-      <Services/>
-      {/* Cases   -> vamos colocar o componente de cases aqui*/}  
-      <AboutHome/>
-      <Ideias/>
-      <Ambiente/>
-      <BottomHome/>
+      <Solucoes />
+      <Services />
+      {/* Cases   -> vamos colocar o componente de cases aqui*/}
+      <AboutHome />
+      <Ideias />
+      <Ambiente />
+      <BottomHome />
 
     </>
 

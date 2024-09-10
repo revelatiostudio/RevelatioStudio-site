@@ -15,39 +15,6 @@
 }
 
 
-/* Nav Bar */
-.navhome{
-    z-index: 10;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 120rem;
-    height: 46px;
-    align-items: center;
-    color: var(--color-white);
-    
-
-}
-
-.navhome p{
-    color: var(--color-gray-900);
-    font-size: 14px;
-    gap: 32px;
-   
-}
-.navhome .logo a{
-    display: flex;
-    align-items: center;
-}
-
-.navhome .logo img{
-    width: 100%;
-    max-width: 22px;
-    height: 22px;
-}
-
-
 /* Seção do meio da home */
 .middle{
     width: 100%;
@@ -103,12 +70,11 @@
 .img_revelatio{
     width: 100%;
     max-width: 120rem;
-    height: 190px;
+    height: 11.875rem;
     position: relative;
-    top:612px;
+    top:38.25rem;
     display: flex;
     justify-content: center;
-    object-position: 50% 50%;
     border-top: 1px var(--color-gray-200) solid;
     padding-top: 40px;
     
