@@ -1,12 +1,17 @@
+/* container principal */
 .container_bottom{
     background-color: var(--color-black);
     color: var(--color-white);
     padding-top: 12.5rem;
 }
+
+/* hero */
 .hero_bottom{
     display: flex;
     justify-content: space-between;
 }
+
+/* parte esqueda hero */
 .left_bottom{
     width: 50%;
 }
@@ -15,8 +20,8 @@
     font-weight: 500;
 }
 .adress{
-    padding-top: 24px;
-    padding-bottom: 89px;
+    padding-top: 1.5rem;
+    padding-bottom: 5.5625rem;
 }
 .adress p{
     font-size: 24px;
@@ -25,9 +30,11 @@
     color: var(--color-gray-600);
 }
 .left_bottom img{
-    width: 263px;
-    height: 176px;
+    width: 16.4375rem;
+    height: 11rem;
 }
+
+/* parte direita hero  */
 
 .right_bottom{
     width: 40%;
@@ -35,7 +42,7 @@
 
 }
 .links{
-    padding-top: 32px;
+    padding-top: 2rem;
     width: 100%;
     position: relative;
     
@@ -45,7 +52,7 @@
     font-weight: 500;
     line-height: 28.8px;
     color: var(--color-gray-600);
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     transition: color 0.5s ease, border 0.5s ease;
     border-bottom: 1px black solid;
 }
@@ -55,20 +62,22 @@
     border-color: var(--color-white);
 }
 .social{
-    margin-left: 205px;
+    margin-left: 12.8125rem;
 }
 
 .revelatio{
-    padding-top: 179px;
+    padding-top: 11.1875rem;
     font-weight: 500;
     font-size: 14px;
     color: var(--color-gray-500);
     position: absolute;
 }
 
+/* imagem rodapé */
+
 .final{
     width: 100%;
     border-top: 1px var(--color-gray-200) solid;
-    padding-top: 32px;
-    margin-top: 88px;
+    padding-top: 2rem;
+    margin-top: 5.5rem;
 }
