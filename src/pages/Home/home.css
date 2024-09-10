@@ -109,6 +109,8 @@
     display: flex;
     justify-content: center;
     object-position: 50% 50%;
+    border-top: 1px var(--color-gray-200) solid;
+    padding-top: 40px;
     
 }
 
