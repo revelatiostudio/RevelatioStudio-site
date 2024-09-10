@@ -2,6 +2,7 @@ import React from 'react'
 import './bottomhome.css'
 
 import prop from '../../../../assets/img/home/prop.png'
+import revelatio from '../../../../assets/img/home/name_revelatio.svg'
 
 export default function BottomHome() {
     return (
@@ -22,7 +23,7 @@ export default function BottomHome() {
                     </div>
 
                     <div className='right_bottom'>
-                        <div>
+                        <div className='container_links'>
                             <p><span>[Links]</span></p>
                             <div className='links'>
                                 <p>Home</p>
@@ -31,6 +32,7 @@ export default function BottomHome() {
                                 <p>Contato</p>
                                 <p>Galeria</p>
                             </div>
+                            <p className='revelatio'>Revelatio © 2024 All rights reserved</p>
 
                         </div>
                         <div className='social'>
@@ -45,6 +47,12 @@ export default function BottomHome() {
                         </div>
 
                     </div>
+
+
+                </div>
+                <div className='final'>
+                    <img src={revelatio} alt='' />
+
 
                 </div>
 

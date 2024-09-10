@@ -32,10 +32,12 @@
 .right_bottom{
     width: 40%;
     display: flex;
+
 }
 .links{
     padding-top: 32px;
-    width: 90%;
+    width: 100%;
+    position: relative;
     
 }
 .links p{
@@ -54,4 +56,19 @@
 }
 .social{
     margin-left: 205px;
+}
+
+.revelatio{
+    padding-top: 179px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-gray-500);
+    position: absolute;
+}
+
+.final{
+    width: 100%;
+    border-top: 1px var(--color-gray-200) solid;
+    padding-top: 32px;
+    margin-top: 88px;
 }
