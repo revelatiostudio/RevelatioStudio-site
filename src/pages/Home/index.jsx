@@ -6,7 +6,7 @@ import Solucoes from '../../componentes/Solucoes'
 
 import homeImg from '../../assets/img/home/home_img.jpg'
 import revelatio from '../../assets/img/home/name_revelatio.svg'
-import Services from './componentesHome/Services'
+import Services from '../../componentes/Services'
 import AboutHome from './componentesHome/AboutHome'
 import Ideias from '../../componentes/Ideias'
 import Ambiente from '../../componentes/ambiente/Ambiente'

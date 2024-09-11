@@ -9,10 +9,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/grid';
 import { Navigation, Grid, FreeMode, Pagination } from 'swiper/modules'
 
-import ambiente1 from '../../assets/img/ambiente/ambiente1.png'
-import ambiente2 from '../../assets/img/ambiente/ambiente2.png'
-import ambiente3 from '../../assets/img/ambiente/ambiente3.png'
-import ambiente4 from '../../assets/img/ambiente/ambiente4.png'
+import ambiente1 from '../../assets/img/home/ambiente/ambiente1.png'
+import ambiente2 from '../../assets/img/home/ambiente/ambiente2.png'
+import ambiente3 from '../../assets/img/home/ambiente/ambiente3.png'
+import ambiente4 from '../../assets/img/home/ambiente/ambiente4.png'
 
 export default function Ambiente() {
   const imagens = [

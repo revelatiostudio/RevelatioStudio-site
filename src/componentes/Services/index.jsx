@@ -1,7 +1,7 @@
 import React from 'react'
 import './services.css'
 
-import prop from '../../../../assets/img/home/prop.png'
+import prop from '../../assets/img/home/prop.png'
 
 export default function Services() {
 
