@@ -12,6 +12,7 @@ import Ideias from '../../componentes/Ideias'
 import Ambiente from '../../componentes/ambiente/Ambiente'
 import BottomHome from './componentesHome/BottomHome'
 import NavBar from '../../componentes/NavBar'
+import ScroolCases from './componentesHome/ScroolCases'
 
 export default function Home() {
   return (
@@ -62,7 +63,7 @@ export default function Home() {
       </section>
       <Solucoes />
       <Services />
-      {/* Cases   -> vamos colocar o componente de cases aqui*/}
+      {/* <ScroolCases/> */}
       <AboutHome />
       <Ideias />
       <Ambiente />

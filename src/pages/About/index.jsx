@@ -1,10 +1,12 @@
 import React from 'react'
 import NavBar from '../../componentes/NavBar'
 import Solucoes from '../../componentes/Solucoes'
+import Services from '../../componentes/Services'
 import './about.css'
 
 
 import about_img from '../../assets/img/home/home_img.jpg'
+
 
 
 export default function About() {
@@ -30,7 +32,11 @@ export default function About() {
       </header>
 
       <section>
-        <Solucoes/>
+        <Solucoes />
+      </section>
+
+      <section>
+        <Services />
       </section>
     </>
 
