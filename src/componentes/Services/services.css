@@ -15,42 +15,50 @@
     display: flex;
     border-bottom: 1px var(--color-gray-900) solid;
     color: var(--color-gray-900);
-    transition: color 0.5s ease, border-bottom 0.5s ease;
     padding-top: 3.125rem;
     align-items: center;
     justify-content: space-between;
+    transition: color 1s ease;
 }
+.text{
+    width: 100%;
+    max-width: 300px;
+}
+
+/* lista images ativada */
+
+.lista_images.active {
+    color: var(--color-gray-100);
+  }
+
 
 .images_services .lista_images h1 {
     font-size: 96px;
     font-weight: 500;
 }
 
-
-.images_services .lista_images:hover {
-    color: var(--color-gray-100);
-    border-color: var(--color-gray-100);
-}
-
-.images img {
+.images{
     transition: opacity 0.5s ease;
-    /* Transição suave para a propriedade opacidade */
     opacity: 0;
-    /* Estado inicial da opacidade quando não está hover */
     width: 100%;
     max-width: 16.375rem;
     height: 11rem;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease;
+
 }
 
-.images_services:hover .images img {
-    opacity: 1;
-    /* Quando .images_services é hover, a imagem se torna visível */
-}
 
-/* texto da direita */
+/* imagem ativada */
+
+.lista_images.active .images {
+    opacity: 1; 
+  }
+
 .text_solutions {
     display: flex;
     flex-direction: column;
     align-items: end;
+    width: 100%;
+    max-width: 400px;
 }

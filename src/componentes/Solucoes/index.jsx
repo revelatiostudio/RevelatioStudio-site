@@ -19,7 +19,7 @@ export default function Solucoes() {
                 trigger: '.container-solucoes',
                 start: '-50px top',
                 end:'+=800',
-                scrub: true,
+                scrub: 1,
             }
         });
 

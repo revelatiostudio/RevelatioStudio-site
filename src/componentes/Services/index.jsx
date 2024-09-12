@@ -3,33 +3,49 @@ import './services.css'
 
 import prop from '../../assets/img/home/prop.png'
 
-export default function Services() {
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
-  // todas essas partes comentadas sao funçoes para a animacao futura;**
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+export default function Services() {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+  function scrollhover() {
+    const texts = [...document.querySelectorAll('.lista_images')];
+    texts.forEach((text) => {
+      ScrollTrigger.create({
+        trigger: text,
+        start: "top center",
+        end: "bottom center",
+        toggleClass: { targets: text, className: "active" },
+        onEnter: () => text.classList.add("active"),
+        onLeave: () => text.classList.remove("active"),
+        onEnterBack: () => text.classList.add("active"),
+        onLeaveBack: () => text.classList.remove("active"),
+      });
+    });
+
+
+  }
+
+  useGSAP(() => {
+    scrollhover();
+
+  })
+
   return (
     <div className='grid'>
-      {/* <div className='image_service'>
-        <img src={image} alt='' />
-      </div> */}
 
       <div className='container'>
-        {/* <div className='service_logo'>
-          <img src={logo_service} alt='' />
-        </div> */}
-
-
-
-
 
         <div className='images_services'>
 
+          <div className='lista_images'>
+            <div className='text'>
+              <h1>+04</h1>
+            </div>
 
-          <div className='lista_images'
-          // onMouseEnter={() => {
-          //   setHover(1)
-          // }}
-          >
-            <h1>+04</h1>
             <div className='images'>
               <img src={prop} alt='' />
             </div>
@@ -37,36 +53,42 @@ export default function Services() {
               <p>Anos gerando soluções</p>
               <p>criativas para o mercado</p>
             </div>
-
           </div>
 
+          <div className='lista_images'>
+            <div className='text'>
+              <h1>+05</h1>
 
-          <div className='lista_images'
-          // onMouseEnter={() => {
-          //   setHover(2)
-          // }}
-
-
-          >
-            <h1>+05</h1>
+            </div>
+            <div className='images'>
+              <img src={prop} alt='' />
+            </div>
             <div className='text_solutions'>
               <p>Países em que nosso</p>
               <p>trabalho está presente</p>
             </div>
           </div>
-          <div className='lista_images'
-          // onMouseEnter={() => setHover(3)}
-          >
-            <h1>+27</h1>
+          <div className='lista_images'>
+            <div className='text'>
+              <h1>+27</h1>
+
+            </div>
+            <div className='images'>
+              <img src={prop} alt='' />
+            </div>
             <div className='text_solutions'>
               <p>Projetos com destaque e </p>
               <p>reconhecimento internacional</p>
             </div>
           </div>
-          <div className='lista_images'
-          // onMouseEnter={() => setHover(4)}
-          >
-            <h1>+200</h1>
+          <div className='lista_images'>
+            <div className='text'>
+              <h1>+200</h1>
+
+            </div>
+            <div className='images'>
+              <img src={prop} alt='' />
+            </div>
             <div className='text_solutions'>
               <p>Projetos realizados ao </p>
               <p>redor do mundo</p>
