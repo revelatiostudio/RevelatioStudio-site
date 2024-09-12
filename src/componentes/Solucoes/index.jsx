@@ -1,6 +1,7 @@
 import React from 'react'
 
-import prop from '../../assets/img/home/prop.png'
+import img_solucoes from '../../assets/img/home/img_solucoes.png'
+import blour from '../../assets/img/home/blour.png'
 import './solucoes.css'
 
 export default function Solucoes() {
@@ -53,7 +54,10 @@ export default function Solucoes() {
                 </div>
 
                 <div className='studio_img'>
-                    <img src={prop} alt='' />
+                    <img src={img_solucoes} alt='' />
+                    <img className = "blour" src={blour} alt='' />
+
+
 
                 </div>
 
