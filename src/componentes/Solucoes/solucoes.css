@@ -142,9 +142,9 @@
 
 }
 .blour{
-    position: absolute; /* Imagem 1 fica sobreposta */
+    position: absolute; 
     bottom: 0;
     right: 0;
-    z-index: 1; /* Controla a profundidade da sobreposição */
+    z-index: 1;
     opacity: 1;
 }
