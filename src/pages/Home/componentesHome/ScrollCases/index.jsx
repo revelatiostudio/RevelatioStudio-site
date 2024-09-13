@@ -18,7 +18,6 @@ export default function ScrollCases() {
                 start: '-20px top',
                 endTrigger: 'overlay-blur bottom',
                 end: 'bottom top',
-                markers: true,
                 scrub: true,
                 pin: true,
             }
@@ -26,7 +25,8 @@ export default function ScrollCases() {
 
         cases.forEach((a) => {
             tl.to(a, {
-                y: -1600
+                y: -1800,
+                scrub: 2,
             }, 0)
         })
 
@@ -48,21 +48,69 @@ export default function ScrollCases() {
 
                 <div className='case-1'>
                     <img src={case1} alt='' />
+                    <div className='project'>
+                        <div className='project-name'>
+                            <p>Nome do projeto</p>
+                            <p>Nome do projeto</p>
+                        </div>
+                        <p>Website | Branding</p>
+
+                    </div>
                 </div>
                 <div className='case-1'>
                     <img src={case1} alt='' />
+                    <div className='project'>
+                        <div className='project-name'>
+                            <p>Nome do projeto</p>
+                            <p>Nome do projeto</p>
+                        </div>
+                        <p>Website | Branding</p>
+
+                    </div>
                 </div>
                 <div className='case-1'>
                     <img src={case1} alt='' />
+                    <div className='project'>
+                        <div className='project-name'>
+                            <p>Nome do projeto</p>
+                            <p>Nome do projeto</p>
+                        </div>
+                        <p>Website | Branding</p>
+
+                    </div>
                 </div>
                 <div className='case-1'>
                     <img src={case1} alt='' />
+                    <div className='project'>
+                        <div className='project-name'>
+                            <p>Nome do projeto</p>
+                            <p>Nome do projeto</p>
+                        </div>
+                        <p>Website | Branding</p>
+
+                    </div>
                 </div>
                 <div className='case-1'>
                     <img src={case1} alt='' />
+                    <div className='project'>
+                        <div className='project-name'>
+                            <p>Nome do projeto</p>
+                            <p>Nome do projeto</p>
+                        </div>
+                        <p>Website | Branding</p>
+
+                    </div>
                 </div>
                 <div className='case-1'>
                     <img src={case1} alt='' />
+                    <div className='project'>
+                        <div className='project-name'>
+                            <p>Nome do projeto</p>
+                            <p>Nome do projeto</p>
+                        </div>
+                        <p>Website | Branding</p>
+
+                    </div>
                 </div>
 
                 <div className='overlay-blur bottom'>
