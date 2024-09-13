@@ -3,10 +3,10 @@
     height: 55rem;
     margin-top: 11.4375rem;
     position: relative;
-    border: 2px red solid;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     display: flex;
     flex-direction: column;
+    /* border: 2px red solid; */
 }
 
 .middle-text {
@@ -38,11 +38,27 @@
 
 }
 
+.overlay-blur{
+    position: absolute;
+    width: 100%;
+    height: 263px;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+.overlay-blur.bottom{
+    bottom: 0px;
+
+}
+/* .case-1:nth-child(2){
+    margin-top: 100px;
+} */
+
 
 .case-1:nth-child(1),
 .case-1:nth-child(3),
 .case-1:nth-child(5)
  {
+    margin-top: 263px;
     padding-left: 10%;
 }
 
