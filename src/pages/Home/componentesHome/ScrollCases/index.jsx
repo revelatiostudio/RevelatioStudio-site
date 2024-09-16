@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './scrollcases.css'
 import case1 from '../../../../assets/img/home/cases/case1.png'
 
@@ -7,12 +7,24 @@ import { useGSAP } from "@gsap/react";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Progress } from "@nextui-org/react";
+import throttle from 'lodash.throttle';
 
 
 export default function ScrollCases() {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
+    const [scrolll, setScroll] = useState(0);
 
-    function createScrollCases() {
+
+    useGSAP(() => {
+        gsap.set('.case-1',{
+            y:263
+        })
+
+
+        const updateProgress = throttle((self) => {
+            setScroll(self.progress);  // Atualiza o estado com throttle
+        }, 200);  // Atualiza no máximo a cada 100ms
+
         const cases = [...document.querySelectorAll('.case-1')];
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -20,16 +32,15 @@ export default function ScrollCases() {
                 start: '-20px top',
                 endTrigger: 'overlay-blur bottom',
                 end: 'bottom top',
-                scrub: true,
+                scrub: 0.5,
                 pin: true,
-                onUpdate: self => console.log("progress", self.progress)
+                onUpdate: updateProgress
             }
         });
 
         cases.forEach((a) => {
             tl.to(a, {
-                y: -1800,
-                scrub: 2,
+                y: -1300,
             }, 0)
         })
 
@@ -44,23 +55,30 @@ export default function ScrollCases() {
         })
 
 
-
-    }
-
-    useGSAP(() => {
-        createScrollCases();
-
     })
 
     return (
         <div className='grid'>
             <section className='cases-scroll'>
+
                 <div className='middle-text'>
                     <h1>Nossos Cases</h1>
                 </div>
 
+                <div className="progress-bar">
+                    <Progress classNames={{
+                        base: 'h-[0.1rem]'
+
+                    }}
+                        size="sm" aria-label="Loading..."
+                        color="default" value={scrolll} radius='none' minValue={0} maxValue={1} valueLabel={scrolll}
+                    />
+                </div>
 
                 <div className='overlay-blur'>
+                </div>
+                <div>
+                    
                 </div>
 
                 <div className='case-1'>
@@ -135,9 +153,6 @@ export default function ScrollCases() {
 
 
             </section>
-            {/* <div className="flex flex-col gap-6 w-full max-w-md">
-                <Progress size="sm" aria-label="Loading..." value={30} />
-            </div> */}
 
 
 

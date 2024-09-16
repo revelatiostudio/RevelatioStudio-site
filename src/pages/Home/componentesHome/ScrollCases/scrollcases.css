@@ -20,9 +20,12 @@
 }
 .progress-bar{
     position: absolute;
-    z-index: 11;
-    width: 100%;
+    z-index: 3;
+    width: 200px;
     height: 200px;
+    right: 0;
+    top:340px;
+    transform: rotate(90deg);
 }
 
 .cases-scroll h1 {
@@ -32,7 +35,6 @@
     vertical-align: middle;
 
 }
-
 
 .case-1 {
     width: 100%;
@@ -68,22 +70,3 @@
     bottom: 0px;
 
 }
-/* .case-1:nth-child(2){
-    margin-top: 100px;
-} */
-
-
-.case-1:nth-child(1),
-.case-1:nth-child(3),
-.case-1:nth-child(5)
- {
-    margin-top: 263px;
-    /* padding-left: 10%; */
-}
-
-/* .case-1:nth-child(2),
-.case-1:nth-child(4),
-.case-1:nth-child(6)
-{
-    padding-left: 75%;
-} */
