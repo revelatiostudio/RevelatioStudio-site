@@ -6,6 +6,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Progress } from "@nextui-org/react";
+
 
 export default function ScrollCases() {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -20,6 +22,7 @@ export default function ScrollCases() {
                 end: 'bottom top',
                 scrub: true,
                 pin: true,
+                onUpdate: self => console.log("progress", self.progress)
             }
         });
 
@@ -31,16 +34,16 @@ export default function ScrollCases() {
         })
 
         cases.forEach((a) => {
-            gsap.to(a,{
-                xPercent:gsap.utils.random(75, 10),
-    
-    
+            gsap.to(a, {
+                xPercent: gsap.utils.random(75, 10),
+
+
             })
-    
+
 
         })
 
-      
+
 
     }
 
@@ -55,6 +58,8 @@ export default function ScrollCases() {
                 <div className='middle-text'>
                     <h1>Nossos Cases</h1>
                 </div>
+
+
                 <div className='overlay-blur'>
                 </div>
 
@@ -130,6 +135,12 @@ export default function ScrollCases() {
 
 
             </section>
+            {/* <div className="flex flex-col gap-6 w-full max-w-md">
+                <Progress size="sm" aria-label="Loading..." value={30} />
+            </div> */}
+
+
+
         </div>
     )
 }
