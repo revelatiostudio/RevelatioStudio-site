@@ -49,7 +49,7 @@ export default function Solucoes() {
                         <div className='time'>
                             <p>RECIFE,BRA <a>[12:46PM]</a></p>
                             <p>NEW YORK,EUA <a>[12:46PM]</a></p>
-                            <div className='border'></div>
+                            <div className='border-time'></div>
                         </div>
 
                     </div>
