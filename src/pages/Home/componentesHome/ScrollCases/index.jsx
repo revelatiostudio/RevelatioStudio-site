@@ -30,6 +30,18 @@ export default function ScrollCases() {
             }, 0)
         })
 
+        cases.forEach((a) => {
+            gsap.to(a,{
+                xPercent:gsap.utils.random(75, 10),
+    
+    
+            })
+    
+
+        })
+
+      
+
     }
 
     useGSAP(() => {
