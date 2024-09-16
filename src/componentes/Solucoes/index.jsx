@@ -17,7 +17,7 @@ export default function Solucoes() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.container-solucoes',
-                start: '-50px top',
+                start: 'top top',
                 end:'+=800',
                 scrub: 1,
             }
