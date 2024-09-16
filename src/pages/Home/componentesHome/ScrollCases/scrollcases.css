@@ -70,3 +70,27 @@
     bottom: 0px;
 
 }
+.see-cases{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.all-cases a{
+    font-weight: 450;
+}
+.explore{
+    font-weight: 500;
+    color: var(--color-gray-700);
+
+}
+.explore .p1{
+    color: var(--color-gray-100);
+}
+.see-cases .all-cases{
+    border-bottom: 1px var(--color-gray-100) solid;
+}
