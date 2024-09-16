@@ -20,7 +20,7 @@ export default function Home() {
 
       <section className='home'>
         <img src={homeImg} alt='' />
-        <div className='grid'>
+        <div className='grid-global'>
           <NavBar color='white'/>
 
           <div className='middle'>

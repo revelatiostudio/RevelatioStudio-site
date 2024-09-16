@@ -37,7 +37,7 @@ export default function Solucoes() {
 
     return (
         <section className='container-solucoes'>
-            <div className='grid'>
+            <div className='grid-global'>
                 <div className='herofirst'>
                     <div className='left_text'>
                         <h1>Trabalhamos</h1>

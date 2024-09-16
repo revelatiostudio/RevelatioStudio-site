@@ -4,7 +4,7 @@ import './ideias.css'
 export default function ideias() {
     return (
         <div className='container_ideias'>
-            <div className='grid'>
+            <div className='grid-global'>
                 <div className='sections'>
                     <div className='options'>
                         <p>01</p>

@@ -35,7 +35,7 @@ export default function Services() {
   })
 
   return (
-    <div className='grid'>
+    <div className='grid-global'>
 
       <div className='container'>
 

@@ -5,7 +5,6 @@ import logo_white from '../../assets/img/home/logo.svg'
 import logo_black from '../../assets/img/home/logo_black.svg'
 
 export default function NavBar({color}) {
-    console.log(color)
     return (
         <nav className={`navbar ${color}`}>
 

@@ -7,7 +7,7 @@ import revelatio from '../../../../assets/img/home/name_revelatio.svg'
 export default function BottomHome() {
     return (
         <div className='container_bottom'>
-            <div className='grid'>
+            <div className='grid-global'>
                 <div className='hero_bottom'>
                     <div className='left_bottom'>
                         <p><span>[Escritório]</span></p>

@@ -60,7 +60,7 @@ export default function ScrollCases() {
     })
 
     return (
-        <div className='grid'>
+        <div className='grid-global'>
             <section className='cases-scroll'>
 
                 <div className='middle-text'>

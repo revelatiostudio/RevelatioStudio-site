@@ -13,7 +13,7 @@ export default function About() {
   return (
     <>
       <header>
-        <div className='grid'>
+        <div className='grid-global'>
 
           <NavBar color='black' />
           <div className='about-us'>

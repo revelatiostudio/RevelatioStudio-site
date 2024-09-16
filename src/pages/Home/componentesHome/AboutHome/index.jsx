@@ -5,7 +5,7 @@ export default function AboutHome() {
     return (
 
         <section className='container_about'>
-            <div className='grid'>
+            <div className='grid-global'>
                 <div className='first_text'>
                     <h1>Alimentando o <span> caos </span> <span>que existe</span> <span>em<br></br>toda ordem.</span>
                         <span>Coordenando</span> <span>a</span> ordem <br></br>que existe em todo caos.</h1>
