@@ -14,27 +14,32 @@
     align-items: start;
     padding-top: 32px;
     border-top: 1px var(--color-gray-100) solid;
-    transition: color 0.5s ease;
+    
+    
+}
+.sections p{
     color: var(--color-gray-200);
-}
-
-.sections div {
     transition: color 0.5s ease;
+
+
+}
+.sections a{
     color: var(--color-gray-200);
+    transition: color 0.5s ease;
+
+
 }
 
-/* Hover na seção: muda a cor geral para branco */
-.sections:hover {
-    color: var(--color-white); /* Muda a cor geral */
-}
 
-.sections:hover div {
-    color: var(--color-white); /* Garante que todos os filhos fiquem brancos no hover */
-}
 
-.sections:hover div:nth-child(n+3) {
+.sections.active p{
     color: var(--color-gray-700); 
 }
+.sections.active .options a{
+    color: var(--color-white);
+}
+
+
 
 /* cada div dentro de sections */
 .options{

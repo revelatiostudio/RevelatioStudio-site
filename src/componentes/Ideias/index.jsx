@@ -1,17 +1,41 @@
 import React from 'react'
 import './ideias.css'
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 export default function ideias() {
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+    useGSAP(() => {
+        const sections = [...document.querySelectorAll('.sections')];
+
+        sections.forEach((sec) => {
+            ScrollTrigger.create({
+                trigger: sec,
+                start: "top center",
+                end: "bottom center",
+                toggleClass: { targets: sec, className: "active" },
+                onEnter: () => sec.classList.add("active"),
+                onLeave: () => sec.classList.remove("active"),
+                onEnterBack: () => sec.classList.add("active"),
+                onLeaveBack: () => sec.classList.remove("active"),
+            });
+
+        })
+    })
+
+
     return (
-        <div className='container_ideias'>
+        <section className='container_ideias'>
             <div className='grid-global'>
                 <div className='sections'>
                     <div className='options'>
-                        <p>01</p>
+                        <a>01</a>
                     </div>
                     <div className='options'>
-                        <p>Ideias & Estratégias</p>
-
+                        <a>Ideias & Estratégias</a>
                     </div>
 
 
@@ -34,10 +58,10 @@ export default function ideias() {
                 </div>
                 <div className='sections '>
                     <div className='options'>
-                        <p>02</p>
+                        <a>02</a>
                     </div>
                     <div className='options'>
-                        <p>Criação & Design</p>
+                        <a>Criação & Design</a>
                     </div>
                     <div className='options'>
                         <p><span>↗</span> Logo System</p>
@@ -58,10 +82,10 @@ export default function ideias() {
                 </div>
                 <div className='sections sections_last '>
                     <div className='options'>
-                        <p>03</p>
+                        <a>03</a>
                     </div>
                     <div className='options'>
-                        <p>Tecnologia</p>
+                        <a>Tecnologia</a>
                     </div>
 
                     <div className='options'>
@@ -82,6 +106,6 @@ export default function ideias() {
             </div>
 
 
-        </div>
+        </section>
     )
 }
