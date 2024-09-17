@@ -27,7 +27,7 @@ export default function BottomHome() {
                             <p><span>[Links]</span></p>
                             <div className='links'>
                                 <p>Home</p>
-                                <p>Sobre</p>
+                                <p><a href='/about'>Sobre</a></p>
                                 <p>Cases</p>
                                 <p>Contato</p>
                                 <p>Galeria</p>
