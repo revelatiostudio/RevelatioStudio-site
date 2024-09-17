@@ -6,6 +6,7 @@ import './about.css'
 
 
 import about_img from '../../assets/img/home/home_img.jpg'
+import Fundadores from './componentesAbout/Fundadores'
 
 
 
@@ -31,13 +32,17 @@ export default function About() {
         </div>
       </header>
 
-      <section>
+      
         <Solucoes />
-      </section>
+      
 
-      <section>
+      
         <Services />
-      </section>
+      
+
+      
+        <Fundadores/>
+      
     </>
 
   )
