@@ -7,7 +7,6 @@ import Lucas from '../../../../assets/img/about/Lucas.png'
 
 import { motion } from "framer-motion"
 import { gsap } from "gsap";
-import { useGSAP } from '@gsap/react'
 
 
 
@@ -32,8 +31,11 @@ export default function Fundadores() {
         setImageHover(id)
 
         const otherImages = document.querySelectorAll(`.fund-img img:not(.image-${id})`);
+        const otherText = document.querySelectorAll(`.founder:not(:has(.class-blour-${id}))`);
 
         gsap.to(otherImages, { opacity: 0.1, filter: 'blur(5px)', duration: 0.5 });
+        gsap.to(otherText, { opacity: 0.5, filter: 'blur(4px)', duration: 0.5 });
+
         if (id === 1) {
             gsap.to(icaroRef.current, { opacity: 1, duration: 0.5, overwrite: true });
         } else if (id === 2) {
@@ -47,7 +49,6 @@ export default function Fundadores() {
         gsap.to(anotherref.current, { opacity: 0, duration: 0.5, delay: 0.2, overwrite: true });
 
 
-
     };
 
 
@@ -56,6 +57,7 @@ export default function Fundadores() {
 
         const tl = gsap.timeline();
         gsap.to('.fund-img img', { opacity: 1, filter: 'blur(0px)', duration: 0.5 });
+        gsap.to('.founder', { opacity: 1, filter: 'blur(0px)', duration: 0.5 });
         setImageHover(0);
 
         gsap.to([icaroRef.current, arthurRef.current, lucasRef.current], { opacity: 0, duration: 0.2, overwrite: true });
@@ -119,20 +121,26 @@ export default function Fundadores() {
                             initial={{ opacity: 1, filter: 'blur(0px)' }}
                             whileHover={{ scale: 1.1, opacity: 1, filter: 'blur(0px)' }}
                             transition={{ duration: 0.5 }}>
-                                
+
                             <motion.img
                                 src={image.image} alt=''
                                 className={`image-${image.id}`}
                                 onMouseEnter={() => handleMouseEnter(image.id)}
                                 onMouseLeave={handleMouseLeave}
                             />
-                            <div className='founder'>
-                                <p>{image.name}</p>
+                            <div className={"founder"}>
+
+                                <p className={`class-blour-${image.id}`}>{image.name}</p>
                                 <div className='description'>
                                     <p><span>{image.des1}</span></p>
                                     <p><span>{image.des2}</span></p>
                                 </div>
+
+
                             </div>
+
+
+
                         </motion.div>
                     ))}
                 </div>
