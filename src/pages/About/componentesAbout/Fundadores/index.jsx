@@ -29,20 +29,22 @@ export default function Fundadores() {
 
 
     const handleMouseEnter = (id) => {
+
+        gsap.killTweensOf('.socios-img img');
         setImageHover(id)
         const otherImages = document.querySelectorAll(`.fund-img img:not(.image-${id})`);
         gsap.to(otherImages, { opacity: 0.1, filter: 'blur(5px)', duration: 0.5 });
         if (id === 1) {
-            gsap.to(icaroRef.current, { opacity: 1, duration: 0.5 });
+            gsap.to(icaroRef.current, { opacity: 1, duration: 0.5, overwrite: true});
         } else if (id === 2) {
-            gsap.to(arthurRef.current, { opacity: 1, duration: 0.5 });
+            gsap.to(arthurRef.current, { opacity: 1, duration: 0.5, overwrite: true });
         } else if (id === 3) {
-            gsap.to(lucasRef.current, { opacity: 1, duration: 0.5 });
+            gsap.to(lucasRef.current, { opacity: 1, duration: 0.5, overwrite: true});
 
         }
 
 
-        gsap.to(anotherref.current, { opacity: 0, duration: 0.5, delay: 0.2 });
+        gsap.to(anotherref.current, { opacity: 0, duration: 0.5, delay: 0.2, overwrite: true });
 
 
 
@@ -50,16 +52,16 @@ export default function Fundadores() {
 
 
     const handleMouseLeave = () => {
+        gsap.killTweensOf('.socios-img img');
+
         const tl = gsap.timeline();
         gsap.to('.fund-img img', { opacity: 1, filter: 'blur(0px)', duration: 0.5 });
         setImageHover(0);
 
-        gsap.to(icaroRef.current, { opacity: 0, duration: 0.2 });
-        gsap.to(arthurRef.current, { opacity: 0, duration: 0.2 });
-        gsap.to(lucasRef.current, { opacity: 0, duration: 0.2 });
+        gsap.to([icaroRef.current, arthurRef.current, lucasRef.current], { opacity: 0, duration: 0.2, overwrite: true });
 
 
-        gsap.to(anotherref.current, { opacity: 1, duration: 0.5, delay:0.5 });
+        gsap.to(anotherref.current, { opacity: 1, duration: 0.5, delay:0.5, overwrite: true });
 
 
     };
