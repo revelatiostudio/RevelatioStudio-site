@@ -34,13 +34,7 @@ export default function About() {
 
       
         <Solucoes />
-      
-
-      
         <Services />
-      
-
-      
         <Fundadores/>
       
     </>

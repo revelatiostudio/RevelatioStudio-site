@@ -68,7 +68,7 @@ export default function Solucoes() {
                             <p>para mostrar pro mundo ao que vieram. </p>
 
                             <div className='seecases'>
-                                <a href=''>Ver todos os cases <a>↗</a></a>
+                                <a href=''>Ver todos os cases <span>↗</span></a>
                             </div>
                         </div>
 
