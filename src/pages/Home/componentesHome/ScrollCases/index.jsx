@@ -154,7 +154,7 @@ export default function ScrollCases() {
                 </div>
                 <div className='see-cases'>
                     <div className='all-cases'>
-                        <a href=''>Ver todos os cases <a>↗</a></a>
+                        <a href=''>Ver todos os cases <span>↗</span></a>
                     </div>
                     <div className='explore'>
                         <p>Scroll to explore ↓</p>

@@ -6,3 +6,11 @@
     font-family: 'NeueHaasLight';
     src: local('NeueHaasDisplayLight'), url('./fonts/NeueHaasDisplayLight.ttf') format('truetype');
   }
+  @font-face {
+    font-family: 'NeueHaasDisplay';
+    src: local('NeueHaasDisplayThin'), url('./fonts/NeueHaasDisplayThin.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'NeueHaasDisplayRoman';
+    src: local('NeueHaasDisplayRoman'), url('./fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+  }

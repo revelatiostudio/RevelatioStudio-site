@@ -1,3 +1,93 @@
 .container-roulette{
-    margin-top: 193px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin-top: 12.0625rem;
+   
+  
+}
+.grid-roulette{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    height: 55rem;
+}
+/* parte esquerda */
+.left-roulette{
+    display: flex;
+    align-items: center;
+}
+.left-roulette h2{
+    font-size: 24px;
+    font-weight: 450;
+    line-height: 120%;
+}
+/* parte direita  */
+.rigth-roulette{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.rigth-roulette p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+ /* container blour */
+.container-blour{
+    width: 100%;
+    height: 328px;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    top: 0;
+}
+.container-blour.bottom{
+    top: auto; 
+    bottom: 0;
+}
+/* meio da roleta */
+
+.middle-roulette{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+    padding-top: 850px;
+    position: relative;
+   
+}
+.middle-roulette .country {
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+ 
+
+}
+
+.middle-roulette .country h1{
+    font-family: 'NeueHaasDisplayRoman';
+    font-size: 88px;
+    font-weight: 500;
+    line-height: 100%;
+    font-style: normal;
+    color: var(--color-gray-600);
+
+}
+
+.middle-roulette .country.active h1{
+    color: var(--color-white);
+
+}
+
+
+.middle-roulette .country p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-gray-600);
+    margin-left: 60px;
+
 }
