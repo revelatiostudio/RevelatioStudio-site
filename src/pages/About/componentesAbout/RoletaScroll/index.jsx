@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './roletaScroll.css'
 
 import { gsap } from "gsap";
@@ -23,40 +23,41 @@ export default function RoletaScroll() {
         { estado: 'Imperatriz', pais: '...' },
         { estado: 'Waterloo', pais: '...' },
     ]
+    const rouletteRef = useRef(null);
 
     useGSAP(() => {
-        const lugares = [...document.querySelectorAll('.country')];
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.grid-roulette',
-                start: 'top top',
-                end: 'bottom top',
-                scrub: true,
-                pin: true,
-                markers: true
-            }
+        const container = rouletteRef.current;
+        const items = gsap.utils.toArray('.country');
+        
+        gsap.to(items, {
+          yPercent: -1050, 
+          ease: 'none',
+          scrollTrigger: {
+            trigger: container,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true, 
+            pin: true, 
+            markers: true, 
+          }
         });
-
-
-        lugares.forEach((lugar, index) => {
-            tl.to(lugar, {
-                y: -1000
-            }, 0)
-            ScrollTrigger.create({
-                trigger: lugar,
-                start: "top center",
-                end: "bottom center",
-                scrub: true,
-                markers: true,
-                onEnter: () => lugar.classList.add("active"),
-                onLeave: () => lugar.classList.remove("active"),
-                onEnterBack: () => lugar.classList.add("active"),
-                onLeaveBack: () => lugar.classList.remove("active"),
-
-            })
-
-        })
-    })
+    
+        items.forEach((item) => {
+          gsap.to(item, {
+            scrollTrigger: {
+              trigger: item,
+              start: 'top center',
+              end: 'bottom center',
+              scrub: true,
+              markers: true,
+              onEnter: () => gsap.to(item.classList.add("active")),
+              onLeave: () => gsap.to(item.classList.remove("active")),
+              onEnterBack: () => gsap.to(item.classList.add("active")),
+              onLeaveBack: () => gsap.to(item.classList.remove("active")),
+            }
+          });
+        });
+      }, [lugares]);
 
 
 
@@ -64,7 +65,7 @@ export default function RoletaScroll() {
         <section className='container-roulette'>
             <div className='grid-global'>
 
-                <div className='grid-roulette'>
+                <div className='grid-roulette' ref={rouletteRef}>
                     <div className='left-roulette'>
                         <h2>Nossos projetos <br />Estão ao redor do mundo</h2>
                     </div>
