@@ -10,17 +10,28 @@ export default function RoletaScroll() {
     gsap.registerPlugin(ScrollTrigger);
 
     const lugares = [
-        { estado: 'Porto Alegre', pais: 'Brasil' },
-        { estado: 'Natal', pais: 'Brasil' },
-        { estado: 'Porto', pais: 'Portugal' },
-        { estado: 'Recife', pais: 'Brasil' },
-        { estado: 'Londres', pais: 'Inglaterra' },
-        { estado: 'Imperatriz', pais: '...' },
-        { estado: 'Waterloo', pais: '...' },
+        { estado: 'Waterloo', pais: 'CA' },
+        { estado: 'New York', pais: 'EUA' },
+        { estado: 'Londres', pais: 'UK' },
+        { estado: 'Boca Raton', pais: 'EUA' },
+        { estado: 'Porto', pais: 'PT' },
+        { estado: 'Recife', pais: 'BR' },
+        { estado: 'São Paulo', pais: 'BR' },
+        { estado: 'Salvador', pais: 'BR' },
+        { estado: 'Natal', pais: 'BR' },
+        { estado: 'Manaus', pais: 'BR' },
+        { estado: 'Chapecó', pais: 'BR' },
+        { estado: 'Balneário Camboriú', pais: 'BR' },
+        { estado: 'Porto Alegre', pais: 'BR' },
+        { estado: 'Acre', pais: 'BR' },
+        { estado: 'Fortaleza', pais: 'BR' },
+        { estado: 'São Carlos', pais: 'BR' },
+        { estado: 'Bela Vista', pais: 'BR' },
+        { estado: 'Canela', pais: 'BR' },
+        { estado: 'Imperatriz', pais: 'BR' },
+        { estado: 'Mato Grosso do Sul', pais: 'BR' },
+        { estado: 'Rio de Janeiro', pais: 'BR' }
 
-        { estado: 'Recife', pais: 'Brasil' },
-        { estado: 'Londres', pais: 'Inglaterra' },
-        { estado: 'Imperatriz', pais: '...' },
     ]
     const rouletteRef = useRef(null);
 
