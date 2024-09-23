@@ -9,29 +9,44 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function RoletaScroll() {
     gsap.registerPlugin(ScrollTrigger);
 
+    const lugares = [
+        { estado: 'Porto Alegre', pais: 'Brasil' },
+        { estado: 'Natal', pais: 'Brasil' },
+        { estado: 'Porto', pais: 'Portugal' },
+        { estado: 'Recife', pais: 'Brasil' },
+        { estado: 'Londres', pais: 'Inglaterra' },
+        { estado: 'Imperatriz', pais: '...' },
+        { estado: 'Waterloo', pais: '...' },
+
+        { estado: 'Recife', pais: 'Brasil' },
+        { estado: 'Londres', pais: 'Inglaterra' },
+        { estado: 'Imperatriz', pais: '...' },
+        { estado: 'Waterloo', pais: '...' },
+    ]
+
     useGSAP(() => {
         const lugares = [...document.querySelectorAll('.country')];
         const tl = gsap.timeline({
-            scrollTrigger:{
-                trigger:'.grid-roulette',
+            scrollTrigger: {
+                trigger: '.grid-roulette',
                 start: 'top top',
                 end: 'bottom top',
                 scrub: true,
                 pin: true,
-                markers:true
+                markers: true
             }
         });
 
 
-        lugares.forEach((lugar,index) => {
+        lugares.forEach((lugar, index) => {
             tl.to(lugar, {
                 y: -1000
-            },0)
+            }, 0)
             ScrollTrigger.create({
                 trigger: lugar,
                 start: "top center",
                 end: "bottom center",
-                scrub:true,
+                scrub: true,
                 markers: true,
                 onEnter: () => lugar.classList.add("active"),
                 onLeave: () => lugar.classList.remove("active"),
@@ -56,54 +71,20 @@ export default function RoletaScroll() {
 
                     <div className='middle-roulette'>
                         <div className='container-blour'></div>
-                        <div className='country'>
-                            <h1>Porto Alegre</h1>
-                            <p>(Brasil)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Natal</h1>
-                            <p>(Brasil)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Porto</h1>
-                            <p>(Portugual)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Recife</h1>
-                            <p>(Brasil)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Londres</h1>
-                            <p>(Inglaterra)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Imperatriz</h1>
-                            <p>(...)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Waterloo</h1>
-                            <p>(...)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Recife</h1>
-                            <p>(Brasil)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Londres</h1>
-                            <p>(Inglaterra)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Imperatriz</h1>
-                            <p>(...)</p>
-                        </div>
-                        <div className='country'>
-                            <h1>Waterloo</h1>
-                            <p>(...)</p>
-                        </div>
+                        {
+                            lugares.map((lugar) => (
+                                <div className='country' key={lugar.estado}>
+                                    <h1>{lugar.estado}</h1>
+                                    <p>({lugar.pais})</p>
+                                </div>
+
+                            ))
+                        }
+
 
                         <div className='container-blour bottom'></div>
 
-                        
+
                     </div>
 
 
