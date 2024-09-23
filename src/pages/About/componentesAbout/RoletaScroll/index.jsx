@@ -38,6 +38,11 @@ export default function RoletaScroll() {
     useGSAP(() => {
         const container = rouletteRef.current;
         const items = gsap.utils.toArray('.country');
+
+        gsap.set('.country',{
+            y:350
+
+        })
         
         gsap.to(items, {
           yPercent: -1050, 
@@ -48,6 +53,7 @@ export default function RoletaScroll() {
             end: 'bottom top',
             scrub: true, 
             pin: true, 
+            markers: true
           }
         });
     
