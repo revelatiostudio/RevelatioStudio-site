@@ -21,7 +21,6 @@ export default function RoletaScroll() {
         { estado: 'Recife', pais: 'Brasil' },
         { estado: 'Londres', pais: 'Inglaterra' },
         { estado: 'Imperatriz', pais: '...' },
-        { estado: 'Waterloo', pais: '...' },
     ]
     const rouletteRef = useRef(null);
 

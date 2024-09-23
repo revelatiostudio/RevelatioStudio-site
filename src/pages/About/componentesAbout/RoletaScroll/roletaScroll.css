@@ -81,6 +81,13 @@
     color: var(--color-white);
 
 }
+.middle-roulette .country.active p{
+    color: var(--color-white);
+
+  
+
+}
+
 
 
 .middle-roulette .country p{
