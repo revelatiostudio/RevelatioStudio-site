@@ -37,7 +37,6 @@ export default function RoletaScroll() {
             end: 'bottom top',
             scrub: true, 
             pin: true, 
-            markers: true, 
           }
         });
     
@@ -48,7 +47,6 @@ export default function RoletaScroll() {
               start: 'top center',
               end: 'bottom center',
               scrub: true,
-              markers: true,
               onEnter: () => gsap.to(item.classList.add("active")),
               onLeave: () => gsap.to(item.classList.remove("active")),
               onEnterBack: () => gsap.to(item.classList.add("active")),
