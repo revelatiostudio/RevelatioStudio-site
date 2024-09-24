@@ -1,0 +1,26 @@
+.only{
+    margin-top: 10.3125rem;
+    display: flex;
+    justify-content: space-between;
+}
+.only h1{
+    font-family: "neue-haas-grotesk-display";
+    font-size: 64px;
+    font-weight: 450;
+    line-height: 100%;
+    
+}
+.only p{
+    font-family: "neue-haas-grotesk-text";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+    color: var( --color-gray-400); 
+}
+.only span{
+    font-family: "neue-haas-grotesk-text";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+    color: var( --color-gray-200); 
+}
