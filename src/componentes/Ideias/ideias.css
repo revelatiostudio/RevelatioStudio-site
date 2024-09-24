@@ -18,6 +18,9 @@
     
 }
 .sections p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 90%;
     color: var(--color-gray-200);
     transition: color 0.5s ease;
 
@@ -45,6 +48,13 @@
 .options{
     width: 100%;
     max-width: 28.75rem;
+}
+.options-list.options p{
+    font-family: "neue-haas-grotesk-text";
+    font-size: 16px;
+    line-height: 120%;
+
+
 }
 
 .options span {

@@ -39,17 +39,17 @@ export default function ideias() {
                     </div>
 
 
-                    <div className='options'>
+                    <div className='options-list options'>
                         <p><span>↗</span> Posicionamento</p>
                         <p><span>↗</span> Estratégia de Marca</p>
                         <p><span>↗</span> Narrativa</p>
                     </div>
-                    <div className='options'>
+                    <div className='options-list options'>
                         <p><span>↗</span> Consultoria de Inovação</p>
                         <p><span>↗</span> Tom de Voz</p>
                         <p><span>↗</span> Identidade Verbal</p>
                     </div>
-                    <div className='options'>
+                    <div className='options-list options'>
                         <p><span>↗</span> Naming</p>
                         <p><span>↗</span> Workshops</p>
                         <p><span>↗</span> Mentoria</p>
@@ -63,17 +63,17 @@ export default function ideias() {
                     <div className='options'>
                         <a>Criação & Design</a>
                     </div>
-                    <div className='options'>
+                    <div className='options-list options'>
                         <p><span>↗</span> Logo System</p>
                         <p><span>↗</span> Identidade Visual</p>
                         <p><span>↗</span> Wireframes</p>
                     </div>
-                    <div className='options'>
+                    <div className='options-list options'>
                         <p><span>↗</span> Direção de Arte</p>
                         <p><span>↗</span> Packaging Design</p>
                         <p><span>↗</span> Protótipos</p>
                     </div>
-                    <div className='options'>
+                    <div className='options-list options'>
                         <p><span>↗</span> UX/UI</p>
                         <p><span>↗</span> Website</p>
                         <p><span>↗</span> Mockups</p>
@@ -88,17 +88,17 @@ export default function ideias() {
                         <a>Tecnologia</a>
                     </div>
 
-                    <div className='options'>
+                    <div className='options-list options'>
                         <p><span>↗</span> Front End</p>
                         <p><span>↗</span> Back End</p>
                         <p><span>↗</span> Automação</p>
                     </div>
-                    <div className='options'>
+                    <div className='options-list options'>
                         <p><span>↗</span> Desenvolvimento Criativo</p>
                         <p><span>↗</span> Integração de Sistemas</p>
                         <p><span>↗</span> Inteligência Artificial</p>
                     </div>
-                    <div className='options'>
+                    <div className='options-list options'>
                     </div>
 
                 </div>

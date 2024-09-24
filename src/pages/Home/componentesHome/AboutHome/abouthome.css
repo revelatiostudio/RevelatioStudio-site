@@ -6,6 +6,7 @@
 }
 
 .container_about h1{
+    font-family: "neue-haas-grotesk-display";
     font-size: 64px;
     font-weight: 450;
     line-height: 72.96px;
@@ -34,6 +35,7 @@
     flex-direction: column;
 }
 .about_text p{
+    font-family: "neue-haas-grotesk-text";
     color: var(--color-gray-600);
     font-size: 22px;
     line-height: 30.8px;

@@ -32,13 +32,15 @@
 }
 .top_part p{
     margin-bottom: 28px;
+    font-weight: 500;
 }
 
 .bottom_part p{
     color: var(--color-white);
     font-size: 16px;
-    line-height: 16px;
+    line-height: 100%;
     margin-bottom: 12px;
+    font-weight: 500;
 }
 .middle .right_part{
     width: 100%;
@@ -57,6 +59,7 @@
 }
 .right_part .time_text{
     margin-bottom: 28px;
+    font-weight: 500;
 
 }
 .right_part .time{
@@ -64,6 +67,11 @@
     flex-direction: column;
     align-items: end;
 }
+.right_part .time p{
+    font-weight: 450;
+
+}
+ 
 
 
 /* Texto revelatio */

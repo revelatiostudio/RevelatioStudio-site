@@ -43,8 +43,8 @@ export default function Home() {
               </div>
 
               <div className='time'>
-                <p>RECIFE,BRA <a>[12:46PM]</a></p>
-                <p>NEW YORK,EUA <a>[12:46PM]</a></p>
+                <p><a>RECIFE,BRA</a> [12:46PM]</p>
+                <p><a>NEW YORK,EUA</a> [12:46PM]</p>
 
               </div>
 

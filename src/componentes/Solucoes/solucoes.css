@@ -9,6 +9,7 @@
 .herofirst h1 {
     font-size: 88px;
     font-weight: 450;
+    line-height: 100%;
 }
 
 /* texto da esquerda */
@@ -41,6 +42,9 @@
     align-items: end;
 
 }
+.right_part_solucoes .time p {
+    font-weight: 450;
+}
 
 /* borda */
 .border-time {
@@ -61,7 +65,8 @@
 
 .herosecond h1 {
     font-size: 88px;
-    font-weight: 450;
+    font-weight: 500;
+    line-height: 100%;
 }
 
 /* parte final  */
@@ -94,12 +99,14 @@
     color: var(--color-gray-600);
     padding-top: 38px;
     padding-bottom: 30px;
+    line-height: 100%;
 }
 
 .texts_studio p {
     color: var(--color-gray-600);
     font-weight: 400;
     font-size: 16px;
+    line-height: 140%;
 }
 
 .texts_studio a {
@@ -114,16 +121,29 @@
 
 }
 
-.seecases {
+.texts_studio .seecases {
     padding-top: 66px;
+    font-weight: 500;
+    margin-left: 0px;
 }
+.texts_studio .seecases a {
+    font-weight: 500;
+    margin-left: 0px;
+}
+
 
 .studio_left {
     padding-top: 85px;
 }
+.studio_left p {
+    font-weight: 400;
+    line-height: 140%;
+}
 
 .studio_left .p1 {
     color: var(--color-gray-100);
+    font-weight: 400;
+    line-height: 140%;
 
 }
 

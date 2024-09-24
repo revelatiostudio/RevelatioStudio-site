@@ -10,8 +10,10 @@
     margin-bottom: 3.75rem;
 }
 .head h1{
+    font-family: "neue-haas-grotesk-display";
     font-size: 64px;
     font-weight: 450;
+    line-height: 120%;
 }
 .head img{
     width: 22px;

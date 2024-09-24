@@ -62,3 +62,11 @@
     width: 100%;
     max-width: 400px;
 }
+.text_solutions p {
+    font-family: "neue-haas-grotesk-text";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.48px;
+ 
+}
