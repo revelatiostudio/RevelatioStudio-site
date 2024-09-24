@@ -64,10 +64,10 @@ export default function RoletaScroll() {
               start: 'top center',
               end: 'bottom center',
               scrub: true,
-              onEnter: () => gsap.to(item.classList.add("active")),
-              onLeave: () => gsap.to(item.classList.remove("active")),
-              onEnterBack: () => gsap.to(item.classList.add("active")),
-              onLeaveBack: () => gsap.to(item.classList.remove("active")),
+              onEnter: () => item.classList.add("active"),
+              onLeave: () => item.classList.remove("active"),
+              onEnterBack: () => item.classList.add("active"),
+              onLeaveBack: () => item.classList.remove("active"),
             }
           });
         });
