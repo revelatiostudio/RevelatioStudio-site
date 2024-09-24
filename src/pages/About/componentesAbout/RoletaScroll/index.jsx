@@ -39,38 +39,64 @@ export default function RoletaScroll() {
         const container = rouletteRef.current;
         const items = gsap.utils.toArray('.country');
 
-        gsap.set('.country',{
-            y:350
+        gsap.set('.country', {
+            y: 350
 
         })
-        
+
         gsap.to(items, {
-          yPercent: -((items.length) * 100),
-          ease: 'none',
-          scrollTrigger: {
-            trigger: container,
-            start: 'top top',
-            end: () => "+=" + container.offsetHeight * 2,
-            scrub: true, 
-            pin: true, 
-          }
-        });
-    
-        items.forEach((item) => {
-          gsap.to(item, {
+            yPercent: -((items.length) * 100),
+            ease: 'none',
             scrollTrigger: {
-              trigger: item,
-              start: 'top center',
-              end: 'bottom center',
-              scrub: true,
-              onEnter: () => item.classList.add("active"),
-              onLeave: () => item.classList.remove("active"),
-              onEnterBack: () => item.classList.add("active"),
-              onLeaveBack: () => item.classList.remove("active"),
+                trigger: container,
+                start: 'top top',
+                end: () => "+=" + container.offsetHeight * 2,
+                scrub: true,
+                pin: true,
             }
-          });
         });
-      }, [lugares]);
+
+        const tl = gsap.timeline()
+
+
+
+        items.forEach((item) => {
+       
+            tl.to(item, {
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top center',
+                    end: 'bottom center',
+                    scrub: true,
+                    onEnter: () => item.classList.add("active"),
+                    onLeave: () => item.classList.remove("active"),
+                    onEnterBack: () => item.classList.add("active"),
+                    onLeaveBack: () => item.classList.remove("active"),
+                }
+            }, 0).to(item, {
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 150px',
+                    end: 'bottom top',
+                    scrub: true
+                }
+
+            }, 0).from(item, {
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 800px',
+                    end: 'bottom center',
+                    scrub: true,
+                }
+
+            }, 0)
+
+
+
+        });
+    }, [lugares]);
 
 
 
