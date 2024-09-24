@@ -28,6 +28,8 @@
 
 .navbar p{
     font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
     gap: 32px;
    
 }

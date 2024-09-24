@@ -32,10 +32,10 @@ img {
   height: 100%;
   object-fit: cover;
 }
-p, a, span{
+h1, h2{
   font-family: "neue-haas-grotesk-text";
 }
-h1, h2{
+p, a, span{
   font-family: "neue-haas-grotesk-display"
 
 }
