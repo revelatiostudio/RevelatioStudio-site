@@ -45,7 +45,7 @@ export default function RoletaScroll() {
         })
         
         gsap.to(items, {
-          yPercent: -((items.length - 1) * 100),
+          yPercent: -((items.length) * 100),
           ease: 'none',
           scrollTrigger: {
             trigger: container,
@@ -53,7 +53,6 @@ export default function RoletaScroll() {
             end: () => "+=" + container.offsetHeight * 2,
             scrub: true, 
             pin: true, 
-            markers: true
           }
         });
     
