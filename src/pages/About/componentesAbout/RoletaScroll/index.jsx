@@ -21,7 +21,7 @@ export default function RoletaScroll() {
         { estado: 'Natal', pais: 'BR' },
         { estado: 'Manaus', pais: 'BR' },
         { estado: 'Chapecó', pais: 'BR' },
-        { estado: 'Balneário Camboriú', pais: 'BR' },
+        { estado: 'Balneário', pais: 'BR' },
         { estado: 'Porto Alegre', pais: 'BR' },
         { estado: 'Acre', pais: 'BR' },
         { estado: 'Fortaleza', pais: 'BR' },
@@ -29,7 +29,7 @@ export default function RoletaScroll() {
         { estado: 'Bela Vista', pais: 'BR' },
         { estado: 'Canela', pais: 'BR' },
         { estado: 'Imperatriz', pais: 'BR' },
-        { estado: 'Mato Grosso do Sul', pais: 'BR' },
+        { estado: 'Mato Grosso', pais: 'BR' },
         { estado: 'Rio de Janeiro', pais: 'BR' }
 
     ]
@@ -51,7 +51,7 @@ export default function RoletaScroll() {
             trigger: container,
             start: 'top top',
             end: () => "+=" + container.offsetHeight * 2,
-            scrub: 0.5, 
+            scrub: true, 
             pin: true, 
           }
         });
