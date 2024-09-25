@@ -53,6 +53,7 @@ export default function RoletaScroll() {
                 end: () => "+=" + container.offsetHeight * 2,
                 scrub: true,
                 pin: true,
+                snap: 1 / (items.length - 1)
             }
         });
 
