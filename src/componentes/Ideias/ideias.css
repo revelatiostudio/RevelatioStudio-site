@@ -4,9 +4,6 @@
     padding-top: 14.5rem;
 }
 
-.white-ideias{
-    background-color: white;
-}
 .black-ideias{
     background-color: var(--color-black);
 }
@@ -23,10 +20,6 @@
     border-top: 1px var(--color-gray-100) solid;
     
 }
-.sections.white-ideias {
-    border-top: 1px var(--color-gray-900) solid;
-    
-}
 .sections p{
     font-size: 20px;
     font-weight: 500;
@@ -35,38 +28,24 @@
     transition: color 0.5s ease;
 
 }
-.sections.white-ideias p{
-    color: var(--color-gray-800);
-}
+
 .sections a{
     color: var(--color-gray-200);
     transition: color 0.5s ease;
     font-size: 20px;
     font-weight: 500;
 }
-.sections.white-ideias a{
-    color: var(--color-gray-800);
-    transition: color 0.5s ease;
-}
-
 
 
 .sections.active p{
     color: var(--color-gray-700); 
 }
 
-.sections.white-ideias.active p{
-    color: var( --color-gray-1000); 
-}
+
 
 .sections.active .options a{
     color: var(--color-white);
 }
-.sections.white-ideias.active .options a{
-    color: var(--color-black);
-}
-
-
 
 
 /* cada div dentro de sections */
@@ -96,6 +75,29 @@
 .sections_last{
     border-bottom: 1px var(--color-gray-100) solid;
 
+}
+
+
+/* section branca  */
+.white-ideias{
+    background-color: white;
+}
+.sections.white-ideias {
+    border-top: 1px var(--color-gray-900) solid;
+    
+}
+.sections.white-ideias p{
+    color: var(--color-gray-800);
+}
+.sections.white-ideias a{
+    color: var(--color-gray-800);
+    transition: color 0.5s ease;
+}
+.sections.white-ideias.active p{
+    color: var( --color-gray-1000); 
+}
+.sections.white-ideias.active .options a{
+    color: var(--color-black);
 }
 .sections_last.white-ideias{
     border-bottom: 1px var(--color-gray-900) solid;
