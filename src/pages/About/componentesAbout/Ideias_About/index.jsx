@@ -1,6 +1,8 @@
 import React from 'react'
 import './ideias_about.css'
 
+import Ideias from '../../../../componentes/Ideias'
+
 export default function Ideias_About() {
   return (
     <section>
@@ -16,6 +18,7 @@ export default function Ideias_About() {
                 </div>
             </div>
         </div>
+        <Ideias color='white-ideias'/>
     </section>
   
   )

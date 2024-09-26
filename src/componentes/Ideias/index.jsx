@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function ideias() {
+export default function ideias({color = 'black-ideias'}) {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
 
     useGSAP(() => {
@@ -28,9 +28,9 @@ export default function ideias() {
 
 
     return (
-        <section className='container_ideias'>
+        <section className={`container_ideias ${color}`}>
             <div className='grid-global'>
-                <div className='sections'>
+                <div className={`sections ${color}`}>
                     <div className='options'>
                         <a>01</a>
                     </div>
@@ -56,7 +56,7 @@ export default function ideias() {
                     </div>
 
                 </div>
-                <div className='sections '>
+                <div className={`sections ${color}`}>
                     <div className='options'>
                         <a>02</a>
                     </div>
@@ -80,7 +80,7 @@ export default function ideias() {
                     </div>
 
                 </div>
-                <div className='sections sections_last '>
+                <div className={`sections ${color} sections_last`}>
                     <div className='options'>
                         <a>03</a>
                     </div>
