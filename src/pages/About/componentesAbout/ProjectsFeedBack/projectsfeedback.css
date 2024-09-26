@@ -1,0 +1,64 @@
+.project-feedback{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 15.4375rem;
+
+}
+.project-feedback .img-project {
+    margin-left: 6.125rem;
+}
+.project-feedback .img-project img{
+    width: 100%;
+    max-width: 32.8125rem;
+   
+}
+
+.feedback{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.feedback .descri{
+    width: 100%;
+    max-width: 514px;
+    
+}
+
+
+.feedback p{
+    font-family: "neue-haas-grotesk-text";
+    color: var(--color-gray-200);
+    font-size: 22px;
+    line-height: 140%;
+}
+
+.people-description{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.people-description .people-img{
+    width: 100%;
+    max-width: 2.375rem;
+    height: 2.375rem;
+    
+}
+.people-description .people-img img{
+    border-radius: 5px;
+    
+}
+
+.people-description .people-name{
+    margin-left: 1.4375rem;
+}
+.people-description .people-name p{
+    font-family: "neue-haas-grotesk-display";
+    font-size: 12px;
+    font-weight: 450;
+    line-height: 130%;
+    color: var(--color-gray-200);
+}
+.people-description .people-name span{
+    color: var( --color-gray-500);
+}
+
+

@@ -9,6 +9,7 @@ import about_img from '../../assets/img/home/home_img.jpg'
 import Fundadores from './componentesAbout/Fundadores'
 import RoletaScroll from './componentesAbout/RoletaScroll'
 import Ideias_About from './componentesAbout/Ideias_About'
+import ProjectsFeedBack from './componentesAbout/ProjectsFeedBack'
 
 
 
@@ -40,6 +41,7 @@ export default function About() {
         <Fundadores/>
         <RoletaScroll/>
         <Ideias_About/>
+        <ProjectsFeedBack/>
       
       
     </>
