@@ -7,11 +7,10 @@ import { Route, Routes } from 'react-router-dom'
 
 
 function App() {
-  const lenis = new Lenis()
-
-  lenis.on('scroll', (e) => {
-    // console.log(e)
+  const lenis = new Lenis({
+    lerp: 0.06
   })
+
 
   function raf(time) {
     lenis.raf(time)

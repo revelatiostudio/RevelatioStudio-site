@@ -51,7 +51,7 @@ export default function RoletaScroll() {
                 trigger: container,
                 start: 'top top',
                 end: () => "+=" + container.offsetHeight * 2,
-                scrub: true,
+                scrub: 0.5,
                 pin: true,
                 snap: 1 / (items.length - 1)
             }
