@@ -3,13 +3,19 @@ import About from './pages/About'
 import NavBar from './componentes/NavBar'
 import Lenis from '@studio-freight/lenis'
 
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 function App() {
-  const lenis = new Lenis({
-    lerp: 0.06
-  })
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+
+  const lenis = new Lenis()
 
 
   function raf(time) {

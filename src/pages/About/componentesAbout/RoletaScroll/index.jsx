@@ -97,7 +97,7 @@ export default function RoletaScroll() {
 
 
         });
-    }, [lugares]);
+    },[lugares]);
 
 
 
