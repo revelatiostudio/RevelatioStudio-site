@@ -1,17 +1,38 @@
 .project-feedback{
+    width: 100%;
+    height: 800px;
     display: grid;
     grid-template-columns: 50% 50%;
     margin-top: 15.4375rem;
-    
-
+    position: relative;
 }
+
 .project-feedback .img-project {
     margin-left: 6.125rem;
+    display: flex;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    
 }
 .project-feedback .img-project img{
+    position: absolute;
     width: 100%;
     max-width: 32.8125rem;
-   
+    height: 638px;
+    
+    
+}
+
+.project-feedback .img-project img:first-child{
+    z-index: 3;
+     
+}
+.project-feedback .img-project img:nth-child(2){
+    z-index: 2;
+     
+}
+.project-feedback .img-project img:nth-child(3){
+    z-index: 1;
+     
 }
 
 .feedback{
@@ -67,6 +88,7 @@
     width: 100%;
     height: 10.75rem;
     display: flex;
+    align-items: center;
     align-items: flex-end;
     justify-content: space-between;
 }
@@ -74,9 +96,10 @@
     width: 14.75rem;
 }
 .change-slide .setas{
-    margin-right: 8rem;
+    margin-right: 10rem;
     display: flex;
     gap: 2rem;
+    cursor: pointer;
 }
 
 
