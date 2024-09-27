@@ -28,7 +28,7 @@ export default function ProjectsFeedBack() {
   const updateImage = (direction) => { 
     const images = [...document.querySelectorAll('.img-project img')];
 
-    if(direction === "left" & currentImg <= (totalSlides - 1)){
+    if(direction === "rigth" & currentImg <= (totalSlides - 1)){
       console.log('left',currentImg)
       gsap.fromTo(
         images[currentImg],
@@ -46,7 +46,7 @@ export default function ProjectsFeedBack() {
 
     }
 
-    if(direction === "rigth" & currentImg >= (totalSlides -1)){
+    if(direction === "left" & currentImg >= (totalSlides -1)){
       console.log('rigth',currentImg)
       
       gsap.to(images[currentImg - 1],{
