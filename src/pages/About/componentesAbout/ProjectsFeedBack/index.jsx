@@ -23,16 +23,18 @@ export default function ProjectsFeedBack() {
   const [imgAtual, setImgAtual] = useState(0);
   const [valorBarra, setValorBarra] = useState(33)
   const totalSlides = 2;
-  
+
 
 
 
   const updateImage = (direction) => {
     const images = [...document.querySelectorAll('.img-project img')];
+    const textos = [...document.querySelectorAll('.descri p')];
+    const tl = gsap.timeline()
+
     let barra = 1;
 
     if (direction === "rigth" & imgAtual <= (totalSlides - 1)) {
-      console.log(imgAtual)
 
       gsap.fromTo(
         images[imgAtual],
@@ -46,7 +48,25 @@ export default function ProjectsFeedBack() {
           ease: "hop",
         }
       );
-      setImgAtual(imgAtual + 1);
+
+
+
+      tl.to(textos, {
+        opacity: 0,
+        ease: "power2.inOut",
+      })
+      tl.to(textos, {
+        opacity: 1,
+        duration: 1.5,
+        delay: 0.5,
+        ease: "power2.inOut",
+      })
+
+
+      setTimeout(() => {
+        setImgAtual(imgAtual + 1);
+      },1000)
+
       barra++;
       setValorBarra((prev) => prev * barra);
 
@@ -63,11 +83,13 @@ export default function ProjectsFeedBack() {
 
       )
       setImgAtual(imgAtual - 1);
+
       setValorBarra((prev) => prev / 2);
 
     }
 
   }
+
 
 
 
