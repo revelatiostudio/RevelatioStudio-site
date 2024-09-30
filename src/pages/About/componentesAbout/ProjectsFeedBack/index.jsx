@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './projectsfeedback.css'
-import feedback1 from '../../../../assets/img/about/feedback1.png'
-import lucas from '../../../../assets/img/about/Lucas.png'
-import icaro from '../../../../assets/img/about/Icaro.png'
+import feed1 from '../../../../assets/img/about/feedback/feed1.png'
+import feed2 from '../../../../assets/img/about/feedback/prop.png'
+import feed3 from '../../../../assets/img/about/feedback/feed3.png'
 
 import arthurMedeiros from '../../../../assets/img/about/arthur-medeiros.png'
 import setaEsquerda from '../../../../assets/img/about/setaEsc.svg'
@@ -15,23 +15,24 @@ import { useGSAP } from '@gsap/react'
 export default function ProjectsFeedBack() {
 
   const image = [
-    { id: 1, img: feedback1 },
-    { id: 2, img: lucas },
-    { id: 3, img: icaro }
+    { id: 1, img: feed1 },
+    { id: 2, img: feed2 },
+    { id: 3, img: feed3 }
   ]
 
-  let currentImg = 0;
+  const [imgAtual, setImgAtual] = useState(0)
   const totalSlides = 2;
 
 
 
-  const updateImage = (direction) => { 
+  const updateImage = (direction) => {
     const images = [...document.querySelectorAll('.img-project img')];
 
-    if(direction === "rigth" & currentImg <= (totalSlides - 1)){
-      console.log('left',currentImg)
+    if (direction === "rigth" & imgAtual <= (totalSlides - 1)) {
+      console.log(imgAtual)
+
       gsap.fromTo(
-        images[currentImg],
+        images[imgAtual],
         {
           clipPath:
             "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)" // para esquerda
@@ -42,25 +43,24 @@ export default function ProjectsFeedBack() {
           ease: "hop",
         }
       );
-      currentImg++;
+      setImgAtual(imgAtual + 1)
+
 
     }
 
-    if(direction === "left" & currentImg >= (totalSlides -1)){
-      console.log('rigth',currentImg)
-      
-      gsap.to(images[currentImg - 1],{
+    if (direction === "left" & imgAtual >= (totalSlides - 1)) {
+
+      gsap.to(images[imgAtual - 1], {
         clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
         duration: 1.5,
         ease: "hop",
       },
-      
-    )
-    currentImg--;
-    
+
+      )
+      setImgAtual(imgAtual - 1)
+
     }
 
- 
   }
 
 
@@ -97,17 +97,34 @@ export default function ProjectsFeedBack() {
             </div>
 
           </div>
+          {
+            imgAtual === 0 ? (
 
-          <div className='descri'>
-            <p>Go further into Planet Earth’s most out-there <br />
-              playgrounds with technical gear designed for  <br />
-              mixed terrains and trails. Engineered with highly  <br />
-              durable yet comfortable fabrics that combine the  <br />
-              incredible properties of soft touch, sweat-wicking <br />
-              and breathable materials with the toughness to  <br />
-              keep going as long as you can. Wild times await.</p>
+              <div className='descri'>
+                <p>Go further into Planet Earth’s most out-there <br />
+                  playgrounds with technical gear designed for  <br />
+                  mixed terrains and trails. Engineered with highly  <br />
+                  durable yet comfortable fabrics that combine the  <br />
+                  incredible properties of soft touch, sweat-wicking <br />
+                  and breathable materials with the toughness to  <br />
+                  keep going as long as you can. Wild times await.</p>
+              </div>
+            ) : imgAtual === 1 ? (
+              <div className='descri'>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br />
+                  Corrupti accusantium asperiores obcaecati est veritatis ducimus nisi, <br />
+                  sed unde voluptatum ratione quod itaque? Sed adipisci itaque quia laborum <br />
+                  blanditiis harum ullam?</p>
+              </div>
+            ) :
+              <div className='descri'>
+                <p>textooooo</p>
+              </div>
 
-          </div>
+
+          }
+
+
 
           <div className='change-slide'>
             <div className='bar'>

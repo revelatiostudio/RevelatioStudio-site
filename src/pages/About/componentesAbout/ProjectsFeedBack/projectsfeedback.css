@@ -17,7 +17,7 @@
     position: absolute;
     width: 100%;
     max-width: 32.8125rem;
-    height: 638px;
+    height: 39.875rem;
     
     
 }
@@ -58,6 +58,7 @@
 .people-description{
     display: flex;
     margin-bottom: 2rem;
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
 }
 .people-description .people-img{
     width: 100%;
