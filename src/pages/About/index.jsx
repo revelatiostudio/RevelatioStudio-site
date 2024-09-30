@@ -10,6 +10,7 @@ import Fundadores from './componentesAbout/Fundadores'
 import RoletaScroll from './componentesAbout/RoletaScroll'
 import Ideias_About from './componentesAbout/Ideias_About'
 import ProjectsFeedBack from './componentesAbout/ProjectsFeedBack'
+import InfinitTimeLine from '../../componentes/InfinitTimeLine'
 
 
 
@@ -42,6 +43,7 @@ export default function About() {
         <RoletaScroll/>
         <Ideias_About/>
         <ProjectsFeedBack/>
+        <InfinitTimeLine/>
       
       
     </>
