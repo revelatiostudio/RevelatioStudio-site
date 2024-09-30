@@ -52,10 +52,13 @@ export default function ProjectsFeedBack() {
 
 
       tl.to(textos, {
+        y: -20,
         opacity: 0,
+        duration: 1,
         ease: "power2.inOut",
       })
       tl.to(textos, {
+        y: 0,
         opacity: 1,
         duration: 1.5,
         delay: 0.5,
