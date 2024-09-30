@@ -41,11 +41,12 @@ export default function ProjectsFeedBack() {
         images[imgAtual],
         {
           clipPath:
-            "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)" // para esquerda
+            "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)", // para esquerda
+            duration: 2,
         },
         {
           clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
-          duration: 1.5,
+          duration: 2,
           ease: "hop",
         }
       );
@@ -69,7 +70,7 @@ export default function ProjectsFeedBack() {
 
       gsap.to(images[imgAtual - 1], {
         clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
-        duration: 1.5,
+        duration: 2,
         ease: "hop",
       },
 
