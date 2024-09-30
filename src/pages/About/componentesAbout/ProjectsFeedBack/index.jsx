@@ -57,7 +57,7 @@ export default function ProjectsFeedBack() {
 
       setTimeout(() => {
         setImgAtual(imgAtual + 1);
-      },1000)
+      }, 1000)
 
       barra++;
       setValorBarra((prev) => prev * barra);
@@ -76,19 +76,19 @@ export default function ProjectsFeedBack() {
       )
       setTimeout(() => {
         setImgAtual(imgAtual + 1);
-      },1000)
+      }, 1000)
 
       setValorBarra((prev) => prev / 2);
 
     }
 
-    tl.to([textos,peopleDesc], {
+    tl.to([textos, peopleDesc], {
       y: -20,
       opacity: 0,
       duration: 1,
       ease: "power2.inOut",
     })
-    tl.to([textos,peopleDesc], {
+    tl.to([textos, peopleDesc], {
       y: 0,
       opacity: 1,
       duration: 1.5,
@@ -122,44 +122,78 @@ export default function ProjectsFeedBack() {
         </div>
 
         <div className='feedback'>
-          <div className='people-description'>
-            <div className='people-img'>
-              <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
 
-            </div>
-            <div className='people-name'>
-              <p>Arthur Medeiros</p>
-              <p><span>Brand director - Atho Studio</span></p>
-
-            </div>
-
-          </div>
           {
             imgAtual === 0 ? (
+              <>
+                <div className='people-description'>
+                  <div className='people-img'>
+                    <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
 
-              <div className='descri'>
-                <p>Go further into Planet Earth’s most out-there <br />
-                  playgrounds with technical gear designed for  <br />
-                  mixed terrains and trails. Engineered with highly  <br />
-                  durable yet comfortable fabrics that combine the  <br />
-                  incredible properties of soft touch, sweat-wicking <br />
-                  and breathable materials with the toughness to  <br />
-                  keep going as long as you can. Wild times await.</p>
-              </div>
+                  </div>
+                  <div className='people-name'>
+                    <p>Arthur Medeiros</p>
+                    <p><span>Brand director - Atho Studio</span></p>
+
+                  </div>
+
+                </div>
+                <div className='descri'>
+                  <p>Go further into Planet Earth’s most out-there <br />
+                    playgrounds with technical gear designed for  <br />
+                    mixed terrains and trails. Engineered with highly  <br />
+                    durable yet comfortable fabrics that combine the  <br />
+                    incredible properties of soft touch, sweat-wicking <br />
+                    and breathable materials with the toughness to  <br />
+                    keep going as long as you can. Wild times await.</p>
+                </div>
+              </>
+
+
             ) : imgAtual === 1 ? (
-              <div className='descri'>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br />
-                  Corrupti accusantium asperiores obcaecati est veritatis ducimus nisi, <br />
-                  sed unde voluptatum ratione quod itaque? Sed adipisci itaque quia laborum <br />
-                  blanditiis harum ullam?</p>
-              </div>
+              <>
+                <div className='people-description'>
+                  <div className='people-img'>
+                    <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
+
+                  </div>
+                  <div className='people-name'>
+                    <p>Lucas</p>
+                    <p><span>Brand director - Atho Studio</span></p>
+
+                  </div>
+
+                </div>
+                <div className='descri'>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br />
+                    Corrupti accusantium asperiores obcaecati est veritatis ducimus nisi, <br />
+                    sed unde voluptatum ratione quod itaque? Sed adipisci itaque quia laborum <br />
+                    blanditiis harum ullam?</p>
+                </div>
+              </>
+
             ) :
-              <div className='descri'>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br />
-                  Corrupti accusantium asperiores obcaecati est veritatis ducimus nisi, <br />
-                  sed unde voluptatum ratione quod itaque? Sed adipisci itaque quia laborum <br />
-                  blanditiis harum ullam?</p>
-              </div>
+              <>
+                <div className='people-description'>
+                  <div className='people-img'>
+                    <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
+
+                  </div>
+                  <div className='people-name'>
+                    <p>Icaro</p>
+                    <p><span>Brand director - Atho Studio</span></p>
+
+                  </div>
+
+                </div>
+                <div className='descri'>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br />
+                    Corrupti accusantium asperiores obcaecati est veritatis ducimus nisi, <br />
+                    sed unde voluptatum ratione quod itaque? Sed adipisci itaque quia laborum <br />
+                    blanditiis harum ullam?</p>
+                </div>
+              </>
+
 
 
           }
