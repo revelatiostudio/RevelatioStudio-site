@@ -50,6 +50,19 @@ export default function ProjectsFeedBack() {
           ease: "hop",
         }
       );
+      tl.to([textos, peopleDesc], {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+      })
+      tl.to([textos, peopleDesc], {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        delay: 0.5,
+        ease: "power2.inOut",
+      })
 
 
 
@@ -66,7 +79,6 @@ export default function ProjectsFeedBack() {
     }
 
     if (direction === "left" & imgAtual >= (totalSlides - 1)) {
-      console.log(imgAtual)
 
       gsap.to(images[imgAtual - 1], {
         clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
@@ -75,6 +87,19 @@ export default function ProjectsFeedBack() {
       },
 
       )
+      tl.to([textos, peopleDesc], {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+      })
+      tl.to([textos, peopleDesc], {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        delay: 0.5,
+        ease: "power2.inOut",
+      })
       setTimeout(() => {
         setImgAtual(imgAtual - 1);
       }, 1000)
@@ -82,21 +107,6 @@ export default function ProjectsFeedBack() {
       setValorBarra((prev) => prev / 2);
 
     }
-
-    tl.to([textos, peopleDesc], {
-      y: -20,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.inOut",
-    })
-    tl.to([textos, peopleDesc], {
-      y: 0,
-      opacity: 1,
-      duration: 1.5,
-      delay: 0.5,
-      ease: "power2.inOut",
-    })
-
 
   }
 
