@@ -31,6 +31,7 @@ export default function ProjectsFeedBack() {
   const updateImage = (direction) => {
     const images = [...document.querySelectorAll('.img-project img')];
     const textos = [...document.querySelectorAll('.descri p')];
+    const peopleDesc = [...document.querySelectorAll('.people-description')];
     const tl = gsap.timeline()
 
     let barra = 1;
@@ -81,13 +82,13 @@ export default function ProjectsFeedBack() {
 
     }
 
-    tl.to(textos, {
+    tl.to([textos,peopleDesc], {
       y: -20,
       opacity: 0,
       duration: 1,
       ease: "power2.inOut",
     })
-    tl.to(textos, {
+    tl.to([textos,peopleDesc], {
       y: 0,
       opacity: 1,
       duration: 1.5,
