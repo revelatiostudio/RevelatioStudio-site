@@ -27,6 +27,7 @@ export default function ProjectsFeedBack() {
 
 
 
+
   const updateImage = (direction) => {
     const images = [...document.querySelectorAll('.img-project img')];
     const textos = [...document.querySelectorAll('.descri p')];
@@ -51,19 +52,6 @@ export default function ProjectsFeedBack() {
 
 
 
-      tl.to(textos, {
-        y: -20,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-      })
-      tl.to(textos, {
-        y: 0,
-        opacity: 1,
-        duration: 1.5,
-        delay: 0.5,
-        ease: "power2.inOut",
-      })
 
 
       setTimeout(() => {
@@ -85,11 +73,28 @@ export default function ProjectsFeedBack() {
       },
 
       )
-      setImgAtual(imgAtual - 1);
+      setTimeout(() => {
+        setImgAtual(imgAtual + 1);
+      },1000)
 
       setValorBarra((prev) => prev / 2);
 
     }
+
+    tl.to(textos, {
+      y: -20,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.inOut",
+    })
+    tl.to(textos, {
+      y: 0,
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.5,
+      ease: "power2.inOut",
+    })
+
 
   }
 
