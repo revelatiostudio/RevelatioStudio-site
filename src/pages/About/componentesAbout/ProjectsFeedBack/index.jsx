@@ -20,13 +20,16 @@ export default function ProjectsFeedBack() {
     { id: 3, img: feed3 }
   ]
 
-  const [imgAtual, setImgAtual] = useState(0)
+  const [imgAtual, setImgAtual] = useState(0);
+  const [valorBarra, setValorBarra] = useState(33)
   const totalSlides = 2;
+  
 
 
 
   const updateImage = (direction) => {
     const images = [...document.querySelectorAll('.img-project img')];
+    let barra = 1;
 
     if (direction === "rigth" & imgAtual <= (totalSlides - 1)) {
       console.log(imgAtual)
@@ -43,7 +46,9 @@ export default function ProjectsFeedBack() {
           ease: "hop",
         }
       );
-      setImgAtual(imgAtual + 1)
+      setImgAtual(imgAtual + 1);
+      barra++;
+      setValorBarra((prev) => prev * barra);
 
 
     }
@@ -57,7 +62,8 @@ export default function ProjectsFeedBack() {
       },
 
       )
-      setImgAtual(imgAtual - 1)
+      setImgAtual(imgAtual - 1);
+      setValorBarra((prev) => prev / 2);
 
     }
 
@@ -118,7 +124,10 @@ export default function ProjectsFeedBack() {
               </div>
             ) :
               <div className='descri'>
-                <p>textooooo</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br />
+                  Corrupti accusantium asperiores obcaecati est veritatis ducimus nisi, <br />
+                  sed unde voluptatum ratione quod itaque? Sed adipisci itaque quia laborum <br />
+                  blanditiis harum ullam?</p>
               </div>
 
 
@@ -133,7 +142,7 @@ export default function ProjectsFeedBack() {
 
               }}
                 size="sm" aria-label="Loading..."
-                color="default" value={10} radius='none' minValue={0} maxValue={100} valueLabel={10}
+                color="default" value={valorBarra} radius='none' minValue={0} maxValue={100} valueLabel={10}
               />
 
             </div>
