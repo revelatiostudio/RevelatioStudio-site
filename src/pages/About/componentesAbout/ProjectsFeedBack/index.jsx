@@ -33,7 +33,6 @@ export default function ProjectsFeedBack() {
     const textos = [...document.querySelectorAll('.descri p')];
     const peopleDesc = [...document.querySelectorAll('.people-description')];
     const tl = gsap.timeline()
-
     let barra = 1;
 
     if (direction === "rigth" & imgAtual <= (totalSlides - 1)) {
@@ -66,6 +65,7 @@ export default function ProjectsFeedBack() {
     }
 
     if (direction === "left" & imgAtual >= (totalSlides - 1)) {
+      console.log(imgAtual)
 
       gsap.to(images[imgAtual - 1], {
         clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
@@ -75,7 +75,7 @@ export default function ProjectsFeedBack() {
 
       )
       setTimeout(() => {
-        setImgAtual(imgAtual + 1);
+        setImgAtual(imgAtual - 1);
       }, 1000)
 
       setValorBarra((prev) => prev / 2);
