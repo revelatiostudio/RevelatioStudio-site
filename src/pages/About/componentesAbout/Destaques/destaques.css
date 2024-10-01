@@ -38,7 +38,10 @@
 }
 .category h3{
     width: 100%;
-    max-width:  150px;
+    max-width:150px;
+    font-family: "neue-haas-grotesk-display";
+    font-weight: 500;
+    color: var( --color-gray-200);
  
 }
 .projects{
@@ -52,9 +55,12 @@
     max-width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 17px;
     
 }
 .projects .project-row p{
-    width: 100%;
-    max-width:  150px;
+    width:100%;
+    max-width:150px;
+    font-weight: 500;
+    color: var( --color-gray-800);
 }
