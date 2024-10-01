@@ -2,6 +2,7 @@ import React from 'react'
 import './ambiente.css'
 
 import logo from '../../assets/img/home/logo.svg'
+import logoPreto from '../../assets/img/home/logo_black.svg'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -14,7 +15,7 @@ import ambiente2 from '../../assets/img/home/ambiente/ambiente2.png'
 import ambiente3 from '../../assets/img/home/ambiente/ambiente3.png'
 import ambiente4 from '../../assets/img/home/ambiente/ambiente4.png'
 
-export default function Ambiente() {
+export default function Ambiente({color = 'black'}) {
   const imagens = [
 
     { id: '1', image: ambiente1 },
@@ -27,11 +28,17 @@ export default function Ambiente() {
     { id: '8', image: ambiente4 },
   ]
   return (
-    <section className='container_ambiente'>
+    <section className={`container_ambiente ${color}`}>
       <div className='grid-global'>
         <div className='head'>
           <h1>Nosso Ambiente</h1>
+          { color === 'black' ? 
           <img src={logo} alt='Logo Revelatio' />
+          :
+          <img src={logoPreto} alt='Logo preto Revelatio' />
+
+          }
+          
         </div>
 
         <div className='galeria'>

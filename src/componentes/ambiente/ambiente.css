@@ -3,6 +3,11 @@
     color: var(--color-white);
     padding-top: 10.75rem;
 }
+.container_ambiente.white{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding-top: 10.75rem;
+}
 .head{
     display: flex;
     justify-content: space-between;

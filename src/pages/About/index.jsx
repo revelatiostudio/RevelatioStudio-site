@@ -11,6 +11,7 @@ import RoletaScroll from './componentesAbout/RoletaScroll'
 import Ideias_About from './componentesAbout/Ideias_About'
 import ProjectsFeedBack from './componentesAbout/ProjectsFeedBack'
 import InfinitTimeLine from '../../componentes/InfinitTimeLine'
+import Ambiente from '../../componentes/ambiente/Ambiente'
 
 
 
@@ -44,6 +45,7 @@ export default function About() {
         <Ideias_About/>
         <ProjectsFeedBack/>
         <InfinitTimeLine/>
+        <Ambiente color='white'/>
       
       
     </>
