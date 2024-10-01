@@ -5,6 +5,17 @@
     overflow: hidden;
     position: relative;
 }
+.container-blour{
+  width: 20%;
+  height: 200px;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  z-index: 2;
+  top: 0;
+}
+.container-blour.right{
+ right: 0;
+}
 
 .timeline{
   width: 100%;

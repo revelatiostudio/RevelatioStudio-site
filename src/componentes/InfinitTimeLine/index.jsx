@@ -11,6 +11,8 @@ export default function InfinitTimeLine() {
   const imgsFrames = [frame1, frame2, frame3, frame4, frame5, frame1, frame2, frame3, frame4, frame5]
   return (
     <section className='container-timeline'>
+      <div className='container-blour'></div>
+
       <div className='timeline'>
         {
           imgsFrames.map((frame, index) => (
@@ -30,6 +32,7 @@ export default function InfinitTimeLine() {
 
         }
       </div>
+      <div className='container-blour right'></div>
     </section>
   )
 }
