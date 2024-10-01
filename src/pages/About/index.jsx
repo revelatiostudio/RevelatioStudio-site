@@ -12,6 +12,7 @@ import Ideias_About from './componentesAbout/Ideias_About'
 import ProjectsFeedBack from './componentesAbout/ProjectsFeedBack'
 import InfinitTimeLine from '../../componentes/InfinitTimeLine'
 import Ambiente from '../../componentes/ambiente/Ambiente'
+import Destaques from './componentesAbout/Destaques'
 
 
 
@@ -46,6 +47,7 @@ export default function About() {
         <ProjectsFeedBack/>
         <InfinitTimeLine/>
         <Ambiente color='white'/>
+        <Destaques/>
       
       
     </>
