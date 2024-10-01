@@ -8,32 +8,28 @@ import frame4 from '../../assets/img/about/infinittimeline/frame4.png'
 import frame5 from '../../assets/img/about/infinittimeline/frame5.png'
 
 export default function InfinitTimeLine() {
+  const imgsFrames = [frame1, frame2, frame3, frame4, frame5, frame1, frame2, frame3, frame4, frame5]
   return (
     <section className='container-timeline'>
       <div className='timeline'>
-        <div className='itemLeft item1'><img src={frame1} alt='' /></div>
-        <div className='itemLeft item2'><img src={frame2} alt='' /></div>
-        <div className='itemLeft item3'><img src={frame3} alt='' /></div>
-        <div className='itemLeft item4'><img src={frame4} alt='' /></div>
-        <div className='itemLeft item5'><img src={frame5} alt='' /></div>
-        <div className='itemLeft item6'><img src={frame1} alt='' /></div>
-        <div className='itemLeft item7'><img src={frame2} alt='' /></div>
-        <div className='itemLeft item8'><img src={frame3} alt='' /></div>
-        <div className='itemLeft item9'><img src={frame4} alt='' /></div>
-        <div className='itemLeft item10'><img src={frame5} alt='' /></div>
-      </div>   
+        {
+          imgsFrames.map((frame, index) => (
+            <div className={`itemLeft item${index}`}><img src={frame} alt='' /></div>
+
+          ))
+
+        }
+
+      </div>
       <div className='timeline'>
-        <div className='itemRight item1'><img src={frame1} alt='' /></div>
-        <div className='itemRight item2'><img src={frame2} alt='' /></div>
-        <div className='itemRight item3'><img src={frame3} alt='' /></div>
-        <div className='itemRight item4'><img src={frame4} alt='' /></div>
-        <div className='itemRight item5'><img src={frame5} alt='' /></div>
-        <div className='itemRight item6'><img src={frame1} alt='' /></div>
-        <div className='itemRight item7'><img src={frame2} alt='' /></div>
-        <div className='itemRight item8'><img src={frame3} alt='' /></div>
-        <div className='itemRight item9'><img src={frame4} alt='' /></div>
-        <div className='itemRight item10'><img src={frame5} alt='' /></div>
-      </div>     
+        {
+          imgsFrames.map((frame, index) => (
+            <div className={`itemRight item${index}`}><img src={frame} alt='' /></div>
+
+          ))
+
+        }
+      </div>
     </section>
   )
 }
