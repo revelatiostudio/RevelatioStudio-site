@@ -1,9 +1,15 @@
 import React from 'react'
 import './destaques.css'
 
+import img1 from '../../../../assets/img/home/cases/case1.png'
+import img2 from '../../../../assets/img/home/cases/case2.png'
+import img3 from '../../../../assets/img/home/cases/case3.png'
+
+
+
 export default function Destaques() {
-    const teste = [...document.querySelectorAll('.project-list li')]
-    console.log(teste)
+
+    
     return (
         <section className='container-destaques'>
             <div className='grid-global'>
@@ -29,6 +35,7 @@ export default function Destaques() {
                     <div className='projects'>
                         <div className='project-row'> 
                             <p>Top Design King</p>
+                            <img src={img1} alt='' />
                             <p></p>
                             <p>Top Design King</p>
                             <p>King of The Day</p>
@@ -37,6 +44,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'>
                             <p>Top Design King</p>
+                            <img src={img2} alt='' />
                             <p></p>
                             <p>CSSDA</p>
                             <p>UX</p>
@@ -45,6 +53,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'> 
                             <p>Top Design King</p>
+                            <img src={img3} alt='' />
                             <p></p>
                             <p>Top Design King</p>
                             <p>King of The Day</p>
@@ -53,6 +62,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'> 
                             <p>Top Design King</p>
+                            <img src={img1} alt='' />
                             <p></p>
                             <p>CSSOTD</p>
                             <p>Site of The Day</p>
@@ -61,6 +71,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'> 
                             <p>Top Design King</p>
+                            <img src={img2} alt='' />
                             <p></p>
                             <p>Behance</p>
                             <p>Featured</p>
@@ -69,6 +80,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'> 
                             <p>Top Design King</p>
+                            <img src={img3} alt='' />
                             <p></p>
                             <p>WBDS</p>
                             <p>Featured</p>
@@ -77,6 +89,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'> 
                             <p>Top Design King</p>
+                            <img src={img1} alt='' />
                             <p></p>
                             <p>Design Rush</p>
                             <p>Mention</p>
@@ -85,6 +98,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'> 
                             <p>Top Design King</p>
+                            <img src={img2} alt='' />
                             <p></p>
                             <p>Behance</p>
                             <p>Featured</p>
@@ -93,6 +107,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'> 
                             <p>Top Design King</p>
+                            <img src={img3} alt='' />
                             <p></p>
                             <p>Design Nominees</p>
                             <p>Site of The Day</p>
@@ -101,6 +116,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'> 
                             <p>Top Design King</p>
+                            <img src={img1} alt='' />
                             <p></p>
                             <p>Top Design King</p>
                             <p>King of The Day</p>
@@ -109,6 +125,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'>
                             <p>Top Design King</p>
+                            <img src={img2} alt='' />
                             <p></p>
                             <p>WBDS</p>
                             <p>Mention</p>
@@ -117,6 +134,7 @@ export default function Destaques() {
                         </div>
                         <div className='project-row'>
                             <p>Top Design King</p>
+                            <img src={img3} alt='' />
                             <p></p>
                             <p>WGA</p>
                             <p>Guru of The Month</p>

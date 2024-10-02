@@ -48,6 +48,7 @@ export default function About() {
         <InfinitTimeLine/>
         <Ambiente color='white'/>
         <Destaques/>
+        <Ambiente color='white'/>
       
       
     </>

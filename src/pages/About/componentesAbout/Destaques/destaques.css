@@ -56,8 +56,35 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 17px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    position: relative;
     
 }
+.projects .project-row img{
+    transition: opacity 0.5s ease; 
+    opacity: 0;
+    width: 100%;
+    max-width: 223px;
+    height: 161px;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+.projects .project-row:hover{
+    color: white;
+    background-color: black;
+    
+}
+.project-row:hover img{
+    opacity: 1;
+  
+    
+}
+
 .projects .project-row p{
     width:100%;
     max-width:150px;
