@@ -1,6 +1,8 @@
 import React from 'react'
 import './destaques.css'
 
+import { gsap } from "gsap";
+
 import img1 from '../../../../assets/img/home/cases/case1.png'
 import img2 from '../../../../assets/img/home/cases/case2.png'
 import img3 from '../../../../assets/img/home/cases/case3.png'
@@ -8,8 +10,28 @@ import img3 from '../../../../assets/img/home/cases/case3.png'
 
 
 export default function Destaques() {
+    function trocaImagem(event) {
+        const img = event.currentTarget.querySelector('img')
+        gsap.to(img,
 
-    
+            {
+                clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            }
+        )
+
+    }
+    function saiImagem(event) {
+        const img = event.currentTarget.querySelector('img')
+        gsap.to(img,
+
+            {
+                clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+            }
+        )
+
+    }
+
+
     return (
         <section className='container-destaques'>
             <div className='grid-global'>
@@ -33,7 +55,7 @@ export default function Destaques() {
                     </div>
 
                     <div className='projects'>
-                        <div className='project-row'> 
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img1} alt='' />
                             <p></p>
@@ -42,7 +64,7 @@ export default function Destaques() {
                             <p>Website</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem} >
                             <p>Top Design King</p>
                             <img src={img2} alt='' />
                             <p></p>
@@ -51,7 +73,7 @@ export default function Destaques() {
                             <p>Website</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'> 
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img3} alt='' />
                             <p></p>
@@ -60,7 +82,7 @@ export default function Destaques() {
                             <p>Website</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'> 
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img1} alt='' />
                             <p></p>
@@ -69,7 +91,7 @@ export default function Destaques() {
                             <p>Website</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'> 
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img2} alt='' />
                             <p></p>
@@ -78,7 +100,7 @@ export default function Destaques() {
                             <p>Branding</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'> 
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img3} alt='' />
                             <p></p>
@@ -87,7 +109,7 @@ export default function Destaques() {
                             <p>Branding</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'> 
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img1} alt='' />
                             <p></p>
@@ -96,7 +118,7 @@ export default function Destaques() {
                             <p>Branding</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'> 
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img2} alt='' />
                             <p></p>
@@ -105,7 +127,7 @@ export default function Destaques() {
                             <p>Branding</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'> 
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img3} alt='' />
                             <p></p>
@@ -114,7 +136,7 @@ export default function Destaques() {
                             <p>Website</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'> 
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img1} alt='' />
                             <p></p>
@@ -123,7 +145,7 @@ export default function Destaques() {
                             <p>Website</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img2} alt='' />
                             <p></p>
@@ -132,7 +154,7 @@ export default function Destaques() {
                             <p>Branding</p>
                             <p>2023</p>
                         </div>
-                        <div className='project-row'>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
                             <p>Top Design King</p>
                             <img src={img3} alt='' />
                             <p></p>

@@ -61,8 +61,8 @@
     
 }
 .projects .project-row img{
-    transition: opacity 0.5s ease; 
-    opacity: 0;
+    /* transition: opacity 0.5s ease;  */
+    opacity: 1;
     width: 100%;
     max-width: 223px;
     height: 161px;
@@ -70,6 +70,7 @@
     left: 20%;
     top: 50%;
     transform: translate(-50%, -50%);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
     
 }
 
@@ -79,11 +80,11 @@
     background-color: black;
     
 }
-.project-row:hover img{
+/* .project-row:hover img{
     opacity: 1;
   
     
-}
+} */
 
 .projects .project-row p{
     width:100%;
