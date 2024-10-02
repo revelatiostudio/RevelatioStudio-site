@@ -6,6 +6,7 @@ import './about.css'
 
 
 import about_img from '../../assets/img/home/home_img.jpg'
+import img_blour from '../../assets/img/about/imgBlour.png'
 import Fundadores from './componentesAbout/Fundadores'
 import RoletaScroll from './componentesAbout/RoletaScroll'
 import Ideias_About from './componentesAbout/Ideias_About'
@@ -38,19 +39,21 @@ export default function About() {
         </div>
       </header>
 
-      
-        <Solucoes />
-        <Services />
-        <Fundadores/>
-        <RoletaScroll/>
-        <Ideias_About/>
-        <ProjectsFeedBack/>
-        <InfinitTimeLine/>
-        <Ambiente color='white'/>
-        <Destaques/>
-        <Ambiente color='white'/>
-      
-      
+
+      <Solucoes />
+      <Services />
+      <Fundadores />
+      <RoletaScroll />
+      <Ideias_About />
+      <ProjectsFeedBack />
+      <InfinitTimeLine />
+      <Ambiente color='white' />
+      <Destaques />
+      <section className='blour-image'>
+        <img src={img_blour} alt='imagem com blour' />
+      </section>
+
+
     </>
 
   )

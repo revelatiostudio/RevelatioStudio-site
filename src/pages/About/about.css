@@ -36,3 +36,11 @@
 .img-about img{
     object-position: 50% 27%;
 }
+
+.blour-image{
+    width: 100%;
+    max-width: 100%;
+    height: 35.6875rem;
+    margin-top: 9.875rem;
+
+}
