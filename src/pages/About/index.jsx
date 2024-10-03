@@ -14,6 +14,8 @@ import ProjectsFeedBack from './componentesAbout/ProjectsFeedBack'
 import InfinitTimeLine from '../../componentes/InfinitTimeLine'
 import Ambiente from '../../componentes/ambiente/Ambiente'
 import Destaques from './componentesAbout/Destaques'
+import Principios from './componentesAbout/Principios'
+import BottomHome from '../Home/componentesHome/BottomHome'
 
 
 
@@ -52,6 +54,8 @@ export default function About() {
       <section className='blour-image'>
         <img src={img_blour} alt='imagem com blour' />
       </section>
+      <Principios/>
+      <BottomHome/>
 
 
     </>

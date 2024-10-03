@@ -111,7 +111,7 @@ export default function RoletaScroll() {
                     </div>
 
                     <div className='middle-roulette'>
-                        <div className='container-blour'></div>
+                        <div className='container-blur'></div>
                         {
                             lugares.map((lugar) => (
                                 <div className='country' key={lugar.estado}>
@@ -123,7 +123,7 @@ export default function RoletaScroll() {
                         }
 
 
-                        <div className='container-blour bottom'></div>
+                        <div className='container-blur bottom'></div>
 
 
                     </div>
