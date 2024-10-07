@@ -1,18 +1,25 @@
 import Home from './pages/Home'
 import About from './pages/About'
-import NavBar from './componentes/NavBar'
 import Lenis from '@studio-freight/lenis'
 
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import NavBar from './componentes/NavBar'
 
 
 function App() {
 
+  // const location = useLocation();
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [location.pathname]);
+
   const location = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+
+  let navColor = "white";
+  if(location.pathname === "/about"){
+    navColor = "black"
+  }
 
 
   const lenis = new Lenis()
@@ -27,6 +34,11 @@ function App() {
 
   return (
     <>
+    <div className='grid-global'>
+    <NavBar color={navColor}/>
+
+    </div>
+    
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

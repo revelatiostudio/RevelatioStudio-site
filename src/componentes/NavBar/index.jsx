@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './navbar.css'
+import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 import logo_white from '../../assets/img/home/logo.svg'
 import logo_black from '../../assets/img/home/logo_black.svg'
@@ -8,41 +10,57 @@ import menu_img from '../../assets/img/menu-img.jpg'
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 
-export default function NavBar({ color }) {
+import { motion } from "framer-motion"
+
+
+export default function NavBar({ color}) {
 
     const tl = useRef();
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
- 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const linksPaginas = [
+        { path: '/', pagina: 'Home', numero: '01' },
+        { path: '/about', pagina: 'Estúdio', numero: '02' },
+        { path: '/', pagina: 'Cases', numero: '03' },
+        { path: '/', pagina: 'Contato', numero: '04' },
+        { path: '/', pagina: 'Playground', numero: '05' }
+    ]
+
 
     function verificaMenu() {
         setIsMenuOpen(!isMenuOpen)
+        console.log(isMenuOpen)
     }
+    gsap.registerPlugin(useGSAP);
 
     useGSAP(() => {
-        gsap.set([".link-menu p", ".link-menu h1"], {y: 85});
+        gsap.set([".link-menu p", ".link-menu h1"], { y: 85 });
 
-        tl.current = gsap.timeline({paused: true})
-        .to(".menu-overlay", {
-            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-            ease: "power4.inOut",
-            duration: 1.25
-        }).to([".link-menu p", ".link-menu h1"],{
-            y: 0,
-            duration: 1,
-            stagger: 0.1,
-            ease: "power4.inOut",
-            delay: -0.75,
-        })
+        tl.current = gsap.timeline({ paused: true })
+            .to(".menu-overlay", {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                ease: "power4.inOut",
+                duration: 1.25
+            }).to([".link-menu p", ".link-menu h1"], {
+                y: 0,
+                duration: 1,
+                stagger: 0.1,
+                ease: "power4.inOut",
+                delay: -0.75,
+            })
 
     })
 
     useEffect(() => {
-        if(isMenuOpen){
+        if (isMenuOpen) {
             tl.current.play();
-        }else {
+        } else {
             tl.current.reverse();
         }
     }, [isMenuOpen])
+
+    
 
     return (
         <>
@@ -108,26 +126,24 @@ export default function NavBar({ color }) {
 
                         </div>
                         <div className='links-menu'>
-                            <div className='link-menu'>
-                                <p>[01]</p>
-                                <h1>Home</h1>
-                            </div>
-                            <div className='link-menu'>
-                                <p>[02]</p>
-                                <h1>Estúdio</h1>
-                            </div>
-                            <div className='link-menu'>
-                                <p>[03]</p>
-                                <h1>Cases</h1>
-                            </div>
-                            <div className='link-menu'>
-                                <p>[04]</p>
-                                <h1>Contato</h1>
-                            </div>
-                            <div className='link-menu'>
-                                <p>[05]</p>
-                                <h1>Playground</h1>
-                            </div>
+
+                            {
+                                linksPaginas.map((pg, index) => (
+                                    <motion.div
+                                        style={{ filter: "blur(2px)" }}
+                                        whileHover={{ x: -40, filter:"blur(0px)" }}
+                                        transition={{ ease: "easeOut" }}
+                                    >
+
+                                        <div key={pg.numero} className='link-menu' onClick={verificaMenu}>
+                                            <p>[{pg.numero}]</p>
+                                            <Link to={pg.path}><h1>{pg.pagina}</h1></Link>
+                                        </div>
+
+                                    </motion.div>
+
+                                ))
+                            }
 
                         </div>
 
@@ -163,9 +179,6 @@ export default function NavBar({ color }) {
                     </div>
 
                 </div>
-
-
-
 
             </div>
         </>

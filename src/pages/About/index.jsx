@@ -24,8 +24,8 @@ export default function About() {
     <>
       <header>
         <div className='grid-global'>
-
-          <NavBar color='black' />
+{/* 
+          <NavBar color='black' /> */}
           <div className='about-us'>
             <h1>Sobre nós</h1>
             <div className='about-right'>

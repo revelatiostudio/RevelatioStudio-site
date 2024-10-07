@@ -6,13 +6,14 @@
 /* Nav Bar branca */
 .navbar {
     z-index: 5;
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 120rem;
     height: 46px;
     align-items: center;
+    left: 0;
     color: var(--navbar-color);
 
 }
@@ -63,7 +64,7 @@
 }
 
 .branding {
-    margin-top: 55px;
+    margin-top: 120px;
     width: 100%;
     max-width: 100%;
     display: flex;
