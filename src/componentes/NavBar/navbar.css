@@ -58,7 +58,7 @@
     width: 100vw;
     height: 100vh;
     background: var(--color-black);
-    z-index: 10;
+    z-index: 4;
     display: flex;
     clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }

@@ -90,7 +90,7 @@ export default function NavBar({ color}) {
             </nav>
             <div className='menu-overlay'>
                 <div className='grid-global'>
-                    <nav className={`navbar ${color}`}>
+                    {/* <nav className={`navbar ${color}`}>
 
                         <div className='logo'>
                             {color == 'white' ?
@@ -113,7 +113,7 @@ export default function NavBar({ color}) {
                             <p>[Menu]</p>
                         </div>
 
-                    </nav>
+                    </nav> */}
                     <div className='branding'>
                         <h2>Trabalhamos <br />com soluções <br /> de</h2>
                         <h2 className='p1'>Branding <br /> & Tecnologia</h2>
