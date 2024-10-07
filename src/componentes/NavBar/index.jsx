@@ -19,14 +19,14 @@ export default function NavBar({ color }) {
     }
 
     useGSAP(() => {
-        // gsap.set([".link p", ".link h1"], {y: 85});
+        gsap.set([".link-menu p", ".link-menu h1"], {y: 85});
 
         tl.current = gsap.timeline({paused: true})
         .to(".menu-overlay", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             ease: "power4.inOut",
             duration: 1.25
-        }).to([".link p", ".link h1"],{
+        }).to([".link-menu p", ".link-menu h1"],{
             y: 0,
             duration: 1,
             stagger: 0.1,
