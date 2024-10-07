@@ -1,11 +1,48 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './navbar.css'
 
 import logo_white from '../../assets/img/home/logo.svg'
 import logo_black from '../../assets/img/home/logo_black.svg'
 import menu_img from '../../assets/img/menu-img.jpg'
 
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+
 export default function NavBar({ color }) {
+
+    const tl = useRef();
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+ 
+
+    function verificaMenu() {
+        setIsMenuOpen(!isMenuOpen)
+    }
+
+    useGSAP(() => {
+        gsap.set([".link p", ".link h1"], {y: 85});
+
+        tl.current = gsap.timeline({paused: true})
+        .to(".menu-overlay", {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            ease: "power4.inOut",
+            duration: 1.25
+        }).to([".link p", ".link h1"],{
+            y: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: "power4.inOut",
+            delay: -0.75,
+        })
+
+    })
+
+    useEffect(() => {
+        if(isMenuOpen){
+            tl.current.play();
+        }else {
+            tl.current.reverse();
+        }
+    }, [isMenuOpen])
 
     return (
         <>
@@ -28,7 +65,7 @@ export default function NavBar({ color }) {
                     <p>PT|EN</p>
                 </div>
 
-                <div>
+                <div className='nav-menu' onClick={verificaMenu}>
                     <p>[Menu]</p>
                 </div>
 
@@ -54,7 +91,7 @@ export default function NavBar({ color }) {
                             <p>PT|EN</p>
                         </div>
 
-                        <div>
+                        <div className='nav-menu' onClick={verificaMenu}>
                             <p>[Menu]</p>
                         </div>
 
