@@ -19,7 +19,7 @@ export default function NavBar({ color }) {
     }
 
     useGSAP(() => {
-        gsap.set([".link p", ".link h1"], {y: 85});
+        // gsap.set([".link p", ".link h1"], {y: 85});
 
         tl.current = gsap.timeline({paused: true})
         .to(".menu-overlay", {
@@ -107,24 +107,24 @@ export default function NavBar({ color }) {
                             <img src={menu_img} alt='' />
 
                         </div>
-                        <div className='links'>
-                            <div className='link'>
+                        <div className='links-menu'>
+                            <div className='link-menu'>
                                 <p>[01]</p>
                                 <h1>Home</h1>
                             </div>
-                            <div className='link'>
+                            <div className='link-menu'>
                                 <p>[02]</p>
                                 <h1>Estúdio</h1>
                             </div>
-                            <div className='link'>
+                            <div className='link-menu'>
                                 <p>[03]</p>
                                 <h1>Cases</h1>
                             </div>
-                            <div className='link'>
+                            <div className='link-menu'>
                                 <p>[04]</p>
                                 <h1>Contato</h1>
                             </div>
-                            <div className='link'>
+                            <div className='link-menu'>
                                 <p>[05]</p>
                                 <h1>Playground</h1>
                             </div>
@@ -146,11 +146,6 @@ export default function NavBar({ color }) {
                             </div>
 
                         </div>
-
-                        <h3>[ NOSSO ESTÚDIO ]</h3>
-                        <h3>[ NOSSO ESTÚDIO ]</h3>
-                        <h3>[ NOSSO ESTÚDIO ]</h3>
-
 
                         <div className='right_part'>
                             <div className='time_text'>
