@@ -13,7 +13,7 @@ import { useGSAP } from '@gsap/react';
 import { motion } from "framer-motion"
 
 
-export default function NavBar({ color}) {
+export default function NavBar({ color }) {
 
     const tl = useRef();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,34 +60,38 @@ export default function NavBar({ color}) {
         }
     }, [isMenuOpen])
 
-    
+
 
     return (
         <>
-            <nav className={`navbar ${color}`}>
+            <div className='grid-global'>
+                <nav className={`navbar ${color}`}>
 
-                <div className='logo'>
-                    {color == 'white' ?
-                        <a href='/'> <img src={logo_white} alt='' /></a>
-                        :
-                        <a href='/'> <img src={logo_black} alt='' /></a>
-                    }
+                    <div className='logo'>
+                        {color == 'white' ?
+                            <a href='/'> <img src={logo_white} alt='' /></a>
+                            :
+                            <a href='/'> <img src={logo_black} alt='' /></a>
+                        }
 
-                </div>
+                    </div>
 
-                <div>
-                    <p>Revelamos o âmago dos negócios.</p>
-                </div>
+                    <div>
+                        <p>Revelamos o âmago dos negócios.</p>
+                    </div>
 
-                <div>
-                    <p>PT|EN</p>
-                </div>
+                    <div>
+                        <p>PT|EN</p>
+                    </div>
 
-                <div className='nav-menu' onClick={verificaMenu}>
-                    <p>[Menu]</p>
-                </div>
+                    <div className='nav-menu' onClick={verificaMenu}>
+                        <p>[Menu]</p>
+                    </div>
 
-            </nav>
+                </nav>
+
+            </div>
+
             <div className='menu-overlay'>
                 <div className='grid-global'>
                     {/* <nav className={`navbar ${color}`}>
@@ -131,7 +135,7 @@ export default function NavBar({ color}) {
                                 linksPaginas.map((pg, index) => (
                                     <motion.div
                                         style={{ filter: "blur(2px)" }}
-                                        whileHover={{ x: -40, filter:"blur(0px)" }}
+                                        whileHover={{ x: -40, filter: "blur(0px)" }}
                                         transition={{ ease: "easeOut" }}
                                     >
 

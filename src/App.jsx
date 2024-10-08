@@ -36,7 +36,6 @@ function App() {
     <>
     <div className='grid-global'>
     <NavBar color={navColor}/>
-
     </div>
     
       <Routes>
