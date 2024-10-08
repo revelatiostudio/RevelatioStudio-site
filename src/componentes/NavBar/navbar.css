@@ -17,6 +17,16 @@
     color: var(--navbar-color);
 
 }
+.navbar-menu{
+    z-index: 9;
+    color: var(--color-gray-900);
+    position: fixed;
+    max-width: 116.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0px 30px;
+
+}
 .nav-menu{
     cursor: pointer;
 }
@@ -58,7 +68,7 @@
     width: 100vw;
     height: 100vh;
     background: var(--color-black);
-    z-index: 4;
+    z-index: 6;
     display: flex;
     clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }
