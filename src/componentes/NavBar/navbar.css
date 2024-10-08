@@ -132,6 +132,7 @@
     transition: color 0.5s ease; 
     color: var(--color-gray-600); 
     position: relative;
+    height: 100px;
 }
 .links-menu .link-menu img {
     position: absolute;
@@ -140,6 +141,7 @@
     height: 45px;
     opacity: 0;
     transition: opacity 0.5s ease-out;
+    transform: translate(-50%, -50%);
 
 }
 .links-menu .link-menu:hover{
