@@ -121,11 +121,25 @@
     gap: 22px;
     transition: color 0.5s ease; 
     color: var(--color-gray-600); 
+    position: relative;
+}
+.links-menu .link-menu img {
+    position: absolute;
+    right: 300px;
+    width: 52px;
+    height: 45px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+
 }
 .links-menu .link-menu:hover{
     color: white;
 
 }
+.links-menu .link-menu:hover img{
+    opacity: 1;
+}
+
 .link-menu{
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }

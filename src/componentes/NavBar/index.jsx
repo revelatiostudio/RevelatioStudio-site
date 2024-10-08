@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import logo_white from '../../assets/img/home/logo.svg'
 import logo_black from '../../assets/img/home/logo_black.svg'
 import menu_img from '../../assets/img/menu-img.jpg'
+import seta from '../../assets/img/seta-menu.svg'
 
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
@@ -142,6 +143,13 @@ export default function NavBar({ color }) {
                                         <div key={pg.numero} className='link-menu' onClick={verificaMenu}>
                                             <p>[{pg.numero}]</p>
                                             <Link to={pg.path}><h1>{pg.pagina}</h1></Link>
+                                            <Link to={pg.path}> <img src={seta} alt='' /></Link>
+                                            {/* <motion.img
+                                                src={seta}
+                                                initial={{ opacity: 0 }} 
+                                                whileHover={{ opacity: 1 }}
+                                            /> */}
+
                                         </div>
 
                                     </motion.div>
