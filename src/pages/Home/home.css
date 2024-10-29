@@ -97,9 +97,17 @@
 /* responsivo medias */
 
 @media(max-width: 1400px) {
-    /* home */
     .img_revelatio{
         top: 29.375rem
+    }
+
+}
+@media(max-width: 1280px) {
+    .middle{
+        top: 20rem
+    }
+    .img_revelatio{
+        top: 23rem;
     }
 
 }
