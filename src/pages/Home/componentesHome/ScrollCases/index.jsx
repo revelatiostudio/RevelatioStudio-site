@@ -56,7 +56,7 @@ export default function ScrollCases() {
             });
           });
 
-          mm.add('(mix-width: 1920px)', () => {
+          mm.add('(max-width: 1920px)', () => {
             cases.forEach((a) => {
               gsap.to(a, {
                 xPercent: gsap.utils.random(10, 70), 
