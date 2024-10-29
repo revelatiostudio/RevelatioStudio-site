@@ -183,6 +183,12 @@
 }
 
 @media(max-width: 1200px) {
+    .herofirst h1{
+        font-size: 67px;
+    }
+    .herosecond h1{
+        font-size: 67px;
+    }
 
 }
 

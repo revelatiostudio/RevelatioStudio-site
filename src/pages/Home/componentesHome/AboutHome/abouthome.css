@@ -87,6 +87,10 @@
 }
 
 @media(max-width: 1200px) {
+    .container_about h1{
+        font-size: 40px;
+
+    }
 
 }
 

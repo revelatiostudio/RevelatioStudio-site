@@ -126,6 +126,9 @@
 }
 
 @media(max-width: 1200px) {
+    .cases-scroll h1{
+        font-size: 85px;
+    }
 
 }
 

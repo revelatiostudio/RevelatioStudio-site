@@ -113,6 +113,10 @@
 }
 
 @media(max-width: 1200px) {
+    .img_revelatio{
+        top: 30rem;
+        padding-top: 0;
+    }
 
 }
 

@@ -18,6 +18,7 @@ export default function ScrollCases() {
 
 
     useGSAP(() => {
+        let mm = gsap.matchMedia();
         const tam = window.innerHeight;
         gsap.set('.case-1', {
             y: 263
@@ -47,16 +48,23 @@ export default function ScrollCases() {
             }, 0)
         })
 
+        mm.add('(max-width: 1200px)', () => {
+            cases.forEach((a) => {
+              gsap.to(a, {
+                xPercent: gsap.utils.random(60, 20),
+              });
+            });
+          });
 
-        cases.forEach((a) => {
-            gsap.to(a, {
-                xPercent: gsap.utils.random(75, 10),
-
-
-            })
-
-
-        })
+          mm.add('(mix-width: 1920px)', () => {
+            cases.forEach((a) => {
+              gsap.to(a, {
+                xPercent: gsap.utils.random(10, 70), 
+              });
+            });
+          });
+      
+          return () => mm.revert();
 
 
     })
