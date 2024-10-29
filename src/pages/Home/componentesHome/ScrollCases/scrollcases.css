@@ -3,7 +3,7 @@
 
 .cases-scroll {
     width: 100%;
-    height: 55rem;
+    height: 100vh;
     margin-top: 11.4375rem;
     position: relative;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -84,7 +84,7 @@
     position: absolute;
     width: 100%;
     z-index: 4;
-    bottom: 0;
+    bottom: 25px;
     justify-content: space-between;
     align-items: center;
 
@@ -103,3 +103,23 @@
 .see-cases .all-cases{
     border-bottom: 1px var(--color-gray-100) solid;
 }
+
+@media(max-width: 1400px) {
+    .overlay-blur{
+        height: 16.4375rem;
+    }
+    
+
+}
+
+@media(max-width: 1200px) {
+
+}
+
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
