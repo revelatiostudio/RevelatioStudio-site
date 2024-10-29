@@ -18,6 +18,7 @@ export default function ScrollCases() {
 
 
     useGSAP(() => {
+        const tam = window.innerHeight;
         gsap.set('.case-1', {
             y: 263
         })
@@ -42,9 +43,10 @@ export default function ScrollCases() {
 
         cases.forEach((a) => {
             tl.to(a, {
-                y: -1300,
+                y: tam <= 650 ? -1400 : -1300,
             }, 0)
         })
+
 
         cases.forEach((a) => {
             gsap.to(a, {
