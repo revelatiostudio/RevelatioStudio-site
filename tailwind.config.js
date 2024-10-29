@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const { nextui, colors } = require("@nextui-org/react");
+import { nextui, colors } from "@nextui-org/react";
 export default {
   content: [
     "./index.html",
