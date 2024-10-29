@@ -168,3 +168,28 @@
     z-index: 1;
     opacity: 1;
 }
+
+/* responsivo medias */
+
+@media(max-width: 1400px) {
+    .herofirst h1{
+        font-size: 80px;
+    }   
+    .herosecond h1{
+        font-size: 80px;
+    }
+    
+
+}
+
+@media(max-width: 1200px) {
+
+}
+
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}

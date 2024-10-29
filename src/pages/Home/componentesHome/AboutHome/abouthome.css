@@ -61,3 +61,29 @@
 .about_text .text_white{
     color: var(--color-white);
 }
+
+
+
+/* responsivo medias */
+
+@media(max-width: 1400px) {
+    /* home */
+    .container_about h1{
+        font-size: 55px;
+
+    }
+    
+
+}
+
+@media(max-width: 1200px) {
+
+}
+
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
