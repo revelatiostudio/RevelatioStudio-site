@@ -94,4 +94,26 @@
    object-fit: contain;
 }
 
+/* responsivo medias */
+
+@media(max-width: 1400px) {
+    /* home */
+    .img_revelatio{
+        top: 29.375rem
+    }
+
+}
+
+@media(max-width: 1200px) {
+
+}
+
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
+
 
