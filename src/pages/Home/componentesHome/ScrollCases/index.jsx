@@ -50,21 +50,28 @@ export default function ScrollCases() {
 
         mm.add('(max-width: 1200px)', () => {
             cases.forEach((a) => {
-              gsap.to(a, {
-                xPercent: gsap.utils.random(60, 20),
-              });
+                gsap.to(a, {
+                    xPercent: gsap.utils.random(60, 20),
+                });
             });
-          });
+        });
 
-          mm.add('(max-width: 1920px)', () => {
+        mm.add('(max-width: 1920px)', () => {
             cases.forEach((a) => {
-              gsap.to(a, {
-                xPercent: gsap.utils.random(10, 70), 
-              });
+                gsap.to(a, {
+                    xPercent: gsap.utils.random(10, 70),
+                });
             });
-          });
-      
-          return () => mm.revert();
+        });
+        mm.add('(max-width: 800px)', () => {
+            cases.forEach((a) => {
+                gsap.to(a, {
+                    xPercent: gsap.utils.random(10, 50),
+                });
+            });
+        });
+
+        return () => mm.revert();
 
 
     })

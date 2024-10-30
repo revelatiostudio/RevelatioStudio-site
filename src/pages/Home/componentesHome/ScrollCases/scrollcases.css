@@ -132,7 +132,18 @@
 
 }
 
-@media(max-width: 991px) {}
+@media(max-width: 991px) {
+    .cases-scroll h1{
+        font-size: 60px;
+    }
+    .case-1 img{
+        width: 20rem;
+        height: 16rem;
+    }
+    .project{
+        max-width: 20rem;
+    }
+}
 
 @media(max-width: 768px) {}
 
