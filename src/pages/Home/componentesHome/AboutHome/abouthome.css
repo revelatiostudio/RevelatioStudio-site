@@ -112,7 +112,17 @@
 
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .container_about h1{
+        font-size: 30px;
+    }
+    .first_text span{
+        margin-right: 3.75rem;
+    }
+    .first_text span:first-child {
+        margin-left: 3.75rem;
+    }
+}
 
 @media(max-width: 600px) {
     .first_text span{
