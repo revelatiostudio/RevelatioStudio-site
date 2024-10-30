@@ -96,10 +96,10 @@
 
 @media(max-width: 991px) {
     .about_home{
-        padding-top: 100px;
+        padding-top: 6.25rem;
     }
     .container_about{
-        margin-top: 130px;
+        margin-top: 8.125rem;
     }
     .container_about h1{
         font-size: 20px;
