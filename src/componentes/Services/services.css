@@ -89,11 +89,31 @@
     .text_solutions p{
         font-size: 18px;
     }
+    .images{
+        max-width: 16rem;
+        height: 10rem;
+    }
 
 }
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .images_services .lista_images h1{
+        font-size: 60px;
+    }
+    .lista_images.active .images{
+        max-width: 14rem;
+        height: 8rem;
+    }
+    .text_solutions p{
+        font-size: 14px;
+    }
+    .images{
+        max-width: 14rem;
+        height: 8rem;
+    }
+
+}
 
 @media(max-width: 480px) {}
