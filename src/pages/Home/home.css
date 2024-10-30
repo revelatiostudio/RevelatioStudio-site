@@ -118,6 +118,12 @@
     }
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .home {
+        width: 100vw;
+        height: 90vh;
+    }
+   
+}
 
 
