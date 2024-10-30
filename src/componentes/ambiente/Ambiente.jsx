@@ -50,6 +50,11 @@ export default function Ambiente({color = 'black'}) {
             pagination={{
               clickable: true,
             }}
+            breakpoints = {{
+              800: {
+                slidesPerView: 2,
+              }
+            }}
             
           >
             

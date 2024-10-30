@@ -31,6 +31,8 @@
     height: 800px;
 }
 
+/* responsivo medias */
+
 @media(max-width: 1440px) {
     .galeria img{
         width:23.1875rem;
@@ -38,3 +40,17 @@
     }
   
 }
+
+@media(max-width: 1280px) {}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
+
+
