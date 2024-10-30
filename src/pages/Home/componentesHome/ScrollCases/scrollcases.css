@@ -147,6 +147,18 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .cases-scroll h1{
+        font-size: 40px;
+    }
+    .case-1 img{
+        width: 16rem;
+        height: 12rem;
+    }
+    .project{
+        max-width: 16rem;
+    }
+
+}
 
 @media(max-width: 480px) {}
