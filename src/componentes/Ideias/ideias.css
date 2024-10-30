@@ -127,7 +127,11 @@
     }
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .options-list.options p{
+        text-indent: -10px;
+    }
+}
 
 @media(max-width: 600px) {
     .options-list.options p{
