@@ -53,6 +53,9 @@ export default function Ambiente({color = 'black'}) {
             breakpoints = {{
               800: {
                 slidesPerView: 2,
+              },
+              801:{
+                slidesPerView: 3.5
               }
             }}
             
