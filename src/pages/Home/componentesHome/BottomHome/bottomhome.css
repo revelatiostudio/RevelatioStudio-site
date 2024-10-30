@@ -7,6 +7,7 @@
 
 /* hero */
 .hero_bottom{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -14,9 +15,6 @@
 /* parte esqueda hero */
 .left_bottom{
     width: 50%;
-}
-.left_bottom p{
-    
 }
 .hero_bottom span{
     color: var(--color-gray-800);
@@ -98,6 +96,17 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .container_links{
+        padding-left: 3.125rem;
+    }
+    .social{
+        margin-left: 6rem;
+    }
+    .left_bottom img{
+        width: 16rem;
+        height: 10rem;
+    }
+}
 
 @media(max-width: 480px) {}
