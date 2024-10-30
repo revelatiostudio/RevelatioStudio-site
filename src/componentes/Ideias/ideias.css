@@ -104,4 +104,34 @@
 
 }
 
+/* responsivo medias */
+
+@media(max-width: 1400px) {}
+
+@media(max-width: 1280px) {}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {
+    .container_ideias{
+        padding-top: 10rem;
+    }
+    .sections{
+        height: 6.25rem;
+        padding-top: 1.5625rem;
+    }
+    .sections a{
+        font-size: 15px;
+    }
+    .options-list.options p{
+        font-size: 11px;
+    }
+}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
+
 
