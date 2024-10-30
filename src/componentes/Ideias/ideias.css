@@ -58,7 +58,6 @@
     font-size: 16px;
     line-height: 120%;
 
-
 }
 
 .options span {
@@ -130,7 +129,26 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .options-list.options p{
+        font-size: 9px;
+        text-indent: -10px;
+    }
+    /* .options-list.options{
+        padding-left: 10px;
+    } */
+    .options-list{
+        padding-left: 1.25rem;
+    }
+    .options{
+        width: 50%;
+    }
+    .sections{
+        height: 6rem;
+        padding-top: 1rem;
+    }
+
+}
 
 @media(max-width: 480px) {}
 
