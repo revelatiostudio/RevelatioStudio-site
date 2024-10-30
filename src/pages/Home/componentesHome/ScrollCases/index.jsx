@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './scrollcases.css'
 import case1 from '../../../../assets/img/home/cases/case1.png'
 import case2 from '../../../../assets/img/home/cases/case2.png'
@@ -15,6 +15,8 @@ import throttle from 'lodash.throttle';
 export default function ScrollCases() {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
     const [scrolll, setScroll] = useState(0);
+    const caseScroll = useRef(null);
+    const imgTam = useRef(null)
 
 
     useGSAP(() => {
@@ -30,12 +32,15 @@ export default function ScrollCases() {
         }, 200);  // Atualiza no máximo a cada 100ms
 
         const cases = [...document.querySelectorAll('.case-1')];
+        const container = caseScroll.current;
+        const imgHeigth = imgTam.current.offsetHeight
+        console.log(imgHeigth)
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: '.cases-scroll',
+                trigger: container,
                 start: '-20px top',
                 endTrigger: 'overlay-blur bottom',
-                end: 'bottom top',
+                end: () => "+=" + container.offsetHeight * 2,
                 scrub: 0.5,
                 pin: true,
                 onUpdate: updateProgress
@@ -44,7 +49,8 @@ export default function ScrollCases() {
 
         cases.forEach((a) => {
             tl.to(a, {
-                y: tam <= 650 ? -1400 : -1300,
+                //y: tam <= 650 ? -1400 : -1300,
+                y: -((imgHeigth) * 5)
             }, 0)
         })
 
@@ -78,7 +84,7 @@ export default function ScrollCases() {
 
     return (
         <div className='grid-global'>
-            <section className='cases-scroll'>
+            <section className='cases-scroll' ref={caseScroll}>
 
                 <div className='middle-text'>
                     <h1>Nossos Cases</h1>
@@ -101,7 +107,7 @@ export default function ScrollCases() {
                 </div>
 
                 <div className='case-1'>
-                    <img src={case1} alt='' />
+                    <img src={case1} alt='' ref={imgTam} />
                     <div className='project'>
                         <div className='project-name'>
                             <p>Nome do projeto</p>
