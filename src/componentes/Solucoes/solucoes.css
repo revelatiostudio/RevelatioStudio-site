@@ -209,6 +209,10 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .texts_studio{
+        padding-right: 1.25rem;
+    }
+}
 
 @media(max-width: 480px) {}
