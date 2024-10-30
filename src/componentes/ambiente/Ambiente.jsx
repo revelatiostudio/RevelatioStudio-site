@@ -54,6 +54,9 @@ export default function Ambiente({color = 'black'}) {
               800: {
                 slidesPerView: 2,
               },
+              600: {
+                slidesPerView: 2,
+              },
               801:{
                 slidesPerView: 3.5
               }
