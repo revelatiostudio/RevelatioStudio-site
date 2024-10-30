@@ -21,8 +21,7 @@ export default function Home() {
       <section className='home'>
         <img src={homeImg} alt='' />
         <div className='grid-global'>
-          {/* <NavBar color='white'/> */}
-
+          <div className='container-home'>
           <div className='middle'>
             <div className='left_part'>
 
@@ -55,6 +54,8 @@ export default function Home() {
 
           <div className='img_revelatio'>
             <img src={revelatio} alt='' />
+
+          </div>
 
           </div>
 
