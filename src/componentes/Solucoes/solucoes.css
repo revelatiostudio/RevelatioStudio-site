@@ -146,6 +146,9 @@
     line-height: 140%;
 
 }
+.studio_left.studio-res{
+    display: none;
+}
 
 .studio_img {
     width: 100%;
@@ -183,11 +186,21 @@
 }
 
 @media(max-width: 1200px) {
+    .herosecond{
+        margin: 40px 0;
+    }
     .herofirst h1{
-        font-size: 67px;
+        font-size: 45px;
     }
     .herosecond h1{
-        font-size: 67px;
+        font-size: 45px;
+    }
+    .studio_left{
+        display: none;
+    }
+    .studio_left.studio-res{
+        display: block;
+        padding-top: 40px;
     }
 
 }

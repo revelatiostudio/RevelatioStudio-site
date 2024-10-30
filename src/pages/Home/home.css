@@ -84,9 +84,10 @@
     display: flex;
     justify-content: center;
     border-top: 1px var(--color-gray-200) solid;
-    padding-top: 40px;
-    
+    padding-top: 40px;    
 }
+
+
 
 .img_revelatio img{
    width: 100%;
@@ -120,7 +121,12 @@
 
 }
 
-@media(max-width: 991px) {}
+@media(max-width: 991px) {
+    .middle{
+        top: 22rem
+    }
+
+}
 
 @media(max-width: 768px) {}
 

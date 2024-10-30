@@ -67,6 +67,17 @@ export default function Solucoes() {
                             <p>que entendem que esse é o momento </p>
                             <p>para mostrar pro mundo ao que vieram. </p>
 
+                            
+                        <div className='studio_left studio-res'>
+                            <p className='p1'>Temos voracidade criativa e estratégica,</p>
+                            <p>concebendo cada entrega de modo único,</p>
+                            <p>entendendo a fundo as singularidades e</p>
+                            <p>necessidades, revelando e dando luz à</p>
+                            <p>propósito, sentido e resultado para as</p>
+                            <p>mais diferentes empresas e modelos de</p>
+                            <p>negócios.</p>
+                        </div>
+
                             <div className='seecases'>
                                 <a href=''>Ver todos os cases <span>↗</span></a>
                             </div>
