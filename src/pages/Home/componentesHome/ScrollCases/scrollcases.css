@@ -20,9 +20,11 @@
 }
 
 .middle-text {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
+    text-align: center;
     transform: translate(-50%, -50%);
     z-index: -1;
 }
