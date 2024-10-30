@@ -130,7 +130,15 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+
+    .middle .left_part p{
+        font-size: 14px;
+    }
+    .middle .right_part p {
+        font-size: 14px;
+    }
+}
 
 @media(max-width: 480px) {}
 
