@@ -114,6 +114,34 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .first_text span{
+        margin-right: 3.75rem;
+    }
+    .first_text span:first-child {
+        margin-left: 3.75rem;
+    }
+    .about_home{
+        padding-top: 3rem;
+    }
+    .about_text p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .text_ladder .p1{
+        padding-top: 1.25rem;
+    }
+    .text_ladder .p2{
+        padding-top: 40px;
+    }
+    .text_ladder .p3{
+        padding-top: 3.75rem;
+        padding-bottom: 1.25rem;
+    }
+    .spacing{
+        margin-bottom: 0.625rem;
+    }
+}
 
 @media(max-width: 480px) {}
