@@ -226,7 +226,7 @@
 
 @media(max-width: 600px) {
     .herosecond{
-        padding-top: 20px;
+        margin: 20px 0;
     }
     .herofirst h1{
         font-size: 30px;
