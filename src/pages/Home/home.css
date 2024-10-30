@@ -123,6 +123,12 @@
         width: 100vw;
         height: 90vh;
     }
+    .middle .left_part p{
+        font-size: 10px;
+    }
+    .middle .right_part p {
+        font-size: 10px;
+    }
    
 }
 

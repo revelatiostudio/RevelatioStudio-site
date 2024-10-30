@@ -258,3 +258,22 @@
     font-weight: 450;
 
 }
+
+/* responsivo medias */
+
+@media(max-width: 1400px) {}
+@media(max-width: 1280px) {}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {
+    .pt-br{
+        display: none;
+    }
+}

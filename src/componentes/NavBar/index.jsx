@@ -81,7 +81,7 @@ export default function NavBar({ color }) {
                         <p>Revelamos o âmago dos negócios.</p>
                     </div>
 
-                    <div>
+                    <div className='pt-br'>
                         <p>PT|EN</p>
                     </div>
 
