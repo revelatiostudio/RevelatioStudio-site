@@ -54,10 +54,12 @@ export default function Solucoes() {
 
                     </div>
                 </div>
+                <div className='border-solucoes-top'></div>
                 <div className='herosecond'>
                     <h1>Branding</h1>
                     <h1>& Tecnologia</h1>
                 </div>
+                <div className='border-solucoes-bottom'></div>
                 <div className='herofinal'>
 
                     <div className='texts_studio'>
