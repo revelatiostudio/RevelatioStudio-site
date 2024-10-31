@@ -173,4 +173,13 @@
 
 }
 
+@media(max-width:360px){
+    .options-list {
+        padding-left: 0;
+    }
+    .sections{
+        gap: 0.9375rem;
+    }
+}
+
 
