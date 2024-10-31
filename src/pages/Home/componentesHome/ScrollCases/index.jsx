@@ -56,8 +56,6 @@ export default function ScrollCases() {
 
 
         mm.add('(max-width: 1200px)', () => {
-            console.log('b')
-
             cases.forEach((a) => {
                 gsap.to(a, {
                     xPercent: gsap.utils.random(60, 20),
@@ -80,10 +78,9 @@ export default function ScrollCases() {
             });
         });
         mm.add('(max-width: 480px)', () => {
-            console.log('aaaa')
             cases.forEach((a) => {
                 gsap.to(a, {
-                    xPercent: gsap.utils.random(10, 40),
+                    xPercent: gsap.utils.random(5, 30),
                 });
             });
         });
