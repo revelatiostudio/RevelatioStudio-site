@@ -124,3 +124,13 @@
     }
 
 }
+
+@media(max-width: 360px){
+    .adress p{
+        font-size: 18px;
+    }
+    .links p{
+        font-size: 18px;
+    }
+
+}
