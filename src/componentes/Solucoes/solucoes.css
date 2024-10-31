@@ -239,4 +239,28 @@
     }
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .herofirst{
+        margin-top: 6.25rem;
+        flex-direction: column;
+    }
+    .left_text{
+        height: 6.25rem;
+    }
+    .right_part_solucoes .time p{
+        font-size: 12px;
+    }
+    .right_part_solucoes .time h1{
+        font-size: 30px;
+    }
+    .border-solucoes-top, .border-solucoes-bottom{
+        width: 50%;
+    }
+    .herofinal{
+        flex-direction: column;
+        height: auto;
+    }
+    .texts_studio .seecases{
+        margin-bottom: 1.25rem;
+    }
+}
