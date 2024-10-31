@@ -31,7 +31,7 @@ export default function ideias({color = 'black-ideias'}) {
         <section className={`container_ideias ${color}`}>
             <div className='grid-global'>
                 <div className={`sections ${color}`}>
-                    <div className='options'>
+                    <div className='options opt-number'>
                         <a>01</a>
                     </div>
                     <div className='options'>
@@ -57,7 +57,7 @@ export default function ideias({color = 'black-ideias'}) {
 
                 </div>
                 <div className={`sections ${color}`}>
-                    <div className='options'>
+                    <div className='options opt-number'>
                         <a>02</a>
                     </div>
                     <div className='options'>
@@ -81,7 +81,7 @@ export default function ideias({color = 'black-ideias'}) {
 
                 </div>
                 <div className={`sections ${color} sections_last`}>
-                    <div className='options'>
+                    <div className='options opt-number'>
                         <a>03</a>
                     </div>
                     <div className='options'>
