@@ -9,7 +9,11 @@ export default function AboutHome() {
                 <div className='first_text'>
                     <h1>Alimentando o <span> caos </span> <span>que existe</span> <span>em<br></br>toda ordem.</span>
                         <span>Coordenando</span> <span>a</span> ordem <br></br>que existe em todo caos.</h1>
+                </div>
 
+                <div className='first_text-mobile'>
+                    <h1>Alimentando o <span> caos </span> <span>que existe</span> <span>em <span>toda</span> ordem.</span>
+                        <span>Coordenando</span> <span>a</span> ordem que existe em todo caos.</h1>
                 </div>
 
                 <div className='about_home'>

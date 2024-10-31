@@ -18,6 +18,9 @@
 .first_text span:first-child {
     margin-left: 150px;
 }
+.first_text-mobile{
+    display: none;
+}
 
 .about_home{
     width: 100%;
@@ -154,4 +157,30 @@
     }
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .container_about h1{
+        font-size: 25px;
+    }
+    .first_text-mobile span{
+        margin-right: 1rem;
+    }
+    .first_text-mobile span:first-child {
+        margin-left: 1rem;
+    }
+    .first_text{
+        display: none;
+    }
+    .first_text-mobile{
+        display: block;
+    }
+    .text_ladder .p1 {
+        padding-top: 1rem;
+    }
+    .text_ladder .p2 {
+        padding-top: 1.875rem;
+    }
+    .text_ladder .p3 {
+        padding-top: 3rem;
+    }
+
+}
