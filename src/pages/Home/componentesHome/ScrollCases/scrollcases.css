@@ -163,4 +163,19 @@
 
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .case-1 img{
+        width: 13rem;
+        height: 9rem;
+    }
+    .project{
+        max-width: 13rem;
+    }
+    .project p{
+        font-size: 10px;
+    }
+    .see-cases{
+        font-size: 14px;
+    }
+
+}
