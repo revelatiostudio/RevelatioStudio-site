@@ -109,4 +109,18 @@
     }
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .adress p{
+        font-size: 20px;
+    }
+    .links p{
+        font-size: 20px;
+    }
+    .container_links {
+        padding-left: 1rem;
+    }
+    .social {
+        margin-left: 1rem;
+    }
+
+}
