@@ -263,4 +263,10 @@
     .texts_studio .seecases{
         margin-bottom: 1.25rem;
     }
+    .blour{
+        left: 0;
+    }
+    .studio_img{
+        justify-content: start;
+    }
 }

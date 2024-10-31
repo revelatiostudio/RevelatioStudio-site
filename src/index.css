@@ -45,3 +45,13 @@ p, a, span{
 html, body{
   overflow-x: hidden; 
 }
+
+@media(max-width: 480px) {
+  .grid-global{
+    width: 100%;
+    max-width: 116.25rem;
+    margin: 0 auto;
+    padding: 0px 15px;
+    position: relative;
+  }
+}

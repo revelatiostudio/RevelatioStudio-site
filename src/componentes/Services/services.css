@@ -24,7 +24,6 @@
     width: 100%;
     max-width: 300px;
 }
-
 /* lista images ativada */
 
 .lista_images.active {
@@ -116,4 +115,25 @@
 
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .images_services .lista_images h1{
+        font-size: 40px;
+    }
+    .images_services .lista_images{
+        gap: 20px;
+    }
+    .lista_images.active .images{
+        max-width: 14rem;
+        height: 6rem;
+    }
+    .images {
+        max-width: 14rem;
+        height: 6rem;
+    }
+    .text_solutions p{
+        font-size: 14px;
+    }
+    .text_solutions{
+        align-items: start;
+    }
+}
