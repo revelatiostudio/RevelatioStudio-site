@@ -25,19 +25,19 @@
     filter: blur(5px);
     position: absolute;
     width: 100%;
-    max-width: 429px;
-    height: 389px;
+    max-width: 26.8125rem;
+    height: 24.3125rem;
     /* background-color: var(--color-gray-50); */
-    margin-top: 195px;
-    left: 98px;
+    margin-top: 12.1875rem;
+    left: 5%;
 }
 .container-principios .prin-1.sec{
-    top: 200px;
-    left: 70%;
+    top: 12.5rem;
+    left: 65%;
 }
 .container-principios .prin-1.third{
     top: 45%;
-    left: 280px;
+    left: 20%;
 }
 .prin-1 img{
     width: 100%;
@@ -75,3 +75,17 @@
     font-weight: 400;
     line-height: 130%;
 }
+
+@media(max-width: 1280px) {}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
+
+@media(max-width: 360px){}
