@@ -45,89 +45,28 @@ export default function RoletaScroll() {
 
         })
 
-       
 
-           
-            mm.add("(max-width: 1920px)", () => {
-                
-                const tl1920 = gsap.timeline()
-                gsap.to(items, {
-                    yPercent: -((items.length) * 100),
-                    ease: 'none',
-                    scrollTrigger: {
-                        trigger: container,
-                        start: 'top top',
-                        end: () => "+=" + container.offsetHeight * 2,
-                        scrub: 0.5,
-                        pin: true,
-                        snap: 1 / (items.length - 1)
-                    }
-                });
-                items.forEach((item) => {
-                    tl1920.to(item, {
-                        scrollTrigger: {
-                            trigger: item,
-                            start: 'center-=20px 50%',
-                            end: 'center 40%',
-                            scrub: true,
-                            onEnter: () => item.classList.add("active"),
-                            onLeave: () => item.classList.remove("active"),
-                            onEnterBack: () => item.classList.add("active"),
-                            onLeaveBack: () => item.classList.remove("active"),
-                        }
-                    }, 0).to(item, {
-                        opacity: 0,
-                        scrollTrigger: {
-                            trigger: item,
-                            start: 'top 150px',
-                            end: 'bottom top',
-                            scrub: true
-                        }
-    
-                    }, 0).from(item, {
-                        opacity: 0,
-                        scrollTrigger: {
-                            trigger: item,
-                            start: 'top 800px',
-                            end: 'bottom center',
-                            scrub: true,
-                        }
-    
-                    }, 0)
-    
-    
-    
-                });
 
-            })
-
-            
-           
-
-        
-        
-        
-        mm.add("(max-width: 1366px)", () => {
-            mm.revert();
-            const tl1366 = gsap.timeline()
+        mm.add("(min-height: 900px)", () => {
+            console.log('900px')
+            const tl900 = gsap.timeline()
             gsap.to(items, {
                 yPercent: -((items.length) * 100),
                 ease: 'none',
                 scrollTrigger: {
                     trigger: container,
                     start: 'top top',
-                    end: () => "+=" + container.offsetHeight * 2.5,
+                    end: () => "+=" + container.offsetHeight * 2,
                     scrub: 0.5,
                     pin: true,
                     snap: 1 / (items.length - 1)
                 }
             });
-
             items.forEach((item) => {
-                tl1366.to(item, {
+                tl900.to(item, {
                     scrollTrigger: {
                         trigger: item,
-                        start: 'center-=10px 50%',
+                        start: 'center-=20px 50%',
                         end: 'center 40%',
                         scrub: true,
                         onEnter: () => item.classList.add("active"),
@@ -148,7 +87,7 @@ export default function RoletaScroll() {
                     opacity: 0,
                     scrollTrigger: {
                         trigger: item,
-                        start: 'top 80%',
+                        start: 'top 800px',
                         end: 'bottom center',
                         scrub: true,
                     }
@@ -160,12 +99,12 @@ export default function RoletaScroll() {
             });
 
         })
-
-        mm.add("(max-width: 1280px)", () => {
+        mm.add("(max-height: 800px)", () => {
             mm.revert();
-            const tl1280 = gsap.timeline()
+            console.log('800px')
+            const tl800 = gsap.timeline()
             gsap.to(items, {
-                yPercent: -((items.length) * 120),
+                yPercent: -((items.length) * 110),
                 ease: 'none',
                 scrollTrigger: {
                     trigger: container,
@@ -178,7 +117,7 @@ export default function RoletaScroll() {
             });
 
             items.forEach((item) => {
-                tl1280.to(item, {
+                tl800.to(item, {
                     scrollTrigger: {
                         trigger: item,
                         start: 'top-=50px 50%',
@@ -189,7 +128,7 @@ export default function RoletaScroll() {
                         onEnterBack: () => item.classList.add("active"),
                         onLeaveBack: () => item.classList.remove("active"),
                     }
-               
+
                 }, 0).to(item, {
                     opacity: 0,
                     scrollTrigger: {
@@ -213,11 +152,299 @@ export default function RoletaScroll() {
 
 
             });
+          
 
         })
-        
+        mm.add("(max-width: 1280px)", () => {
+            mm.revert();
+            console.log('800px')
+            const tl12800 = gsap.timeline()
+            gsap.to(items, {
+                yPercent: -((items.length) * 110),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: container,
+                    start: 'top top',
+                    end: () => "+=" + container.offsetHeight * 2,
+                    scrub: 0.5,
+                    pin: true,
+                    snap: 1 / (items.length - 1)
+                }
+            });
 
-       
+            items.forEach((item) => {
+                tl12800.to(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top-=50px 50%',
+                        end: 'bottom 55%',
+                        scrub: true,
+                        onEnter: () => item.classList.add("active"),
+                        onLeave: () => item.classList.remove("active"),
+                        onEnterBack: () => item.classList.add("active"),
+                        onLeaveBack: () => item.classList.remove("active"),
+                    }
+
+                }, 0).to(item, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 150px',
+                        end: 'bottom top',
+                        scrub: true,
+                    }
+
+                }, 0).from(item, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 90%',
+                        end: 'bottom center',
+                        scrub: true,
+                    }
+
+                }, 0)
+
+
+
+            });
+          
+
+        })
+        mm.add("(max-height: 700px)", () => {
+            mm.revert();
+            console.log('700px')
+            const tl700 = gsap.timeline()
+            gsap.to(items, {
+                yPercent: -((items.length) * 110),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: container,
+                    start: 'top top',
+                    end: () => "+=" + container.offsetHeight * 2.5,
+                    scrub: 0.5,
+                    pin: true,
+                    snap: 1 / (items.length - 1)
+                }
+            });
+
+            items.forEach((item) => {
+                tl700.to(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top-=50px 50%',
+                        end: 'bottom 55%',
+                        scrub: true,
+
+                        onEnter: () => item.classList.add("active"),
+                        onLeave: () => item.classList.remove("active"),
+                        onEnterBack: () => item.classList.add("active"),
+                        onLeaveBack: () => item.classList.remove("active"),
+                    }
+                
+
+                }, 0).to(item, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 150px',
+                        end: 'bottom top',
+                        scrub: true,
+                    }
+
+                }, 0).from(item, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 90%',
+                        end: 'bottom center',
+                        scrub: true,
+                    }
+
+                }, 0)
+
+
+
+            });
+          
+
+        })
+
+
+
+
+
+        // por width
+        // mm.add("(max-width: 1920px)", () => {
+
+        //     const tl1920 = gsap.timeline()
+        //     gsap.to(items, {
+        //         yPercent: -((items.length) * 100),
+        //         ease: 'none',
+        //         scrollTrigger: {
+        //             trigger: container,
+        //             start: 'top top',
+        //             end: () => "+=" + container.offsetHeight * 2,
+        //             scrub: 0.5,
+        //             pin: true,
+        //             snap: 1 / (items.length - 1)
+        //         }
+        //     });
+        //     items.forEach((item) => {
+        //         tl1920.to(item, {
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'center-=20px 50%',
+        //                 end: 'center 40%',
+        //                 scrub: true,
+        //                 onEnter: () => item.classList.add("active"),
+        //                 onLeave: () => item.classList.remove("active"),
+        //                 onEnterBack: () => item.classList.add("active"),
+        //                 onLeaveBack: () => item.classList.remove("active"),
+        //             }
+        //         }, 0).to(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 150px',
+        //                 end: 'bottom top',
+        //                 scrub: true
+        //             }
+
+        //         }, 0).from(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 800px',
+        //                 end: 'bottom center',
+        //                 scrub: true,
+        //             }
+
+        //         }, 0)
+
+
+
+        //     });
+
+        // })
+
+
+
+
+
+
+
+        // mm.add("(max-width: 1366px)", () => {
+        //     mm.revert();
+        //     const tl1366 = gsap.timeline()
+        //     gsap.to(items, {
+        //         yPercent: -((items.length) * 100),
+        //         ease: 'none',
+        //         scrollTrigger: {
+        //             trigger: container,
+        //             start: 'top top',
+        //             end: () => "+=" + container.offsetHeight * 2.5,
+        //             scrub: 0.5,
+        //             pin: true,
+        //             snap: 1 / (items.length - 1)
+        //         }
+        //     });
+
+        //     items.forEach((item) => {
+        //         tl1366.to(item, {
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'center-=10px 50%',
+        //                 end: 'center 40%',
+        //                 scrub: true,
+        //                 onEnter: () => item.classList.add("active"),
+        //                 onLeave: () => item.classList.remove("active"),
+        //                 onEnterBack: () => item.classList.add("active"),
+        //                 onLeaveBack: () => item.classList.remove("active"),
+        //             }
+        //         }, 0).to(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 150px',
+        //                 end: 'bottom top',
+        //                 scrub: true
+        //             }
+
+        //         }, 0).from(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 80%',
+        //                 end: 'bottom center',
+        //                 scrub: true,
+        //             }
+
+        //         }, 0)
+
+
+
+        //     });
+
+        // })
+
+        // mm.add("(max-width: 1280px)", () => {
+        //     mm.revert();
+        //     const tl1280 = gsap.timeline()
+        //     gsap.to(items, {
+        //         yPercent: -((items.length) * 120),
+        //         ease: 'none',
+        //         scrollTrigger: {
+        //             trigger: container,
+        //             start: 'top top',
+        //             end: () => "+=" + container.offsetHeight * 2.5,
+        //             scrub: 0.5,
+        //             pin: true,
+        //             snap: 1 / (items.length - 1)
+        //         }
+        //     });
+
+        //     items.forEach((item) => {
+        //         tl1280.to(item, {
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top-=50px 50%',
+        //                 end: 'bottom 55%',
+        //                 scrub: true,
+        //                 onEnter: () => item.classList.add("active"),
+        //                 onLeave: () => item.classList.remove("active"),
+        //                 onEnterBack: () => item.classList.add("active"),
+        //                 onLeaveBack: () => item.classList.remove("active"),
+        //             }
+
+        //         }, 0).to(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 150px',
+        //                 end: 'bottom top',
+        //                 scrub: true,
+        //             }
+
+        //         }, 0).from(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 90%',
+        //                 end: 'bottom center',
+        //                 scrub: true,
+        //             }
+
+        //         }, 0)
+
+
+
+        //     });
+
+        // })
+
+
+
 
 
 
