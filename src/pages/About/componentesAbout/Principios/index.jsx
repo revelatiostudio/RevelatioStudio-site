@@ -55,10 +55,10 @@ export default function principios() {
                     <img src={seta} alt='seta' />
                 </div>
                 <div className='prinText'>
-                    <p>É ser claro como um cristal. Colocar as cartas na mesa e <br />
-                        manter sempre uma via de diálogo honesta e dentro da <br />
-                        realidade de cada projeto. É o comprometer-se a <br />
-                        entregar algo que acreditamos, não importa o quão seja <br />
+                    <p>É ser claro como um cristal. Colocar as cartas na mesa e <span className="hide-on-mobile"><br /></span>
+                        manter sempre uma via de diálogo honesta e dentro da <span className="hide-on-mobile"><br /></span>
+                        realidade de cada projeto. É o comprometer-se a <span className="hide-on-mobile"><br /></span>
+                        entregar algo que acreditamos, não importa o quão seja <span className="hide-on-mobile"><br /></span>
                         nosso esforço para tornar o desejável em tangível.</p>
                 </div>
 
@@ -69,10 +69,10 @@ export default function principios() {
                     <img src={seta} alt='seta' />
                 </div>
                 <div className='prinText'>
-                    <p>É ser claro como um cristal. Colocar as cartas na mesa e <br />
-                        manter sempre uma via de diálogo honesta e dentro da <br />
-                        realidade de cada projeto. É o comprometer-se a <br />
-                        entregar algo que acreditamos, não importa o quão seja <br />
+                    <p>É ser claro como um cristal. Colocar as cartas na mesa e <span className="hide-on-mobile"><br /></span>
+                        manter sempre uma via de diálogo honesta e dentro da <span className="hide-on-mobile"><br /></span>
+                        realidade de cada projeto. É o comprometer-se a <span className="hide-on-mobile"><br /></span>
+                        entregar algo que acreditamos, não importa o quão seja <span className="hide-on-mobile"><br /></span>
                         nosso esforço para tornar o desejável em tangível.</p>
                 </div>
 
@@ -83,10 +83,10 @@ export default function principios() {
                     <img src={seta} alt='seta' />
                 </div>
                 <div className='prinText'>
-                    <p>É ser claro como um cristal. Colocar as cartas na mesa e <br />
-                        manter sempre uma via de diálogo honesta e dentro da <br />
-                        realidade de cada projeto. É o comprometer-se a <br />
-                        entregar algo que acreditamos, não importa o quão seja <br />
+                    <p>É ser claro como um cristal. Colocar as cartas na mesa e <span className="hide-on-mobile"><br /></span>
+                        manter sempre uma via de diálogo honesta e dentro da <span className="hide-on-mobile"><br /></span>
+                        realidade de cada projeto. É o comprometer-se a <span className="hide-on-mobile"><br /></span>
+                        entregar algo que acreditamos, não importa o quão seja <span className="hide-on-mobile"><br /></span>
                         nosso esforço para tornar o desejável em tangível.</p>
                 </div>
 
