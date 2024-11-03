@@ -1,9 +1,10 @@
-.container-fund{
+.container-fund {
     margin-top: 13.3125rem;
     overflow: hidden;
     position: relative;
 }
-.fund-name{
+
+.fund-name {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -13,24 +14,26 @@
     transition: opacity 0.5s ease;
 }
 
-.fund-name h2{
+.fund-name h2 {
     font-family: "neue-haas-grotesk-display";
-   color: var(--color-black);
-   font-size: 48px;
-   font-weight: 450;
-   line-height: 120%;
+    color: var(--color-black);
+    font-size: 48px;
+    font-weight: 450;
+    line-height: 120%;
 }
 
-.fund-name p{
+.fund-name p {
     color: var(--color-gray-500);
     font-weight: 500;
     line-height: 130%;
 
 }
-.fund-name p:first-child{
+
+.fund-name p:first-child {
     padding-bottom: 1.25rem;
 }
-.fund-img{
+
+.fund-img {
     padding-top: 170px;
     padding-bottom: 1.5625rem;
     width: 100%;
@@ -40,35 +43,64 @@
     align-items: center;
     align-items: center;
     margin: 0 auto;
-    
+
 }
 
-.founder{
-    margin-top:10px ;
+.founder {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     font-size: 12px;
 }
 
-.founder p{
+.founder p {
     color: var(--color-gray-200);
     font-weight: 400;
     line-height: 120%;
 }
-.founder span{
+
+.founder span {
     color: var(--color-gray-400);
 }
-.description{
+
+.description {
     text-align: end;
 }
-.description p span{
+
+.description p span {
     font-family: "neue-haas-grotesk-text";
     font-weight: 400;
     line-height: 120%;
 }
 
-.fund-img img{
+.fund-img img {
     width: 329px;
     height: 458px;
 
 }
+
+
+/* responsivo medias */
+
+@media(max-width: 1400px) {}
+
+@media(max-width: 1280px) {}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {
+    .fund-img img {
+        width: 17.5rem;
+        height: 23.75rem;
+    }
+    .fund-img{
+        gap: 0.625rem;
+    }
+
+}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
