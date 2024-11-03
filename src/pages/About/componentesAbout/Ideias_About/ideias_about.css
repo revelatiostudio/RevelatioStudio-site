@@ -24,3 +24,27 @@
     line-height: 140%;
     color: var( --color-gray-200); 
 }
+
+/* responsivo medias */
+
+@media(max-width: 1400px) {}
+
+@media(max-width: 1280px) {}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {
+    .ideia-text{
+        width: 100%;
+        max-width: 31.25rem;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
