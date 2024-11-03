@@ -49,6 +49,20 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .only h1{
+        font-size: 50px;
+    }
+    .only p{
+        font-size: 18px;
+    }
+    .only span{
+        font-size: 18px;
+    }
+    .only {
+        gap: 1.25rem;
+    }
+
+}
 
 @media(max-width: 480px) {}
