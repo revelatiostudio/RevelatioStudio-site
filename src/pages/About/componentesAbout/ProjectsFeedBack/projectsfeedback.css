@@ -89,7 +89,6 @@
     width: 100%;
     height: 10.75rem;
     display: flex;
-    align-items: center;
     align-items: flex-end;
     justify-content: space-between;
 }
@@ -114,7 +113,32 @@
 
 @media(max-width: 1200px) {}
 
-@media(max-width: 991px) {}
+@media(max-width: 991px) {
+    .project-feedback .img-project img{
+        max-width: 25rem;
+        height: 30rem;
+    }
+    .feedback p{
+        font-size: 18px;
+    }
+    .project-feedback{
+        gap: 1.25rem;
+        height: auto;
+    }
+    .change-slide .setas {
+        margin-bottom: 30%;
+        margin-right: 10px;
+    }
+    .change-slide .bar{
+        margin-bottom: 30%;
+    }
+    .feedback .descri{
+        height: 18.75rem;
+    }
+    .feedback{
+        padding-top: 10%;
+    }
+}
 
 @media(max-width: 768px) {}
 

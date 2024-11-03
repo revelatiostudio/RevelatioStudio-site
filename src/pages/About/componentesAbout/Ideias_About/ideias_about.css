@@ -29,7 +29,11 @@
 
 @media(max-width: 1400px) {}
 
-@media(max-width: 1280px) {}
+@media(max-width: 1280px) {
+    .ideia-text{
+        width: 50%;
+    }
+}
 
 @media(max-width: 1200px) {}
 

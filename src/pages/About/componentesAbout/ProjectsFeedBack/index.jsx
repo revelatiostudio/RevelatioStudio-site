@@ -150,12 +150,12 @@ export default function ProjectsFeedBack() {
 
                 </div>
                 <div className='descri'>
-                  <p>Go further into Planet Earth’s most out-there <br />
-                    playgrounds with technical gear designed for  <br />
-                    mixed terrains and trails. Engineered with highly  <br />
-                    durable yet comfortable fabrics that combine the  <br />
-                    incredible properties of soft touch, sweat-wicking <br />
-                    and breathable materials with the toughness to  <br />
+                  <p>Go further into Planet Earth’s most out-there <span className='hide-on-mobile'><br /></span>
+                    playgrounds with technical gear designed for  <span className='hide-on-mobile'><br /></span>
+                    mixed terrains and trails. Engineered with highly  <span className='hide-on-mobile'><br /></span>
+                    durable yet comfortable fabrics that combine the  <span className='hide-on-mobile'><br /></span>
+                    incredible properties of soft touch, sweat-wicking <span className='hide-on-mobile'><br /></span>
+                    and breathable materials with the toughness to  <span className='hide-on-mobile'><br /></span>
                     keep going as long as you can. Wild times await.</p>
                 </div>
               </>
