@@ -101,6 +101,11 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .fund-img img {
+        width: 17.5rem;
+        height: 18rem;
+    }
+}
 
 @media(max-width: 480px) {}
