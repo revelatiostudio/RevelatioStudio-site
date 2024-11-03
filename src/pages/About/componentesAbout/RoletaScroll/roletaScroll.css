@@ -125,10 +125,41 @@
     }
 }
 
-@media(max-width: 991px) {}
+@media(max-width: 991px) {
+    .grid-roulette{
+        grid-template-columns: 20% 60% 20%; 
+    }
+    .left-roulette h2{
+        font-size: 18px;
+    }
+    .middle-roulette .country h1{
+        font-size: 50px;
+    }
+    .middle-roulette .country p{
+        margin-left: 2.5rem;
+    }
+
+}
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .grid-roulette{
+        grid-template-columns: 15% 70% 15%; 
+    }
+    .left-roulette h2{
+        font-size: 16px;
+    }
+    .middle-roulette .country h1{
+        font-size: 50px;
+    }
+    .rigth-roulette p {
+        font-size: 14px;
+    }
+    .middle-roulette .country p{
+        margin-left: 30px;
+    }
+
+}
 
 @media(max-width: 480px) {}

@@ -155,10 +155,124 @@ export default function RoletaScroll() {
           
 
         })
-        mm.add("(max-width: 1280px)", () => {
+        mm.add("(max-height: 700px)", () => {
             mm.revert();
-            console.log('800px')
-            const tl12800 = gsap.timeline()
+            console.log('700px')
+            const tl700 = gsap.timeline()
+            gsap.to(items, {
+                yPercent: -((items.length) * 110),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: container,
+                    start: 'top top',
+                    end: () => "+=" + container.offsetHeight * 2.5,
+                    scrub: 0.5,
+                    pin: true,
+                    snap: 1 / (items.length - 1)
+                }
+            });
+
+            items.forEach((item) => {
+                tl700.to(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top-=50px 50%',
+                        end: 'bottom 55%',
+                        scrub: true,
+
+                        onEnter: () => item.classList.add("active"),
+                        onLeave: () => item.classList.remove("active"),
+                        onEnterBack: () => item.classList.add("active"),
+                        onLeaveBack: () => item.classList.remove("active"),
+                    }
+                
+
+                }, 0).to(item, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 150px',
+                        end: 'bottom top',
+                        scrub: true,
+                    }
+
+                }, 0).from(item, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 90%',
+                        end: 'bottom center',
+                        scrub: true,
+                    }
+
+                }, 0)
+
+
+
+            });
+          
+
+        })
+        // mm.add("(max-width: 1280px)", () => {
+        //     mm.revert();
+        //     console.log('800px')
+        //     const tl12800 = gsap.timeline()
+        //     gsap.to(items, {
+        //         yPercent: -((items.length) * 110),
+        //         ease: 'none',
+        //         scrollTrigger: {
+        //             trigger: container,
+        //             start: 'top top',
+        //             end: () => "+=" + container.offsetHeight * 2,
+        //             scrub: 0.5,
+        //             pin: true,
+        //             snap: 1 / (items.length - 1)
+        //         }
+        //     });
+
+        //     items.forEach((item) => {
+        //         tl12800.to(item, {
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top-=50px 50%',
+        //                 end: 'bottom 55%',
+        //                 scrub: true,
+        //                 onEnter: () => item.classList.add("active"),
+        //                 onLeave: () => item.classList.remove("active"),
+        //                 onEnterBack: () => item.classList.add("active"),
+        //                 onLeaveBack: () => item.classList.remove("active"),
+        //             }
+
+        //         }, 0).to(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 150px',
+        //                 end: 'bottom top',
+        //                 scrub: true,
+        //             }
+
+        //         }, 0).from(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 90%',
+        //                 end: 'bottom center',
+        //                 scrub: true,
+        //             }
+
+        //         }, 0)
+
+
+
+        //     });
+          
+
+        // })
+        mm.add("(min-width: 1150px)", () => {
+            mm.revert();
+            console.log('1150px')
+            const tl1150 = gsap.timeline()
             gsap.to(items, {
                 yPercent: -((items.length) * 110),
                 ease: 'none',
@@ -173,7 +287,7 @@ export default function RoletaScroll() {
             });
 
             items.forEach((item) => {
-                tl12800.to(item, {
+                tl1150.to(item, {
                     scrollTrigger: {
                         trigger: item,
                         start: 'top-=50px 50%',
@@ -211,17 +325,17 @@ export default function RoletaScroll() {
           
 
         })
-        mm.add("(max-height: 700px)", () => {
+        mm.add("(max-width: 800px)", () => {
             mm.revert();
-            console.log('700px')
-            const tl700 = gsap.timeline()
+            console.log('800px')
+            const tl800 = gsap.timeline()
             gsap.to(items, {
                 yPercent: -((items.length) * 110),
                 ease: 'none',
                 scrollTrigger: {
                     trigger: container,
                     start: 'top top',
-                    end: () => "+=" + container.offsetHeight * 2.5,
+                    end: () => "+=" + container.offsetHeight * 1.6,
                     scrub: 0.5,
                     pin: true,
                     snap: 1 / (items.length - 1)
@@ -229,13 +343,12 @@ export default function RoletaScroll() {
             });
 
             items.forEach((item) => {
-                tl700.to(item, {
+                tl800.to(item, {
                     scrollTrigger: {
                         trigger: item,
                         start: 'top-=50px 50%',
                         end: 'bottom 55%',
                         scrub: true,
-
                         onEnter: () => item.classList.add("active"),
                         onLeave: () => item.classList.remove("active"),
                         onEnterBack: () => item.classList.add("active"),
