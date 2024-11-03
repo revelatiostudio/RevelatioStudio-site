@@ -135,6 +135,38 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .grid-global{
+        padding: 0px 15px;
+    }
+    .destaques-text h1{
+        font-size: 2rem;
+    }
+    .destaques-text h2 {
+        font-size: 14px;
+    }
+    .destaques-text p {
+        font-size: 14px;
+    }
+    .category h3{
+        font-size: 14px;
+    }
+    .projects .project-row p{
+        font-size: 12px;
+    }
+    .projects .project-row img{
+        width: 6rem;
+        height: 4.5rem;
+        left: 23%;
+    }
+    .projects .project-row{
+        width: 100vw;
+        max-width: 100vw;
+    }
+    .category{
+        width: 100vw;
+        max-width: 100vw;
+    }
+}
 
 @media(max-width: 480px) {}
