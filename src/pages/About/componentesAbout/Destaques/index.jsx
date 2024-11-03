@@ -36,10 +36,10 @@ export default function Destaques() {
         <section className='container-destaques'>
             <div className='grid-global'>
                 <div className='destaques-text'>
-                    <h1>Destaques<br />
-                        & Reconhecimentos
+                    <h1>Destaques<span className='hide-on-mobile'><br /></span>
+                         & Reconhecimentos
                     </h1>
-                    <h2>Seja o próximo a se juntar à nossa <br />
+                    <h2>Seja o próximo a se juntar à nossa <span className='hide-on-mobile'><br /></span>
                         galeria de projetos premiados!</h2>
                     <p><a>Entrar em contato ↗</a></p>
                 </div>
