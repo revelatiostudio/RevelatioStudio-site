@@ -142,7 +142,33 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .project-feedback .img-project img{
+        max-width: 20rem;
+        height: 25rem;
+    }
+    .feedback{
+        height: 25rem;
+    }
+    .feedback .descri{
+        height: 12rem;
+    }
+    .feedback p{
+        font-size: 16px;
+    }
+    .change-slide .bar{
+        margin-bottom: 10%;
+        width: 10rem;
+    }
+    .change-slide .setas{
+        margin-bottom: 10%;
+    }
+    .setas img{
+        width: 100%;
+        max-width: 15px;
+
+    }
+}
 
 @media(max-width: 480px) {}
 
