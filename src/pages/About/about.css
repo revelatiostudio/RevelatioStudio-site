@@ -65,6 +65,17 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .about-us h1{
+        font-size: 40px;
+    }
+    .about-us h2{
+        font-size: 18px;
+    }
+    .about-right {
+        padding-top: 15rem;
+    }
+
+}
 
 @media(max-width: 480px) {}
