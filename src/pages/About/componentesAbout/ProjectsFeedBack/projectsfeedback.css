@@ -165,7 +165,7 @@
     }
     .setas img{
         width: 100%;
-        max-width: 15px;
+        max-width: 0.9375rem;
 
     }
 }
