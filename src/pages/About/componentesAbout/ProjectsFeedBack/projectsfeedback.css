@@ -103,4 +103,25 @@
     cursor: pointer;
 }
 
+@media(max-width: 1280px) {
+    .project-feedback .img-project{
+        margin-left: 0;
+    }
+    .project-feedback{
+        height: 100vh;
+    }
+}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
+
+@media(max-width: 360px){}
+
 
