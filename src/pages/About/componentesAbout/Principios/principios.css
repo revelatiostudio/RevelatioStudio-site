@@ -120,6 +120,15 @@
     }
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .container-principios .prin-1.sec {
+        top: 18.5rem;
+        left: 40%;
+    }
+    .container-principios .prin-1.third {
+        top: 50%;
+        left: 15%;
+    }
+}
 
 @media(max-width: 360px){}
