@@ -65,4 +65,9 @@
 
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .only{
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
