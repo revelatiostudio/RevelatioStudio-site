@@ -106,6 +106,12 @@
         width: 17.5rem;
         height: 18rem;
     }
+    .fund-name h2 {
+        font-size: 40px;
+    }
+    .fund-name p{
+        font-size: 14px;
+    }
 }
 
 @media(max-width: 480px) {}
