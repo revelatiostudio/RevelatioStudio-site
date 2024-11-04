@@ -29,8 +29,8 @@ export default function About() {
           <div className='about-us'>
             <h1>Sobre nós</h1>
             <div className='about-right'>
-              <h2>Somos uma boutique de design focada <br />
-                em soluções de <span>branding & tecnologia</span> <br /> para empresas em crescimento.</h2>
+              <h2>Somos uma boutique de design focada <span className='hide-on-mobile'><br /></span>
+                em soluções de <span>branding & tecnologia</span> <span className='hide-on-mobile'><br /></span> para empresas em crescimento.</h2>
             </div>
 
           </div>

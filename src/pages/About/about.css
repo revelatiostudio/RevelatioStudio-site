@@ -78,4 +78,16 @@
 
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .hide-on-mobile{
+        display: none;
+    }
+    .about-us h1{
+        line-height: 60px;
+        font-size: 50px;
+    }
+    .img-about{
+        height: 31.25rem;
+    }
+
+}
