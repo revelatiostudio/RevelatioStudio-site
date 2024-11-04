@@ -131,4 +131,8 @@
     }
 }
 
-@media(max-width: 360px){}
+@media(max-width: 360px){
+    .container-principios .prin-1.sec{
+        left: 25%;
+    }
+}
