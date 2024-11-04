@@ -67,7 +67,7 @@
 
 @media(max-width: 600px) {
     .about-us h1{
-        font-size: 40px;
+        line-height: 80px;
     }
     .about-us h2{
         font-size: 18px;
