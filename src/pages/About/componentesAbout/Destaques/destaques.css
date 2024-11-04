@@ -169,4 +169,11 @@
     }
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .destaques-text{
+        flex-direction: column;
+    }
+    .projects .project-row img{
+        width: 4rem;
+    }
+}
