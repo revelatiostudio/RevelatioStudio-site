@@ -101,7 +101,24 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .container-principios .principios h1{
+        font-size: 60px;
+    }
+    .container-principios .prin-1{
+        max-width: 16rem;
+    }
+    .prin-1 .prin h2{
+        font-size: 28px;
+    }
+    .prin-1 img{
+        max-width: 1.875rem;
+        height: 1.875rem;
+    }
+    .prin-1 .prinText p{
+        font-size: 12px;
+    }
+}
 
 @media(max-width: 480px) {}
 
