@@ -31,19 +31,18 @@ export default function NavBar({ color }) {
 
     function verificaMenu() {
         setIsMenuOpen(!isMenuOpen)
-        console.log(isMenuOpen)
     }
     gsap.registerPlugin(useGSAP);
 
     useGSAP(() => {
-        gsap.set([".link-menu p", ".link-menu h1"], { y: 85 });
+        gsap.set([".link-menu p", ".link-menu h1", ".link-menu img"], { y: 85 });
 
         tl.current = gsap.timeline({ paused: true })
             .to(".menu-overlay", {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 ease: "power4.inOut",
                 duration: 1.25
-            }).to([".link-menu p", ".link-menu h1"], {
+            }).to([".link-menu p", ".link-menu h1", ".link-menu img"], {
                 y: 0,
                 duration: 1,
                 stagger: 0.1,
@@ -139,7 +138,7 @@ export default function NavBar({ color }) {
                                         <div key={pg.numero} className='link-menu' onClick={verificaMenu}>
                                             <p>[{pg.numero}]</p>
                                             <Link to={pg.path}><h1>{pg.pagina}</h1></Link>
-                                            <Link to={pg.path}> <img  className = 'seta' src={seta} alt='' /></Link>
+                                            <Link to={pg.path}> <img src={seta} alt='' /></Link>
                                             {/* <motion.img
                                                 src={seta}
                                                 initial={{ opacity: 0 }} 

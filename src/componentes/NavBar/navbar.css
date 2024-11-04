@@ -152,7 +152,7 @@
     opacity: 1;
 }
 
-.link-menu{
+.link-menu, .seta{
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
