@@ -132,8 +132,12 @@ export default function Fundadores() {
 
                                 <p className={`class-blour-${image.id}`}>{image.name}</p>
                                 <div className='description'>
-                                    <p><span>{image.des1}</span></p>
-                                    <p><span>{image.des2}</span></p>
+                                    <div className='name-text-mobile'>
+                                        <p><span>{image.des1}</span></p>
+                                    </div>
+                                    <div className='desc-text-mobile'>
+                                        <p><span>{image.des2}</span></p>
+                                    </div>
                                 </div>
 
 

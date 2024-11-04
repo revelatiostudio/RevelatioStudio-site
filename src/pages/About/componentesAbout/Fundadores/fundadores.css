@@ -102,9 +102,15 @@
 @media(max-width: 768px) {}
 
 @media(max-width: 600px) {
+    .container-fund{
+        margin-top: 6rem;
+    }
     .fund-img img {
         width: 17.5rem;
         height: 18rem;
+    }
+    .fund-img{
+        padding-top: 15.625rem;
     }
     .fund-name h2 {
         font-size: 40px;
@@ -114,4 +120,27 @@
     }
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .fund-img img {
+        width: 17.5rem;
+        height: 14rem;
+    }
+    .fund-name h2{
+        font-size: 35px;
+    }
+    .description p{
+        white-space: nowrap;
+    }
+    .class-blour-3{
+        width: 30%;
+    }
+    .desc-text-mobile{
+        width: 70%;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+    .fundadores{
+        margin-top: 1.875rem;
+    }
+}
