@@ -125,6 +125,7 @@ export default function NavBar({ color }) {
                             <img src={menu_img} alt='' />
 
                         </div>
+
                         <div className='links-menu'>
 
                             {
@@ -138,7 +139,7 @@ export default function NavBar({ color }) {
                                         <div key={pg.numero} className='link-menu' onClick={verificaMenu}>
                                             <p>[{pg.numero}]</p>
                                             <Link to={pg.path}><h1>{pg.pagina}</h1></Link>
-                                            <Link to={pg.path}> <img src={seta} alt='' /></Link>
+                                            <Link to={pg.path}> <img  className = 'seta' src={seta} alt='' /></Link>
                                             {/* <motion.img
                                                 src={seta}
                                                 initial={{ opacity: 0 }} 
