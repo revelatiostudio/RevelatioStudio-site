@@ -162,4 +162,11 @@
 
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .middle-roulette .country h1{
+        font-size: 30px;
+    }
+    .middle-roulette .country p{
+        margin-left: 0.9375rem;
+    }
+}
