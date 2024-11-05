@@ -159,7 +159,7 @@
 
 @media(max-width: 480px) {
     .options-list.options p{
-        font-size: 10px;
+        font-size: 8px;
         text-indent: -10px;
     }
     .sections {
