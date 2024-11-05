@@ -151,6 +151,9 @@
         height: 6rem;
         padding-top: 1rem;
     }
+    .options span{
+        margin-right: 0;
+    }
 
 }
 
