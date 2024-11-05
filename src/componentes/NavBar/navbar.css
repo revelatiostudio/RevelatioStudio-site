@@ -365,3 +365,8 @@
         padding: 0px 15px;
     }
 }
+@media(max-width:320px){
+    .links-container{
+        margin-top: 4rem;
+    }
+}
