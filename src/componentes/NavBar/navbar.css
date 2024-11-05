@@ -308,7 +308,37 @@
 
 @media(max-width: 768px) {}
 
-@media(max-width: 600px) {}
+@media(max-width: 600px) {
+    .social-mn .top_part p{
+        margin-bottom: 15px;
+    }
+    .social-mn .top_part p,.social-mn .bottom_part p{
+        font-size: 14px;
+    }
+
+    .right_part .time_text{
+        margin-bottom: 15px;
+    }
+    .right_part .time_text p,.right_part .time p {
+        font-size: 14px;
+    }
+
+    .links-menu .link-menu {
+        height: 4.5rem;
+    }
+    .links-container .links-img {
+        height: 340px;
+    }
+    .links-menu .link-menu{
+        gap: 10px;
+    }
+    .links-container .links-menu{
+        padding-left: 5%;
+    }
+    .links-menu .link-menu img {
+        display: none;
+    }
+}
 
 @media(max-width: 480px) {
     .pt-br{
