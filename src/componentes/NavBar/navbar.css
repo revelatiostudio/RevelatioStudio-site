@@ -317,10 +317,7 @@
     }
 
     .right_part .time_text{
-        margin-bottom: 15px;
-    }
-    .right_part .time_text p,.right_part .time p {
-        font-size: 14px;
+        margin-bottom: 10px;
     }
 
     .links-menu .link-menu {
@@ -352,6 +349,15 @@
     }
     .navbar-menu{
         padding: 0px 15px;
+    }
+    .footer-menu .right_part .time_text p{
+        font-size: 14px;
+    }
+    .footer-menu .right_part .time p{
+        font-size: 14px;
+    }
+    .footer-menu{
+        align-items: end;
     }
 }
 @media(max-width:360px){

@@ -116,6 +116,9 @@
     .middle .right_part p {
         font-size: 14px;
     }
+    .top_part p{
+        margin-bottom: 15px;
+    }
 }
 
 @media(max-width: 480px) {
