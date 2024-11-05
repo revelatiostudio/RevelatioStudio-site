@@ -177,12 +177,15 @@
 
 }
 
-@media(max-width:360px){
+@media(max-width:390px){
     .options-list {
         padding-left: 0;
     }
     .sections{
         gap: 0.9375rem;
+    }
+    .sections a{
+        font-size: 12px;
     }
 }
 
