@@ -45,6 +45,9 @@ p, a, span{
 html, body{
   overflow-x: hidden; 
 }
+a{
+  cursor: pointer;
+}
 
 @media(max-width: 480px) {
   .grid-global{

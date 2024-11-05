@@ -27,7 +27,7 @@ export default function BottomHome() {
                         <div className='container_links'>
                             <p><span>[Links]</span></p>
                             <div className='links'>
-                                <p>Home</p>
+                                <Link to='/'><p>Home</p></Link>
                                 <Link to='/about'><p>Sobre</p></Link>
                                 <p>Cases</p>
                                 <p>Contato</p>
@@ -39,8 +39,8 @@ export default function BottomHome() {
                         <div className='social'>
                             <p><span>[Redes Sociais]</span></p>
                             <div className='links'>
-                                <p>Instagram</p>
-                                <p>Linkedin</p>
+                                <p><a href='https://www.instagram.com/revelatio.studio/' target='blank'>Instagram</a></p>
+                                <p><a href='https://www.linkedin.com/company/revelatio-studio/posts/?feedView=all' target='blank'>Linkedin</a></p>
                                 <p>Behance</p>
                                 <p>Awwwards</p>
                             </div>
