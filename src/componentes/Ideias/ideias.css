@@ -137,6 +137,7 @@
     .options-list.options p{
         font-size: 9px;
         text-indent: -10px;
+        white-space: nowrap;
     }
     /* .options-list.options{
         padding-left: 10px;
