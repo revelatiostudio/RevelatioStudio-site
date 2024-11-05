@@ -12,6 +12,7 @@ import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 
 import { motion } from "framer-motion"
+import { filter } from 'framer-motion/client';
 
 
 export default function NavBar({ color }) {
@@ -19,6 +20,7 @@ export default function NavBar({ color }) {
     const tl = useRef();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
 
     const linksPaginas = [
         { path: '/', pagina: 'Home', numero: '01' },
@@ -130,8 +132,8 @@ export default function NavBar({ color }) {
                             {
                                 linksPaginas.map((pg, index) => (
                                     <motion.div
-                                        style={{ filter: "blur(2px)" }}
-                                        whileHover={{ x: -40, filter: "blur(0px)" }}
+                                        style={!isMobile ? { filter: "blur(2px)" } : {}}
+                                        whileHover={!isMobile ? { x: -40, filter: "blur(0px)" } : {}}
                                         transition={{ ease: "easeOut" }}
                                     >
 
@@ -139,11 +141,6 @@ export default function NavBar({ color }) {
                                             <p>[{pg.numero}]</p>
                                             <Link to={pg.path}><h1>{pg.pagina}</h1></Link>
                                             <Link to={pg.path}> <img src={seta} alt='' /></Link>
-                                            {/* <motion.img
-                                                src={seta}
-                                                initial={{ opacity: 0 }} 
-                                                whileHover={{ opacity: 1 }}
-                                            /> */}
 
                                         </div>
 
