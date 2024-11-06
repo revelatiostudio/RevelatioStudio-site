@@ -43,7 +43,7 @@ export default function Ambiente({color = 'black'}) {
 
         <div className='galeria'>
           <Swiper
-            slidesPerView={1.5}
+            slidesPerView={1.2}
             spaceBetween={30}
             freeMode={true}
             modules={[FreeMode, Pagination]}
@@ -52,7 +52,7 @@ export default function Ambiente({color = 'black'}) {
             }}
             breakpoints={{
               480:{
-                slidesPerView: 1.5
+                slidesPerView: 1.2
               },
               600:{
                 slidesPerView: 2

@@ -56,8 +56,17 @@
 }
 
 @media(max-width: 480px) {
+    .container_ambiente .grid-global .head{
+        padding: 0px 15px;
+    }
     .head h1 {
         font-size: 2.5rem;
+    }
+    .galeria img{
+        height: 30rem;
+    }
+    .container_ambiente .grid-global{
+        padding: 0px;
     }
 }
 
