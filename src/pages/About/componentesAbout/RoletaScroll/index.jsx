@@ -269,17 +269,75 @@ export default function RoletaScroll() {
           
 
         // })
-        mm.add("(min-width: 1150px)", () => {
+
+        // mm.add("(min-width: 1150px)", () => {
+        //     mm.revert();
+        //     console.log('1150px')
+        //     const tl1150 = gsap.timeline()
+        //     gsap.to(items, {
+        //         yPercent: -((items.length) * 110),
+        //         ease: 'none',
+        //         scrollTrigger: {
+        //             trigger: container,
+        //             start: 'top top',
+        //             end: () => "+=" + container.offsetHeight * 2,
+        //             scrub: 0.5,
+        //             pin: true,
+        //             snap: 1 / (items.length - 1)
+        //         }
+        //     });
+
+        //     items.forEach((item) => {
+        //         tl1150.to(item, {
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top-=50px 50%',
+        //                 end: 'bottom 55%',
+        //                 scrub: true,
+        //                 onEnter: () => item.classList.add("active"),
+        //                 onLeave: () => item.classList.remove("active"),
+        //                 onEnterBack: () => item.classList.add("active"),
+        //                 onLeaveBack: () => item.classList.remove("active"),
+        //             }
+
+        //         }, 0).to(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 150px',
+        //                 end: 'bottom top',
+        //                 scrub: true,
+        //             }
+
+        //         }, 0).from(item, {
+        //             opacity: 0,
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: 'top 90%',
+        //                 end: 'bottom center',
+        //                 scrub: true,
+        //             }
+
+        //         }, 0)
+
+
+
+        //     });
+          
+
+        // })
+
+        mm.add("(max-width: 800px)", () => {
             mm.revert();
-            console.log('1150px')
-            const tl1150 = gsap.timeline()
+            console.log('width-800px')
+            const tl800 = gsap.timeline()
             gsap.to(items, {
-                yPercent: -((items.length) * 110),
+                yPercent: -((items.length) * 130),
                 ease: 'none',
                 scrollTrigger: {
                     trigger: container,
                     start: 'top top',
-                    end: () => "+=" + container.offsetHeight * 2,
+                    end: () => "+=" + container.offsetHeight * 1.8,
                     scrub: 0.5,
                     pin: true,
                     snap: 1 / (items.length - 1)
@@ -287,7 +345,7 @@ export default function RoletaScroll() {
             });
 
             items.forEach((item) => {
-                tl1150.to(item, {
+                tl800.to(item, {
                     scrollTrigger: {
                         trigger: item,
                         start: 'top-=50px 50%',
@@ -298,6 +356,7 @@ export default function RoletaScroll() {
                         onEnterBack: () => item.classList.add("active"),
                         onLeaveBack: () => item.classList.remove("active"),
                     }
+                
 
                 }, 0).to(item, {
                     opacity: 0,
@@ -325,9 +384,67 @@ export default function RoletaScroll() {
           
 
         })
-        mm.add("(max-width: 800px)", () => {
+
+        mm.add("(max-width: 600px)", () => {
             mm.revert();
-            console.log('800px')
+            console.log('width-600px')
+            const tl800 = gsap.timeline()
+            gsap.to(items, {
+                yPercent: -((items.length) * 130),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: container,
+                    start: 'top top',
+                    end: () => "+=" + container.offsetHeight * 1.5,
+                    scrub: 0.5,
+                    pin: true,
+                    snap: 1 / (items.length - 1)
+                }
+            });
+
+            items.forEach((item) => {
+                tl800.to(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top-=50px 50%',
+                        end: 'bottom 55%',
+                        scrub: true,
+                        onEnter: () => item.classList.add("active"),
+                        onLeave: () => item.classList.remove("active"),
+                        onEnterBack: () => item.classList.add("active"),
+                        onLeaveBack: () => item.classList.remove("active"),
+                    }
+                
+
+                }, 0).to(item, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 150px',
+                        end: 'bottom top',
+                        scrub: true,
+                    }
+
+                }, 0).from(item, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 90%',
+                        end: 'bottom center',
+                        scrub: true,
+                    }
+
+                }, 0)
+
+
+
+            });
+          
+
+        })
+         mm.add("(max-width: 480px)", () => {
+            mm.revert();
+            console.log('width-480px')
             const tl800 = gsap.timeline()
             gsap.to(items, {
                 yPercent: -((items.length) * 110),
@@ -335,7 +452,7 @@ export default function RoletaScroll() {
                 scrollTrigger: {
                     trigger: container,
                     start: 'top top',
-                    end: () => "+=" + container.offsetHeight * 1.6,
+                    end: () => "+=" + container.offsetHeight * 0.8,
                     scrub: 0.5,
                     pin: true,
                     snap: 1 / (items.length - 1)

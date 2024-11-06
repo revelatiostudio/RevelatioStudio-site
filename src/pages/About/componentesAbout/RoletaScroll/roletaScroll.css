@@ -151,7 +151,7 @@
         font-size: 16px;
     }
     .middle-roulette .country h1{
-        font-size: 50px;
+        font-size: 40px;
     }
     .rigth-roulette p {
         font-size: 14px;
@@ -168,5 +168,12 @@
     }
     .middle-roulette .country p{
         margin-left: 0.9375rem;
+        font-size: 12px;
+    }
+    .left-roulette h2 {
+        font-size: 12px;
+    }
+    .rigth-roulette p{
+        font-size: 12px;
     }
 }
