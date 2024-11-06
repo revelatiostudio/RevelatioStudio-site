@@ -41,7 +41,7 @@ export default function ScrollCases() {
                 start: '-20px top',
                 endTrigger: 'overlay-blur bottom',
                 end: () => "+=" + container.offsetHeight * 2,
-                scrub: 0.5,
+                scrub: true,
                 pin: true,
                 onUpdate: updateProgress
             }
