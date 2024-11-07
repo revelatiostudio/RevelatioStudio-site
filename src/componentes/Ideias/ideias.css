@@ -159,6 +159,10 @@
 @media(max-width: 768px) {
     .options-list.options p{
         text-indent: -10px;
+        white-space: nowrap;
+    }
+    .options span{
+        margin-right: 0.80rem;
     }
 }
 
