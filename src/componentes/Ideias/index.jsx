@@ -36,7 +36,7 @@ export default function ideias({ color = 'black-ideias' }) {
                     <div className='options opt-number'>
                         <a>01</a>
                     </div>
-                    <div className='options'>
+                    <div className='options text'>
                         <a>Ideias & Estratégias</a>
                     </div>
 
@@ -89,7 +89,7 @@ export default function ideias({ color = 'black-ideias' }) {
                     <div className='options opt-number'>
                         <a>02</a>
                     </div>
-                    <div className='options'>
+                    <div className='options text'>
                         <a>Criação & Design</a>
                     </div>
                     <div className='options-list options'>
@@ -142,7 +142,7 @@ export default function ideias({ color = 'black-ideias' }) {
                     <div className='options opt-number'>
                         <a>03</a>
                     </div>
-                    <div className='options'>
+                    <div className='options text'>
                         <a>Tecnologia</a>
                     </div>
 
