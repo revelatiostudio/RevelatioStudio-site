@@ -4,6 +4,7 @@
     margin-top: 10.1875rem;
 }
 
+
 .destaques-text {
     width: 100%;
     display: flex;
@@ -25,19 +26,32 @@
     font-weight: 400;
     line-height: 140%;
 }
+.contact{
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid;
+    padding-bottom: 0.3125rem;
+}
+.contact span{
+    margin-left: 0.5rem;
+}
+.contact img{
+ width: 0.75rem;
+ height: 0.75rem;
+}
 
 .destaques-text p {
     font-family: "neue-haas-grotesk-display";
     font-size: 16px;
     font-weight: 450;
     line-height: 100%;
-    border-bottom: 1px solid;
-    padding-bottom: 5px;
 }
 
 .category {
-    margin-top: 96px;
-    margin-bottom: 35px;
+    margin-top: 6rem;
+    margin-bottom: 2.1875rem;
     display: flex;
     justify-content: space-between;
 }

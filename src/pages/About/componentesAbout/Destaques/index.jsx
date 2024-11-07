@@ -1,6 +1,7 @@
 import React from 'react'
 import './destaques.css'
 
+import seta from '../../../../assets/img/arrow-secs.svg'
 import { gsap } from "gsap";
 
 import img1 from '../../../../assets/img/home/cases/case1.png'
@@ -37,11 +38,16 @@ export default function Destaques() {
             <div className='grid-global'>
                 <div className='destaques-text'>
                     <h1>Destaques<span className='hide-on-mobile'><br /></span>
-                         & Reconhecimentos
+                        & Reconhecimentos
                     </h1>
                     <h2>Seja o próximo a se juntar à nossa <span className='hide-on-mobile'><br /></span>
                         galeria de projetos premiados!</h2>
-                    <p><a>Entrar em contato ↗</a></p>
+
+                    <div className='contact'>
+                        <p><a>Entrar em contato</a></p>
+                        <span><a><img src={seta} alt='' /></a></span>
+                    </div>
+
                 </div>
 
                 <div className='container-category-first'>
