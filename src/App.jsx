@@ -9,11 +9,6 @@ import NavBar from './componentes/NavBar'
 
 function App() {
 
-  // const location = useLocation();
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [location.pathname]);
-
   const location = useLocation();
 
   let navColor = "white";
@@ -31,6 +26,12 @@ function App() {
   }
 
   requestAnimationFrame(raf)
+
+  
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location]);
 
   return (
     <>
