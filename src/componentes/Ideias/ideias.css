@@ -75,6 +75,10 @@
     filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(500%);
 }
 
+.option.white-ideias img{
+    filter: brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(500%);
+}
+
 .options-list.options p{
     font-family: "neue-haas-grotesk-text";
     font-size: 16px;
