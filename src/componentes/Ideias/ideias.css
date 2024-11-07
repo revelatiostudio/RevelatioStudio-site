@@ -52,6 +52,7 @@
 .options{
     width: 100%;
     max-width: 28.75rem;
+    /* border: 2px blue solid; */
 }
 .options-list{
     /* border: 1px red solid; */
@@ -146,6 +147,13 @@
     .options-list.options p{
         font-size: 11px;
     }
+    .options span {
+        margin-right: 5px;
+    }
+    .option img{
+        width: 6px;
+        height: 6px;
+    }
 }
 
 @media(max-width: 768px) {
@@ -160,21 +168,20 @@
         text-indent: -10px;
         white-space: nowrap;
     }
-    /* .options-list.options{
-        padding-left: 10px;
-    } */
-    .options-list{
-        padding-left: 1.25rem;
-    }
     .options{
-        width: 50%;
+        width: 100%;
+        max-width: 6.25rem;
+    }
+    .options.opt-number{
+        width: 100%;
+        max-width: 1.875rem;
     }
     .sections{
         height: 6rem;
         padding-top: 1rem;
     }
     .options span{
-        margin-right: 0;
+        margin-right: 15px;
     }
 
 }
