@@ -3,6 +3,8 @@ import './scrollcases.css'
 import case1 from '../../../../assets/img/home/cases/case1.png'
 import case2 from '../../../../assets/img/home/cases/case2.png'
 import case3 from '../../../../assets/img/home/cases/case3.png'
+import seta from '../../../../assets/img/arrow-secs.svg'
+import setac from '../../../../assets/img/home/cases/arrow-cases.svg'
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -34,7 +36,6 @@ export default function ScrollCases() {
         const cases = [...document.querySelectorAll('.case-1')];
         const container = caseScroll.current;
         const imgHeigth = imgTam.current.offsetHeight
-        console.log(imgHeigth)
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: container,
@@ -185,10 +186,14 @@ export default function ScrollCases() {
                 </div>
                 <div className='see-cases'>
                     <div className='all-cases'>
-                        <a href=''>Ver todos os cases <span>↗</span></a>
+                        <a href=''>Ver todos os cases</a>
+                        <span><a><img src={seta} alt=''/></a></span>
                     </div>
                     <div className='explore'>
-                        <p>Scroll to explore ↓</p>
+                        <div className='sec-explore'>
+                            <p>Scroll to explore</p>
+                            <span><img src={setac} alt='' /></span>
+                        </div>
                         <p className='p1'>6 Cases</p>
                     </div>
 

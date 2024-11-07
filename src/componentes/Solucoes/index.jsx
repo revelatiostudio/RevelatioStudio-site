@@ -4,6 +4,8 @@ import img_solucoes from '../../assets/img/home/img_solucoes.png'
 import blour from '../../assets/img/home/blour.png'
 import './solucoes.css'
 
+import seta from '../../assets/img/arrow-secs.svg'
+
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -81,7 +83,8 @@ export default function Solucoes() {
                         </div>
 
                             <div className='seecases'>
-                                <a href=''>Ver todos os cases <span>↗</span></a>
+                                <a href=''>Ver todos os cases</a>
+                                <span><a><img src={seta} alt='' /></a></span>
                             </div>
                         </div>
 
