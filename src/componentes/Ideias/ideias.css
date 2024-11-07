@@ -216,16 +216,23 @@
 
 }
 
-@media(max-width:390px){
+@media(max-width:370px){
+    .option{
+        align-items: start;
+    }
+    .options span{
+        margin-right: 0.75rem;
+    }
     .options-list {
         padding-left: 0;
     }
     .sections{
-        gap: 10px;
+        gap: 0.5rem;
     }
     .sections a{
         font-size: 12px;
     }
+
 }
 
 
