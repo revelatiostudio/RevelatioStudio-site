@@ -53,6 +53,27 @@
     width: 100%;
     max-width: 28.75rem;
 }
+.options-list{
+    /* border: 1px red solid; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.option{
+    /* border: 1px blue solid; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.option img{
+    width: 100%;
+    max-width: 8px;
+    height: 8px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(500%);
+}
+
 .options-list.options p{
     font-family: "neue-haas-grotesk-text";
     font-size: 16px;
@@ -61,12 +82,12 @@
 }
 
 .options span {
-    margin-right: 2px;
+    margin-right: 10px;
 }
 
-.sections p{
+/* .sections p{
     padding-bottom: 8px;
-}
+} */
 .sections p:last-child{
     margin-bottom: 0px;
 }

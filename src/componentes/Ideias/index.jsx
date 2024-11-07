@@ -1,11 +1,13 @@
 import React from 'react'
 import './ideias.css'
 
+import arrow from '../../assets/img/home/arrow-ideias.svg'
+
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function ideias({color = 'black-ideias'}) {
+export default function ideias({ color = 'black-ideias' }) {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
 
     useGSAP(() => {
@@ -40,19 +42,46 @@ export default function ideias({color = 'black-ideias'}) {
 
 
                     <div className='options-list options'>
-                        <p><span>↗</span> Posicionamento</p>
-                        <p><span>↗</span> Estratégia de Marca</p>
-                        <p><span>↗</span> Narrativa</p>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Posicionamento</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Estratégia de Marca</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Narrativa</p>
+                        </div>
                     </div>
                     <div className='options-list options'>
-                        <p><span>↗</span> Consultoria de Inovação</p>
-                        <p><span>↗</span> Tom de Voz</p>
-                        <p><span>↗</span> Identidade Verbal</p>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Consultoria de Inovação</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Tom de Voz</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Identidade Verbal</p>
+                        </div>
                     </div>
                     <div className='options-list options'>
-                        <p><span>↗</span> Naming</p>
-                        <p><span>↗</span> Workshops</p>
-                        <p><span>↗</span> Mentoria</p>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Naming</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Workshops</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Mentoria</p>
+                        </div>
                     </div>
 
                 </div>
@@ -64,19 +93,48 @@ export default function ideias({color = 'black-ideias'}) {
                         <a>Criação & Design</a>
                     </div>
                     <div className='options-list options'>
-                        <p><span>↗</span> Logo System</p>
-                        <p><span>↗</span> Identidade Visual</p>
-                        <p><span>↗</span> Wireframes</p>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Logo System</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Identidade Visual</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Wireframes</p>
+                        </div>
                     </div>
                     <div className='options-list options'>
-                        <p><span>↗</span> Direção de Arte</p>
-                        <p><span>↗</span> Packaging Design</p>
-                        <p><span>↗</span> Protótipos</p>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Direção de Arte</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Packaging Design</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Protótipos</p>
+                        </div>
+
                     </div>
                     <div className='options-list options'>
-                        <p><span>↗</span> UX/UI</p>
-                        <p><span>↗</span> Website</p>
-                        <p><span>↗</span> Mockups</p>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>UX/UI</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Website</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Mockups</p>
+                        </div>
+
                     </div>
 
                 </div>
@@ -89,14 +147,35 @@ export default function ideias({color = 'black-ideias'}) {
                     </div>
 
                     <div className='options-list options'>
-                        <p><span>↗</span> Front End</p>
-                        <p><span>↗</span> Back End</p>
-                        <p><span>↗</span> Automação</p>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Front End</p>
+
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Back End</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Automação</p>
+                        </div>
+                        
                     </div>
                     <div className='options-list options'>
-                        <p><span>↗</span> Desenvolvimento Criativo</p>
-                        <p><span>↗</span> Integração de Sistemas</p>
-                        <p><span>↗</span> Inteligência Artificial</p>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Desenvolvimento Criativo</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Integração de Sistemas</p>
+                        </div>
+                        <div className='option'>
+                            <span><img src={arrow} alt='' /></span>
+                            <p>Inteligência Artificial</p>
+                        </div>
+                        
                     </div>
                     <div className='options-list options'>
                     </div>
