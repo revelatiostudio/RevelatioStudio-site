@@ -53,6 +53,15 @@
     .head h1{
         font-size: 50px;
     }
+    .galeria img{
+        height: 28rem;
+    }
+    .container_ambiente .grid-global{
+        padding: 0px;
+    }
+    .container_ambiente .grid-global .head{
+        padding: 0px 15px;
+    }
 }
 
 @media(max-width: 480px) {

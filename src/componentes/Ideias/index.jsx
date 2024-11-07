@@ -40,19 +40,19 @@ export default function ideias({color = 'black-ideias'}) {
 
 
                     <div className='options-list options'>
-                        <p><span className='no-emoji'>↗</span> Posicionamento</p>
-                        <p><span className='no-emoji'>↗</span> Estratégia de Marca</p>
-                        <p><span className='no-emoji'>↗</span> Narrativa</p>
+                        <p><span>↗</span> Posicionamento</p>
+                        <p><span>↗</span> Estratégia de Marca</p>
+                        <p><span>↗</span> Narrativa</p>
                     </div>
                     <div className='options-list options'>
-                        <p><span className='no-emoji'>↗</span> Consultoria de Inovação</p>
-                        <p><span className='no-emoji'>↗</span> Tom de Voz</p>
-                        <p><span className='no-emoji'>↗</span> Identidade Verbal</p>
+                        <p><span>↗</span> Consultoria de Inovação</p>
+                        <p><span>↗</span> Tom de Voz</p>
+                        <p><span>↗</span> Identidade Verbal</p>
                     </div>
                     <div className='options-list options'>
-                        <p><span className='no-emoji'>↗</span> Naming</p>
-                        <p><span className='no-emoji'>↗</span> Workshops</p>
-                        <p><span className='no-emoji'>↗</span> Mentoria</p>
+                        <p><span>↗</span> Naming</p>
+                        <p><span>↗</span> Workshops</p>
+                        <p><span>↗</span> Mentoria</p>
                     </div>
 
                 </div>
@@ -64,19 +64,19 @@ export default function ideias({color = 'black-ideias'}) {
                         <a>Criação & Design</a>
                     </div>
                     <div className='options-list options'>
-                        <p><span className='no-emoji'>↗</span> Logo System</p>
-                        <p><span className='no-emoji'>↗</span> Identidade Visual</p>
-                        <p><span className='no-emoji'>↗</span> Wireframes</p>
+                        <p><span>↗</span> Logo System</p>
+                        <p><span>↗</span> Identidade Visual</p>
+                        <p><span>↗</span> Wireframes</p>
                     </div>
                     <div className='options-list options'>
-                        <p><span className='no-emoji'>↗</span> Direção de Arte</p>
-                        <p><span className='no-emoji'>↗</span> Packaging Design</p>
-                        <p><span className='no-emoji'>↗</span> Protótipos</p>
+                        <p><span>↗</span> Direção de Arte</p>
+                        <p><span>↗</span> Packaging Design</p>
+                        <p><span>↗</span> Protótipos</p>
                     </div>
                     <div className='options-list options'>
-                        <p><span className='no-emoji'>↗</span> UX/UI</p>
-                        <p><span className='no-emoji'>↗</span> Website</p>
-                        <p><span className='no-emoji'>↗</span> Mockups</p>
+                        <p><span>↗</span> UX/UI</p>
+                        <p><span>↗</span> Website</p>
+                        <p><span>↗</span> Mockups</p>
                     </div>
 
                 </div>
@@ -89,14 +89,14 @@ export default function ideias({color = 'black-ideias'}) {
                     </div>
 
                     <div className='options-list options'>
-                        <p><span className='no-emoji'>↗</span> Front End</p>
-                        <p><span className='no-emoji'>↗</span> Back End</p>
-                        <p><span className='no-emoji'>↗</span> Automação</p>
+                        <p><span>↗</span> Front End</p>
+                        <p><span>↗</span> Back End</p>
+                        <p><span>↗</span> Automação</p>
                     </div>
                     <div className='options-list options'>
-                        <p><span className='no-emoji'>↗</span> Desenvolvimento Criativo</p>
-                        <p><span className='no-emoji'>↗</span> Integração de Sistemas</p>
-                        <p><span className='no-emoji'>↗</span> Inteligência Artificial</p>
+                        <p><span>↗</span> Desenvolvimento Criativo</p>
+                        <p><span>↗</span> Integração de Sistemas</p>
+                        <p><span>↗</span> Inteligência Artificial</p>
                     </div>
                     <div className='options-list options'>
                     </div>
