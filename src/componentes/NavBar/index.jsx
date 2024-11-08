@@ -71,9 +71,9 @@ export default function NavBar({ color }) {
 
                     <div className='logo'>
                         {color == 'white' ?
-                            <a href='/'> <img src={logo_white} alt='' /></a>
+                            <Link to='/'> <img src={logo_white} alt='' /></Link>
                             :
-                            <a href='/'> <img src={logo_black} alt='' /></a>
+                            <Link to='/'> <img src={logo_black} alt='' /></Link>
                         }
 
                     </div>

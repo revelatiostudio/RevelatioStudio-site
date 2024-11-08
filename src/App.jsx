@@ -5,6 +5,7 @@ import Lenis from '@studio-freight/lenis'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import NavBar from './componentes/NavBar'
+import { AnimatePresence } from 'framer-motion'
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
   const location = useLocation();
 
   let navColor = "white";
-  if(location.pathname === "/about"){
+  if (location.pathname === "/about") {
     navColor = "black"
   }
 
@@ -27,22 +28,29 @@ function App() {
 
   requestAnimationFrame(raf)
 
-  
-
   useEffect(() => {
-      window.scrollTo(0, 0);
+      setTimeout(() => {
+          window.scrollTo(0, 0);
+      },1000)
+      
     }, [location]);
+
+
+
 
   return (
     <>
-    <div className='grid-global'>
-    <NavBar color={navColor}/>
-    </div>
-    
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
+      <div className='grid-global'>
+        <NavBar color={navColor} />
+      </div>
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+
+      </AnimatePresence>
+
 
     </>
   )

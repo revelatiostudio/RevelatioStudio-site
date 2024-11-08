@@ -16,10 +16,11 @@ import Ambiente from '../../componentes/ambiente/Ambiente'
 import Destaques from './componentesAbout/Destaques'
 import Principios from './componentesAbout/Principios'
 import BottomHome from '../Home/componentesHome/BottomHome'
+import Transition from '../../transition'
 
 
 
-export default function About() {
+const About = () => {
   return (
     <>
       <header>
@@ -62,3 +63,5 @@ export default function About() {
 
   )
 }
+
+export default Transition(About)

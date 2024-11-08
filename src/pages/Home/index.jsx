@@ -13,8 +13,9 @@ import Ambiente from '../../componentes/ambiente/Ambiente'
 import BottomHome from './componentesHome/BottomHome'
 import NavBar from '../../componentes/NavBar'
 import ScrollCases from './componentesHome/ScrollCases'
+import Transition from '../../transition'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
 
@@ -74,3 +75,5 @@ export default function Home() {
 
   )
 }
+
+export default Transition(Home)
