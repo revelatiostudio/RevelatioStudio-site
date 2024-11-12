@@ -112,7 +112,11 @@
 
 /* responsivo medias */
 
-@media(max-width: 1400px) {}
+@media(max-width: 1400px) {
+    .middle-roulette .country h1{
+        font-size: 80px;
+    }
+}
 @media(max-width: 1280px) {
     .middle-roulette .country h1{
         font-size: 75px;

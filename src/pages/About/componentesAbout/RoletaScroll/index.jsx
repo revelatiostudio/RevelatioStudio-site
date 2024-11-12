@@ -41,6 +41,7 @@ export default function RoletaScroll() {
         const container = rouletteRef.current;
         //const items = gsap.utils.toArray('.country');
         const items = itemsRef.current;
+        const viewportWidth = window.innerWidth;
 
 
 
@@ -50,9 +51,15 @@ export default function RoletaScroll() {
             y: 450
 
         })
+        var activation;
+
+        console.log('end:',container.offsetHeight)
+        console.log('y:', ((items.length) * (viewportWidth <= 1150 ? 20 : 50)))
+
+        console.log("viewportWidth:",viewportWidth)
 
         gsap.to(items, {
-            y: -((items.length) * 80),
+            y: -((items.length) * (viewportWidth <= 480 ? 25 : viewportWidth <= 1150 ? 60 : 80)),
             ease: 'none',
             scrollTrigger: {
               trigger: container,
@@ -67,9 +74,17 @@ export default function RoletaScroll() {
                   const rect = item.getBoundingClientRect();
                   const itemCenter = rect.top + rect.height / 2;
                   const distanceFromCenter = Math.abs(viewportHeight / 2 - itemCenter);
+
+                  if(viewportWidth <= 480){
+                    activation = 20
+                  }else if( viewportWidth <= 1150){
+                    activation = 30
+                  }else{
+                    activation = 50
+                  }
       
+
                   
-                  const activation = 50;
       
                   if (distanceFromCenter < activation) {
                     item.classList.add("active");
