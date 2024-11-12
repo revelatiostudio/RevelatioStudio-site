@@ -40,9 +40,9 @@ export default function ScrollCases() {
             scrollTrigger: {
                 trigger: container,
                 start: '-20px top',
-                endTrigger: 'overlay-blur bottom',
+                // endTrigger: 'overlay-blur bottom',
                 end: () => "+=" + container.offsetHeight * 2,
-                scrub: 0.1,
+                scrub: true,
                 pin: true,
                 onUpdate: updateProgress
             }
