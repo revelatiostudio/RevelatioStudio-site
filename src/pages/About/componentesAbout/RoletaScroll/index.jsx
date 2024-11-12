@@ -58,9 +58,9 @@ export default function RoletaScroll() {
               trigger: container,
               start: 'top top',
               end: () => "+=" + container.offsetHeight * 2,
-              scrub: 0.5,
+              scrub: true,
               pin: true,
-              snap: 1 / (items.length - 1),
+              //snap: 1 / (items.length - 1),
               onUpdate: self => {
                 const viewportHeight = window.innerHeight;
                 items.forEach((item) => {
