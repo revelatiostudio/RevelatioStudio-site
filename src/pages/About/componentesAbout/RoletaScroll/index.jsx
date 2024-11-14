@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './roletaScroll.css'
 
 import { gsap } from "gsap";
@@ -36,11 +36,10 @@ export default function RoletaScroll() {
     const rouletteRef = useRef(null);
 
     const itemsRef = useRef([]);
+    const items = itemsRef.current;
 
     useGSAP(() => {
-        const container = rouletteRef.current;
-        //const items = gsap.utils.toArray('.country');
-        const items = itemsRef.current;
+        const container = rouletteRef.current;        
         const viewportWidth = window.innerWidth;
 
 
@@ -52,11 +51,6 @@ export default function RoletaScroll() {
 
         })
         var activation;
-
-        console.log('end:',container.offsetHeight)
-        console.log('y:', ((items.length) * (viewportWidth <= 1150 ? 20 : 50)))
-
-        console.log("viewportWidth:",viewportWidth)
 
         gsap.to(items, {
             y: -((items.length) * (viewportWidth <= 480 ? 25 : viewportWidth <= 1150 ? 60 : 80)),
@@ -100,8 +94,64 @@ export default function RoletaScroll() {
 
 
 
+
+          // items.forEach((item) => {
+          //   gsap.to(item,{
+          //     opacity:0,
+          //     scrollTrigger:{
+          //       trigger:item,
+          //       start: 'top +=20%',
+          //       end: 'bottom top',
+          //       scrub: true,
+          //     }
+          //   })
+
+          //   gsap.from(item,{
+          //     opacity: 0,
+          //     scrollTrigger: {
+          //       trigger: item,
+          //       start: 'top 90%',
+          //       end: 'bottom center',
+          //       scrub: true,
+          //   }
+          //   })
+          // })
+
+
+
+
+
     }, []);
 
+    function setFade() {
+      items.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+
+        const viewportHeight = window.innerHeight;
+        const itemCenter = rect.top + rect.height / 2;
+
+        const distanceFromCenter = Math.abs(viewportHeight / 2 - itemCenter);
+
+        const progress = distanceFromCenter / (viewportHeight / 2);
+
+        const adjustedProgress = Math.pow(progress, 2);
+
+        let fade = 1 - adjustedProgress * 0.8;
+        fade = Math.max(0, Math.min(fade, 1));
+
+        gsap.to(item, { opacity: fade});
+      });
+    }
+
+    useEffect(() => {
+      window.addEventListener("scroll", setFade);
+
+      return () => {
+        window.removeEventListener("scroll", setFade);
+      };
+    },[setFade()])
+
+    
 
 
     return (
