@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function principios() {
     gsap.registerPlugin(ScrollTrigger);
 
-    useGSAP(() => {
+    function pinnedSec(){
         const principios = [...document.querySelectorAll('.prin-1')];
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -18,7 +18,7 @@ export default function principios() {
                 start: '150px top', 
                 end: 'bottom top',
                 scrub: 0.5,
-                pin: true
+                pin: true,
 
             }
         });
@@ -33,10 +33,10 @@ export default function principios() {
             })
         })
 
-      
+    }
 
-     
-
+    useGSAP(() => {
+        pinnedSec()
 
     })
 
