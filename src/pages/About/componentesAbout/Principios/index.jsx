@@ -19,7 +19,7 @@ export default function principios() {
                 end: 'bottom top',
                 scrub: 0.5,
                 pin: true,
-                pinReparent: true
+                markers:true,
             }
         });
 
