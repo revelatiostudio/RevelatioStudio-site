@@ -20,15 +20,25 @@
     line-height: 120%;
 }
 .head img{
-    width: 1.375rem;
-    height: 1.375rem;
+    width: 22px;
+    height: 22px;
 }
 
 
+.galeria video{
+    width:500px;
+    height: 800px;
+}
 
 /* responsivo medias */
 
-@media(max-width: 1440px) {}
+@media(max-width: 1440px) {
+    .galeria video{
+        width:23.1875rem;
+        height: 36.125rem;
+    }
+  
+}
 
 @media(max-width: 1280px) {}
 
@@ -41,6 +51,9 @@
 @media(max-width: 600px) {
     .head h1{
         font-size: 50px;
+    }
+    .galeria img{
+        height: 28rem;
     }
     .container_ambiente .grid-global{
         padding: 0px;
@@ -56,6 +69,9 @@
     }
     .head h1 {
         font-size: 2.5rem;
+    }
+    .galeria img{
+        height: 30rem;
     }
     .container_ambiente .grid-global{
         padding: 0px;
