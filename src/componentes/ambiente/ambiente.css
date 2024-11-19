@@ -1,7 +1,7 @@
 .container_ambiente{
     background-color: var(--color-black);
     color: var(--color-white);
-    margin-top: 10.75rem;
+    padding-top: 10.75rem;
 }
 .container_ambiente.white{
     background-color: var(--color-white);
