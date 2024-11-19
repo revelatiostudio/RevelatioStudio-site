@@ -190,4 +190,7 @@
     .projects .project-row img{
         width: 4rem;
     }
+    .container-destaques {
+        margin-top: 5rem;
+    }
 }

@@ -101,4 +101,7 @@
     .container_ambiente .grid-global {
         padding: 0px;
     }
+    .head{
+        margin-bottom: 0;
+    }
 }
