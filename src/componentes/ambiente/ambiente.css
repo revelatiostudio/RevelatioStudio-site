@@ -1,12 +1,11 @@
 .container_ambiente{
     background-color: var(--color-black);
     color: var(--color-white);
-    padding-top: 10.75rem;
+    margin-top: 10.75rem;
 }
 .container_ambiente.white{
     background-color: var(--color-white);
     color: var(--color-black);
-    padding-top: 10.75rem;
 }
 .head{
     display: flex;
