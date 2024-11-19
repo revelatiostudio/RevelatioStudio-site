@@ -1,25 +1,29 @@
-.container_ambiente{
+.container_ambiente {
     background-color: var(--color-black);
     color: var(--color-white);
     padding-top: 10.75rem;
 }
-.container_ambiente.white{
+
+.container_ambiente.white {
     background-color: var(--color-white);
     color: var(--color-black);
 }
-.head{
+
+.head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3.75rem;
 }
-.head h1{
+
+.head h1 {
     font-family: "neue-haas-grotesk-display";
     font-size: 64px;
     font-weight: 450;
     line-height: 120%;
 }
-.head img{
+
+.head img {
     width: 22px;
     height: 22px;
 }
@@ -27,18 +31,32 @@
 
 .galeria img {
     width: 100%;
-    max-width:500px;
+    max-width: 500px;
     height: 800px;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide video {
+    width: 100%;
+    max-width: 31.25rem;
+    height: 50rem;
 }
 
 /* responsivo medias */
 
 @media(max-width: 1440px) {
-    .galeria img{
-        max-width:23.1875rem;
+    .galeria img {
+        max-width: 23.1875rem;
         height: 36.125rem;
     }
-  
+
 }
 
 @media(max-width: 1280px) {}
@@ -50,33 +68,37 @@
 @media(max-width: 768px) {}
 
 @media(max-width: 600px) {
-    .head h1{
+    .head h1 {
         font-size: 50px;
     }
-    .galeria img{
+
+    .galeria img {
         height: 28rem;
     }
-    .container_ambiente .grid-global{
+
+    .container_ambiente .grid-global {
         padding: 0px;
     }
-    .container_ambiente .grid-global .head{
+
+    .container_ambiente .grid-global .head {
         padding: 0px 15px;
     }
 }
 
 @media(max-width: 480px) {
-    .container_ambiente .grid-global .head{
+    .container_ambiente .grid-global .head {
         padding: 0px 15px;
     }
+
     .head h1 {
         font-size: 2.5rem;
     }
-    .galeria img{
+
+    .galeria img {
         height: 30rem;
     }
-    .container_ambiente .grid-global{
+
+    .container_ambiente .grid-global {
         padding: 0px;
     }
 }
-
-

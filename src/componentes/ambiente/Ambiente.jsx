@@ -70,6 +70,7 @@ export default function Ambiente({color = 'black'}) {
 
               },
               1200:{
+                spaceBetween: 10,
                 slidesPerView: 3.5
               }
               

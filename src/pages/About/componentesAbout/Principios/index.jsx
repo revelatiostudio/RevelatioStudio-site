@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './principios.css'
 
 import seta from '../../../../assets/img/about/seta-prin.svg'
@@ -10,16 +10,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function principios() {
     gsap.registerPlugin(ScrollTrigger);
 
+    const container = useRef(null)
+
     function pinnedSec(){
         const principios = [...document.querySelectorAll('.prin-1')];
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger:'.container-principios',
+                trigger:container.current,
                 start: '150px top', 
                 end: 'bottom top',
                 scrub: 0.5,
                 pin: true,
-                markers:true,
             }
         });
 
@@ -35,17 +36,17 @@ export default function principios() {
 
     }
 
-    useGSAP(() => {
+    useGSAP(() => {       
         pinnedSec()
 
-    })
+    },[])
 
 
 
 
 
     return (
-        <section className='container-principios'>
+        <section className='container-principios' ref={container}>
             <div className='principios'>
                 <h1>Nossos <br /> Princípios</h1>
             </div>
