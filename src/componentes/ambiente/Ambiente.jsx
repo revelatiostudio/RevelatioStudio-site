@@ -49,6 +49,7 @@ export default function Ambiente({color = 'black'}) {
             spaceBetween={30}
             freeMode={true}
             modules={[FreeMode, Pagination]}
+            autoHeight={false}
             pagination={{
               clickable: true,
             }}

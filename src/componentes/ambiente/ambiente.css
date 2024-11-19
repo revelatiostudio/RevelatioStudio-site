@@ -25,16 +25,17 @@
 }
 
 
-.galeria video{
-    width:500px;
+.galeria img {
+    width: 100%;
+    max-width:500px;
     height: 800px;
 }
 
 /* responsivo medias */
 
 @media(max-width: 1440px) {
-    .galeria video{
-        width:23.1875rem;
+    .galeria img{
+        max-width:23.1875rem;
         height: 36.125rem;
     }
   
