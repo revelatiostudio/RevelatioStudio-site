@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './projectsfeedback.css'
-import feed1 from '../../../../assets/img/about/feedback/feed1.png'
-import feed2 from '../../../../assets/img/about/feedback/prop.png'
-import feed3 from '../../../../assets/img/about/feedback/feed3.png'
+import feed1 from '../../../../assets/img/about/feedback/prop.png'
+import feed2 from '../../../../assets/img/about/feedback/approach.png'
+import feed3 from '../../../../assets/img/about/feedback/castro.png'
+import feed4 from '../../../../assets/img/about/feedback/life.png'
+import feed5 from '../../../../assets/img/about/feedback/ctm.png'
+import feed6 from '../../../../assets/img/about/feedback/dca.png'
 
 import arthurMedeiros from '../../../../assets/img/about/arthur-medeiros.png'
 import setaEsquerda from '../../../../assets/img/about/setaEsc.svg'
@@ -17,12 +20,15 @@ export default function ProjectsFeedBack() {
   const image = [
     { id: 1, img: feed1 },
     { id: 2, img: feed2 },
-    { id: 3, img: feed3 }
+    { id: 3, img: feed3 },
+    { id: 4, img: feed4 },
+    { id: 5, img: feed5 },
+    { id: 6, img: feed6 }
   ]
 
   const [imgAtual, setImgAtual] = useState(0);
-  const [valorBarra, setValorBarra] = useState(33)
-  const totalSlides = 2;
+  const [valorBarra, setValorBarra] = useState(16.5)
+  const totalSlides = image.length - 1;
 
 
 
@@ -35,7 +41,12 @@ export default function ProjectsFeedBack() {
     const tl = gsap.timeline()
     let barra = 1;
 
-    if (direction === "rigth" & imgAtual <= (totalSlides - 1)) {
+    if (direction === "rigth" && imgAtual <= (totalSlides - 1)) {
+      console.log('imgAtual',images[imgAtual])
+      console.log('images',images)
+      console.log('totalSlides',totalSlides)
+
+      console.log('caiu no iff')
 
       gsap.fromTo(
         images[imgAtual],
@@ -69,16 +80,16 @@ export default function ProjectsFeedBack() {
 
 
       setTimeout(() => {
-        setImgAtual(imgAtual + 1);
-      }, 1000)
+        setImgAtual((prev) => prev + 1);
+      }, 1000);
 
       barra++;
-      setValorBarra((prev) => prev * barra);
+      setValorBarra((prev) => prev + 16.5);
 
 
     }
 
-    if (direction === "left" & imgAtual >= (totalSlides - 1)) {
+    if (direction === "left" && imgAtual > 0) {
 
       gsap.to(images[imgAtual - 1], {
         clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
@@ -101,10 +112,10 @@ export default function ProjectsFeedBack() {
         ease: "power2.inOut",
       })
       setTimeout(() => {
-        setImgAtual(imgAtual - 1);
-      }, 1000)
+        setImgAtual((prev) => prev - 1);
+      }, 1000);
 
-      setValorBarra((prev) => prev / 2);
+      setValorBarra((prev) => prev - 16.5);
 
     }
 
@@ -143,20 +154,15 @@ export default function ProjectsFeedBack() {
 
                   </div>
                   <div className='people-name'>
-                    <p>Arthur Medeiros</p>
-                    <p><span>Brand director - Atho Studio</span></p>
+                    <p>Guilherme Rocha</p>
+                    <p><span>Prop</span></p>
 
                   </div>
 
                 </div>
                 <div className='descri'>
-                  <p>Go further into Planet Earth’s most out-there <span className='hide-on-mobile'><br /></span>
-                    playgrounds with technical gear designed for  <span className='hide-on-mobile'><br /></span>
-                    mixed terrains and trails. Engineered with highly  <span className='hide-on-mobile'><br /></span>
-                    durable yet comfortable fabrics that combine the  <span className='hide-on-mobile'><br /></span>
-                    incredible properties of soft touch, sweat-wicking <span className='hide-on-mobile'><br /></span>
-                    and breathable materials with the toughness to  <span className='hide-on-mobile'><br /></span>
-                    keep going as long as you can. Wild times await.</p>
+                  <p>O projeto foi incrível, gostamos muito do resultado, e o Revelatio Studio conseguiu 
+                    realmente extrair toda a nossa visão sobre o que era a Prop e colocar em uma marca e identidade visual.</p>
                 </div>
               </>
 
@@ -169,41 +175,102 @@ export default function ProjectsFeedBack() {
 
                   </div>
                   <div className='people-name'>
-                    <p>Lucas</p>
-                    <p><span>Brand director - Atho Studio</span></p>
+                    <p>Pedro Meneses</p>
+                    <p><span>Approach</span></p>
 
                   </div>
 
                 </div>
                 <div className='descri'>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br />
-                    Corrupti accusantium asperiores obcaecati est veritatis ducimus nisi, <br />
-                    sed unde voluptatum ratione quod itaque? Sed adipisci itaque quia laborum <br />
-                    blanditiis harum ullam?</p>
+                  <p>Produto totalmente aderente às expectativas. Processo de criação com foco no cliente e bastante humanizado. 
+                    Devo ressaltar ainda o atendimento pós-entrega do projeto, no qual o Revelatio sempre se colocou prestativo.</p>
                 </div>
               </>
 
-            ) :
+            ) : imgAtual === 2 ? (
               <>
-                <div className='people-description'>
-                  <div className='people-img'>
-                    <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
-
-                  </div>
-                  <div className='people-name'>
-                    <p>Icaro</p>
-                    <p><span>Brand director - Atho Studio</span></p>
-
-                  </div>
+              <div className='people-description'>
+                <div className='people-img'>
+                  <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
 
                 </div>
-                <div className='descri'>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br />
-                    Corrupti accusantium asperiores obcaecati est veritatis ducimus nisi, <br />
-                    sed unde voluptatum ratione quod itaque? Sed adipisci itaque quia laborum <br />
-                    blanditiis harum ullam?</p>
+                <div className='people-name'>
+                  <p>Thiago Hinrichsen</p>
+                  <p><span>Castro & Hinrichsen</span></p>
+
                 </div>
-              </>
+
+              </div>
+              <div className='descri'>
+                <p>Contratamos o Revelatio Studio para criar nossa Identidade Visual, através da indicação de um grande amigo. 
+                  Todas as reuniões foram bem direcionadas para que tivéssemos o melhor conceito na construção de nossa nova marca. 
+                  E não foi diferente na apresentação do resultado final do projeto. Foi muito gratificante ver o que o Revelatio nos proporcionou. Recomendo de olhos fechados.</p>
+              </div>
+            </>
+            ) : imgAtual === 3 ? (
+              <>
+              <div className='people-description'>
+                <div className='people-img'>
+                  <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
+
+                </div>
+                <div className='people-name'>
+                  <p>Maicon Lino</p>
+                  <p><span>Life Consultoria e Tecnologia</span></p>
+
+                </div>
+
+              </div>
+              <div className='descri'>
+                <p>O resultado do projeto de rebranding realizado pelo Revelatio Studio atingiu nossas expectativas. 
+                  O nível de dedicação e atenção aos detalhes apresentados pela equipe foi notável, tornando visível o comprometimento em 
+                  entender a essência da Life e traduzi-la em uma nova identidade visual inovadora e impactante.</p>
+              </div>
+            </>
+            ) : imgAtual === 4 ? (
+              <>
+              <div className='people-description'>
+                <div className='people-img'>
+                  <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
+
+                </div>
+                <div className='people-name'>
+                  <p>Ana Karla Arraes</p>
+                  <p><span>CTM DOR</span></p>
+
+                </div>
+
+              </div>
+              <div className='descri'>
+                <p>O projeto de Identidade Visual elaborado para nossa clínica CTM DOR ficou muito bom, nos surpreendeu com o resultado. 
+                  Além disso, a apresentação final do projeto foi excelente, o Revelatio foi muito seguro nos argumentos e, com certeza, vai longe!</p>
+              </div>
+            </>
+            ) : (
+              <>
+              <div className='people-description'>
+                <div className='people-img'>
+                  <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
+
+                </div>
+                <div className='people-name'>
+                  <p>Andrea Forjaz</p>
+                  <p><span>DCA Influence House</span></p>
+
+                </div>
+
+              </div>
+              <div className='descri'>
+                <p>O Revelatio Studio conduziu o processo de forma brilhante, ouviu todos os pontos levantados e em pouco 
+                  tempo trouxe algo exatamente como queríamos (e nem sabíamos ao certo o que queríamos). Mudamos praticamente nada do projeto inicial, caiu como uma luva 
+                  e temos muito orgulho da nova identidade visual. Nos sentimos representadas efetivamente e com vontade de mostrar nossa nova forma aos clientes. 
+                  Inclusive, a percepção dos clientes e não clientes de forma geral é de que a DCA é uma empresa profissional, sólida, robusta. 
+                  E a comunicação visual contribuiu para essa percepção. Obrigada, Revelatio!</p>
+              </div>
+            </>
+            )
+             
+              
 
 
 

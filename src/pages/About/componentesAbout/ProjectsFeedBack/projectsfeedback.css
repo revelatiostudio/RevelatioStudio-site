@@ -34,6 +34,21 @@
     z-index: 1;
      
 }
+.project-feedback .img-project img:nth-child(4){
+    z-index: -1;
+     
+}
+
+.project-feedback .img-project img:nth-child(5){
+    z-index: -2;
+     
+}
+
+.project-feedback .img-project img:nth-child(6){
+    z-index: -3;
+     
+}
+
 
 .feedback{
     display: flex;

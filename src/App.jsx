@@ -28,12 +28,12 @@ function App() {
 
   requestAnimationFrame(raf)
 
-  useEffect(() => {
-      setTimeout(() => {
-          window.scrollTo(0, 0);
-      },1000)
+  // useEffect(() => {
+  //     setTimeout(() => {
+  //         window.scrollTo(0, 0);
+  //     },1000)
       
-    }, [location]);
+  //   }, [location]);
 
 
 
