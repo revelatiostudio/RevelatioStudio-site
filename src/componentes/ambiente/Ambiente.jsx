@@ -10,22 +10,24 @@ import 'swiper/css/navigation';
 import 'swiper/css/grid';
 import { Navigation, Grid, FreeMode, Pagination } from 'swiper/modules'
 
-import ambiente1 from '../../assets/img/home/ambiente/ambiente1.png'
-import ambiente2 from '../../assets/img/home/ambiente/ambiente2.png'
-import ambiente3 from '../../assets/img/home/ambiente/ambiente3.png'
-import ambiente4 from '../../assets/img/home/ambiente/ambiente4.png'
+import video1 from '../../assets/videos/nossoAmbiente/video1.mp4'
+import video2 from '../../assets/videos/nossoAmbiente/video2.mp4'
+import video3 from '../../assets/videos/nossoAmbiente/video3.mp4'
+import video4 from '../../assets/videos/nossoAmbiente/video4.mp4'
+import video5 from '../../assets/videos/nossoAmbiente/video5.mp4'
+import video6 from '../../assets/videos/nossoAmbiente/video6.mp4'
 
 export default function Ambiente({color = 'black'}) {
-  const imagens = [
+  const videos = [
 
-    { id: '1', image: ambiente1 },
-    { id: '2', image: ambiente2 },
-    { id: '3', image: ambiente3 },
-    { id: '4', image: ambiente4 },
-    { id: '5', image: ambiente1 },
-    { id: '6', image: ambiente2 },
-    { id: '7', image: ambiente3 },
-    { id: '8', image: ambiente4 },
+    { id: '1', image: video1 },
+    { id: '2', image: video2 },
+    { id: '3', image: video3 },
+    { id: '4', image: video4 },
+    { id: '5', image: video5 },
+    { id: '6', image: video6 },
+    { id: '7', image: video1 },
+    { id: '8', image: video2 },
   ]
   return (
     <section className={`container_ambiente ${color}`}>
@@ -69,23 +71,22 @@ export default function Ambiente({color = 'black'}) {
               1200:{
                 slidesPerView: 3.5
               }
+              
             }}
             
           >
             
             {
               
-              imagens.map((imagem) => (
-                <SwiperSlide key={imagem.id}>
-                    <img src={imagem.image}/>
+              videos.map((video) => (
+                <SwiperSlide key={video.id}>
+                    <video autoPlay loop muted playsInline>
+                      <source src={video.image} type='video/mp4'/>
+                    </video>
                   </SwiperSlide>
               ))
               
             }
-
-            
-
-
 
           </Swiper>
 
