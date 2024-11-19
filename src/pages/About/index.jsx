@@ -50,7 +50,7 @@ const About = () => {
       <Ideias_About />
       <ProjectsFeedBack />
       <InfinitTimeLine />
-      <Ambiente color='white' />
+      {/* <Ambiente color='white' /> */}
       <Destaques />
       <section className='blour-image'>
         <img src={img_blour} alt='imagem com blour' />
