@@ -106,6 +106,8 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    position: absolute;
+    bottom: 5%;
 }
 .change-slide .bar{
     width: 14.75rem;
@@ -126,7 +128,16 @@
     }
 }
 
-@media(max-width: 1200px) {}
+@media(max-width: 1200px) {
+    .feedback{
+        height: 37.5rem;
+        justify-content: start;
+        padding-top: 70px;
+    }
+    .change-slide{
+        bottom: 0;
+    }
+}
 
 @media(max-width: 991px) {
     .project-feedback .img-project img{
@@ -134,7 +145,7 @@
         height: 30rem;
     }
     .feedback p{
-        font-size: 18px;
+        font-size: 16px;
     }
     .project-feedback{
         gap: 1.25rem;
@@ -151,7 +162,13 @@
         height: 18.75rem;
     }
     .feedback{
-        padding-top: 10%;
+        padding-top: 5%;
+    }
+    .people-description{
+        margin-bottom: 1rem;
+    }
+    .change-slide{
+        bottom: 5%;
     }
 }
 
@@ -159,8 +176,8 @@
 
 @media(max-width: 600px) {
     .project-feedback .img-project img{
-        max-width: 20rem;
-        height: 25rem;
+       max-width: 100%;
+       object-position: 50% 80%;
     }
     .feedback{
         height: 25rem;
@@ -181,12 +198,19 @@
     .setas img{
         width: 100%;
         max-width: 0.9375rem;
+    }
+    .project-feedback{
+        grid-template-columns: 1fr; 
+        gap: 0.625rem; 
 
+    }
+    .img-project{
+        height: 21.875rem;
     }
 }
 
 @media(max-width: 480px) {
-    .project-feedback{
+    /* .project-feedback{
         grid-template-columns: 1fr; 
         gap: 0.625rem; 
 
@@ -196,7 +220,19 @@
     }
     .project-feedback .img-project img{
         max-width: 100%;
+    } */
+
+    .feedback{
+        width: 100%;
+        height: 30rem;
     }
+    .project-feedback .img-project{
+        display: none;
+    }
+    .project-feedback{
+        margin-top: 8rem;
+    }
+    
 }
 
 @media(max-width: 360px){}

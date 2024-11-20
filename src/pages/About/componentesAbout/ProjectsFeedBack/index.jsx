@@ -161,8 +161,11 @@ export default function ProjectsFeedBack() {
 
                 </div>
                 <div className='descri'>
-                  <p>O projeto foi incrível, gostamos muito do resultado, e o Revelatio Studio conseguiu 
-                    realmente extrair toda a nossa visão sobre o que era a Prop e colocar em uma marca e identidade visual.</p>
+                <p>O Revelatio Studio conduziu o processo de forma brilhante, ouviu todos os pontos levantados e em pouco 
+                  tempo trouxe algo exatamente como queríamos (e nem sabíamos ao certo o que queríamos). Mudamos praticamente nada do projeto inicial, caiu como uma luva 
+                  e temos muito orgulho da nova identidade visual. Nos sentimos representadas efetivamente e com vontade de mostrar nossa nova forma aos clientes. 
+                  Inclusive, a percepção dos clientes e não clientes de forma geral é de que a DCA é uma empresa profissional, sólida, robusta. 
+                  E a comunicação visual contribuiu para essa percepção. Obrigada, Revelatio!</p>
                 </div>
               </>
 
