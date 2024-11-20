@@ -117,7 +117,7 @@ export default function Destaques() {
                             <p>smile burguer</p>
                             <img src={smile} alt='' />
                             <p></p>
-                            <p>Design Rush</p>
+                            <p>Design <br className='hide-on-desk'/>Rush</p>
                             <p>Listado</p>
                             <p>Branding</p>
                             <p>2024</p>
@@ -132,7 +132,7 @@ export default function Destaques() {
                             <p>2024</p>
                         </div>
                         <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>dca influence house</p>
+                            <p>{window.innerWidth <= 800 ? <p>dca influence</p> : <p>dca influence house</p>}</p>
                             <img src={dca} alt='' />
                             <p></p>
                             <p>WBDS</p>
@@ -163,7 +163,7 @@ export default function Destaques() {
                             <img src={prop} alt='' />
                             <p></p>
                             <p>Behance</p>
-                            <p>Selo Graphic Design</p>
+                            {window.innerWidth <=800 ? <p>SGD</p> : <p>Selo Graphic Design</p>}
                             <p>Branding</p>
                             <p>2024</p>
                         </div>

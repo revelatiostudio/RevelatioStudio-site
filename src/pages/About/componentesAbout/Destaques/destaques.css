@@ -116,6 +116,9 @@
     font-weight: 500;
     color: var(--color-gray-800);
 }
+.hide-on-desk{
+    display: none;
+}
 
 /* responsivo medias */
 
@@ -171,7 +174,7 @@
     .projects .project-row img{
         width: 6rem;
         height: 4.5rem;
-        left: 23%;
+        left: 24%;
     }
     .projects .project-row{
         width: 100vw;
@@ -192,5 +195,17 @@
     }
     .container-destaques {
         margin-top: 5rem;
+    }
+    .project-row{
+        height: 2rem;
+    }
+    .projects .project-row p{
+        word-wrap: break-word;
+    }
+    .hide-on-desk{
+        display: block;
+    }
+    .contact{
+        width: max-content;
     }
 }
