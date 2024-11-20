@@ -4,9 +4,25 @@ import './destaques.css'
 import seta from '../../../../assets/img/arrow-secs.svg'
 import { gsap } from "gsap";
 
-import img1 from '../../../../assets/img/home/cases/case1.png'
-import img2 from '../../../../assets/img/home/cases/case2.png'
-import img3 from '../../../../assets/img/home/cases/case3.png'
+import castro from '../../../../assets/img/about/reconhecimentos/castro.png'
+import approach from '../../../../assets/img/about/reconhecimentos/approach.png'
+import ctm from '../../../../assets/img/about/reconhecimentos/ctm.png'
+import immersy from '../../../../assets/img/about/reconhecimentos/immersy.png'
+import kaicara from '../../../../assets/img/about/reconhecimentos/kaicara.png'
+import life from '../../../../assets/img/about/reconhecimentos/life.png'
+import prop from '../../../../assets/img/about/reconhecimentos/prop.png'
+import smile from '../../../../assets/img/about/reconhecimentos/smile.png'
+import marasol from '../../../../assets/img/about/reconhecimentos/marasol.png'
+import dca from '../../../../assets/img/about/reconhecimentos/dca.png'
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,112 +78,166 @@ export default function Destaques() {
 
                     <div className='projects'>
                         <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img1} alt='' />
+                            <p>castro & hinrichsen</p>
+                            <img src={castro} alt='' />
                             <p></p>
-                            <p>Top Design King</p>
-                            <p>King of The Day</p>
-                            <p>Website</p>
-                            <p>2023</p>
+                            <p>WBDS</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
                         </div>
                         <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem} >
-                            <p>Top Design King</p>
-                            <img src={img2} alt='' />
+                            <p>marasol pousada</p>
+                            <img src={marasol} alt='' />
                             <p></p>
-                            <p>CSSDA</p>
-                            <p>UX</p>
-                            <p>Website</p>
-                            <p>2023</p>
-                        </div>
-                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img3} alt='' />
-                            <p></p>
-                            <p>Top Design King</p>
-                            <p>King of The Day</p>
-                            <p>Website</p>
-                            <p>2023</p>
-                        </div>
-                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img1} alt='' />
-                            <p></p>
-                            <p>CSSOTD</p>
-                            <p>Site of The Day</p>
-                            <p>Website</p>
-                            <p>2023</p>
-                        </div>
-                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img2} alt='' />
-                            <p></p>
-                            <p>Behance</p>
-                            <p>Featured</p>
+                            <p> WBDS</p>
+                            <p>Listado</p>
                             <p>Branding</p>
-                            <p>2023</p>
+                            <p>2024</p>
                         </div>
                         <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img3} alt='' />
+                            <p>ctm dor </p>
+                            <img src={ctm} alt='' />
                             <p></p>
                             <p>WBDS</p>
-                            <p>Featured</p>
+                            <p>Listado</p>
                             <p>Branding</p>
-                            <p>2023</p>
+                            <p>2024</p>
                         </div>
                         <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img1} alt='' />
+                            <p>smile burguer</p>
+                            <img src={smile} alt='' />
+                            <p></p>
+                            <p>WBDS</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>smile burguer</p>
+                            <img src={smile} alt='' />
                             <p></p>
                             <p>Design Rush</p>
-                            <p>Mention</p>
+                            <p>Listado</p>
                             <p>Branding</p>
-                            <p>2023</p>
+                            <p>2024</p>
                         </div>
                         <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img2} alt='' />
-                            <p></p>
-                            <p>Behance</p>
-                            <p>Featured</p>
-                            <p>Branding</p>
-                            <p>2023</p>
-                        </div>
-                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img3} alt='' />
-                            <p></p>
-                            <p>Design Nominees</p>
-                            <p>Site of The Day</p>
-                            <p>Website</p>
-                            <p>2023</p>
-                        </div>
-                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img1} alt='' />
-                            <p></p>
-                            <p>Top Design King</p>
-                            <p>King of The Day</p>
-                            <p>Website</p>
-                            <p>2023</p>
-                        </div>
-                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img2} alt='' />
+                            <p>approach</p>
+                            <img src={approach} alt='' />
                             <p></p>
                             <p>WBDS</p>
-                            <p>Mention</p>
+                            <p>Listado</p>
                             <p>Branding</p>
-                            <p>2023</p>
+                            <p>2024</p>
                         </div>
                         <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
-                            <p>Top Design King</p>
-                            <img src={img3} alt='' />
+                            <p>dca influence house</p>
+                            <img src={dca} alt='' />
                             <p></p>
-                            <p>WGA</p>
-                            <p>Guru of The Month</p>
-                            <p>Website</p>
-                            <p>2023</p>
+                            <p>WBDS</p>
+                            <p>...</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>life</p>
+                            <img src={life} alt='' />
+                            <p></p>
+                            <p>WBDS</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>prop</p>
+                            <img src={prop} alt='' />
+                            <p></p>
+                            <p>WBDS</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>prop</p>
+                            <img src={prop} alt='' />
+                            <p></p>
+                            <p>Behance</p>
+                            <p>Selo Graphic Design</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>prop</p>
+                            <img src={prop} alt='' />
+                            <p></p>
+                            <p>Behance</p>
+                            <p>Selo Stock</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>kaiçara</p>
+                            <img src={kaicara} alt='' />
+                            <p></p>
+                            <p>WBDS</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>kaiçara</p>
+                            <img src={kaicara} alt='' />
+                            <p></p>
+                            <p>WBDS</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>marasol pousada</p>
+                            <img src={marasol} alt='' />
+                            <p></p>
+                            <p>BDC</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>marasol pousada</p>
+                            <img src={marasol} alt='' />
+                            <p></p>
+                            <p>BDC</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>immersy</p>
+                            <img src={immersy} alt='' />
+                            <p></p>
+                            <p>WBDS</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>immersy</p>
+                            <img src={immersy} alt='' />
+                            <p></p>
+                            <p>abduzeedo</p>
+                            <p>Listado</p>
+                            <p>Branding</p>
+                            <p>2024</p>
+                        </div>
+                        <div className='project-row' onMouseEnter={trocaImagem} onMouseLeave={saiImagem}>
+                            <p>immersy</p>
+                            <img src={immersy} alt='' />
+                            <p></p>
+                            <p>BDA</p>
+                            <p>Shortlist</p>
+                            <p>Branding</p>
+                            <p>2024</p>
                         </div>
 
                     </div>
