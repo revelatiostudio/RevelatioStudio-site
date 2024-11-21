@@ -45,6 +45,7 @@
     height: 25rem;
     position: relative;
     margin-bottom: 1em;
+    will-change: transform;
 }
 
 .case-1 img {

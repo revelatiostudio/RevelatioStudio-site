@@ -1,13 +1,13 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 
-  
+
 }
-.grid-global{
+
+.grid-global {
   width: 100%;
   max-width: 116.25rem;
   margin: 0 auto;
@@ -15,7 +15,7 @@
   position: relative;
 }
 
-:root{
+:root {
   --color-gray-500: #808080;
   --color-gray-900: #E6E6E6;
   --color-gray-1000: #4C4C4C;
@@ -29,28 +29,38 @@
   --color-white: #FFFFFF;
   --color-black: #000000
 }
+
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-h1, h2{
+
+h1,
+h2 {
   font-family: "neue-haas-grotesk-text";
 }
-p, a, span{
+
+p,
+a,
+span {
   font-family: "neue-haas-grotesk-display"
 
 }
 
-html, body{
-  overflow-x: hidden; 
+html,
+body {
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
 }
-a{
+
+a {
   cursor: pointer;
 }
 
 @media(max-width: 480px) {
-  .grid-global{
+  .grid-global {
     width: 100%;
     max-width: 116.25rem;
     margin: 0 auto;
