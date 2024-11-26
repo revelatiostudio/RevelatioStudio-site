@@ -48,7 +48,7 @@ function App() {
         <NavBar color={navColor} />
       </div>
 
-      <ReactLenis root options={{autoRaf:false, smoothWheel: false, syncTouch:false, smoothTouch: false, syncTouchLerp:0.020}} ref={lenisRef}>
+      <ReactLenis root options={{autoRaf:false, smoothWheel: false, syncTouch:false, smoothTouch: false}} ref={lenisRef}>
         <AnimatePresence mode='wait'>
           <Routes location={location} key={location.pathname}>
             <Route path='/' element={<Home />} />
