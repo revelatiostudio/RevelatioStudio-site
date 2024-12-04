@@ -183,8 +183,6 @@
 
 
 
-
-
 @media(max-width: 1400px) {
     .overlay-blur{
         height: 16rem;
@@ -230,38 +228,43 @@
     .project{
         max-width: 20.68rem;
     }
-    .all-cases{
-        
-    }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 600px) and (min-width: 481px) {
     .cases-scroll h1{
-        font-size: 40px;
+        font-size: 2.5rem;
     }
     .case-1 img{
         width: 16rem;
         height: 12rem;
     }
-    .project{
-        max-width: 16rem;
+    .projects-tablet .cases-tablet:nth-of-type(2),
+    .projects-tablet .cases-tablet:nth-of-type(4){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
     }
 
 }
 
 @media(max-width: 480px) {
-    .case-1 img{
-        width: 13rem;
-        height: 9rem;
+    .cases-tablet{
+        width: 100%;
+    }
+    .projects-tablet .cases-tablet img{
+        width: 100%;
+        max-width: 116.25rem;
+        height: 16.25rem;
     }
     .project{
-        max-width: 13rem;
+        max-width: 116.25rem;
     }
     .project p{
-        font-size: 10px;
+        font-size: 0.75rem;
     }
     .see-cases{
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
 } 
