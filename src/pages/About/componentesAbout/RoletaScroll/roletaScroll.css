@@ -123,7 +123,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     padding-top: 3.125rem;
 }
 .roulette-tablet .header-roulette-tablet h1{
