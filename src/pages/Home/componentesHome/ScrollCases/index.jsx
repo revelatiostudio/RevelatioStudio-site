@@ -5,6 +5,7 @@ import case2 from '../../../../assets/img/home/cases/case2.png'
 import case3 from '../../../../assets/img/home/cases/case3.png'
 import seta from '../../../../assets/img/arrow-secs.svg'
 import setac from '../../../../assets/img/home/cases/arrow-cases.svg'
+import setaBaixo from '../../../../assets/img/home/cases/arrow-down.svg'
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -20,8 +21,7 @@ export default function ScrollCases() {
     const caseScroll = useRef(null);
     const imgTam = useRef(null)
 
-
-    useGSAP(() => {
+    function animationScrollCases() {
         let mm = gsap.matchMedia();
         const tam = window.innerHeight;
         gsap.set('.case-1', {
@@ -88,119 +88,193 @@ export default function ScrollCases() {
 
         return () => mm.revert();
 
+    }
+
+
+    useGSAP(() => {
+        if (window.innerWidth >= 801) {
+            animationScrollCases()
+        }
+
 
     })
 
     return (
         <div className='grid-global'>
-            <section className='cases-scroll' ref={caseScroll}>
+            {window.innerWidth <= 800 ? (
+                <section className='cases-tablet'>
+                    <div className='header-tablet'>
+                        <h1>Nossos cases</h1>
+                        <img src={setaBaixo} alt='seta para baixo' />
+                    </div>
+                    <div className='projects-tablet'>
+                        <div className='cases-tablet'>
+                            <img src={case1} alt='' ref={imgTam} />
+                            <div className='project'>
+                                <div className='project-name'>
+                                    <p>Nome do projeto</p>
+                                    <p>Nome do projeto</p>
+                                </div>
+                                <p>Website | Branding</p>
 
-                <div className='middle-text'>
-                    <h1>Nossos Cases</h1>
-                </div>
-
-                <div className="progress-bar">
-                    <Progress classNames={{
-                        base: 'h-[0.1rem]'
-
-                    }}
-                        size="sm" aria-label="Loading..."
-                        color="default" value={scrolll} radius='none' minValue={0} maxValue={1} valueLabel={scrolll}
-                    />
-                </div>
-
-                <div className='overlay-blur'>
-                </div>
-                <div>
-
-                </div>
-
-                <div className='case-1'>
-                    <img src={case1} alt='' ref={imgTam} />
-                    <div className='project'>
-                        <div className='project-name'>
-                            <p>Nome do projeto</p>
-                            <p>Nome do projeto</p>
+                            </div>
                         </div>
-                        <p>Website | Branding</p>
+                        <div className='cases-tablet'>
+                            <img src={case1} alt='' ref={imgTam} />
+                            <div className='project'>
+                                <div className='project-name'>
+                                    <p>Nome do projeto</p>
+                                    <p>Nome do projeto</p>
+                                </div>
+                                <p>Website | Branding</p>
 
-                    </div>
-                </div>
-                <div className='case-1'>
-                    <img src={case2} alt='' />
-                    <div className='project'>
-                        <div className='project-name'>
-                            <p>Nome do projeto</p>
-                            <p>Nome do projeto</p>
+                            </div>
                         </div>
-                        <p>Website | Branding</p>
+                        <div className='cases-tablet'>
+                            <img src={case1} alt='' ref={imgTam} />
+                            <div className='project'>
+                                <div className='project-name'>
+                                    <p>Nome do projeto</p>
+                                    <p>Nome do projeto</p>
+                                </div>
+                                <p>Website | Branding</p>
 
-                    </div>
-                </div>
-                <div className='case-1'>
-                    <img src={case3} alt='' />
-                    <div className='project'>
-                        <div className='project-name'>
-                            <p>Nome do projeto</p>
-                            <p>Nome do projeto</p>
+                            </div>
                         </div>
-                        <p>Website | Branding</p>
+                        <div className='cases-tablet'>
+                            <img src={case1} alt='' ref={imgTam} />
+                            <div className='project'>
+                                <div className='project-name'>
+                                    <p>Nome do projeto</p>
+                                    <p>Nome do projeto</p>
+                                </div>
+                                <p>Website | Branding</p>
 
-                    </div>
-                </div>
-                <div className='case-1'>
-                    <img src={case1} alt='' />
-                    <div className='project'>
-                        <div className='project-name'>
-                            <p>Nome do projeto</p>
-                            <p>Nome do projeto</p>
+                            </div>
                         </div>
-                        <p>Website | Branding</p>
 
-                    </div>
-                </div>
-                <div className='case-1'>
-                    <img src={case2} alt='' />
-                    <div className='project'>
-                        <div className='project-name'>
-                            <p>Nome do projeto</p>
-                            <p>Nome do projeto</p>
+                        <div className='all-casest'>
+                            <div className='all-cases'>
+                                <a href=''>Ver todos os cases</a>
+                                <span><a><img src={seta} alt='' /></a></span>
+                            </div>
                         </div>
-                        <p>Website | Branding</p>
 
                     </div>
-                </div>
-                <div className='case-1'>
-                    <img src={case3} alt='' />
-                    <div className='project'>
-                        <div className='project-name'>
-                            <p>Nome do projeto</p>
-                            <p>Nome do projeto</p>
+
+                </section>
+            ) : (
+                <section className='cases-scroll' ref={caseScroll}>
+
+                    <div className='middle-text'>
+                        <h1>Nossos Cases</h1>
+                    </div>
+
+                    <div className="progress-bar">
+                        <Progress classNames={{
+                            base: 'h-[0.1rem]'
+
+                        }}
+                            size="sm" aria-label="Loading..."
+                            color="default" value={scrolll} radius='none' minValue={0} maxValue={1} valueLabel={scrolll}
+                        />
+                    </div>
+
+                    <div className='overlay-blur'>
+                    </div>
+                    <div>
+
+                    </div>
+
+                    <div className='case-1'>
+                        <img src={case1} alt='' ref={imgTam} />
+                        <div className='project'>
+                            <div className='project-name'>
+                                <p>Nome do projeto</p>
+                                <p>Nome do projeto</p>
+                            </div>
+                            <p>Website | Branding</p>
+
                         </div>
-                        <p>Website | Branding</p>
-
                     </div>
-                </div>
+                    <div className='case-1'>
+                        <img src={case2} alt='' />
+                        <div className='project'>
+                            <div className='project-name'>
+                                <p>Nome do projeto</p>
+                                <p>Nome do projeto</p>
+                            </div>
+                            <p>Website | Branding</p>
 
-                <div className='overlay-blur bottom'>
-                </div>
-                <div className='see-cases'>
-                    <div className='all-cases'>
-                        <a href=''>Ver todos os cases</a>
-                        <span><a><img src={seta} alt=''/></a></span>
-                    </div>
-                    <div className='explore'>
-                        <div className='sec-explore'>
-                            <p>Scroll to explore</p>
-                            <span><img src={setac} alt='' /></span>
                         </div>
-                        <p className='p1'>6 Cases</p>
+                    </div>
+                    <div className='case-1'>
+                        <img src={case3} alt='' />
+                        <div className='project'>
+                            <div className='project-name'>
+                                <p>Nome do projeto</p>
+                                <p>Nome do projeto</p>
+                            </div>
+                            <p>Website | Branding</p>
+
+                        </div>
+                    </div>
+                    <div className='case-1'>
+                        <img src={case1} alt='' />
+                        <div className='project'>
+                            <div className='project-name'>
+                                <p>Nome do projeto</p>
+                                <p>Nome do projeto</p>
+                            </div>
+                            <p>Website | Branding</p>
+
+                        </div>
+                    </div>
+                    <div className='case-1'>
+                        <img src={case2} alt='' />
+                        <div className='project'>
+                            <div className='project-name'>
+                                <p>Nome do projeto</p>
+                                <p>Nome do projeto</p>
+                            </div>
+                            <p>Website | Branding</p>
+
+                        </div>
+                    </div>
+                    <div className='case-1'>
+                        <img src={case3} alt='' />
+                        <div className='project'>
+                            <div className='project-name'>
+                                <p>Nome do projeto</p>
+                                <p>Nome do projeto</p>
+                            </div>
+                            <p>Website | Branding</p>
+
+                        </div>
                     </div>
 
-                </div>
+                    <div className='overlay-blur bottom'>
+                    </div>
+                    <div className='see-cases'>
+                        <div className='all-cases'>
+                            <a href=''>Ver todos os cases</a>
+                            <span><a><img src={seta} alt='' /></a></span>
+                        </div>
+                        <div className='explore'>
+                            <div className='sec-explore'>
+                                <p>Scroll to explore</p>
+                                <span><img src={setac} alt='' /></span>
+                            </div>
+                            <p className='p1'>6 Cases</p>
+                        </div>
+
+                    </div>
 
 
-            </section>
+                </section>
+            )
+
+            }
 
 
 

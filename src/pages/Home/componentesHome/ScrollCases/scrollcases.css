@@ -138,6 +138,53 @@
     border-bottom: 1px var(--color-gray-100) solid;
 }
 
+/* Tablet */
+.header-tablet{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3.75rem;
+}
+.header-tablet img{
+    width: 100%;
+    max-width: 0.75rem;
+    height: 1rem;
+}
+.header-tablet h1{
+    font-size: 2rem;
+    font-weight: 450;
+    line-height: 120%;
+    font-family: "neue-haas-grotesk-display"
+}
+
+.projects-tablet{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cases-tablet{
+    margin-top: 3.5rem;
+}
+
+.projects-tablet .cases-tablet img{
+    width: 100%;
+    max-width: 20.68rem;
+    height: 16.25rem;
+}
+.all-casest{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+
+
+
+
+
+
 @media(max-width: 1400px) {
     .overlay-blur{
         height: 16rem;
@@ -179,7 +226,14 @@
     }
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 800px) {
+    .project{
+        max-width: 20.68rem;
+    }
+    .all-cases{
+        
+    }
+}
 
 @media(max-width: 600px) {
     .cases-scroll h1{
@@ -210,4 +264,4 @@
         font-size: 14px;
     }
 
-}
+} 
