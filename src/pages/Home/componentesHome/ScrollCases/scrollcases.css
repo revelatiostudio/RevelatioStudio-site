@@ -163,11 +163,20 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.cases-tablet{
+.projectst{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cases-tablet, .case-tablet{
     margin-top: 3.5rem;
 }
+.case-tablet{
+    will-change: transform;
+}
 
-.projects-tablet .cases-tablet img{
+.projects-tablet .case-tablet img{
     width: 100%;
     max-width: 20.68rem;
     height: 16.25rem;
@@ -238,8 +247,8 @@
         width: 16rem;
         height: 12rem;
     }
-    .projects-tablet .cases-tablet:nth-of-type(2),
-    .projects-tablet .cases-tablet:nth-of-type(4){
+    .projects-tablet .case-tablet:nth-of-type(2),
+    .projects-tablet .case-tablet:nth-of-type(4){
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -252,9 +261,9 @@
     .cases-tablet{
         width: 100%;
     }
-    .projects-tablet .cases-tablet img{
+    .projects-tablet .case-tablet img{
         width: 100%;
-        max-width: 116.25rem;
+        max-width: 100%;
         height: 16.25rem;
     }
     .project{

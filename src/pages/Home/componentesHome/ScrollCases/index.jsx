@@ -90,10 +90,35 @@ export default function ScrollCases() {
 
     }
 
+    function animationScrollCasesMobile() {
+
+        const cases = document.querySelectorAll('.case-tablet')
+
+
+        gsap.set(cases, {
+            clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
+        })
+        cases.forEach((a) => {
+            gsap.to(a, {
+                clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+                scrollTrigger:{
+                    trigger: a,
+                    start: 'top-=20% center',
+                    end: 'bottom center',
+                    ease:'none',
+                
+                }
+            },0)
+        })
+       
+    }
+
 
     useGSAP(() => {
         if (window.innerWidth >= 801) {
             animationScrollCases()
+        } else {
+            animationScrollCasesMobile()
         }
 
 
@@ -102,13 +127,13 @@ export default function ScrollCases() {
     return (
         <div className='grid-global'>
             {window.innerWidth <= 800 ? (
-                <section className='cases-tablet'>
+                <section className='cases-tablet' ref={caseScroll}>
                     <div className='header-tablet'>
                         <h1>Nossos cases</h1>
                         <img src={setaBaixo} alt='seta para baixo' />
                     </div>
                     <div className='projects-tablet'>
-                        <div className='cases-tablet'>
+                        <div className='case-tablet'>
                             <img src={case1} alt='' ref={imgTam} />
                             <div className='project'>
                                 <div className='project-name'>
@@ -119,7 +144,7 @@ export default function ScrollCases() {
 
                             </div>
                         </div>
-                        <div className='cases-tablet'>
+                        <div className='case-tablet'>
                             <img src={case1} alt='' ref={imgTam} />
                             <div className='project'>
                                 <div className='project-name'>
@@ -130,7 +155,7 @@ export default function ScrollCases() {
 
                             </div>
                         </div>
-                        <div className='cases-tablet'>
+                        <div className='case-tablet'>
                             <img src={case1} alt='' ref={imgTam} />
                             <div className='project'>
                                 <div className='project-name'>
@@ -141,7 +166,7 @@ export default function ScrollCases() {
 
                             </div>
                         </div>
-                        <div className='cases-tablet'>
+                        <div className='case-tablet'>
                             <img src={case1} alt='' ref={imgTam} />
                             <div className='project'>
                                 <div className='project-name'>
