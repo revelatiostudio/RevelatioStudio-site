@@ -113,6 +113,70 @@
 
 }
 
+/* Tablet */
+.roulette-tablet{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin-top: 12.0625rem;
+}
+.header-roulette-tablet{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3.125rem;
+}
+.roulette-tablet .header-roulette-tablet h1{
+    font-size: 1.5rem;
+    font-weight: 450;
+    line-height: 120%;
+    letter-spacing: -0.48px;
+    font-family: "neue-haas-grotesk-display"
+}
+
+.container-country-tablet{
+    margin-top: 2.8125rem;
+}
+
+.container-country-tablet .country-tablet{
+    display: flex;
+    align-items: center;
+    padding-top: 0.9375rem;
+}
+.container-country-tablet .country-tablet:last-child{
+    padding-bottom: 1.25rem;
+}
+.container-country-tablet .country-tablet h1{
+    font-size: 2.4188rem;
+    font-weight: 500;
+    line-height: 100%;
+    font-style: normal;
+    color: var(--color-gray-600);
+    will-change: transform;
+   
+}
+.container-country-tablet .country-tablet p{
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-gray-600);
+    margin-left: 25px;
+    will-change: transform;
+}
+
+.container-country-tablet .country-tablet.active h1{
+    color: var(--color-white);
+
+}
+.container-country-tablet .country-tablet.active p{
+    color: var(--color-white);
+
+  
+
+}
+
+
+
 /* responsivo medias */
 
 @media(max-width: 1400px) {
