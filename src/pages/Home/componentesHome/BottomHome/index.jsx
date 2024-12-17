@@ -30,7 +30,7 @@ export default function BottomHome() {
                                 <Link to='/'><p>Home</p></Link>
                                 <Link to='/about'><p>Sobre</p></Link>
                                 <p>Cases</p>
-                                <p>Contato</p>
+                                <Link to='/contato'><p>Contato</p></Link>
                                 <p>Galeria</p>
                             </div>
                             <p className='revelatio'>Revelatio © 2024 All rights reserved</p>

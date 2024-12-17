@@ -26,7 +26,7 @@ export default function NavBar({ color }) {
         { path: '/', pagina: 'Home', numero: '01' },
         { path: '/about', pagina: 'Estúdio', numero: '02' },
         { path: '/', pagina: 'Cases', numero: '03' },
-        { path: '/', pagina: 'Contato', numero: '04' },
+        { path: '/contato', pagina: 'Contato', numero: '04' },
         { path: '/', pagina: 'Playground', numero: '05' }
     ]
 
