@@ -25,7 +25,7 @@ const About = () => {
     <>
       <header>
         <div className='grid-global'>
-{/* 
+          {/* 
           <NavBar color='black' /> */}
           <div className='about-us'>
             <h1>Sobre nós</h1>
@@ -55,8 +55,8 @@ const About = () => {
       <section className='blour-image'>
         <img src={img_blour} alt='imagem com blour' />
       </section>
-      <Principios/>
-      <BottomHome/>
+      <Principios />
+      <BottomHome />
 
 
     </>

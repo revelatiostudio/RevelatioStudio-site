@@ -1,0 +1,127 @@
+.container-contato{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-separator{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.image-form{
+    width: 100%;
+    max-width: 50%;
+}
+.image-form img{
+    width: 100%;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.contato-form{
+    width: 100%;
+    max-width: 50%;
+}
+.contatos{
+    width: 100%;
+    max-width: 50%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 1.875rem;
+    align-items: end;
+
+}
+
+.contatos h1{
+    color: var(--color-gray-900);
+    opacity: 0.5;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 100%;
+    font-family: "neue-haas-grotesk-display";
+    padding-bottom: 18px;
+}
+.contatos p{
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 130%;
+    opacity: 0.8;
+}
+
+.contato-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 5.625rem;
+}
+.formulario-contato{
+    width: 100%;
+    max-width: 30rem;
+}
+.formulario-contato h1{
+    color: var(--color-black);
+    font-size: 2.5rem;
+    font-family: "neue-haas-grotesk-display";
+    font-weight: 450;
+    line-height: 120%;
+}
+.formulario-contato form{
+    margin-top: 5.125rem;
+    width: 100%;
+    
+}
+.formulario-contato form input{
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 1.625rem 0.75rem;
+    margin-top: 1.125rem;
+    border: 1px var(--color-gray-900) solid;
+  
+}
+
+.formulario-contato form input:focus{
+    outline: none;
+    border-color: black;
+    opacity: 0.5;
+}
+.form-div{
+    display: flex;
+    gap: 1.5rem;
+
+}
+
+/* Para remover as setinhas em navegadores baseados em Webkit (Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Para remover as setinhas no Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.formulario-contato button{
+    margin-top: 82px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    width: 100%;
+    padding: 1.25rem 1.125rem;
+    border-radius: 0.25rem;
+}
+
+.button-prox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-prox img{
+    width: 0.625rem;
+    height: 0.625rem;
+}
+

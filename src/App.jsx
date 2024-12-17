@@ -8,6 +8,7 @@ import { useEffect, useRef } from 'react'
 import NavBar from './componentes/NavBar'
 import { AnimatePresence } from 'framer-motion'
 import { useGSAP } from '@gsap/react'
+import Contato from './pages/Contato'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   const lenisRef = useRef()
 
   let navColor = "white";
-  if (location.pathname === "/about") {
+  if (location.pathname === "/about" || location.pathname === "/contato") {
     navColor = "black"
   }
 
@@ -53,6 +54,7 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
+            <Route path='/contato' element={<Contato/>} />
           </Routes>
 
         </AnimatePresence>
