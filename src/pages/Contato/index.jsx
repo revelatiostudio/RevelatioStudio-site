@@ -11,13 +11,6 @@ import emailJs from '@emailjs/browser'
 
 
 const Contato = () => {
-    const nomeRef = useRef()
-    const negocioRef = useRef()
-    const celularRef = useRef()
-    const cnpjRef = useRef()
-    const emailRef = useRef()
-    const cidadeRef = useRef()
-
     const [nome, setNome] = useState("")
     const [negocio, setNegocio] = useState("")
     const [celular, setCelular] = useState("")
@@ -27,17 +20,18 @@ const Contato = () => {
 
     const [captcha, setCaptcha] = useState("");
 
- 
 
-    function novoCliente(event){
+
+    function novoCliente(event) {
         event.preventDefault();
 
-        if (captcha)
-            alert('captcha resolvido');
-          else
+        if (!captcha) {
             alert('captcha pendente');
+            return;
+        }
 
-        
+
+
 
         const templateParams = {
             from_name: nome,
@@ -55,11 +49,11 @@ const Contato = () => {
         setCidade("")
 
         emailJs.send("service_baqelvg", "template_1wbysni", templateParams, "jjDEffKIK2bVCsPkO")
-        .then((response) => {
-            alert("Seu email foi enviado com sucesso!")
-        }, (erro) => {
-            console.log("erro", erro)
-        })
+            .then((response) => {
+                alert("Seu email foi enviado com sucesso!")
+            }, (erro) => {
+                console.log("erro", erro)
+            })
 
 
     }
@@ -91,22 +85,24 @@ const Contato = () => {
                     <div className='formulario-contato'>
                         <h1>Preencha o formulário <br /> para entrarmos em contato!</h1>
                         <form onSubmit={novoCliente}>
-                            <input required type='text' id='nome' placeholder='Como podemos te chamar? *'  onChange={(e) => setNome(e.target.value)} value={nome} />
+                            <input required type='text' id='nome' placeholder='Como podemos te chamar? *' onChange={(e) => setNome(e.target.value)} value={nome} />
                             <input type='text' id='empresa' placeholder='Qual o nome do seu negócio?' onChange={(e) => setNegocio(e.target.value)} value={negocio} />
                             <div className='form-div'>
                                 <input type='tel' id='celular' placeholder='Celular para contato' onChange={(e) => setCelular(e.target.value)} value={celular} />
                                 <input type='number' id='cnpj' placeholder='CNPJ da empresa' onChange={(e) => setCnpj(e.target.value)} value={cnpj} />
                             </div>
-                            <input required type='email' id='empresa' placeholder='Informe seu email *' onChange={(e) => setEmail(e.target.value)} value={email}/>
+                            <input required type='email' id='empresa' placeholder='Informe seu email *' onChange={(e) => setEmail(e.target.value)} value={email} />
                             <input required type='text' id='cidade' placeholder='Qual cidade / estado / país a sua empresa está ou será estabelecida?' onChange={(e) => setCidade(e.target.value)} value={cidade} />
-                            <ReCAPTCHA 
-                            sitekey={import.meta.env.VITE_SITE_KEY}
-                            onChange={setCaptcha}
+                           <div className='captcha'>
+                           <ReCAPTCHA
+                                sitekey={import.meta.env.VITE_SITE_KEY}
+                                onChange={setCaptcha}
                             />
+                           </div>
                             <button type='submit'>
                                 <div className='button-prox'>
-                                Próxima etapa
-                                <img src={logo} alt=''/>
+                                    Próxima etapa
+                                    <img src={logo} alt='' />
                                 </div>
                             </button>
                         </form>

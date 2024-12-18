@@ -107,7 +107,7 @@ input[type="number"] {
 }
 
 .formulario-contato button{
-    margin-top: 50px;
+    margin-top: 2.5rem;
     background-color: var(--color-black);
     color: var(--color-white);
     width: 100%;
@@ -123,5 +123,8 @@ input[type="number"] {
 .button-prox img{
     width: 0.625rem;
     height: 0.625rem;
+}
+.captcha{
+    margin-top: 0.625rem;
 }
 
