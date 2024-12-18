@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 
 import logo_white from '../../assets/img/home/logo.svg'
@@ -21,6 +21,7 @@ export default function NavBar({ color }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+    const location = useLocation();
 
     const linksPaginas = [
         { path: '/', pagina: 'Home', numero: '01' },
@@ -82,11 +83,11 @@ export default function NavBar({ color }) {
                         <p>Revelamos o âmago dos negócios.</p>
                     </div>
 
-                    <div className='pt-br'>
+                    <div className={location.pathname == '/contato' ? "pt-br pt-br-contato" : "pt-br"}>
                         <p>PT|EN</p>
                     </div>
 
-                    <div className='nav-menu' onClick={verificaMenu}>
+                    <div className={location.pathname == '/contato' ? "nav-menu nav-menu-contato" : "nav-menu"} onClick={verificaMenu}>
                         <p>[Menu]</p>
                     </div>
 

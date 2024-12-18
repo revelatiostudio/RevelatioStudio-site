@@ -17,7 +17,7 @@ function App() {
   const lenisRef = useRef()
 
   let navColor = "white";
-  if (location.pathname === "/about" || location.pathname === "/contato") {
+  if (location.pathname === "/about") {
     navColor = "black"
   }
 

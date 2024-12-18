@@ -127,4 +127,9 @@ input[type="number"] {
 .captcha{
     margin-top: 0.625rem;
 }
-
+.pt-br-contato{
+    color: var(--color-gray-100);
+}
+.nav-menu-contato{
+    color: var(--color-gray-100);
+}
