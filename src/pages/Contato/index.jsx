@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Transition from '../../transition'
 import './contato.css'
 
@@ -8,6 +8,25 @@ import logo from '../../assets/img/contato/logo-submit.png'
 
 
 const Contato = () => {
+    const nomeRef = useRef()
+    const negocioRef = useRef()
+    const celularRef = useRef()
+    const cnpjRef = useRef()
+    const emailRef = useRef()
+    const cidadeRef = useRef()
+
+    function novoCliente(event){
+        event.preventDefault();
+        const nome = nomeRef.current.value
+        const negocio = negocioRef.current.value
+        const celular = celularRef.current.value
+        const cnpj = cnpjRef.current.value
+        const email = emailRef.current.value 
+        const cidade = cidadeRef.current.value
+
+    }
+
+
     return (
         <section className='container-contato'>
             <div className='container-separator'>
@@ -33,15 +52,15 @@ const Contato = () => {
                 <div className='contato-form'>
                     <div className='formulario-contato'>
                         <h1>Preencha o formulário <br /> para entrarmos em contato!</h1>
-                        <form>
-                            <input required type='text' id='nome' placeholder='Como podemos te chamar? *' />
-                            <input type='text' id='empresa' placeholder='Qual o nome do seu negócio?' />
+                        <form onSubmit={novoCliente}>
+                            <input required type='text' id='nome' placeholder='Como podemos te chamar? *' ref={nomeRef} />
+                            <input type='text' id='empresa' placeholder='Qual o nome do seu negócio?' ref={negocioRef}/>
                             <div className='form-div'>
-                                <input type='tel' id='celular' placeholder='Celular para contato' />
-                                <input type='number' id='cnpj' placeholder='CNPJ da empresa' />
+                                <input type='tel' id='celular' placeholder='Celular para contato' ref={celularRef} />
+                                <input type='number' id='cnpj' placeholder='CNPJ da empresa' ref={cnpjRef}/>
                             </div>
-                            <input required type='email' id='empresa' placeholder='Informe seu email *' />
-                            <input required type='text' id='empresa' placeholder='Qual cidade / estado / país a sua empresa está ou será estabelecida?' />
+                            <input required type='email' id='empresa' placeholder='Informe seu email *' ref={emailRef}/>
+                            <input required type='text' id='empresa' placeholder='Qual cidade / estado / país a sua empresa está ou será estabelecida?' ref={cidadeRef}/>
 
                             <button type='submit'>
                                 <div className='button-prox'>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './bottomhome.css'
 
 import prop from '../../../../assets/img/home/prop.png'
@@ -6,6 +6,8 @@ import revelatio from '../../../../assets/img/home/name_revelatio.svg'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function BottomHome() {
+   
+
     return (
         <div className='container_bottom'>
             <div className='grid-global'>
