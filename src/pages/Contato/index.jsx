@@ -5,6 +5,7 @@ import './contato.css'
 import contatoImg from '../../assets/img/contato/image-contato2.png'
 import logo from '../../assets/img/contato/logo-submit.png'
 import ReCAPTCHA from "react-google-recaptcha";
+import emailJs from '@emailjs/browser'
 
 
 
@@ -17,7 +18,15 @@ const Contato = () => {
     const emailRef = useRef()
     const cidadeRef = useRef()
 
+    const [nome, setNome] = useState("")
+    const [negocio, setNegocio] = useState("")
+    const [celular, setCelular] = useState("")
+    const [cnpj, setCnpj] = useState("")
+    const [email, setEmail] = useState("")
+    const [cidade, setCidade] = useState("")
+
     const [captcha, setCaptcha] = useState("");
+
  
 
     function novoCliente(event){
@@ -28,14 +37,30 @@ const Contato = () => {
           else
             alert('captcha pendente');
 
-        const nome = nomeRef.current.value
-        const negocio = negocioRef.current.value
-        const celular = celularRef.current.value
-        const cnpj = cnpjRef.current.value
-        const email = emailRef.current.value 
-        const cidade = cidadeRef.current.value
+        
 
-        return alert('teste')
+        const templateParams = {
+            from_name: nome,
+            empresa: negocio,
+            contato: celular,
+            cnpj: cnpj,
+            email: email,
+            cidade: cidade
+        }
+        setNome("")
+        setNegocio("")
+        setCelular("")
+        setCnpj("")
+        setEmail("")
+        setCidade("")
+
+        emailJs.send("service_baqelvg", "template_1wbysni", templateParams, "jjDEffKIK2bVCsPkO")
+        .then((response) => {
+            alert("Seu email foi enviado com sucesso!")
+        }, (erro) => {
+            console.log("erro", erro)
+        })
+
 
     }
 
@@ -66,14 +91,14 @@ const Contato = () => {
                     <div className='formulario-contato'>
                         <h1>Preencha o formulário <br /> para entrarmos em contato!</h1>
                         <form onSubmit={novoCliente}>
-                            <input required type='text' id='nome' placeholder='Como podemos te chamar? *' ref={nomeRef} />
-                            <input type='text' id='empresa' placeholder='Qual o nome do seu negócio?' ref={negocioRef}/>
+                            <input required type='text' id='nome' placeholder='Como podemos te chamar? *'  onChange={(e) => setNome(e.target.value)} value={nome} />
+                            <input type='text' id='empresa' placeholder='Qual o nome do seu negócio?' onChange={(e) => setNegocio(e.target.value)} value={negocio} />
                             <div className='form-div'>
-                                <input type='tel' id='celular' placeholder='Celular para contato' ref={celularRef} />
-                                <input type='number' id='cnpj' placeholder='CNPJ da empresa' ref={cnpjRef}/>
+                                <input type='tel' id='celular' placeholder='Celular para contato' onChange={(e) => setCelular(e.target.value)} value={celular} />
+                                <input type='number' id='cnpj' placeholder='CNPJ da empresa' onChange={(e) => setCnpj(e.target.value)} value={cnpj} />
                             </div>
-                            <input required type='email' id='empresa' placeholder='Informe seu email *' ref={emailRef}/>
-                            <input required type='text' id='empresa' placeholder='Qual cidade / estado / país a sua empresa está ou será estabelecida?' ref={cidadeRef}/>
+                            <input required type='email' id='empresa' placeholder='Informe seu email *' onChange={(e) => setEmail(e.target.value)} value={email}/>
+                            <input required type='text' id='cidade' placeholder='Qual cidade / estado / país a sua empresa está ou será estabelecida?' onChange={(e) => setCidade(e.target.value)} value={cidade} />
                             <ReCAPTCHA 
                             sitekey={import.meta.env.VITE_SITE_KEY}
                             onChange={setCaptcha}
