@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './home.css'
 
 import Solucoes from '../../componentes/Solucoes'
@@ -16,6 +16,76 @@ import ScrollCases from './componentesHome/ScrollCases'
 import Transition from '../../transition'
 
 const Home = () => {
+  const [horaRecife, setHoraRecife] = useState('');
+  const [horaLocal, setHoraLocal] = useState('');
+  const [idioma, setIdioma] = useState('')
+  
+  
+
+
+    const obterHoraRecife = () => {
+      const horaRecife = new Date().toLocaleString("pt-BR", {
+        timeZone: "America/Recife",
+        timeZoneName: "short",
+        hour12: false
+      });
+
+      var hora = horaRecife.split(' ')
+      hora = hora[1].split(':')
+      var horaCerta = hora[0] + ":" + hora[1]
+      const comparaHora = hora[0]
+
+      
+      if( Number(comparaHora) <= 11){
+        setHoraRecife(horaCerta + " " + "AM")
+      }else{
+        setHoraRecife(horaCerta + " " + "PM")
+      }
+      
+    };
+
+    const obterHoraLocal = () => {
+      const localTime = new Date().toLocaleString("pt-BR", {
+        timeZoneName: "short",
+        hour12: false
+      });
+
+      var hora = localTime.split(' ')
+      hora = hora[1].split(':')
+      var horaCerta = hora[0] + ":" + hora[1]
+      const comparaHora = hora[0]
+
+      
+      if( Number(comparaHora) <= 11){
+        setHoraLocal(horaCerta + " " + "AM")
+      }else{
+        setHoraLocal(horaCerta + " " + "PM")
+      }
+      let idioma = navigator.language || navigator.userLanguage;
+      const pcIdioma = idioma.split('-')[1]
+      setIdioma(pcIdioma)
+      
+    };
+
+  
+    
+    useEffect(() => {
+      obterHoraRecife()
+      obterHoraLocal()
+
+      const intervalo = setInterval(() => {
+        obterHoraRecife();
+      }, 30000); 
+  
+      return () => clearInterval(intervalo);
+
+    },[horaRecife])
+
+    
+
+
+ 
+
   return (
     <>
 
@@ -43,8 +113,8 @@ const Home = () => {
               </div>
 
               <div className='time'>
-                <p><a>RECIFE,BRA</a> [12:46PM]</p>
-                <p><a>NEW YORK,EUA</a> [12:46PM]</p>
+                <p><a>RECIFE,BR</a> [{horaRecife}]</p>
+                <p><a>LOCAL,{idioma}</a> [{horaLocal}]</p>
 
               </div>
 
