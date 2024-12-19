@@ -31,8 +31,8 @@ const Home = () => {
               </div>
 
               <div className='bottom_part'>
-                <p>INSTAGRAM</p>
-                <p>BEHANCE</p>
+                <a href='https://www.instagram.com/revelatio.studio/' target='blank'><p>INSTAGRAM</p></a>
+                <a href='https://www.behance.net/revelatiostudio' target='blank'><p>BEHANCE</p></a>
               </div>
 
             </div>
