@@ -83,7 +83,7 @@ const Contato = () => {
                 </div>
                 <div className='contato-form'>
                     <div className='formulario-contato'>
-                        <h1>Preencha o formulário <br /> para entrarmos em contato!</h1>
+                        <h1>Preencha o formulário <br className='hide-in-mobile' /> para entrarmos em contato!</h1>
                         <form onSubmit={novoCliente}>
                             <input required type='text' id='nome' placeholder='Como podemos te chamar? *' onChange={(e) => setNome(e.target.value)} value={nome} />
                             <input type='text' id='empresa' placeholder='Qual o nome do seu negócio?' onChange={(e) => setNegocio(e.target.value)} value={negocio} />

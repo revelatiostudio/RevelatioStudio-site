@@ -19,6 +19,11 @@ function App() {
   let navColor = "white";
   if (location.pathname === "/about") {
     navColor = "black"
+
+  }
+
+  if(window.innerWidth <= 768 && location.pathname === "/contato"){
+    navColor = "black"
   }
 
   useGSAP(() => {
