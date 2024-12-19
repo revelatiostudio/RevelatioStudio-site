@@ -16,7 +16,7 @@ export default function InfinitTimeLine() {
       <div className='timeline'>
         {
           imgsFrames.map((frame, index) => (
-            <div className={`itemLeft item${index}`}><img src={frame} alt='' /></div>
+            <div className={`itemLeft item${index}`} key={index}><img src={frame} alt='' /></div>
 
           ))
 
@@ -26,7 +26,7 @@ export default function InfinitTimeLine() {
       <div className='timeline'>
         {
           imgsFrames.map((frame, index) => (
-            <div className={`itemRight item${index}`}><img src={frame} alt='' /></div>
+            <div className={`itemRight item${index}`} key={index}><img src={frame} alt='' /></div>
 
           ))
 

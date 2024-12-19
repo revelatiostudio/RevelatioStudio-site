@@ -136,6 +136,7 @@ export default function NavBar({ color }) {
                                         style={!isMobile ? { filter: "blur(2px)" } : {}}
                                         whileHover={!isMobile ? { x: -40, filter: "blur(0px)" } : {}}
                                         transition={{ ease: "easeOut" }}
+                                        key={pg.numero}
                                     >
 
                                         <div key={pg.numero} className='link-menu' onClick={verificaMenu}>
