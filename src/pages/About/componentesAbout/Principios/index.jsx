@@ -14,12 +14,16 @@ export default function principios() {
 
     function pinnedSec(){
         const principios = [...document.querySelectorAll('.prin-1')];
+        gsap.set(principios,{
+            filter: ' blur(5px)',
+            backgroundColor: 'var(--color-gray-50)',
+        })
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger:container.current,
                 start: '150px top', 
                 end: 'bottom top',
-                scrub: 0.5,
+                scrub: true,
                 pin: true,
             }
         });
@@ -29,8 +33,8 @@ export default function principios() {
             tl.to(principio,{
                 filter: ' blur(0px)',
                 backgroundColor: 'var(--color-gray-50)',
-                duration: 2, 
-                ease: 'power1.inOut'
+                duration: 1.5,
+                ease: 'power2.inOut'
             })
         })
 

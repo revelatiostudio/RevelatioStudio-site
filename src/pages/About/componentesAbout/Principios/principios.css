@@ -23,7 +23,6 @@
 }
 
 .container-principios .prin-1{
-    filter: blur(5px);
     position: absolute;
     width: 100%;
     max-width: 26.8125rem;
