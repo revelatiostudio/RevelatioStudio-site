@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Transition from '../../transition'
 import './contato.css'
 
@@ -58,6 +58,45 @@ const Contato = () => {
 
     }
 
+      const [horaRecife, setHoraRecife] = useState('');
+      
+      
+    
+    
+        const obterHoraRecife = () => {
+          const horaRecife = new Date().toLocaleString("pt-BR", {
+            timeZone: "America/Recife",
+            timeZoneName: "short",
+            hour12: false
+          });
+    
+          var hora = horaRecife.split(' ')
+          hora = hora[1].split(':')
+          var horaCerta = hora[0] + ":" + hora[1]
+          const comparaHora = hora[0]
+    
+          
+          if( Number(comparaHora) <= 11){
+            setHoraRecife(horaCerta + " " + "AM")
+          }else{
+            setHoraRecife(horaCerta + " " + "PM")
+          }
+          
+        };
+    
+      
+        
+        useEffect(() => {
+          obterHoraRecife()
+    
+          const intervalo = setInterval(() => {
+            obterHoraRecife();
+          }, 30000); 
+      
+          return () => clearInterval(intervalo);
+    
+        },[horaRecife])
+
 
     return (
         <section className='container-contato'>
@@ -71,7 +110,7 @@ const Contato = () => {
                             <p>Estrada do Encanamento, 846.</p>
                             <p>Room 306</p>
                             <p>Recife, Brasil</p>
-                            <p>Horário: 12:46 PM</p>
+                            <p>Horário: {horaRecife}</p>
                         </div>
                         <div className='bottom-contato'>
                             <h1>[CONTATO]</h1>
