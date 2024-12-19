@@ -50,9 +50,9 @@ function App() {
 
   return (
     <>
-      <div className='grid-global'>
+      {/* <div className='grid-global'>
         <NavBar color={navColor} />
-      </div>
+      </div> */}
 
       <ReactLenis root options={{autoRaf:false, smoothWheel: true}} ref={lenisRef}>
         <AnimatePresence mode='wait'>
