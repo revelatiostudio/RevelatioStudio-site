@@ -48,7 +48,7 @@ const Contato = () => {
         setEmail("")
         setCidade("")
 
-        emailJs.send("service_baqelvg", "template_1wbysni", templateParams, "jjDEffKIK2bVCsPkO")
+        emailJs.send("service_0o5ybc4", "template_zcg486u", templateParams, "q8kFNA-VjEX21TVzZ")
             .then((response) => {
                 alert("Seu email foi enviado com sucesso!")
             }, (erro) => {
