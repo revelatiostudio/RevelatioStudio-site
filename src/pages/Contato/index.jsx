@@ -120,7 +120,7 @@ const Contato = () => {
                     </div>
 
                 </div>
-                <div className='contato-form'>
+                <div className='contato-form' data-lenis-prevent>
                     <div className='formulario-contato'>
                         <h1>Preencha o formulário <br className='hide-in-mobile' /> para entrarmos em contato!</h1>
                         <form onSubmit={novoCliente}>

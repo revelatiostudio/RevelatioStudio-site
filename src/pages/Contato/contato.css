@@ -22,7 +22,7 @@
 .contato-form{
     width: 100%;
     max-width: 50%;
-    overflow: auto;
+    overflow-y: auto;
 }
 .contatos{
     width: 100%;
