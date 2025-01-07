@@ -15,8 +15,8 @@ export default function BottomHome() {
                     <div className='left_bottom'>
                         <p><span>[Escritório]</span></p>
                         <div className='adress'>
-                            <p>Estrada Encanamento,846.</p>
-                            <p>Room306</p>
+                            <p>Praça Miguel de Cervantes, 60.</p>
+                            <p>Sala 1103</p>
                             <p>Recife,Brasil</p>
 
                         </div>

@@ -107,8 +107,8 @@ const Contato = () => {
                     <div className='contatos'>
                         <div className='bottom-endereco'>
                             <h1>[NOSSO ESCRITÓRIO]</h1>
-                            <p>Estrada do Encanamento, 846.</p>
-                            <p>Room 306</p>
+                            <p>Praça Miguel de Cervantes, 60.</p>
+                            <p>Sala 1103</p>
                             <p>Recife, Brasil</p>
                             <p>Horário: {horaRecife}</p>
                         </div>
