@@ -1,0 +1,12 @@
+.container-not-found{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.container-not-found h1 {
+    font-size: 3.125rem;
+}

@@ -9,6 +9,7 @@ import NavBar from './componentes/NavBar'
 import { AnimatePresence } from 'framer-motion'
 import { useGSAP } from '@gsap/react'
 import Contato from './pages/Contato'
+import NotFoundPage  from './pages/NotFoundPage'
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/contato' element={<Contato/>} />
+            <Route path='*' element={<NotFoundPage />} />
           </Routes>
 
         </AnimatePresence>
