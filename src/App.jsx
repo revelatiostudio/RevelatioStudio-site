@@ -10,6 +10,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useGSAP } from '@gsap/react'
 import Contato from './pages/Contato'
 import NotFoundPage  from './pages/NotFoundPage'
+import Cases from './pages/Cases'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
   const lenisRef = useRef()
 
   let navColor = "white";
-  if (location.pathname === "/about") {
+  if (location.pathname === "/about" || location.pathname === "/cases") {
     navColor = "black"
 
   }
@@ -61,6 +62,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/contato' element={<Contato/>} />
+            <Route path='/cases' element={<Cases/>} /> 
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
 

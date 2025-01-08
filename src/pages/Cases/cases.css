@@ -1,0 +1,92 @@
+.container-cases{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.side-menu{
+    width: 100%;
+    max-width: 293px;
+    height: 842px;
+    margin-top: 126px;
+   
+}
+.side-menu h1{
+    font-size: 20px;
+    font-family: "neue-haas-grotesk-display";
+    font-weight: 500;
+    line-height: 110%;
+
+}
+.all-cases{
+    width: 100%;
+    margin-top: 46px;
+}
+.filtros{
+    margin-top: 28px;
+}
+.filtros li{
+    margin-bottom: 18px;
+    color: var(--color-gray-500);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 110%;
+    font-family: "neue-haas-grotesk-display";
+    max-width: max-content;
+    transition: color 0.5s ease, border 0.5s ease;
+    border-bottom: 1px white solid;
+}
+
+.filtros li:hover{
+    color: var(--color-black);
+    border-color: var(--color-black);
+    cursor: pointer;
+    
+}
+
+.work-together{
+    margin-top: 100px;
+}
+
+.work-together img{
+    width: 100%;
+    max-width: 224px;
+    height: 260px;
+}
+
+.work-together button{
+    margin-top: 18px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    width: 224px;
+    padding: 12px 0px;
+    border-radius: 4px;
+}
+
+.bottom-side-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 224px;
+    margin-top: 100px;
+}
+
+.bottom-side-menu h2{
+    color: var(--color-gray-700);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+    font-family: "neue-haas-grotesk-display"
+}
+.bottom-side-menu p{
+    color: var(--color-black);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.image-side-menu img{
+    width: 100%;
+    max-width: 43px;
+    height: 47px;
+}
+

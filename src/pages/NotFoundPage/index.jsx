@@ -1,6 +1,6 @@
 import React from "react";
 import './notfoundpage.css'
-//t
+
 export default function NotFoundPage() {
     return(
         <section className="container-not-found">
