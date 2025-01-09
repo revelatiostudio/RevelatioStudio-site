@@ -103,6 +103,26 @@
     height: 200px;
     position: absolute;
 }
+
+.quadro-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.quadro-text p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 110%;
+    color: var(--color-gray-500)
+}
+.quadro-text .projeto {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 110%;
+    color: var(--color-gray-100)
+}
+
 .quadrado-image:nth-child(3n + 1){
     width: 100%;
     max-width: 330px;

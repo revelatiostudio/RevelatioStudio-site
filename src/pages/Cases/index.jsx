@@ -25,15 +25,15 @@ const Cases = () => {
     gsap.registerPlugin(useGSAP)
     const array = [
 
-        { id: '1', img: approach },
-        { id: '2', img: nando},
-        { id: '3', img: immersy },
-        { id: '4', img: life },
-        { id: '5', img: dca},
-        { id: '6', img: prop},
-        { id: '7', img: kaicara},
-        { id: '8', img: marasol },
-        { id: '9', img: mistery },
+        { id: '1', img: approach, projeto: "Approach" , tipo: "Brand"},
+        { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional"},
+        { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand"},
+        { id: '4', img: life, projeto: "Life", tipo: "Rebranding"},
+        { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding"},
+        { id: '6', img: prop, projeto: "Prop", tipo: "Brand"},
+        { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand"},
+        { id: '8', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity" },
+        { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev"},
     ]
 
    
@@ -67,7 +67,7 @@ const Cases = () => {
         { top: "100%", left: "70%" }, //6
         { top: "100%", left: "10%" }, //7
         { top: "130%", left: "70%" }, //8
-        { top: "48%", left: "0%" },
+        { top: "140%", left: "0%" }, // 9
         { top: "64%", left: "30%" },
         { top: "64%", left: "50%" },
         { top: "64%", left: "90%" },
@@ -137,8 +137,11 @@ const Cases = () => {
                     {
                         array.map((a) => (
                             <div className="quadrado-image" key={a.id}>
-                                <h1>{a.id}</h1>
                                 <img src={a.img} alt="" />
+                                <div className="quadro-text">
+                                    <p className="projeto">{a.projeto}</p>
+                                    <p>{a.tipo}</p>
+                                </div>
                             </div>
 
                         ))
