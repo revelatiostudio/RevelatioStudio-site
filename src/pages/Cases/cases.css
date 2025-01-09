@@ -1,7 +1,9 @@
 .container-cases{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 200vh;
     display: flex;
+    position: relative;
+    overflow: hidden;
 }
 .side-menu{
     width: 100%;
@@ -16,10 +18,6 @@
     font-weight: 500;
     line-height: 110%;
 
-}
-.all-cases{
-    width: 100%;
-    margin-top: 46px;
 }
 .filtros{
     margin-top: 28px;
@@ -89,4 +87,36 @@
     max-width: 43px;
     height: 47px;
 }
+
+/* Parte de cases  */
+
+.all-cases-container{
+    width: 100%;
+    max-width: 1567px;
+    height: 100vh;
+    margin-top: 46px;
+    position: relative;
+}
+
+.quadrado-image{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+.quadrado-image:nth-child(3n + 1){
+    width: 100%;
+    max-width: 330px;
+    height: 257px;
+}
+.quadrado-image:nth-child(3n + 2){
+    width: 100%;
+    max-width: 417px;
+    height: 462px;
+}
+.quadrado-image:nth-child(3n + 3){
+    width: 100%;
+    max-width: 243px;
+    height: 183px;
+}
+
 
