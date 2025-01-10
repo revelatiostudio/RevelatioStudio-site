@@ -25,16 +25,28 @@ const Cases = () => {
     gsap.registerPlugin(useGSAP)
     const array = [
 
-        { id: '1', img: approach, projeto: "Approach" , tipo: "Brand"},
-        { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional"},
-        { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand"},
-        { id: '4', img: life, projeto: "Life", tipo: "Rebranding"},
-        { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding"},
-        { id: '6', img: prop, projeto: "Prop", tipo: "Brand"},
-        { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand"},
-        { id: '8', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity" },
-        { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev"},
+        { id: '1', img: approach, projeto: "Approach" , tipo: "Brand", tag: "site"},
+        { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site"},
+        { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site"},
+        { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital"},
+        { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital"},
+        { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca"},
+        { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca"},
+        { id: '8', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
+        { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca"},
     ]
+
+    const [itens, setItens] = useState(array)
+    const tags = [...new Set(array.map((foto) => foto.tag))]
+    
+    function filtraFotos(tag){
+        
+        const novasFotos = array.filter((foto) => {
+            return foto.tag === tag
+        })
+        setItens(novasFotos)
+    }
+ 
 
    
     useGSAP(() => {
@@ -94,7 +106,7 @@ const Cases = () => {
     
 
 
-    },[])
+    },[itens])
 
 
 
@@ -106,10 +118,10 @@ const Cases = () => {
                     <h1>Filtre por: </h1>
 
                     <ol className="filtros">
-                        <li>Todos</li>
-                        <li>Site</li>
-                        <li>Produto digital</li>
-                        <li>Marca</li>
+                        <li onClick={() => setItens(array)}>Todos</li>
+                        <li onClick={() => filtraFotos("site")}>Site</li>
+                        <li onClick={() => filtraFotos("digital")}>Produto digital</li>
+                        <li onClick={() => filtraFotos("marca")}>Marca</li>
                     </ol>
 
                     <div className="work-together">
@@ -135,7 +147,7 @@ const Cases = () => {
                 </div>
                 <div className="all-cases-container">
                     {
-                        array.map((a) => (
+                        itens.map((a) => (
                             <div className="quadrado-image" key={a.id}>
                                 <img src={a.img} alt="" />
                                 <div className="quadro-text">
