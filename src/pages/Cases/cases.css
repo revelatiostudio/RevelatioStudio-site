@@ -99,7 +99,6 @@
     display: grid;
     grid-template-columns: auto auto;
     gap: 30px;
-    border: 2px red solid;
 }
 .quadrado-image{
     position: relative;
@@ -111,7 +110,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
-    border: 2px purple solid;
 }
 .quadro-text p{
     font-size: 14px;
@@ -128,10 +126,9 @@
 
 .quadrado-image:nth-child(3n + 1){
     width: 100%;
-    max-width: 330px;
-    height: 257px;
+    max-width: 20.625rem;
+    height: 16.0625rem;
     top: 20%;
-    border: 2px red solid;
 }
 .quadrado-image:nth-child(3n + 2){
     width: 100%;
@@ -139,7 +136,6 @@
     height: 28.875rem;
     top: 10%;
     left: 20%;
-    border: 2px blue solid;
 
 }
 .quadrado-image:nth-child(3n + 3){
@@ -148,9 +144,75 @@
     height: 11.4375rem;
     top: 30%;
     left: 50%;
-    margin-bottom: 40px;
-    border: 2px green solid;
+    margin-bottom: 2.5rem;
 }
+
+/* responsivo medias */
+
+@media(max-width: 1400px) {
+    .quadrado-image:nth-child(3n + 2){
+        top: 10%;
+        left: 13%;
+    
+    }
+}
+
+@media(max-width: 1280px) {
+    .quadrado-image:nth-child(3n + 2){
+        top: 10%;
+        left: 5%;
+    
+    }
+    .quadrado-image:nth-child(3n + 3){
+        top: 30%;
+        left: 40%;
+       
+    }
+}
+
+@media(max-width: 1200px) {
+    .quadrado-image:nth-child(3n + 1){
+        width: 100%;
+        max-width: 18.75rem;
+        height: 14.1875rem;
+    }
+
+    .quadrado-image:nth-child(3n + 2){
+        width: 100%;
+        max-width: 21.875rem;
+        height: 26.375rem;
+    
+    }
+
+    .quadrado-image:nth-child(3n + 3){
+        top: 30%;
+        left: 30%;
+       
+    }
+}
+
+@media(max-width: 991px) {
+    .quadrado-image:nth-child(3n + 2){
+        width: 100%;
+        max-width: 18.75rem;
+        height: 26.375rem;
+        top: 10%;
+        left: 0%;
+       
+    }
+    .quadrado-image:nth-child(3n + 3){
+        top: 30%;
+        left: 10%;
+       
+    }
+}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {}
+
 
 
 
