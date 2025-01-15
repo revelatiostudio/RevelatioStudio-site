@@ -20,6 +20,7 @@ import Transition from "../../transition";
 import { gsap } from "gsap";
 import { useEffect } from 'react';
 import { useGSAP } from '@gsap/react';
+import { useLenis } from "lenis/react";
 
 const Cases = () => {
     gsap.registerPlugin(useGSAP)
@@ -49,64 +50,65 @@ const Cases = () => {
  
 
    
-    useGSAP(() => {
-    const cases = [...document.querySelectorAll('.quadrado-image')];
-    const container = document.querySelector('.all-cases-container');
+    // useGSAP(() => {
+    // const cases = [...document.querySelectorAll('.quadrado-image')];
+    // const container = document.querySelector('.all-cases-container');
 
-    //   cases.forEach((a) => {
-    //     const divWidth = a.offsetWidth;
-    //     const divHeight = a.offsetHeight;
-    //     gsap.to(a,{
-    //         top: gsap.utils.random(-100, containerHeight - divHeight),
-    //         left: gsap.utils.random(0, containerWidth - divWidth),
-    //         duration: 0.5,
-    //         scale: gsap.utils.random(0.5, 1.5)
-    //         // yPercent: gsap.utils.distribute({
-    //         //     base: 50,
-    //         //     amount: 1000,
-    //         //     from: 'random',
-    //         //     grid: "rows"
-    //         // })
+    // //   cases.forEach((a) => {
+    // //     const divWidth = a.offsetWidth;
+    // //     const divHeight = a.offsetHeight;
+    // //     gsap.to(a,{
+    // //         top: gsap.utils.random(-100, containerHeight - divHeight),
+    // //         left: gsap.utils.random(0, containerWidth - divWidth),
+    // //         duration: 0.5,
+    // //         scale: gsap.utils.random(0.5, 1.5)
+    // //         // yPercent: gsap.utils.distribute({
+    // //         //     base: 50,
+    // //         //     amount: 1000,
+    // //         //     from: 'random',
+    // //         //     grid: "rows"
+    // //         // })
+    // //     })
+    // //   })
+
+    // const positions = [
+    //     { top: "10%", left: "10%" }, //1
+    //     { top: "14%", left: "70%" }, //2
+    //     { top: "40%", left: "30%" }, //3
+    //     { top: "70%", left: "75%" }, //4
+    //     { top: "70%", left: "40%" }, //5
+    //     { top: "100%", left: "70%" }, //6
+    //     { top: "100%", left: "10%" }, //7
+    //     { top: "130%", left: "70%" }, //8
+    //     { top: "140%", left: "0%" }, // 9
+    //     { top: "64%", left: "30%" },
+    //     { top: "64%", left: "50%" },
+    //     { top: "64%", left: "90%" },
+    //     { top: "80%", left: "20%" },
+    //     { top: "80%", left: "70%" },
+    //   ];
+
+    
+    //     gsap.to(cases, {
+    //         top: (i) => positions[i].top,
+    //         left: (i) => positions[i].left,
+    //         transform: "none",
+    //         stagger: 0.075,
+    //         duration: 0.75,
+    //         ease: "power2.out",
     //     })
-    //   })
 
-    const positions = [
-        { top: "10%", left: "10%" }, //1
-        { top: "14%", left: "70%" }, //2
-        { top: "40%", left: "30%" }, //3
-        { top: "70%", left: "75%" }, //4
-        { top: "70%", left: "40%" }, //5
-        { top: "100%", left: "70%" }, //6
-        { top: "100%", left: "10%" }, //7
-        { top: "130%", left: "70%" }, //8
-        { top: "140%", left: "0%" }, // 9
-        { top: "64%", left: "30%" },
-        { top: "64%", left: "50%" },
-        { top: "64%", left: "90%" },
-        { top: "80%", left: "20%" },
-        { top: "80%", left: "70%" },
-      ];
-
-    
-        gsap.to(cases, {
-            top: (i) => positions[i].top,
-            left: (i) => positions[i].left,
-            transform: "none",
-            stagger: 0.075,
-            duration: 0.75,
-            ease: "power2.out",
-        })
-
-        // cases.forEach((b) => {
-        //     gsap.to(b, {
-        //         width: gsap.utils.random(155, 418),
-        //         height: gsap.utils.random(183, 466)
-        //     })
-        // })
+    //     // cases.forEach((b) => {
+    //     //     gsap.to(b, {
+    //     //         width: gsap.utils.random(155, 418),
+    //     //         height: gsap.utils.random(183, 466)
+    //     //     })
+    //     // })
     
 
 
-    },[itens])
+    // },[itens])
+
 
 
 
@@ -145,7 +147,7 @@ const Cases = () => {
                     </div>
 
                 </div>
-                <div className="all-cases-container">
+                <div className="all-cases-container" >
                     {
                         itens.map((a) => (
                             <div className="quadrado-image" key={a.id}>

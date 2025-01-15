@@ -12,6 +12,8 @@ import Contato from './pages/Contato'
 import NotFoundPage  from './pages/NotFoundPage'
 import Cases from './pages/Cases'
 
+import Lenis from "@studio-freight/lenis";
+
 
 function App() {
 
