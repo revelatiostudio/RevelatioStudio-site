@@ -195,19 +195,36 @@
     .quadrado-image:nth-child(3n + 2){
         width: 100%;
         max-width: 18.75rem;
-        height: 26.375rem;
+        height: 21.875rem;
         top: 10%;
         left: 0%;
        
     }
     .quadrado-image:nth-child(3n + 3){
         top: 30%;
-        left: 10%;
+        left: 0%;
        
     }
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 750px) {
+    .quadrado-image:nth-child(3n + 1){
+        width: 100%;
+        max-width: 18.75rem;
+        height: 12.5rem;
+    }
+    .quadrado-image:nth-child(3n + 2){
+        width: 100%;
+        max-width: 18.75rem;
+        height: 17.5rem;
+    }
+    .quadro-text p, .quadro-text .projeto {
+        font-size: 12px;
+    }
+    .side-menu{
+        max-width: 15.625rem;
+    }
+}
 
 @media(max-width: 600px) {}
 
