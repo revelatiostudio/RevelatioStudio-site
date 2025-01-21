@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import './cases.css'
 
 import boxImg from '../../assets/img/cases/boardsLight.png'
@@ -14,14 +14,14 @@ import kaicara from '../../assets/img/cases/kaicara.png'
 import marasol from '../../assets/img/cases/marasol.png'
 import mistery from '../../assets/img/cases/mistery.png'
 import filtro from '../../assets/img/cases/filtro-cases.svg'
+import close from '../../assets/img/cases/close-svg.svg'
+
 
 import { Link } from "react-router-dom";
 import Transition from "../../transition";
 
 import { gsap } from "gsap";
-import { useEffect } from 'react';
 import { useGSAP } from '@gsap/react';
-import { useLenis } from "lenis/react";
 
 const Cases = () => {
     gsap.registerPlugin(useGSAP)
@@ -149,10 +149,33 @@ const Cases = () => {
 
                 </div>
                 <div className="filtro-mobile">
-                        <h1>oii</h1>
+                    <img src={filtro} alt="filtro dos cases" />
+                </div>
+                <div className="menu-mobile">
+                    <div className="head-menu">
+                        <h1>Filtre por:</h1>
+                        <img src={close} alt="close" />
                     </div>
+
+                    <ol className="filtros">
+                        <li onClick={() => setItens(array)}>Todos</li>
+                        <li onClick={() => filtraFotos("site")}>Site</li>
+                        <li onClick={() => filtraFotos("digital")}>Produto digital</li>
+                        <li onClick={() => filtraFotos("marca")}>Marca</li>
+                    </ol>
+
+                    <div className="work-together">
+                        <img src={boxImg} alt="caixa branca com luz" />
+                        <Link to="/contato">
+                            <button>
+                                Entrar em contato
+                            </button>
+                        </Link>
+                    </div>
+
+                </div>
                 <div className="all-cases-container" >
-                  
+
                     {
                         itens.map((a) => (
                             <div className="quadrado-image" key={a.id}>
