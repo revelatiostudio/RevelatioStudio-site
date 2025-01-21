@@ -98,7 +98,7 @@
     position: relative;
     display: grid;
     grid-template-columns: auto auto;
-    gap: 30px;
+    gap: 1.875rem;
 }
 .quadrado-image{
     position: relative;
@@ -146,8 +146,10 @@
     left: 50%;
     margin-bottom: 2.5rem;
 }
+
 .filtro-mobile{
     display: none;
+    position: absolute;
 }
 
 /* responsivo medias */
@@ -235,7 +237,7 @@
     }
     .filtro-mobile{
         display: flex;
-        position: absolute;
+        top: 50px;
     }
 }
 

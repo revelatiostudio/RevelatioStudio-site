@@ -148,10 +148,11 @@ const Cases = () => {
                     </div>
 
                 </div>
-                <div className="all-cases-container" >
-                    <div className="filtro-mobile">
+                <div className="filtro-mobile">
                         <h1>oii</h1>
                     </div>
+                <div className="all-cases-container" >
+                  
                     {
                         itens.map((a) => (
                             <div className="quadrado-image" key={a.id}>
