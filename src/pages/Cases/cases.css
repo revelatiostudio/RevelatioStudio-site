@@ -146,6 +146,9 @@
     left: 50%;
     margin-bottom: 2.5rem;
 }
+.filtro-mobile{
+    display: none;
+}
 
 /* responsivo medias */
 
@@ -226,7 +229,15 @@
     }
 }
 
-@media(max-width: 600px) {}
+@media(max-width: 650px) {
+    .side-menu{
+        display: none;
+    }
+    .filtro-mobile{
+        display: flex;
+        position: absolute;
+    }
+}
 
 @media(max-width: 480px) {}
 

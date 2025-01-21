@@ -13,6 +13,7 @@ import prop from '../../assets/img/cases/prop.png'
 import kaicara from '../../assets/img/cases/kaicara.png'
 import marasol from '../../assets/img/cases/marasol.png'
 import mistery from '../../assets/img/cases/mistery.png'
+import filtro from '../../assets/img/cases/filtro-cases.svg'
 
 import { Link } from "react-router-dom";
 import Transition from "../../transition";
@@ -26,30 +27,30 @@ const Cases = () => {
     gsap.registerPlugin(useGSAP)
     const array = [
 
-        { id: '1', img: approach, projeto: "Approach" , tipo: "Brand", tag: "site"},
-        { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site"},
-        { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site"},
-        { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital"},
-        { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital"},
-        { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca"},
-        { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca"},
+        { id: '1', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
+        { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
+        { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
+        { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital" },
+        { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital" },
+        { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca" },
+        { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca" },
         { id: '8', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
-        { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca"},
+        { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
     ]
 
     const [itens, setItens] = useState(array)
     const tags = [...new Set(array.map((foto) => foto.tag))]
-    
-    function filtraFotos(tag){
-        
+
+    function filtraFotos(tag) {
+
         const novasFotos = array.filter((foto) => {
             return foto.tag === tag
         })
         setItens(novasFotos)
     }
- 
 
-   
+
+
     // useGSAP(() => {
     // const cases = [...document.querySelectorAll('.quadrado-image')];
     // const container = document.querySelector('.all-cases-container');
@@ -88,7 +89,7 @@ const Cases = () => {
     //     { top: "80%", left: "70%" },
     //   ];
 
-    
+
     //     gsap.to(cases, {
     //         top: (i) => positions[i].top,
     //         left: (i) => positions[i].left,
@@ -104,7 +105,7 @@ const Cases = () => {
     //     //         height: gsap.utils.random(183, 466)
     //     //     })
     //     // })
-    
+
 
 
     // },[itens])
@@ -148,6 +149,9 @@ const Cases = () => {
 
                 </div>
                 <div className="all-cases-container" >
+                    <div className="filtro-mobile">
+                        <h1>oii</h1>
+                    </div>
                     {
                         itens.map((a) => (
                             <div className="quadrado-image" key={a.id}>
