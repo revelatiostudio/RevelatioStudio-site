@@ -26,7 +26,7 @@ export default function NavBar({ color }) {
     const linksPaginas = [
         { path: '/', pagina: 'Home', numero: '01' },
         { path: '/about', pagina: 'Estúdio', numero: '02' },
-        { path: '/', pagina: 'Cases', numero: '03' },
+        { path: '/cases', pagina: 'Cases', numero: '03' },
         { path: '/contato', pagina: 'Contato', numero: '04' },
         { path: '/', pagina: 'Playground', numero: '05' }
     ]

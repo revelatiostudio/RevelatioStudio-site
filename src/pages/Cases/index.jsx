@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './cases.css'
 
 import boxImg from '../../assets/img/cases/boardsLight.png'
@@ -25,6 +25,7 @@ import { useGSAP } from '@gsap/react';
 
 const Cases = () => {
     gsap.registerPlugin(useGSAP)
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const array = [
 
         { id: '1', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
@@ -109,6 +110,33 @@ const Cases = () => {
 
 
     // },[itens])
+    const tl = useRef();
+
+    useGSAP(() => {
+        gsap.set([".menu-mobile"], { xPercent: -100 });
+
+        tl.current = gsap.timeline({ paused: true })
+            .to(".menu-mobile", {
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                xPercent: 0,
+                duration: 1,
+                stagger: 0.1,
+                ease: "power4.inOut",
+            })
+
+    })
+
+     useEffect(() => {
+            if (isMenuOpen) {
+                tl.current.play();
+            } else {
+                tl.current.reverse();
+            }
+        }, [isMenuOpen])
+
+    function verificaMenu() {
+        setIsMenuOpen(!isMenuOpen)
+    }
 
 
 
@@ -148,13 +176,13 @@ const Cases = () => {
                     </div>
 
                 </div>
-                <div className="filtro-mobile">
+                <div className="filtro-mobile" onClick={verificaMenu}>
                     <img src={filtro} alt="filtro dos cases" />
                 </div>
                 <div className="menu-mobile">
                     <div className="head-menu">
                         <h1>Filtre por:</h1>
-                        <img src={close} alt="close" />
+                        <img src={close} alt="close" onClick={verificaMenu}/>
                     </div>
 
                     <ol className="filtros">
