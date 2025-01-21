@@ -113,26 +113,30 @@ const Cases = () => {
     const tl = useRef();
 
     useGSAP(() => {
-        gsap.set([".menu-mobile"], { xPercent: -100 });
+        gsap.set(".menu-mobile", { xPercent: -100 });
+        gsap.set(".menu-open-mobile-black", { opacity: 0, display: "none" })
 
         tl.current = gsap.timeline({ paused: true })
-            .to(".menu-mobile", {
+            .to(".menu-open-mobile-black", {
+                display: "block",
+                opacity: 0.7,
+            }).to(".menu-mobile", {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 xPercent: 0,
                 duration: 1,
                 stagger: 0.1,
                 ease: "power4.inOut",
-            })
+            }, 0)
 
     })
 
-     useEffect(() => {
-            if (isMenuOpen) {
-                tl.current.play();
-            } else {
-                tl.current.reverse();
-            }
-        }, [isMenuOpen])
+    useEffect(() => {
+        if (isMenuOpen) {
+            tl.current.play();
+        } else {
+            tl.current.reverse();
+        }
+    }, [isMenuOpen])
 
     function verificaMenu() {
         setIsMenuOpen(!isMenuOpen)
@@ -182,7 +186,7 @@ const Cases = () => {
                 <div className="menu-mobile">
                     <div className="head-menu">
                         <h1>Filtre por:</h1>
-                        <img src={close} alt="close" onClick={verificaMenu}/>
+                        <img src={close} alt="close" onClick={verificaMenu} />
                     </div>
 
                     <ol className="filtros">
@@ -202,8 +206,8 @@ const Cases = () => {
                     </div>
 
                 </div>
-                <div className="all-cases-container" >
-
+                <div className="menu-open-mobile-black"></div>
+                <div className="all-cases-container " >
                     {
                         itens.map((a) => (
                             <div className="quadrado-image" key={a.id}>
