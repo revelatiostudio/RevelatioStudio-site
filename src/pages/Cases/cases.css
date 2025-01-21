@@ -157,6 +157,20 @@
     margin-bottom: 2.5rem;
 }
 
+.quadrado-image:nth-child(3n + 3) {
+    width: 100%;
+    max-width: 15.1875rem;
+    height: 11.4375rem;
+    top: 30%;
+    left: 50%;
+    margin-bottom: 2.5rem;
+}
+.quadrado-image:last-child{
+    top: 0% !important
+}
+
+
+
 /* Mobile */
 
 .menu-mobile {
