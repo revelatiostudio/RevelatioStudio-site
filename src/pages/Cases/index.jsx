@@ -207,7 +207,7 @@ const Cases = () => {
 
                 </div>
                 <div className="menu-open-mobile-black"></div>
-                <div className="all-cases-container " >
+                <div className="all-cases-container" >
                     {
                         itens.map((a) => (
                             <div className="quadrado-image" key={a.id}>
