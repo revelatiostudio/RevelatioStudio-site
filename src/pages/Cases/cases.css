@@ -167,6 +167,16 @@
 .quadrado-image:last-child{
     top: 0% !important
 }
+.change-page{
+    position: absolute;
+    bottom: 10px;
+    gap: 20px;
+    display: flex;
+}
+.change-page img{
+    width: 10px;
+    height: 10px;
+}
 
 
 

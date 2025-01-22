@@ -15,6 +15,10 @@ import marasol from '../../assets/img/cases/marasol.png'
 import mistery from '../../assets/img/cases/mistery.png'
 import filtro from '../../assets/img/cases/filtro-cases.svg'
 import close from '../../assets/img/cases/close-svg.svg'
+import next from '../../assets/img/cases/next-page.svg'
+import previous from '../../assets/img/cases/previous-page.svg'
+
+
 
 
 import { Link } from "react-router-dom";
@@ -37,10 +41,37 @@ const Cases = () => {
         { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca" },
         { id: '8', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
         { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
+        { id: '1', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
+        { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
+        { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
+        { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital" },
+        { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital" },
+        { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca" },
+        { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca" },
+        { id: '8', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
+        { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
+        { id: '1', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
+        { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
+        { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
+        { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital" },
+        { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital" },
+        { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca" },
+        { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca" },
+        { id: '8', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
+        { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
     ]
 
+
+
     const [itens, setItens] = useState(array)
-    const tags = [...new Set(array.map((foto) => foto.tag))]
+    const [itensPerPage, setItensPerPage] = useState(9)
+    const [currentPage, setCurrentPage] = useState(0)
+    const startIndex = currentPage * itensPerPage
+    const endIndex = startIndex + itensPerPage
+    const currentItens = itens.slice(startIndex, endIndex)
+
+    const pages = Math.ceil(itens.length / itensPerPage)
+    console.log(currentPage)
 
     function filtraFotos(tag) {
 
@@ -49,67 +80,26 @@ const Cases = () => {
         })
         setItens(novasFotos)
     }
+    function proxPagina() {
+        if(currentPage >= pages - 1){
+            return
+        }else{
+            window.scrollTo(0, 0);
+            setCurrentPage(currentPage + 1)
+        }
+    }
+    function voltaPagina(){
+        if(currentPage <= 0){
+            return
+        }else{
+            window.scrollTo(0, 0);
+            setCurrentPage(currentPage - 1)
+        }
+    }
 
 
 
-    // useGSAP(() => {
-    // const cases = [...document.querySelectorAll('.quadrado-image')];
-    // const container = document.querySelector('.all-cases-container');
-
-    // //   cases.forEach((a) => {
-    // //     const divWidth = a.offsetWidth;
-    // //     const divHeight = a.offsetHeight;
-    // //     gsap.to(a,{
-    // //         top: gsap.utils.random(-100, containerHeight - divHeight),
-    // //         left: gsap.utils.random(0, containerWidth - divWidth),
-    // //         duration: 0.5,
-    // //         scale: gsap.utils.random(0.5, 1.5)
-    // //         // yPercent: gsap.utils.distribute({
-    // //         //     base: 50,
-    // //         //     amount: 1000,
-    // //         //     from: 'random',
-    // //         //     grid: "rows"
-    // //         // })
-    // //     })
-    // //   })
-
-    // const positions = [
-    //     { top: "10%", left: "10%" }, //1
-    //     { top: "14%", left: "70%" }, //2
-    //     { top: "40%", left: "30%" }, //3
-    //     { top: "70%", left: "75%" }, //4
-    //     { top: "70%", left: "40%" }, //5
-    //     { top: "100%", left: "70%" }, //6
-    //     { top: "100%", left: "10%" }, //7
-    //     { top: "130%", left: "70%" }, //8
-    //     { top: "140%", left: "0%" }, // 9
-    //     { top: "64%", left: "30%" },
-    //     { top: "64%", left: "50%" },
-    //     { top: "64%", left: "90%" },
-    //     { top: "80%", left: "20%" },
-    //     { top: "80%", left: "70%" },
-    //   ];
-
-
-    //     gsap.to(cases, {
-    //         top: (i) => positions[i].top,
-    //         left: (i) => positions[i].left,
-    //         transform: "none",
-    //         stagger: 0.075,
-    //         duration: 0.75,
-    //         ease: "power2.out",
-    //     })
-
-    //     // cases.forEach((b) => {
-    //     //     gsap.to(b, {
-    //     //         width: gsap.utils.random(155, 418),
-    //     //         height: gsap.utils.random(183, 466)
-    //     //     })
-    //     // })
-
-
-
-    // },[itens])
+    
     const tl = useRef();
 
     useGSAP(() => {
@@ -209,7 +199,7 @@ const Cases = () => {
                 <div className="menu-open-mobile-black"></div>
                 <div className="all-cases-container" >
                     {
-                        itens.map((a) => (
+                        currentItens.map((a) => (
                             <div className="quadrado-image" key={a.id}>
                                 <img src={a.img} alt="" />
                                 <div className="quadro-text">
@@ -221,6 +211,17 @@ const Cases = () => {
                         ))
                     }
 
+
+                </div>
+                <div className="change-page">
+                    <button onClick={voltaPagina}><img src={previous} alt=""/></button>
+                    <div className="flex items-center gap-x-1">
+                            <span className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-100 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-300 dark:text-black dark:focus:bg-black/10">{currentPage + 1}</span>
+                            <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">of</span>
+                            <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">{pages}</span>
+                        </div>
+                    <button onClick={proxPagina}><img src={next} alt="" /></button>
+                    
                 </div>
 
             </section>
