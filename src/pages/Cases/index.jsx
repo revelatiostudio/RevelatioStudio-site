@@ -26,9 +26,11 @@ import Transition from "../../transition";
 
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 const Cases = () => {
-    gsap.registerPlugin(useGSAP)
+    gsap.registerPlugin(useGSAP, ScrollTrigger)
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const array = [
 
@@ -81,17 +83,17 @@ const Cases = () => {
         setItens(novasFotos)
     }
     function proxPagina() {
-        if(currentPage >= pages - 1){
+        if (currentPage >= pages - 1) {
             return
-        }else{
+        } else {
             window.scrollTo(0, 0);
             setCurrentPage(currentPage + 1)
         }
     }
-    function voltaPagina(){
-        if(currentPage <= 0){
+    function voltaPagina() {
+        if (currentPage <= 0) {
             return
-        }else{
+        } else {
             window.scrollTo(0, 0);
             setCurrentPage(currentPage - 1)
         }
@@ -99,7 +101,7 @@ const Cases = () => {
 
 
 
-    
+
     const tl = useRef();
 
     useGSAP(() => {
@@ -117,7 +119,26 @@ const Cases = () => {
                 stagger: 0.1,
                 ease: "power4.inOut",
             }, 0)
+    })
 
+    useGSAP(() => {
+        const heroImages = [...document.querySelectorAll('.quadrado-image')]
+        const tl = gsap.timeline({
+            scrollTrigger:{
+                trigger: '.all-cases-container',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            }
+        })
+
+        heroImages.forEach(image => {
+            tl.to(image,{
+                ease: 'none',
+                yPercent: gsap.utils.random(-80, -50),
+                // rotateZ: gsap.utils.random(-10, -5),
+            },0)
+        })
     })
 
     useEffect(() => {
@@ -214,14 +235,14 @@ const Cases = () => {
 
                 </div>
                 <div className="change-page">
-                    <button onClick={voltaPagina}><img src={previous} alt=""/></button>
+                    <button onClick={voltaPagina}><img src={previous} alt="" /></button>
                     <div className="flex items-center gap-x-1">
-                            <span className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-100 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-300 dark:text-black dark:focus:bg-black/10">{currentPage + 1}</span>
-                            <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">of</span>
-                            <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">{pages}</span>
-                        </div>
+                        <span className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-100 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-300 dark:text-black dark:focus:bg-black/10">{currentPage + 1}</span>
+                        <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">of</span>
+                        <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">{pages}</span>
+                    </div>
                     <button onClick={proxPagina}><img src={next} alt="" /></button>
-                    
+
                 </div>
 
             </section>
