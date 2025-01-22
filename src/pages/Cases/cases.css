@@ -169,13 +169,13 @@
 }
 .change-page{
     position: absolute;
-    bottom: 10px;
-    gap: 20px;
+    bottom: 0.625rem;
+    gap: 1.25rem;
     display: flex;
 }
 .change-page img{
-    width: 10px;
-    height: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
 }
 
 
@@ -359,6 +359,9 @@
         display: block;
         /* transition: ease 0.3s; */
     }
+    .change-page{
+        right: 1.875rem;
+    }
 
 }
 
@@ -366,6 +369,9 @@
     .menu-mobile {
         width: 70vw;
 
+    }
+    .change-page{
+        gap: 0.625rem;
     }
 
 
