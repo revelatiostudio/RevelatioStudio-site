@@ -44,14 +44,14 @@ export default function NavBar({ color }) {
             .to(".menu-overlay", {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 ease: "power4.inOut",
-                duration: 1.25
-            }).to([".link-menu p", ".link-menu h1", ".link-menu img"], {
-                y: 0,
                 duration: 1,
+            },0).to([".link-menu p", ".link-menu h1", ".link-menu img"], {
+                y: 0,
+                duration: 0.5,
                 stagger: 0.1,
                 ease: "power4.inOut",
-                delay: -0.75,
-            })
+                // delay: -0.75,
+            },0)
 
     })
 
