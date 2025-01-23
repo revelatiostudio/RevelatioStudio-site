@@ -28,6 +28,9 @@ import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { motion } from "framer-motion"
+
+
 
 const Cases = () => {
     gsap.registerPlugin(useGSAP, ScrollTrigger)
@@ -43,7 +46,7 @@ const Cases = () => {
         { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca" },
         { id: '8', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
         { id: '9', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
-        
+
         { id: '10', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
         { id: '11', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
         { id: '12', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
@@ -125,7 +128,7 @@ const Cases = () => {
     useGSAP(() => {
         const heroImages = [...document.querySelectorAll('.quadrado-image')]
         const tl = gsap.timeline({
-            scrollTrigger:{
+            scrollTrigger: {
                 trigger: '.all-cases-container',
                 start: 'top top',
                 end: 'bottom top',
@@ -134,11 +137,24 @@ const Cases = () => {
         })
 
         heroImages.forEach(image => {
-            tl.to(image,{
+            if(window.innerWidth >= 1150){
+                image.addEventListener("mouseenter", () => {
+                    gsap.to(image, { scale: 1.05, ease: "none", rotateZ: 2 });
+                })
+                image.addEventListener("mouseleave", () => {
+                    gsap.to(image, { scale: 1, ease: "none", rotateZ: 0 });
+                  });
+            }else{
+                
+                return
+            }
+          
+
+            tl.to(image, {
                 ease: 'none',
                 yPercent: gsap.utils.random(-100, -50),
                 // rotateZ: gsap.utils.random(-10, 5),
-            },0)
+            }, 0)
         })
     })
 
@@ -222,6 +238,9 @@ const Cases = () => {
                 <div className="all-cases-container" >
                     {
                         currentItens.map((a) => (
+
+
+
                             <div className="quadrado-image" key={a.id}>
                                 <img src={a.img} alt="" />
                                 <div className="quadro-text">
@@ -230,10 +249,11 @@ const Cases = () => {
                                 </div>
                             </div>
 
+
                         ))
                     }
 
-                    
+
                 </div>
                 <div className="change-page">
                     <button onClick={voltaPagina}><img src={previous} alt="" /></button>
@@ -247,8 +267,8 @@ const Cases = () => {
                 </div>
 
             </section>
-            
-            
+
+
         </div>
 
     )
