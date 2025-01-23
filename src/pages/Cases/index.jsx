@@ -44,9 +44,9 @@ const Cases = () => {
         { id: '8', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
         { id: '9', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
         
-        // { id: '1', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
-        // { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
-        // { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
+        { id: '10', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
+        { id: '11', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
+        { id: '12', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
         // { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital" },
         // { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital" },
         // { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca" },
