@@ -42,11 +42,6 @@ export default function ProjectsFeedBack() {
     let barra = 1;
 
     if (direction === "rigth" && imgAtual <= (totalSlides - 1)) {
-      console.log('imgAtual',images[imgAtual])
-      console.log('images',images)
-      console.log('totalSlides',totalSlides)
-
-      console.log('caiu no iff')
 
       gsap.fromTo(
         images[imgAtual],
@@ -149,10 +144,6 @@ export default function ProjectsFeedBack() {
             imgAtual === 0 ? (
               <>
                 <div className='people-description'>
-                  <div className='people-img'>
-                    <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
-
-                  </div>
                   <div className='people-name'>
                     <p>Guilherme Rocha</p>
                     <p><span>Prop</span></p>
@@ -170,10 +161,6 @@ export default function ProjectsFeedBack() {
             ) : imgAtual === 1 ? (
               <>
                 <div className='people-description'>
-                  <div className='people-img'>
-                    <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
-
-                  </div>
                   <div className='people-name'>
                     <p>Pedro Meneses</p>
                     <p><span>Approach</span></p>
@@ -190,10 +177,6 @@ export default function ProjectsFeedBack() {
             ) : imgAtual === 2 ? (
               <>
               <div className='people-description'>
-                <div className='people-img'>
-                  <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
-
-                </div>
                 <div className='people-name'>
                   <p>Thiago Hinrichsen</p>
                   <p><span>Castro & Hinrichsen</span></p>
@@ -210,10 +193,6 @@ export default function ProjectsFeedBack() {
             ) : imgAtual === 3 ? (
               <>
               <div className='people-description'>
-                <div className='people-img'>
-                  <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
-
-                </div>
                 <div className='people-name'>
                   <p>Maicon Lino</p>
                   <p><span>Life Consultoria e Tecnologia</span></p>
@@ -230,10 +209,6 @@ export default function ProjectsFeedBack() {
             ) : imgAtual === 4 ? (
               <>
               <div className='people-description'>
-                <div className='people-img'>
-                  <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
-
-                </div>
                 <div className='people-name'>
                   <p>Ana Karla Arraes</p>
                   <p><span>CTM DOR</span></p>
@@ -249,10 +224,6 @@ export default function ProjectsFeedBack() {
             ) : (
               <>
               <div className='people-description'>
-                <div className='people-img'>
-                  <img src={arthurMedeiros} alt='Arthur Medeiros imagem' />
-
-                </div>
                 <div className='people-name'>
                   <p>Andrea Forjaz</p>
                   <p><span>DCA Influence House</span></p>

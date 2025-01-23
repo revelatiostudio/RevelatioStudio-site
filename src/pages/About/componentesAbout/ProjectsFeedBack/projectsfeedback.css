@@ -86,12 +86,9 @@
     
 }
 
-.people-description .people-name{
-    margin-left: 1.4375rem;
-}
 .people-description .people-name p{
     font-family: "neue-haas-grotesk-display";
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 450;
     line-height: 130%;
     color: var(--color-gray-200);
