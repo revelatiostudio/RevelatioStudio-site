@@ -77,7 +77,6 @@ const Cases = () => {
     const currentItens = itens.slice(startIndex, endIndex)
 
     const pages = Math.ceil(itens.length / itensPerPage)
-    console.log(currentPage)
 
     function filtraFotos(tag) {
 
@@ -156,7 +155,7 @@ const Cases = () => {
                 // rotateZ: gsap.utils.random(-10, 5),
             }, 0)
         })
-    })
+    },[itens])
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -238,8 +237,6 @@ const Cases = () => {
                 <div className="all-cases-container" >
                     {
                         currentItens.map((a) => (
-
-
 
                             <div className="quadrado-image" key={a.id}>
                                 <img src={a.img} alt="" />
