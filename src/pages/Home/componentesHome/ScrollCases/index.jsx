@@ -13,6 +13,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Progress } from "@nextui-org/react";
 import throttle from 'lodash.throttle';
+import { Link } from 'react-router-dom'
 
 
 export default function ScrollCases() {
@@ -282,7 +283,7 @@ export default function ScrollCases() {
                     </div>
                     <div className='see-cases'>
                         <div className='all-cases'>
-                            <a href=''>Ver todos os cases</a>
+                            <Link to='/cases'>Ver todos os cases</Link>
                             <span><a><img src={seta} alt='' /></a></span>
                         </div>
                         <div className='explore'>

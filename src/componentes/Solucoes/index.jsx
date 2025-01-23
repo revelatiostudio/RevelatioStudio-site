@@ -10,6 +10,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from 'react-router-dom'
 
 export default function Solucoes() {
 
@@ -151,7 +152,7 @@ export default function Solucoes() {
                             </div>
 
                             <div className='seecases'>
-                                <a href=''>Ver todos os cases</a>
+                                <Link to='/cases'>Ver todos os cases</Link>
                                 <span><a><img src={seta} alt='' /></a></span>
                             </div>
                         </div>

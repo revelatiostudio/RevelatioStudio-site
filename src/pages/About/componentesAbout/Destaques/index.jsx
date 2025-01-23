@@ -14,6 +14,7 @@ import prop from '../../../../assets/img/about/reconhecimentos/prop.png'
 import smile from '../../../../assets/img/about/reconhecimentos/smile.png'
 import marasol from '../../../../assets/img/about/reconhecimentos/marasol.png'
 import dca from '../../../../assets/img/about/reconhecimentos/dca.png'
+import { Link } from 'react-router-dom';
 
 
 
@@ -60,7 +61,7 @@ export default function Destaques() {
                         galeria de projetos premiados!</h2>
 
                     <div className='contact'>
-                        <p><a>Entrar em contato</a></p>
+                        <Link to='/contato'><p>Entrar em contato</p></Link>
                         <span><a><img src={seta} alt='' /></a></span>
                     </div>
 

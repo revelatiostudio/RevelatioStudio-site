@@ -31,7 +31,7 @@ export default function BottomHome() {
                             <div className='links'>
                                 <Link to='/'><p>Home</p></Link>
                                 <Link to='/about'><p>Sobre</p></Link>
-                                <p>Cases</p>
+                                <Link to='/cases'><p>Cases</p></Link>
                                 <Link to='/contato'><p>Contato</p></Link>
                                 <p>Galeria</p>
                             </div>
