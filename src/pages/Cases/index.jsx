@@ -35,7 +35,9 @@ import { motion } from "framer-motion"
 const Cases = () => {
     gsap.registerPlugin(useGSAP, ScrollTrigger)
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
     const array = [
+
 
         { id: '1', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
         { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
@@ -50,21 +52,7 @@ const Cases = () => {
         { id: '10', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
         { id: '11', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
         { id: '12', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
-        // { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital" },
-        // { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital" },
-        // { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca" },
-        // { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca" },
-        // { id: '8', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
-        // { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
-        // { id: '1', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
-        // { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
-        // { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
-        // { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital" },
-        // { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital" },
-        // { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca" },
-        // { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca" },
-        // { id: '8', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
-        // { id: '9', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
+ 
     ]
 
 
@@ -125,6 +113,7 @@ const Cases = () => {
     })
 
     useGSAP(() => {
+   
         const heroImages = [...document.querySelectorAll('.quadrado-image')]
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -169,6 +158,10 @@ const Cases = () => {
         setIsMenuOpen(!isMenuOpen)
     }
 
+    const gridStyle =
+    itens.length === 4 || itens.length === 6 || itens.length === 8
+      ? { gridAutoRows: "minmax(600px, auto)" }
+      : { gridAutoRows: "minmax(400px, auto)" };
 
 
 
@@ -234,7 +227,7 @@ const Cases = () => {
 
                 </div>
                 <div className="menu-open-mobile-black"></div>
-                <div className="all-cases-container" >
+                <div className="all-cases-container" style={{display:"grid", ...gridStyle}}>
                     {
                         currentItens.map((a) => (
 

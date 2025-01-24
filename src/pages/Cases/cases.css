@@ -206,7 +206,7 @@
     width: 100%;
     max-width: 26.125rem;
     height: 29.125rem;
-    top: 50%;
+    top: 30%;
     right: 5%;
     justify-self: center;
 
@@ -223,7 +223,7 @@
     max-width: 15.1875rem;
     height: 15.1875rem;
     justify-self: end;
-    top: 140%;
+    top: 50%;
     right: 5%;
 }
 
