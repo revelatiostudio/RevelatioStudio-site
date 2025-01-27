@@ -36,6 +36,8 @@ import { useAllPrismicDocumentsByType, useFirstPrismicDocument } from "@prismici
 const Cases = () => {
     gsap.registerPlugin(useGSAP, ScrollTrigger)
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const casesRef = useRef([])
+    const cases = casesRef.current
 
     const array = [
 
@@ -140,39 +142,27 @@ const Cases = () => {
             }, 0)
     })
 
-    // useGSAP(() => {
+    useGSAP(() => {
 
-    //     const heroImages = [...document.querySelectorAll('.quadrado-image')]
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: '.all-cases-container',
-    //             start: 'top top',
-    //             end: 'bottom top',
-    //             scrub: true
-    //         }
-    //     })
+        //const heroImages = [...document.querySelectorAll('.quadrado-image')]
+       
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.all-cases-container',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            }
+        })
 
-    //     heroImages.forEach(image => {
-    //         if(window.innerWidth >= 1150){
-    //             image.addEventListener("mouseenter", () => {
-    //                 gsap.to(image, { scale: 1.05, ease: "none", rotateZ: 2 });
-    //             })
-    //             image.addEventListener("mouseleave", () => {
-    //                 gsap.to(image, { scale: 1, ease: "none", rotateZ: 0 });
-    //               });
-    //         }else{
-
-    //             return
-    //         }
-
-
-    //         tl.to(image, {
-    //             ease: 'none',
-    //             yPercent: gsap.utils.random(-100, -50),
-    //             // rotateZ: gsap.utils.random(-10, 5),
-    //         }, 0)
-    //     })
-    // },[itens])
+        cases.forEach(image => {
+            tl.to(image, {
+                ease: 'none',
+                yPercent: gsap.utils.random(-100, -50),
+                rotateZ: window.innerWidth >= 1200 ? gsap.utils.random(-20, 20) : 0,
+            }, 0)
+        })
+    },[itens])
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -259,7 +249,7 @@ const Cases = () => {
                     {
                         currentItens?.map((a) => (
 
-                            <div className="quadrado-image" key={a.id}>
+                            <div className="quadrado-image" key={a.id} ref={(el)=> casesRef.current.push(el)}>
                                 <img src={a.img} alt="" />
                                 <div className="quadro-text">
                                     <p className="projeto">{a.projeto}</p>
