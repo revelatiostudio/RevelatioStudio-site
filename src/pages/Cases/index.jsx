@@ -187,7 +187,7 @@ const Cases = () => {
     }
 
     const gridStyle =
-        data?.length === 4 || data?.length === 6 || data?.length === 8
+        itens?.length === 4 || itens?.length === 6 || itens?.length === 8
             ? { gridAutoRows: "minmax(600px, auto)" }
             : { gridAutoRows: "minmax(400px, auto)" };
 
