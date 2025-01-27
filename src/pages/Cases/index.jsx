@@ -40,15 +40,15 @@ const Cases = () => {
     const array = [
 
 
-        { id: '1', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
-        { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
-        { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
-        { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital" },
-        { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital" },
-        { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca" },
-        { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca" },
-        { id: '8', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
-        { id: '9', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
+        // { id: '1', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
+        // { id: '2', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
+        // { id: '3', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
+        // { id: '4', img: life, projeto: "Life", tipo: "Rebranding", tag: "digital" },
+        // { id: '5', img: dca, projeto: "DCA Influence House", tipo: "Rebranding", tag: "digital" },
+        // { id: '6', img: prop, projeto: "Prop", tipo: "Brand", tag: "marca" },
+        // { id: '7', img: kaicara, projeto: "Kaiçara", tipo: "Brand", tag: "marca" },
+        // { id: '8', img: mistery, projeto: "Mistery of Lears Macaw", tipo: "UI & Dev", tag: "marca" },
+        // { id: '9', img: marasol, projeto: "Marasol Pousada", tipo: "Brand Strategy & Visual Identity", tag: "marca" },
 
         { id: '10', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
         { id: '11', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
@@ -56,30 +56,39 @@ const Cases = () => {
 
     ]
 
-
-
-    const [itens, setItens] = useState(array)
-    const [itensPerPage, setItensPerPage] = useState(9)
-    const [currentPage, setCurrentPage] = useState(0)
-    const startIndex = currentPage * itensPerPage
-    const endIndex = startIndex + itensPerPage
-    const currentItens = itens.slice(startIndex, endIndex)
-
     const [document] = useAllPrismicDocumentsByType('case')
+    
 
-
-
+  
     const data = document?.map((data, id) => {
         return {
             id,
             img: data.data.case_gallery[0]?.case_cover.url,
             projeto: data.data.case_gallery[0]?.project[0]?.text,
-            tipo: data.data.case_gallery[0]?.type[0].text,
-            tag: data.data.case_gallery[0]?.tag[0].text
+            tipo: data.data.case_gallery[0]?.type,
+            tag: data.data.case_gallery[0]?.tag
         }
+        
     })
+    
+
+  
 
 
+
+    const [itens, setItens] = useState(null)
+    const [itensPerPage, setItensPerPage] = useState(9)
+    const [currentPage, setCurrentPage] = useState(0)
+    const startIndex = currentPage * itensPerPage
+    const endIndex = startIndex + itensPerPage
+    const currentItens = itens?.slice(startIndex, endIndex)
+
+
+    useEffect(() => {
+        if (data?.length > 0) {
+            setItens(data);
+        }
+    },[document]);
 
 
 
@@ -87,7 +96,7 @@ const Cases = () => {
 
     function filtraFotos(tag) {
 
-        const novasFotos = array.filter((foto) => {
+        const novasFotos = data?.filter((foto) => {
             return foto.tag === tag
         })
         setItens(novasFotos)
@@ -178,7 +187,7 @@ const Cases = () => {
     }
 
     const gridStyle =
-        itens.length === 4 || itens.length === 6 || itens.length === 8
+        data?.length === 4 || data?.length === 6 || data?.length === 8
             ? { gridAutoRows: "minmax(600px, auto)" }
             : { gridAutoRows: "minmax(400px, auto)" };
 
@@ -192,7 +201,7 @@ const Cases = () => {
                     <h1>Filtre por: </h1>
 
                     <ol className="filtros">
-                        <li onClick={() => setItens(array)}>Todos</li>
+                        <li onClick={() => setItens(data)}>Todos</li>
                         <li onClick={() => filtraFotos("site")}>Site</li>
                         <li onClick={() => filtraFotos("digital")}>Produto digital</li>
                         <li onClick={() => filtraFotos("marca")}>Marca</li>
@@ -229,7 +238,7 @@ const Cases = () => {
                     </div>
 
                     <ol className="filtros">
-                        <li onClick={() => setItens(array)}>Todos</li>
+                        <li onClick={() => setItens(data)}>Todos</li>
                         <li onClick={() => filtraFotos("site")}>Site</li>
                         <li onClick={() => filtraFotos("digital")}>Produto digital</li>
                         <li onClick={() => filtraFotos("marca")}>Marca</li>
@@ -248,7 +257,7 @@ const Cases = () => {
                 <div className="menu-open-mobile-black"></div>
                 <div className="all-cases-container" style={{ display: "grid", ...gridStyle }}>
                     {
-                        data?.map((a) => (
+                        currentItens?.map((a) => (
 
                             <div className="quadrado-image" key={a.id}>
                                 <img src={a.img} alt="" />
