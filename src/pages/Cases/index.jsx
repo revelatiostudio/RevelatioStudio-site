@@ -29,14 +29,14 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { motion } from "framer-motion"
-import { useFirstPrismicDocument } from "@prismicio/react";
+import { useAllPrismicDocumentsByType, useFirstPrismicDocument } from "@prismicio/react";
 
 
 
 const Cases = () => {
     gsap.registerPlugin(useGSAP, ScrollTrigger)
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    
+
     const array = [
 
 
@@ -53,7 +53,7 @@ const Cases = () => {
         { id: '10', img: approach, projeto: "Approach", tipo: "Brand", tag: "site" },
         { id: '11', img: nando, projeto: "Nando Reis", tipo: "Site Institucional", tag: "site" },
         { id: '12', img: immersy, projeto: "Immersy", tipo: "Brand", tag: "site" },
- 
+
     ]
 
 
@@ -65,9 +65,24 @@ const Cases = () => {
     const endIndex = startIndex + itensPerPage
     const currentItens = itens.slice(startIndex, endIndex)
 
-    const [document] = useFirstPrismicDocument()
-    console.log(document?.data.title[0].text )
-   
+    const [document] = useAllPrismicDocumentsByType('cases')
+
+
+
+    const data = document?.map((data, id) => {
+        return {
+            id,
+            img: data.data.case_gallery[0]?.case_cover.url,
+            projeto: data.data.case_gallery[0]?.project[0]?.text,
+            tipo: data.data.case_gallery[0]?.type[0].text,
+            tag: data.data.case_gallery[0]?.tag[0].text
+
+        }
+    })
+
+
+
+
 
     const pages = Math.ceil(itens.length / itensPerPage)
 
@@ -118,7 +133,7 @@ const Cases = () => {
     })
 
     // useGSAP(() => {
-   
+
     //     const heroImages = [...document.querySelectorAll('.quadrado-image')]
     //     const tl = gsap.timeline({
     //         scrollTrigger: {
@@ -138,10 +153,10 @@ const Cases = () => {
     //                 gsap.to(image, { scale: 1, ease: "none", rotateZ: 0 });
     //               });
     //         }else{
-                
+
     //             return
     //         }
-          
+
 
     //         tl.to(image, {
     //             ease: 'none',
@@ -164,9 +179,9 @@ const Cases = () => {
     }
 
     const gridStyle =
-    itens.length === 4 || itens.length === 6 || itens.length === 8
-      ? { gridAutoRows: "minmax(600px, auto)" }
-      : { gridAutoRows: "minmax(400px, auto)" };
+        itens.length === 4 || itens.length === 6 || itens.length === 8
+            ? { gridAutoRows: "minmax(600px, auto)" }
+            : { gridAutoRows: "minmax(400px, auto)" };
 
 
 
@@ -232,7 +247,7 @@ const Cases = () => {
 
                 </div>
                 <div className="menu-open-mobile-black"></div>
-                <div className="all-cases-container" style={{display:"grid", ...gridStyle}}>
+                <div className="all-cases-container" style={{ display: "grid", ...gridStyle }}>
                     {
                         currentItens.map((a) => (
 
