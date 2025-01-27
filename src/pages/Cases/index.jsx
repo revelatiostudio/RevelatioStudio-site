@@ -65,7 +65,7 @@ const Cases = () => {
     const endIndex = startIndex + itensPerPage
     const currentItens = itens.slice(startIndex, endIndex)
 
-    const [document] = useAllPrismicDocumentsByType('cases')
+    const [document] = useAllPrismicDocumentsByType('case')
 
 
 
@@ -76,7 +76,6 @@ const Cases = () => {
             projeto: data.data.case_gallery[0]?.project[0]?.text,
             tipo: data.data.case_gallery[0]?.type[0].text,
             tag: data.data.case_gallery[0]?.tag[0].text
-
         }
     })
 
@@ -84,7 +83,7 @@ const Cases = () => {
 
 
 
-    const pages = Math.ceil(itens.length / itensPerPage)
+    const pages = Math.ceil(data?.length / itensPerPage)
 
     function filtraFotos(tag) {
 
@@ -249,7 +248,7 @@ const Cases = () => {
                 <div className="menu-open-mobile-black"></div>
                 <div className="all-cases-container" style={{ display: "grid", ...gridStyle }}>
                     {
-                        currentItens.map((a) => (
+                        data?.map((a) => (
 
                             <div className="quadrado-image" key={a.id}>
                                 <img src={a.img} alt="" />
