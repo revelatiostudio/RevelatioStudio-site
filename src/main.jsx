@@ -8,6 +8,8 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { NextUIProvider } from '@nextui-org/react'
+import { PrismicProvider } from '@prismicio/react'
+import { client } from './services/prismic.jsx'
 
 
 
@@ -15,11 +17,13 @@ import { NextUIProvider } from '@nextui-org/react'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <NextUIProvider>
-      <Router>
-        <Routes>
-          <Route path='/*' element={<App />} />
-        </Routes>
-      </Router>
+      <PrismicProvider client={client}>
+        <Router>
+          <Routes>
+            <Route path='/*' element={<App />} />
+          </Routes>
+        </Router>
+      </PrismicProvider>
     </NextUIProvider>
 
   </StrictMode>,

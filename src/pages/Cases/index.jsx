@@ -29,6 +29,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { motion } from "framer-motion"
+import { useFirstPrismicDocument } from "@prismicio/react";
 
 
 
@@ -63,6 +64,10 @@ const Cases = () => {
     const startIndex = currentPage * itensPerPage
     const endIndex = startIndex + itensPerPage
     const currentItens = itens.slice(startIndex, endIndex)
+
+    const [document] = useFirstPrismicDocument()
+    console.log(document?.data.title[0].text )
+   
 
     const pages = Math.ceil(itens.length / itensPerPage)
 
@@ -112,39 +117,39 @@ const Cases = () => {
             }, 0)
     })
 
-    useGSAP(() => {
+    // useGSAP(() => {
    
-        const heroImages = [...document.querySelectorAll('.quadrado-image')]
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.all-cases-container',
-                start: 'top top',
-                end: 'bottom top',
-                scrub: true
-            }
-        })
+    //     const heroImages = [...document.querySelectorAll('.quadrado-image')]
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: '.all-cases-container',
+    //             start: 'top top',
+    //             end: 'bottom top',
+    //             scrub: true
+    //         }
+    //     })
 
-        heroImages.forEach(image => {
-            if(window.innerWidth >= 1150){
-                image.addEventListener("mouseenter", () => {
-                    gsap.to(image, { scale: 1.05, ease: "none", rotateZ: 2 });
-                })
-                image.addEventListener("mouseleave", () => {
-                    gsap.to(image, { scale: 1, ease: "none", rotateZ: 0 });
-                  });
-            }else{
+    //     heroImages.forEach(image => {
+    //         if(window.innerWidth >= 1150){
+    //             image.addEventListener("mouseenter", () => {
+    //                 gsap.to(image, { scale: 1.05, ease: "none", rotateZ: 2 });
+    //             })
+    //             image.addEventListener("mouseleave", () => {
+    //                 gsap.to(image, { scale: 1, ease: "none", rotateZ: 0 });
+    //               });
+    //         }else{
                 
-                return
-            }
+    //             return
+    //         }
           
 
-            tl.to(image, {
-                ease: 'none',
-                yPercent: gsap.utils.random(-100, -50),
-                // rotateZ: gsap.utils.random(-10, 5),
-            }, 0)
-        })
-    },[itens])
+    //         tl.to(image, {
+    //             ease: 'none',
+    //             yPercent: gsap.utils.random(-100, -50),
+    //             // rotateZ: gsap.utils.random(-10, 5),
+    //         }, 0)
+    //     })
+    // },[itens])
 
     useEffect(() => {
         if (isMenuOpen) {
