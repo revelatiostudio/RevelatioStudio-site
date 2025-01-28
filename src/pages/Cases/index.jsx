@@ -159,7 +159,7 @@ const Cases = () => {
             tl.to(image, {
                 ease: 'none',
                 yPercent: gsap.utils.random(-100, -50),
-                rotateZ: window.innerWidth >= 1200 ? gsap.utils.random(-20, 20) : 0,
+                //rotateZ: window.innerWidth >= 1200 ? gsap.utils.random(-20, 20) : 0,
             }, 0)
         })
     }, [itens])
