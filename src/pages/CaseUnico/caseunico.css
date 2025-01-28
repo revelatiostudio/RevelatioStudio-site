@@ -4,6 +4,13 @@
     display: flex;
     flex-direction: column;
 }
+.container-caseunico h2{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-gray-200);
+    font-family: "neue-haas-grotesk-display"
+    
+}
 .title{
     width: 100%;
     margin-top: 138px;
@@ -52,12 +59,7 @@
     width: 100%;
     margin-top: 11.25rem;
 }
-.background h2{
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--color-gray-200);
-    font-family: "neue-haas-grotesk-display"
-}
+
 .back-text{
     width: 50%;
     margin-top: 32px;
@@ -98,3 +100,85 @@
 .group-grid img{
     border-radius: 0.5rem;
 }
+
+.brand{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.brand-naming,.brand-posi{
+    width: 40%;
+    justify-content: start;
+    padding-left: 80px;
+    margin-top: 180px;
+}
+.brand-naming h2,.brand-posi h2{
+   margin-bottom: 32px
+}
+
+.brand-naming p,.brand-posi p{
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 140%;
+   font-family: "neue-haas-grotesk-text";
+   color: var(--color-gray-400);
+}
+.grupo-image-2,.group-images-3{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 48px;
+}
+.grupo-image-2 img,.group-images-3 img{
+    width: 100%;
+    height: 720px;
+    border-radius: 8px;
+}
+.visual{
+    width: 100%;
+    margin-top: 11.25rem;
+}
+.visual p{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--color-gray-400);
+    font-family: "neue-haas-grotesk-text";
+    margin-top: 2rem;
+}
+.category-about{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: end;
+    margin-top: 83px;
+}
+
+.cat-abou{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-bottom{
+    width: 30%;
+
+}
+.category-bottom li, .about-bottom p{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--color-gray-400);
+    line-height: 140%;
+    font-family: "neue-haas-grotesk-text";
+}
+.category-bottom h2{
+    margin-bottom: 2rem;
+}
+.about-bottom{
+    width: 60%;
+}
+.about-bottom h2{
+    margin-bottom: 2rem;
+}
+

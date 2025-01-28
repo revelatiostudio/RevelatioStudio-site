@@ -85,6 +85,50 @@ const CaseUnico = () => {
                     <img className='item3' src={data.group_images_one.g1_image_3} alt='' />
 
                 </div>
+                <div className='brand'>
+                    <div className='brand-naming'>
+                        <h2>[ Brand Naming ]</h2>
+                        <p>{data.branding_group.brand_naming}</p>
+                    </div>
+                    <div className='brand-posi'>
+                        <h2>[ Brand Positioning ]</h2>
+                        <p>{data.branding_group.brand_positioning}</p>
+                    </div>
+
+                </div>
+                <div className='grupo-image-2'>
+                    <img src={data.group_images_two.g2_image_1} alt='' />
+                    <img src={data.group_images_two.g2_image_2} alt='' />
+                    <img src={data.group_images_two.g2_image_3} alt='' />
+                </div>
+                <div className='visual'>
+                    <h2>[ Visual Expression ]</h2>
+                    <p>{data.visual_expression}</p>
+                    <div className='group-images-3'>
+                        <img src={data.group_images_three.g3_image_1} alt='' />
+                        <img src={data.group_images_three.g3_image_2} alt='' />
+                        <img src={data.group_images_three.g3_image_3} alt='' />
+                    </div>
+
+                </div>
+                <div className='category-about'>
+                    <div className='cat-abou'>
+                        <div className='category-bottom'>
+                            <h2>[ Categorias ]</h2>
+                            <ul>
+                               {data.categories.map((a) => (
+                                <li>{a.text}</li>
+                               ))}
+                            </ul>
+
+                        </div>
+                        <div className='about-bottom'>
+                            <h2>[ Sobre o projeto ]</h2>
+                            <p>{data.about_the_project}</p>
+                           
+                        </div>
+                    </div>
+                </div>
             </section>
 
         </div>
