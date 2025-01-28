@@ -13,6 +13,7 @@ import NotFoundPage  from './pages/NotFoundPage'
 import Cases from './pages/Cases'
 
 import Lenis from "@studio-freight/lenis";
+import CaseUnico from './pages/CaseUnico'
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
   const lenisRef = useRef()
 
   let navColor = "white";
-  if (location.pathname === "/about" || location.pathname === "/cases") {
+  if (location.pathname === "/about" || location.pathname.startsWith("/cases")) {
     navColor = "black"
 
   }
@@ -65,6 +66,7 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/contato' element={<Contato/>} />
             <Route path='/cases' element={<Cases/>} /> 
+            <Route path='/cases/caseunico/:nome/:id' element={<CaseUnico/>} />
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
 

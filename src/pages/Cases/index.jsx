@@ -59,9 +59,9 @@ const Cases = () => {
     ]
 
     const [document] = useAllPrismicDocumentsByType('case')
-    
 
-  
+
+
     const data = document?.map((data, id) => {
         return {
             id,
@@ -70,11 +70,11 @@ const Cases = () => {
             tipo: data.data.case_gallery[0]?.type,
             tag: data.data.case_gallery[0]?.tag
         }
-        
-    })
-    
 
-  
+    })
+
+
+
 
 
 
@@ -90,7 +90,7 @@ const Cases = () => {
         if (data?.length > 0) {
             setItens(data);
         }
-    },[document]);
+    }, [document]);
 
 
 
@@ -145,7 +145,7 @@ const Cases = () => {
     useGSAP(() => {
 
         //const heroImages = [...document.querySelectorAll('.quadrado-image')]
-       
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.all-cases-container',
@@ -162,7 +162,7 @@ const Cases = () => {
                 rotateZ: window.innerWidth >= 1200 ? gsap.utils.random(-20, 20) : 0,
             }, 0)
         })
-    },[itens])
+    }, [itens])
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -249,13 +249,17 @@ const Cases = () => {
                     {
                         currentItens?.map((a) => (
 
-                            <div className="quadrado-image" key={a.id} ref={(el)=> casesRef.current.push(el)}>
-                                <img src={a.img} alt="" />
-                                <div className="quadro-text">
-                                    <p className="projeto">{a.projeto}</p>
-                                    <p>{a.tipo}</p>
-                                </div>
+                            <div className="quadrado-image" key={a.id} ref={(el) => casesRef.current.push(el)}>
+                                <Link to={`/cases/caseunico/${a.projeto}/${a.id}`}>
+                                    <img src={a.img} alt="" />
+                                    <div className="quadro-text">
+                                        <p className="projeto">{a.projeto}</p>
+                                        <p>{a.tipo}</p>
+                                    </div>
+                                </Link>
                             </div>
+
+
 
 
                         ))
