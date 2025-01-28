@@ -94,7 +94,7 @@ const Cases = () => {
 
 
 
-    const pages = Math.ceil(data?.length / itensPerPage)
+    const pages = Math.ceil(itens?.length / itensPerPage)
 
     function filtraFotos(tag) {
 
