@@ -167,6 +167,7 @@ const CaseUnico = () => {
                     </div>
                     <div className='all-projects'>
                         <Swiper
+                            slidesPerView={1.2}
                             spaceBetween={10}
                             freeMode={true}
                             modules={[FreeMode, Pagination]}
