@@ -15,7 +15,7 @@
 
 .title {
     width: 100%;
-    margin-top: 138px;
+    margin-top: 8.625rem;
 }
 
 .title h1 {
@@ -58,12 +58,12 @@
 .image-hero {
     width: 100%;
     height: 45rem;
-    margin-top: 38px;
+    margin-top: 2.375rem;
 }
 
 .image-hero img {
     object-position: 50% 0%;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
 .background {
@@ -73,7 +73,7 @@
 
 .back-text {
     width: 50%;
-    margin-top: 32px;
+    margin-top: 2rem;
 }
 
 .back-text p {
@@ -92,7 +92,7 @@
         "item3 item3";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: 20px;
+    gap: 1.25rem;
     margin-top: 3rem;
 
 }
@@ -100,7 +100,7 @@
 .item1,
 .item2,
 .item3 {
-    height: 720px;
+    height: 45rem;
 }
 
 .item1 {
@@ -129,12 +129,12 @@
 .brand-posi {
     width: 40%;
     justify-content: start;
-    margin-top: 180px;
+    margin-top: 11.25rem;
 }
 
 .brand-naming h3,
 .brand-posi h3 {
-    margin-bottom: 32px
+    margin-bottom: 2rem
 }
 
 .brand-naming p,
@@ -151,15 +151,15 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-top: 48px;
+    gap: 1.25rem;
+    margin-top: 3rem;
 }
 
 .grupo-image-2 img,
 .group-images-3 img {
     width: 100%;
-    height: 720px;
-    border-radius: 8px;
+    height: 45rem;
+    border-radius: 0.5rem;
 }
 
 .visual {
@@ -180,7 +180,7 @@
     width: 100%;
     display: flex;
     justify-content: end;
-    margin-top: 83px;
+    margin-top: 5.1875rem;
 }
 
 .cat-abou {
@@ -225,8 +225,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 200px;
-    margin-bottom: 82px;
+    margin-top: 12.5rem;
+    margin-bottom: 5.125rem;
 }
 
 .projects-cases h2 {
@@ -244,13 +244,13 @@
 
 .all-projects{
     width: 100%;
-    margin-bottom: 158px;
+    margin-bottom: 9.875rem;
 }
 .all-projects img {
     width: 100%;
-    max-width: 418px;
-    height: 524px;
-    border-radius: 8px;
+    max-width: 26.125rem;
+    height: 32.75rem;
+    border-radius: 0.5rem;
 }
 
 /* responsivo medias */
@@ -263,48 +263,48 @@
         height: 500px;
     }
     .projects-cases{
-        margin-bottom: 70px;
+        margin-bottom: 4.375rem;
     }
 }
 
 @media(max-width: 1150px) {
     .text-resume {
         width: 100%;
-        margin-top: 70px;
+        margin-top: 4.375rem;
     }
     .back-text {
         width: 80%;
     }
     .item1, .item2, .item3{
-        height: 620px;
+        height: 38.75rem;
     }
     .grupo-image-2 img, .group-images-3 img{
-        height: 620px;
+        height: 38.75rem;
     }
 }
 
 @media(max-width: 991px) {
     .back-text{
         width: 100%;
-        margin-top: 25px;
+        margin-top: 1.5625rem;
     }
     .brand{
         flex-direction: column;
-        gap: 30px;
+        gap: 1.875rem;
     }
     .brand-naming, .brand-posi{
         width: 100%;
         margin-top: 0;
     }
     .brand-naming{
-        margin-top: 150px;
+        margin-top: 9.375rem;
     }
   
     .brand-naming h3, .brand-posi h3{
-        margin-bottom: 25px;
+        margin-bottom: 1.5625rem;
     }
     .visual p{
-        margin-top: 25px;
+        margin-top: 1.5625rem;
     }
     .cat-abou {
         width: 70%;
@@ -314,13 +314,13 @@
 
 @media(max-width: 800px) {
     .item1, .item2, .item3{
-        height: 520px;
+        height: 32.5rem;
     }
     .grupo-image-2 img, .group-images-3 img{
-        height: 520px;
+        height: 32.5rem;
     }
     .image-hero{
-        height: 520px;
+        height: 32.5rem;
     }
    
     .category-bottom li, .about-bottom p,.visual p,
@@ -329,30 +329,30 @@
         font-size: 18px;
     }
     .category-bottom h3, .about-bottom h3{
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
     }
 }
 
 @media(max-width: 600px) {
     .group-grid{
-        gap: 10px;
+        gap: 0.625rem;
     }
     .item1, .item2, .item3{
-        height: 420px;
+        height: 26.25rem;
     }
     .grupo-image-2 img, .group-images-3 img{
-        height: 420px;
+        height: 26.25rem;
     }
     .cat-abou{
         width: 100%;
         flex-direction: column-reverse;
-        gap: 20px;
+        gap: 1.25rem;
     }
     .about-bottom{
         width: 100%;
     }
     .projects-cases h2{
-        font-size: 50px;
+        font-size: 3.125rem;
     }
 }
 
@@ -363,32 +363,32 @@
         font-size: 16px;
     }
     .item1, .item2, .item3{
-        height: 320px;
+        height: 20rem;
     }
     .grupo-image-2 img, .group-images-3 img{
-        height: 320px;
+        height: 20rem;
     }
     .services{
         margin-top: 1rem;
     }
     .text-resume{
-        margin-top: 50px;
+        margin-top: 3.125rem;
     }
 }
 @media(max-width: 390px) {
     .image-hero {
-        height: 420px;
+        height: 26.25rem;
     }
     .item1, .item2, .item3{
-        height: 260px;
+        height: 16.25rem;
     }
     .grupo-image-2 img, .group-images-3 img{
-        height: 260px;
+        height: 16.25rem;
     }
     .projects-cases h2{
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     .all-projects img{
-        height: 300px;
+        height: 18.75rem;
     }
 }
