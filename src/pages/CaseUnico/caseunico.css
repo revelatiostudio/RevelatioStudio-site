@@ -1,145 +1,174 @@
-.container-caseunico{
+.container-caseunico {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.container-caseunico h2{
+
+.container-caseunico h3 {
     font-size: 16px;
     font-weight: 500;
     color: var(--color-gray-200);
     font-family: "neue-haas-grotesk-display"
-    
+
 }
-.title{
+
+.title {
     width: 100%;
     margin-top: 138px;
 }
-.title h1{
+
+.title h1 {
     font-size: 64px;
     font-weight: 500;
     line-height: 120%;
     font-family: "neue-haas-grotesk-display"
 }
-.services{
+
+.services {
     display: flex;
-    margin-top: 2.4375rem;    
+    margin-top: 2.4375rem;
 }
-.services p{
+
+.services p {
     color: var(--color-gray-500);
     font-size: 14px;
     font-weight: 450;
     line-height: 110%;
 }
-.resume{
+
+.resume {
     display: flex;
     width: 100%;
     justify-content: end;
 }
-.text-resume{
+
+.text-resume {
     width: 50%;
 }
-.text-resume p{
+
+.text-resume p {
     font-size: 22px;
     font-weight: 400;
     line-height: 140%;
     font-family: "neue-haas-grotesk-text";
     color: var(--color-gray-400);
 }
-.image-hero{
+
+.image-hero {
     width: 100%;
     height: 45rem;
     margin-top: 38px;
 }
-.image-hero img{
+
+.image-hero img {
     object-position: 50% 0%;
     border-radius: 8px;
 }
-.background{
+
+.background {
     width: 100%;
     margin-top: 11.25rem;
 }
 
-.back-text{
+.back-text {
     width: 50%;
     margin-top: 32px;
 }
-.back-text p{
+
+.back-text p {
     font-size: 22px;
     font-weight: 400;
     line-height: 140%;
     font-family: "neue-haas-grotesk-text";
     color: var(--color-gray-400);
 }
-.group-grid{
+
+.group-grid {
     width: 100%;
     display: grid;
     grid-template-areas:
-    "item1 item2"
-    "item3 item3";
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: auto auto; 
-  gap: 20px;
-  margin-top: 3rem;
- 
+        "item1 item2"
+        "item3 item3";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    margin-top: 3rem;
+
 }
-.item1,.item2,.item3{
+
+.item1,
+.item2,
+.item3 {
     height: 720px;
 }
+
 .item1 {
     grid-area: item1;
-  }
-  
-  .item2 {
+}
+
+.item2 {
     grid-area: item2;
-  }
-  
-  .item3 {
+}
+
+.item3 {
     grid-area: item3;
-  }
-.group-grid img{
+}
+
+.group-grid img {
     border-radius: 0.5rem;
 }
 
-.brand{
+.brand {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.brand-naming,.brand-posi{
+
+.brand-naming,
+.brand-posi {
     width: 40%;
     justify-content: start;
     padding-left: 80px;
     margin-top: 180px;
 }
-.brand-naming h2,.brand-posi h2{
-   margin-bottom: 32px
+
+.brand-naming h3,
+.brand-posi h3 {
+    margin-bottom: 32px
 }
 
-.brand-naming p,.brand-posi p{
-   font-size: 16px;
-   font-weight: 400;
-   line-height: 140%;
-   font-family: "neue-haas-grotesk-text";
-   color: var(--color-gray-400);
+.brand-naming p,
+.brand-posi p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-family: "neue-haas-grotesk-text";
+    color: var(--color-gray-400);
 }
-.grupo-image-2,.group-images-3{
+
+.grupo-image-2,
+.group-images-3 {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: 48px;
 }
-.grupo-image-2 img,.group-images-3 img{
+
+.grupo-image-2 img,
+.group-images-3 img {
     width: 100%;
     height: 720px;
     border-radius: 8px;
 }
-.visual{
+
+.visual {
     width: 100%;
     margin-top: 11.25rem;
 }
-.visual p{
+
+.visual p {
     font-size: 22px;
     font-weight: 400;
     line-height: 140%;
@@ -147,38 +176,80 @@
     font-family: "neue-haas-grotesk-text";
     margin-top: 2rem;
 }
-.category-about{
+
+.category-about {
     width: 100%;
-    height: 500px;
     display: flex;
     justify-content: end;
     margin-top: 83px;
 }
 
-.cat-abou{
+.cat-abou {
     width: 60%;
     display: flex;
     justify-content: space-between;
 }
 
-.category-bottom{
+.category-bottom {
     width: 30%;
 
 }
-.category-bottom li, .about-bottom p{
+
+.category-bottom li,
+.about-bottom p {
     font-size: 22px;
     font-weight: 400;
     color: var(--color-gray-400);
     line-height: 140%;
     font-family: "neue-haas-grotesk-text";
 }
-.category-bottom h2{
-    margin-bottom: 2rem;
-}
-.about-bottom{
-    width: 60%;
-}
-.about-bottom h2{
+
+.category-bottom h3 {
     margin-bottom: 2rem;
 }
 
+.about-bottom {
+    width: 60%;
+}
+
+.about-bottom h3 {
+    margin-bottom: 2rem;
+}
+
+.more-projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-cases {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 82px;
+}
+
+.projects-cases h2 {
+    font-size: 64px;
+    font-weight: 450;
+    line-height: 120%;
+    font-family: "neue-haas-grotesk-display"
+}
+
+.projects-cases img {
+    width: 100%;
+    max-width: 1.375rem;
+    height: 1.375rem;
+}
+
+.all-projects{
+    width: 100%;
+    margin-bottom: 158px;
+}
+.all-projects img {
+    width: 100%;
+    max-width: 418px;
+    height: 524px;
+    border-radius: 8px;
+}

@@ -1,7 +1,26 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Transition from '../../transition'
 import './caseunico.css'
 import { useAllPrismicDocumentsByType } from '@prismicio/react'
+
+import revelatioLogo from '../../assets/img/cases/logo-revelatio-case.svg'
+
+import img1 from '../../assets/img/cases/approach.png'
+import img2 from '../../assets/img/cases/immersy.png'
+import img3 from '../../assets/img/cases/kaicara.png'
+import img4 from '../../assets/img/cases/life.png'
+import img5 from '../../assets/img/cases/dca.png'
+
+
+
+
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/grid';
+import { Navigation, Grid, FreeMode, Pagination } from 'swiper/modules'
+import BottomHome from '../Home/componentesHome/BottomHome'
 
 const CaseUnico = () => {
     const { id, nome } = useParams()
@@ -50,9 +69,20 @@ const CaseUnico = () => {
 
     };
 
+    const caseGaleria = document?.map((data, id) => {
+        return {
+            id,
+            img: data.data.case_gallery[0]?.case_cover.url,
+            projeto: data.data.case_gallery[0]?.project[0]?.text,
+            tipo: data.data.case_gallery[0]?.type,
+            tag: data.data.case_gallery[0]?.tag
+        }
+
+    }).slice(0, 6)
 
 
     return (
+        <>
         <div className='grid-global'>
             <section className='container-caseunico'>
                 <div className='title'>
@@ -72,7 +102,7 @@ const CaseUnico = () => {
                     <img src={data.hero_image} alt='imagem do case' />
                 </div>
                 <div className='background'>
-                    <h2>[ Background ] </h2>
+                    <h3>[ Background ] </h3>
                     <div className='back-text'>
                         <p>{data.background}</p>
                     </div>
@@ -87,11 +117,11 @@ const CaseUnico = () => {
                 </div>
                 <div className='brand'>
                     <div className='brand-naming'>
-                        <h2>[ Brand Naming ]</h2>
+                        <h3>[ Brand Naming ]</h3>
                         <p>{data.branding_group.brand_naming}</p>
                     </div>
                     <div className='brand-posi'>
-                        <h2>[ Brand Positioning ]</h2>
+                        <h3>[ Brand Positioning ]</h3>
                         <p>{data.branding_group.brand_positioning}</p>
                     </div>
 
@@ -102,7 +132,7 @@ const CaseUnico = () => {
                     <img src={data.group_images_two.g2_image_3} alt='' />
                 </div>
                 <div className='visual'>
-                    <h2>[ Visual Expression ]</h2>
+                    <h3>[ Visual Expression ]</h3>
                     <p>{data.visual_expression}</p>
                     <div className='group-images-3'>
                         <img src={data.group_images_three.g3_image_1} alt='' />
@@ -114,24 +144,86 @@ const CaseUnico = () => {
                 <div className='category-about'>
                     <div className='cat-abou'>
                         <div className='category-bottom'>
-                            <h2>[ Categorias ]</h2>
+                            <h3>[ Categorias ]</h3>
                             <ul>
-                               {data.categories.map((a) => (
-                                <li>{a.text}</li>
-                               ))}
+                                {data.categories.map((a) => (
+                                    <li>{a.text}</li>
+                                ))}
                             </ul>
 
                         </div>
                         <div className='about-bottom'>
-                            <h2>[ Sobre o projeto ]</h2>
+                            <h3>[ Sobre o projeto ]</h3>
                             <p>{data.about_the_project}</p>
-                           
+
                         </div>
                     </div>
                 </div>
-            </section>
 
+                <div className='more-projects'>
+                    <div className='projects-cases'>
+                        <h2>Projetos relacionados</h2>
+                        <img src={revelatioLogo} alt='' />
+                    </div>
+                    <div className='all-projects'>
+                        <Swiper
+                            spaceBetween={10}
+                            freeMode={true}
+                            modules={[FreeMode, Pagination]}
+                            autoHeight={false}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            breakpoints={{
+                                480: {
+                                    slidesPerView: 1.2
+                                },
+                                600: {
+                                    slidesPerView: 2
+
+                                },
+                                800: {
+                                    slidesPerView: 2
+
+                                },
+                                900: {
+                                    slidesPerView: 3
+
+                                },
+                                1200: {
+                                    spaceBetween: 10,
+                                    slidesPerView: 4
+                                }
+
+                            }}
+
+                        >
+
+                            {
+
+                                caseGaleria.map((cases) => (
+                                    
+                                        <SwiperSlide key={cases.id}>
+                                            <Link to={`/cases/caseunico/${cases.projeto}/${cases.id}`}>
+                                            <img src={cases.img} alt='' />
+                                            </Link>
+                                        </SwiperSlide>
+                                    
+                                ))
+
+                            }
+
+                        </Swiper>
+
+                    </div>
+                </div>
+               
+            </section>
+                
         </div>
+         <BottomHome />
+        </>
+        
     )
 }
 export default Transition(CaseUnico)
