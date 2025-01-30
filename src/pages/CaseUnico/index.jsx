@@ -29,15 +29,9 @@ const CaseUnico = () => {
     const tituloref = useRef(null)
     const imageHero = useRef(null)
     const gridOneRef = useRef(null)
+    const backGroundRef = useRef(null)
     const containerHero = useRef(null)
-
-    // function wordsToSpan(word){
-    //     const text = word.innerText
-    //     text.split("").map((letter,i) => {
-    //         return <span>{letter}</span>
-    //     })
-
-    // }
+    const brandRef = useRef(null)
 
 
     useEffect(() => {
@@ -47,6 +41,12 @@ const CaseUnico = () => {
 
         if (containerHero.current) {
             parallaxImage()
+        }
+        if(backGroundRef.current){
+            secBackGround()
+        }
+        if(brandRef.current){
+            secBrand()
         }
 
 
@@ -137,6 +137,70 @@ const CaseUnico = () => {
 
     }
 
+    function secBackGround(){
+        const textBackground = new SplitType(".background h3")
+        const tl = gsap.timeline({
+            scrollTrigger:{
+                trigger:backGroundRef.current,
+                markers: false
+            }
+        })
+
+        tl.fromTo(textBackground.chars,{
+            yPercent: 200,
+            ease: "none"
+        },{
+            yPercent: 0,
+            ease: "power1.out",
+            stagger: 0.02,
+            delay: 0.3
+        }).fromTo(".back-text",{
+            yPercent: 20,
+            opacity: 0,
+        },{
+            yPercent: 0,
+            opacity: 1,
+            ease: "power1.out",
+        })
+
+        tl.fromTo([".item1", ".item2"],{
+            yPercent: 10,
+            opacity: 0,
+        },{
+            yPercent: 0,
+            opacity: 1,
+            ease: "power1.out",
+        },0.4)
+        
+    }
+
+    function secBrand(){
+        const tl = gsap.timeline({
+            scrollTrigger:{
+                trigger: brandRef.current,
+                start: "top bottom-=300px",
+                markers: false
+
+            }
+        })
+
+        tl.fromTo(".brand-naming",{
+            xPercent: -20,
+            opacity: 0,
+        },{
+            xPercent: 0,
+            opacity: 1,
+            ease: "power1.out",
+        }).fromTo(".brand-posi",{
+            xPercent: 20,
+            opacity: 0,
+        },{
+            xPercent: 0,
+            opacity: 1,
+            ease: "power1.out",
+        },0)
+    }
+
 
     function parallaxImage() {
 
@@ -213,7 +277,7 @@ const CaseUnico = () => {
                     <div className='image-hero' ref={containerHero} >
                         <img src={data.hero_image} alt='imagem do case' ref={imageHero} />
                     </div>
-                    <div className='background'>
+                    <div className='background' ref={backGroundRef}>
                         <h3>[ Background ] </h3>
                         <div className='back-text'>
                             <p>{data.background}</p>
@@ -227,7 +291,7 @@ const CaseUnico = () => {
                         <img className='item3' src={data.group_images_one.g1_image_3} alt='' />
 
                     </div>
-                    <div className='brand'>
+                    <div className='brand' ref={brandRef}>
                         <div className='brand-naming'>
                             <h3>[ Brand Naming ]</h3>
                             <p>{data.branding_group.brand_naming}</p>

@@ -72,6 +72,7 @@
     height: 45rem;
     margin-top: 2.375rem;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .image-hero img {
@@ -82,6 +83,9 @@
 .background {
     width: 100%;
     margin-top: 11.25rem;
+}
+.background h3{
+    overflow: hidden;
 }
 
 .back-text {
