@@ -5,14 +5,7 @@ import { useAllPrismicDocumentsByType } from '@prismicio/react'
 
 import revelatioLogo from '../../assets/img/cases/logo-revelatio-case.svg'
 
-import img1 from '../../assets/img/cases/approach.png'
-import img2 from '../../assets/img/cases/immersy.png'
-import img3 from '../../assets/img/cases/kaicara.png'
-import img4 from '../../assets/img/cases/life.png'
-import img5 from '../../assets/img/cases/dca.png'
-
-
-
+import SplitType from 'split-type'
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -43,15 +36,15 @@ const CaseUnico = () => {
     //     text.split("").map((letter,i) => {
     //         return <span>{letter}</span>
     //     })
-       
+
     // }
 
 
     useEffect(() => {
-        if(tituloref.current){
-            //createIntro()
+        if (tituloref.current) {
+            createIntro()
         }
-        
+
         if (containerHero.current) {
             parallaxImage()
         }
@@ -112,18 +105,36 @@ const CaseUnico = () => {
 
     }).slice(0, 6)
 
-    function createIntro(){
+    function createIntro() {
+        const title = new SplitType(".title-animation h1")
+        const services = new SplitType(".services", { types: 'words' })
         const tl = gsap.timeline()
-        //const titleSpan = wordsToSpan(tituloref.current.querySelector('h1'))
-
-        tl.fromTo('.title-animation h1',{
+        tl.fromTo([title.chars, services.words], {
             yPercent: 200,
             ease: "none"
-        },{
+        }, {
             yPercent: 0,
-            ease: "none",
+            ease: "power1.out",
+            stagger: 0.05,
             delay: 0.3
         })
+
+        tl.fromTo(".text-resume", {
+            yPercent: 20,
+            opacity: 0,
+        }, {
+            yPercent: 0,
+            opacity: 1,
+            ease: "power1.out",
+        }, 0.8).fromTo(".image-hero", {
+            yPercent: 10,
+            opacity: 0,
+        }, {
+            yPercent: 0,
+            opacity: 1,
+            ease: "power1.out",
+        },0.4)
+
     }
 
 
@@ -154,7 +165,7 @@ const CaseUnico = () => {
         //         scrub:true,
         //     }
         // })
-      
+
 
         // imagesArrayGrid1.forEach((image) => {
         //     tlGrid1.fromTo(image, {
@@ -173,7 +184,6 @@ const CaseUnico = () => {
     }
 
 
-    // console.log('imagem: ',images?.current)
 
 
 

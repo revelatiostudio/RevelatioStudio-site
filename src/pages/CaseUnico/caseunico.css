@@ -32,6 +32,7 @@
 .services {
     display: flex;
     margin-top: 2.4375rem;
+    overflow: hidden;
 }
 
 .services p {
@@ -49,6 +50,7 @@
 
 .text-resume {
     width: 50%;
+    overflow: hidden;
 }
 
 .text-resume p {
@@ -57,6 +59,12 @@
     line-height: 140%;
     font-family: "neue-haas-grotesk-text";
     color: var(--color-gray-400);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.word h1{
+    overflow: hidden;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
 }
 
 .image-hero {
