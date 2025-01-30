@@ -19,14 +19,51 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/grid';
-import { Navigation, Grid, FreeMode, Pagination } from 'swiper/modules'
+import { FreeMode, Pagination } from 'swiper/modules'
 import BottomHome from '../Home/componentesHome/BottomHome'
+import { useEffect, useRef } from 'react'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+import { useGSAP } from '@gsap/react'
+import { text } from 'framer-motion/client'
 
 const CaseUnico = () => {
-    const { id, nome } = useParams()
+    gsap.registerPlugin(useGSAP, ScrollTrigger)
+    const { id } = useParams()
     const [document] = useAllPrismicDocumentsByType('case')
+    const tituloref = useRef(null)
+    const imageHero = useRef(null)
+    const gridOneRef = useRef(null)
+    const containerHero = useRef(null)
+
+    // function wordsToSpan(word){
+    //     const text = word.innerText
+    //     text.split("").map((letter,i) => {
+    //         return <span>{letter}</span>
+    //     })
+       
+    // }
+
+
+    useEffect(() => {
+        if(tituloref.current){
+            //createIntro()
+        }
+        
+        if (containerHero.current) {
+            parallaxImage()
+        }
+
+
+    })
+
+
 
     if (!document) return null
+
+
 
     const data = document?.find((_, index) => index === parseInt(id)) &&
     {
@@ -75,151 +112,227 @@ const CaseUnico = () => {
 
     }).slice(0, 6)
 
+    function createIntro(){
+        const tl = gsap.timeline()
+        //const titleSpan = wordsToSpan(tituloref.current.querySelector('h1'))
+
+        tl.fromTo('.title-animation h1',{
+            yPercent: 200,
+            ease: "none"
+        },{
+            yPercent: 0,
+            ease: "none",
+            delay: 0.3
+        })
+    }
+
+
+    function parallaxImage() {
+
+        const tlHero = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.image-hero',
+                scrub: true
+            }
+        })
+
+
+        tlHero.fromTo(imageHero.current, {
+            yPercent: -20,
+            ease: "none"
+        }, {
+            yPercent: 20,
+            ease: "none"
+        })
+
+        // const imagesGrid1 = gridOneRef.current.querySelectorAll('img');
+        // const imagesArrayGrid1 = Array.from(imagesGrid1)
+
+        // const tlGrid1 = gsap.timeline({
+        //     scrollTrigger:{
+        //         trigger: '.grupo-image-2',
+        //         scrub:true,
+        //     }
+        // })
+      
+
+        // imagesArrayGrid1.forEach((image) => {
+        //     tlGrid1.fromTo(image, {
+        //         yPercent: -20,
+        //         ease: "none"
+        //     }, {
+        //         yPercent: 20,
+        //         ease: "none"
+        //     })
+        // })
+
+
+
+
+
+    }
+
+
+    // console.log('imagem: ',images?.current)
+
+
+
+
+
+
 
     return (
         <>
-        <div className='grid-global'>
-            <section className='container-caseunico'>
-                <div className='title'>
-                    <h1>{data.title}</h1>
-                    <div className='services'>
-                        {data.categories.map((a, index) => (
-                            <p>{a.text}{index === data.categories.length - 1 ? '.' : ','}</p>
-                        ))}
-                    </div>
-                </div>
-                <div className='resume'>
-                    <div className='text-resume'>
-                        <p>{data.description}</p>
-                    </div>
-                </div>
-                <div className='image-hero'>
-                    <img src={data.hero_image} alt='imagem do case' />
-                </div>
-                <div className='background'>
-                    <h3>[ Background ] </h3>
-                    <div className='back-text'>
-                        <p>{data.background}</p>
-                    </div>
-
-                </div>
-
-                <div className='group-grid'>
-                    <img className='item1' src={data.group_images_one.g1_image_1} alt='' />
-                    <img className='item2' src={data.group_images_one.g1_image_2} alt='' />
-                    <img className='item3' src={data.group_images_one.g1_image_3} alt='' />
-
-                </div>
-                <div className='brand'>
-                    <div className='brand-naming'>
-                        <h3>[ Brand Naming ]</h3>
-                        <p>{data.branding_group.brand_naming}</p>
-                    </div>
-                    <div className='brand-posi'>
-                        <h3>[ Brand Positioning ]</h3>
-                        <p>{data.branding_group.brand_positioning}</p>
-                    </div>
-
-                </div>
-                <div className='grupo-image-2'>
-                    <img src={data.group_images_two.g2_image_1} alt='' />
-                    <img src={data.group_images_two.g2_image_2} alt='' />
-                    <img src={data.group_images_two.g2_image_3} alt='' />
-                </div>
-                <div className='visual'>
-                    <h3>[ Visual Expression ]</h3>
-                    <p>{data.visual_expression}</p>
-                    <div className='group-images-3'>
-                        <img src={data.group_images_three.g3_image_1} alt='' />
-                        <img src={data.group_images_three.g3_image_2} alt='' />
-                        <img src={data.group_images_three.g3_image_3} alt='' />
-                    </div>
-
-                </div>
-                <div className='category-about'>
-                    <div className='cat-abou'>
-                        <div className='category-bottom'>
-                            <h3>[ Categorias ]</h3>
-                            <ul>
-                                {data.categories.map((a) => (
-                                    <li>{a.text}</li>
-                                ))}
-                            </ul>
-
+            <div className='grid-global'>
+                <section className='container-caseunico'>
+                    <div className='title' >
+                        <div className='title-animation' ref={tituloref}>
+                            <h1>{data.title}</h1>
                         </div>
-                        <div className='about-bottom'>
-                            <h3>[ Sobre o projeto ]</h3>
-                            <p>{data.about_the_project}</p>
-
+                        <div className='services'>
+                            {data.categories.map((a, index) => (
+                                <p key={a.index}>{a.text}{index === data.categories.length - 1 ? '.' : ','}</p>
+                            ))}
                         </div>
                     </div>
-                </div>
-
-                <div className='more-projects'>
-                    <div className='projects-cases'>
-                        <h2>Projetos relacionados</h2>
-                        <img src={revelatioLogo} alt='' />
+                    <div className='resume'>
+                        <div className='text-resume'>
+                            <p>{data.description}</p>
+                        </div>
                     </div>
-                    <div className='all-projects'>
-                        <Swiper
-                            slidesPerView={1.2}
-                            spaceBetween={10}
-                            freeMode={true}
-                            modules={[FreeMode, Pagination]}
-                            autoHeight={false}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            breakpoints={{
-                                480: {
-                                    slidesPerView: 1.2
-                                },
-                                600: {
-                                    slidesPerView: 2
+                    <div className='image-hero' ref={containerHero} >
+                        <img src={data.hero_image} alt='imagem do case' ref={imageHero} />
+                    </div>
+                    <div className='background'>
+                        <h3>[ Background ] </h3>
+                        <div className='back-text'>
+                            <p>{data.background}</p>
+                        </div>
 
-                                },
-                                800: {
-                                    slidesPerView: 2
+                    </div>
 
-                                },
-                                900: {
-                                    slidesPerView: 3
+                    <div className='group-grid'>
+                        <img className='item1' src={data.group_images_one.g1_image_1} alt='' />
+                        <img className='item2' src={data.group_images_one.g1_image_2} alt='' />
+                        <img className='item3' src={data.group_images_one.g1_image_3} alt='' />
 
-                                },
-                                1200: {
-                                    spaceBetween: 10,
-                                    slidesPerView: 4
-                                }
+                    </div>
+                    <div className='brand'>
+                        <div className='brand-naming'>
+                            <h3>[ Brand Naming ]</h3>
+                            <p>{data.branding_group.brand_naming}</p>
+                        </div>
+                        <div className='brand-posi'>
+                            <h3>[ Brand Positioning ]</h3>
+                            <p>{data.branding_group.brand_positioning}</p>
+                        </div>
 
-                            }}
+                    </div>
+                    <div className='grupo-image-2' ref={gridOneRef}>
+                        <div className='g2'>
+                            <img src={data.group_images_two.g2_image_1} alt='' />
+                        </div>
+                        <div className='g2'>
+                            <img src={data.group_images_two.g2_image_2} alt='' />
+                        </div>
+                        <div className='g2'>
+                            <img src={data.group_images_two.g2_image_3} alt='' />
+                        </div>
+                    </div>
+                    <div className='visual'>
+                        <h3>[ Visual Expression ]</h3>
+                        <p>{data.visual_expression}</p>
+                        <div className='group-images-3'>
+                            <img src={data.group_images_three.g3_image_1} alt='' />
+                            <img src={data.group_images_three.g3_image_2} alt='' />
+                            <img src={data.group_images_three.g3_image_3} alt='' />
+                        </div>
 
-                        >
+                    </div>
+                    <div className='category-about'>
+                        <div className='cat-abou'>
+                            <div className='category-bottom'>
+                                <h3>[ Categorias ]</h3>
+                                <ul>
+                                    {data.categories.map((a, index) => (
+                                        <li key={a.index}>{a.text}</li>
+                                    ))}
+                                </ul>
 
-                            {
+                            </div>
+                            <div className='about-bottom'>
+                                <h3>[ Sobre o projeto ]</h3>
+                                <p>{data.about_the_project}</p>
 
-                                caseGaleria.map((cases) => (
-                                    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='more-projects'>
+                        <div className='projects-cases'>
+                            <h2>Projetos relacionados</h2>
+                            <img src={revelatioLogo} alt='' />
+                        </div>
+                        <div className='all-projects'>
+                            <Swiper
+                                slidesPerView={1.2}
+                                spaceBetween={10}
+                                freeMode={true}
+                                modules={[FreeMode, Pagination]}
+                                autoHeight={false}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                breakpoints={{
+                                    480: {
+                                        slidesPerView: 1.2
+                                    },
+                                    600: {
+                                        slidesPerView: 2
+
+                                    },
+                                    800: {
+                                        slidesPerView: 2
+
+                                    },
+                                    900: {
+                                        slidesPerView: 3
+
+                                    },
+                                    1200: {
+                                        spaceBetween: 10,
+                                        slidesPerView: 4
+                                    }
+
+                                }}
+
+                            >
+
+                                {
+
+                                    caseGaleria.map((cases) => (
+
                                         <SwiperSlide key={cases.id}>
                                             <Link to={`/cases/caseunico/${cases.projeto}/${cases.id}`}>
-                                            <img src={cases.img} alt='' />
+                                                <img src={cases.img} alt='' />
                                             </Link>
                                         </SwiperSlide>
-                                    
-                                ))
 
-                            }
+                                    ))
 
-                        </Swiper>
+                                }
 
+                            </Swiper>
+
+                        </div>
                     </div>
-                </div>
-               
-            </section>
-                
-        </div>
-         <BottomHome />
+
+                </section>
+
+            </div>
+            <BottomHome />
         </>
-        
+
     )
 }
 export default Transition(CaseUnico)

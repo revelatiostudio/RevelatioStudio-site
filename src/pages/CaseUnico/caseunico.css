@@ -16,6 +16,10 @@
 .title {
     width: 100%;
     margin-top: 8.625rem;
+   
+}
+.title-animation{
+    overflow: hidden;
 }
 
 .title h1 {
@@ -59,6 +63,7 @@
     width: 100%;
     height: 45rem;
     margin-top: 2.375rem;
+    overflow: hidden;
 }
 
 .image-hero img {
@@ -153,6 +158,11 @@
     flex-direction: column;
     gap: 1.25rem;
     margin-top: 3rem;
+    overflow: hidden;
+   
+}
+.g2{
+    overflow: hidden;
 }
 
 .grupo-image-2 img,
