@@ -28,7 +28,7 @@ const CaseUnico = () => {
     const [document] = useAllPrismicDocumentsByType('case')
     const tituloref = useRef(null)
     const imageHero = useRef(null)
-    const gridOneRef = useRef(null)
+    const imagesSecBrandRef = useRef(null)
     const backGroundRef = useRef(null)
     const containerHero = useRef(null)
     const brandRef = useRef(null)
@@ -42,10 +42,10 @@ const CaseUnico = () => {
         if (containerHero.current) {
             parallaxImage()
         }
-        if(backGroundRef.current){
+        if (backGroundRef.current) {
             secBackGround()
         }
-        if(brandRef.current){
+        if (brandRef.current) {
             secBrand()
         }
 
@@ -133,50 +133,50 @@ const CaseUnico = () => {
             yPercent: 0,
             opacity: 1,
             ease: "power1.out",
-        },0.4)
+        }, 0.4)
 
     }
 
-    function secBackGround(){
+    function secBackGround() {
         const textBackground = new SplitType(".background h3")
         const tl = gsap.timeline({
-            scrollTrigger:{
-                trigger:backGroundRef.current,
+            scrollTrigger: {
+                trigger: backGroundRef.current,
                 markers: false
             }
         })
 
-        tl.fromTo(textBackground.chars,{
+        tl.fromTo(textBackground.chars, {
             yPercent: 200,
             ease: "none"
-        },{
+        }, {
             yPercent: 0,
             ease: "power1.out",
             stagger: 0.02,
             delay: 0.3
-        }).fromTo(".back-text",{
+        }).fromTo(".back-text", {
             yPercent: 20,
             opacity: 0,
-        },{
+        }, {
             yPercent: 0,
             opacity: 1,
             ease: "power1.out",
         })
 
-        tl.fromTo([".item1", ".item2"],{
+        tl.fromTo([".item1", ".item2"], {
             yPercent: 10,
             opacity: 0,
-        },{
+        }, {
             yPercent: 0,
             opacity: 1,
             ease: "power1.out",
-        },0.4)
-        
+        }, 0.4)
+
     }
 
-    function secBrand(){
+    function secBrand() {
         const tl = gsap.timeline({
-            scrollTrigger:{
+            scrollTrigger: {
                 trigger: brandRef.current,
                 start: "top bottom-=300px",
                 markers: false
@@ -184,21 +184,40 @@ const CaseUnico = () => {
             }
         })
 
-        tl.fromTo(".brand-naming",{
+        tl.fromTo(".brand-naming", {
             xPercent: -20,
             opacity: 0,
-        },{
+        }, {
             xPercent: 0,
             opacity: 1,
             ease: "power1.out",
-        }).fromTo(".brand-posi",{
+        }).fromTo(".brand-posi", {
             xPercent: 20,
             opacity: 0,
-        },{
+        }, {
             xPercent: 0,
             opacity: 1,
             ease: "power1.out",
-        },0)
+        }, 0)
+
+
+        const images = imagesSecBrandRef.current.querySelectorAll("img")
+
+        images.forEach((image) => {
+            gsap.fromTo(image, {
+                yPercent: 10,
+                opacity: 0,
+            }, {
+                yPercent: 0,
+                opacity: 1,
+                scrollTrigger:{
+                    trigger: image,
+                    markers: true
+                }
+                   
+            })
+        })
+
     }
 
 
@@ -219,29 +238,6 @@ const CaseUnico = () => {
             yPercent: 20,
             ease: "none"
         })
-
-        // const imagesGrid1 = gridOneRef.current.querySelectorAll('img');
-        // const imagesArrayGrid1 = Array.from(imagesGrid1)
-
-        // const tlGrid1 = gsap.timeline({
-        //     scrollTrigger:{
-        //         trigger: '.grupo-image-2',
-        //         scrub:true,
-        //     }
-        // })
-
-
-        // imagesArrayGrid1.forEach((image) => {
-        //     tlGrid1.fromTo(image, {
-        //         yPercent: -20,
-        //         ease: "none"
-        //     }, {
-        //         yPercent: 20,
-        //         ease: "none"
-        //     })
-        // })
-
-
 
 
 
@@ -302,7 +298,7 @@ const CaseUnico = () => {
                         </div>
 
                     </div>
-                    <div className='grupo-image-2' ref={gridOneRef}>
+                    <div className='grupo-image-2' ref={imagesSecBrandRef}>
                         <div className='g2'>
                             <img src={data.group_images_two.g2_image_1} alt='' />
                         </div>
