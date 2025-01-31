@@ -14,7 +14,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/grid';
 import { FreeMode, Pagination } from 'swiper/modules'
 import BottomHome from '../Home/componentesHome/BottomHome'
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -33,6 +33,7 @@ const CaseUnico = () => {
     const containerHero = useRef(null)
     const brandRef = useRef(null)
     const visualRef = useRef(null)
+    const bottomRef = useRef(null)
 
 
     useEffect(() => {
@@ -51,6 +52,9 @@ const CaseUnico = () => {
         }
         if (visualRef.current) {
             lastSecImages()
+        }
+        if (bottomRef.current) {
+            bottomCase()
         }
 
 
@@ -253,7 +257,55 @@ const CaseUnico = () => {
 
             })
         })
-        
+
+
+    }
+
+    function bottomCase() {
+        const categories = new SplitType(".category-bottom h3", { types: 'words' })
+        const eachCategory = new SplitType(".category-bottom li", { types: 'words' })
+
+        const about = new SplitType(".about-bottom h3", { types: "words" })
+        const aboutText = new SplitType(".about-bottom p", { types: "words" })
+
+        // const wrapper = React.createElement("div", { className: 'sla' }, aboutText.words);
+        // console.log(wrapper.props.children)
+
+        // aboutText.words.map((word, index) => (
+        //     <div key={index} className="sla">
+        //       {word.innerText}
+        //     </div>
+        //   ))
+
+        //   console.log(aboutText)
+
+
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".cat-abou",
+                start: "top bottom+=100px",
+                markers: false
+            }
+        })
+
+        tl.fromTo([categories.words, eachCategory.words], {
+            yPercent: 200,
+            ease: "none"
+
+        }, {
+            yPercent: 0,
+            ease: "power1.out",
+            delay: 1
+
+        }).fromTo(".about-bottom", {
+            yPercent: 20,
+            opacity: 0
+        },{
+            yPercent: 0,
+            opacity: 1,
+            ease: "power1.out",
+        })
 
     }
 
@@ -358,7 +410,7 @@ const CaseUnico = () => {
                         </div>
 
                     </div>
-                    <div className='category-about'>
+                    <div className='category-about' ref={bottomRef}>
                         <div className='cat-abou'>
                             <div className='category-bottom'>
                                 <h3>[ Categorias ]</h3>
