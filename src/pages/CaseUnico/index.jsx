@@ -32,6 +32,7 @@ const CaseUnico = () => {
     const backGroundRef = useRef(null)
     const containerHero = useRef(null)
     const brandRef = useRef(null)
+    const visualRef = useRef(null)
 
 
     useEffect(() => {
@@ -47,6 +48,9 @@ const CaseUnico = () => {
         }
         if (brandRef.current) {
             secBrand()
+        }
+        if (visualRef.current) {
+            lastSecImages()
         }
 
 
@@ -210,13 +214,47 @@ const CaseUnico = () => {
             }, {
                 yPercent: 0,
                 opacity: 1,
-                scrollTrigger:{
+                scrollTrigger: {
                     trigger: image,
                     markers: false
                 }
-                   
+
             })
         })
+
+    }
+    function lastSecImages() {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".visual-text"
+            }
+        })
+
+        tl.fromTo(".visual-text", {
+            yPercent: 20,
+            opacity: 0,
+        }, {
+            yPercent: 0,
+            opacity: 1,
+            ease: "power1.out",
+        })
+
+        const images = visualRef.current.querySelectorAll('img')
+        images.forEach((image) => {
+            gsap.fromTo(image, {
+                yPercent: 10,
+                opacity: 0,
+            }, {
+                yPercent: 0,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: image,
+                    markers: false
+                }
+
+            })
+        })
+        
 
     }
 
@@ -309,9 +347,11 @@ const CaseUnico = () => {
                             <img src={data.group_images_two.g2_image_3} alt='' />
                         </div>
                     </div>
-                    <div className='visual'>
-                        <h3>[ Visual Expression ]</h3>
-                        <p>{data.visual_expression}</p>
+                    <div className='visual' ref={visualRef}>
+                        <div className='visual-text'>
+                            <h3>[ Visual Expression ]</h3>
+                            <p>{data.visual_expression}</p>
+                        </div>
                         <div className='group-images-3'>
                             <img src={data.group_images_three.g3_image_1} alt='' />
                             <img src={data.group_images_three.g3_image_2} alt='' />
