@@ -157,7 +157,6 @@ const CaseUnico = () => {
             yPercent: 0,
             ease: "power1.out",
             stagger: 0.02,
-            delay: 0.3
         }).fromTo(".back-text", {
             yPercent: 20,
             opacity: 0,
