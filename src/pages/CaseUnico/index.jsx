@@ -212,7 +212,7 @@ const CaseUnico = () => {
                 opacity: 1,
                 scrollTrigger:{
                     trigger: image,
-                    markers: true
+                    markers: false
                 }
                    
             })
