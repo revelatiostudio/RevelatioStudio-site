@@ -10,6 +10,7 @@
     font-size: 88px;
     font-weight: 450;
     line-height: 100%;
+    color: var(--color-white);
 }
 
 /* texto da esquerda */
@@ -26,8 +27,21 @@
 .right_part_solucoes {
     width: 100%;
     max-width: 592px;
-    height: 73px;
+    height: 120px;
     color: var(--color-gray-900);
+}
+.time_text{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 28px;
+    opacity: 0.5;
+}
+.time_text p{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-white);
+    line-height: 100%;
+    
 }
 
 
@@ -82,6 +96,7 @@
     font-size: 88px;
     font-weight: 500;
     line-height: 100%;
+    color: var(--color-white);
 }
 
 /* parte final  */
@@ -105,7 +120,7 @@
     max-width: 650px;
     display: flex;
     justify-content: space-between;
-    /* border-top: 1px var(--color-gray-900) solid; */
+    align-items: center;
 }
 
 .texts_studio h2 {
@@ -125,21 +140,23 @@
 }
 
 .texts_studio a {
-    color: var(--color-gray-200);
+    color: var(--color-white);
     font-weight: 400;
     font-size: 16px;
 
 
+}
+.grid-left{
+    height: 11.25rem;
 }
 
 .seecases{
     width: 100%;
     max-width: max-content;
     display: flex;
-    margin-top: 68px;
     align-items: center;
-    border-bottom: 1px solid;
-    padding-bottom: 5px;
+    border-bottom: 1px var(--color-white) solid;
+    margin-top: 66px;
 }
 .seecases span{
     margin-left: 10px;
@@ -152,7 +169,6 @@
 }
 
 .texts_studio .seecases {
-    padding-top: 66px;
     font-weight: 500;
     margin-left: 0px;
 }
@@ -160,18 +176,17 @@
     font-weight: 500;
     margin-left: 0px;
 }
-
-
-.studio_left {
-    padding-top: 85px;
+.studio_left{
+    height: 11.25rem;
 }
+
 .studio_left p {
     font-weight: 400;
     line-height: 140%;
 }
 
 .studio_left .p1 {
-    color: var(--color-gray-100);
+    color: var(--color-gray-900);
     font-weight: 400;
     line-height: 140%;
 
@@ -216,7 +231,12 @@
 }
 
 @media(max-width: 1200px) {
-    .herosecond{
+ 
+
+}
+
+@media(max-width: 991px) {
+       .herosecond{
         margin: 40px 0;
     }
     .herofirst h1{
@@ -232,10 +252,7 @@
         display: block;
         padding-top: 40px;
     }
-
 }
-
-@media(max-width: 991px) {}
 
 @media(max-width: 768px) {}
 

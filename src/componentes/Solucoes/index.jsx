@@ -4,7 +4,7 @@ import img_solucoes from '../../assets/img/home/img_solucoes.png'
 import blour from '../../assets/img/home/blour.png'
 import './solucoes.css'
 
-import seta from '../../assets/img/arrow-secs.svg'
+import seta from '../../assets/img/home/seta-branca.svg'
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -116,7 +116,9 @@ export default function Solucoes() {
                     </div>
 
                     <div className='right_part_solucoes'>
-
+                        <div className='time_text'>
+                            <p>[ CURRENTLY TIME ]</p>
+                        </div>
                         <div className='time'>
                             <p>RECIFE,BR <a>[{horaRecife}]</a></p>
                             <p>LOCAL,{idioma} <a>[{horaLocal}]</a></p>
@@ -134,8 +136,7 @@ export default function Solucoes() {
                 <div className='herofinal'>
 
                     <div className='texts_studio'>
-                        <div>
-                            <h2>[NOSSO ESTÚDIO]</h2>
+                        <div className='grid-left'>
                             <p>Entregamos soluções para negócios</p>
                             <p>que entendem que esse é o momento </p>
                             <p>para mostrar pro mundo ao que vieram. </p>
