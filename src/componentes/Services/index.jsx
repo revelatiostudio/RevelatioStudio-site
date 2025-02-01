@@ -16,8 +16,8 @@ export default function Services() {
            layout
            initial={{ height: "70px" }}
            animate={{ height: "70px" }}
-           whileHover={{ height: "200px" }}
-           whileTap={{ height: "200px" }}
+           whileHover={{ height: "223px" }}
+           whileTap={{ height: "223px" }}
            transition={{ type: "spring", stiffness: 200 }}
           >
             <div className='bullets'>
@@ -42,8 +42,8 @@ export default function Services() {
           layout
           initial={{ height: "70px" }}
           animate={{ height: "70px" }}
-          whileHover={{ height: "200px" }}
-          whileTap={{ height: "200px" }}
+          whileHover={{ height: "223px" }}
+          whileTap={{ height: "223px" }}
           transition={{ type: "spring", stiffness: 200 }}
           >
             <div className='bullets'>
@@ -66,7 +66,8 @@ export default function Services() {
           layout
           initial={{ height: "70px" }}
           animate={{ height: "70px" }}
-          whileHover={{ height: "200px" }}
+          whileHover={{ height: "223px" }}
+          whileTap={{ height: "223px"}}
           transition={{ type: "spring", stiffness: 200 }}
           >
             <div className='bullets'>
@@ -87,7 +88,8 @@ export default function Services() {
           layout
           initial={{ height: "70px" }}
           animate={{ height: "70px" }}
-          whileHover={{ height: "200px" }}
+          whileHover={{ height: "223px" }}
+          whileTap={{ height: "223px"}}
           transition={{ type: "spring", stiffness: 200 }}
           >
             <div className='bullets'>
