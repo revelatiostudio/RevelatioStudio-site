@@ -4,7 +4,7 @@ import './home.css'
 import Solucoes from '../../componentes/Solucoes'
 
 
-import homeImg from '../../assets/img/home/home_img.jpg'
+import homeImg from '../../assets/img/home/nova_home.png'
 import revelatio from '../../assets/img/home/name_revelatio.svg'
 import Services from '../../componentes/Services'
 import AboutHome from './componentesHome/AboutHome'

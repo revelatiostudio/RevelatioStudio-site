@@ -87,6 +87,8 @@
     position: absolute;
     bottom: 0;
     border-top: 1px var(--color-gray-200) solid; 
+    padding-top: 40px;
+    margin-bottom: 60px;
 }
 
 
@@ -99,8 +101,17 @@
 
 /* responsivo medias */
 
-@media(max-width: 1400px) {}
-@media(max-width: 1280px) {}
+@media(max-width: 1400px) {
+    .img_revelatio{
+        padding-top: 10px;
+        margin-bottom: 0px;
+    }
+}
+@media(max-width: 1280px) {
+    .middle{
+        top: 40%;
+    }
+}
 
 @media(max-width: 1200px) {}
 
