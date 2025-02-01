@@ -17,8 +17,8 @@
     padding-bottom: 18px;
     justify-content: center;
     position: relative;
-    
     border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    overflow: hidden;
 }
 .service:first-child{
     border-top: 1px solid rgba(128, 128, 128, 0.5);
