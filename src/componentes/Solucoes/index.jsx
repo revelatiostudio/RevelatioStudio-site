@@ -174,8 +174,6 @@ export default function Solucoes() {
                         <img src={img_solucoes} alt='' />
                         <img className="blour" src={blour} alt='' />
 
-
-
                     </div>
 
 

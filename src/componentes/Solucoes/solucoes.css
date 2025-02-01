@@ -1,4 +1,9 @@
 /* div principal  */
+.container-solucoes{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 .herofirst {
     margin-top: 138px;
     display: flex;
@@ -106,6 +111,7 @@
     height: 400px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .herofinal .border {
@@ -272,6 +278,12 @@
 }
 
 @media(max-width: 480px) {
+    .container-solucoes{
+        height: 100vh;
+    }
+    .herofinal{
+
+    }
     .herofirst{
         margin-top: 6.25rem;
         flex-direction: column;
@@ -300,5 +312,22 @@
     }
     .studio_img{
         justify-content: start;
+        height: auto;
+        margin-top: 50%;
+    }
+    .right_part_solucoes{
+        display: none;
+    }
+    .border-solucoes-top{
+        display: none;
+    }
+    .border-solucoes-bottom{
+        display: none;
+    }
+}
+@media(max-width: 390px){
+    .herofinal{
+        flex-direction: column;
+        height: 80vh;
     }
 }
