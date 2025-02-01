@@ -8,26 +8,59 @@ export default function Services() {
         <div className='container-services'>
 
 
-         
-      
-       
-            <motion.div 
-            className='service'
-            layout
-            initial={{ height: "70px" }}
-            animate={{ height: "70px" }}
-            whileHover={{ height: "200px" }}
-            transition={{ type: "spring", stiffness: 200 }}
-            >
-              <div className='bullets'>
-                <p>Jornada</p>
-              </div>
-              <div className='points'>
+
+
+
+          <motion.div
+           className='service'
+           layout
+           initial={{ height: "70px" }}
+           animate={{ height: "70px" }}
+           whileHover={{ height: "200px" }}
+           whileTap={{ height: "200px" }}
+           transition={{ type: "spring", stiffness: 200 }}
+          >
+            <div className='bullets'>
+              <p>Jornada</p>
+            </div>
+            <div className='points'>
+
+              <div className='t1'>
                 <p>Anos de Mercado</p>
+              </div>
+
+              <div className='t2'>
                 <h1>04</h1>
               </div>
-            </motion.div>
-          
+            </div>
+          </motion.div>
+
+
+
+          <motion.div 
+          className='service'
+          layout
+          initial={{ height: "70px" }}
+          animate={{ height: "70px" }}
+          whileHover={{ height: "200px" }}
+          whileTap={{ height: "200px" }}
+          transition={{ type: "spring", stiffness: 200 }}
+          >
+            <div className='bullets'>
+              <p>Experiência</p>
+            </div>
+            <div className='points'>
+              <div className='t1'>
+                <p>Projetos Realizados</p>
+              </div>
+
+              <div className='t2'>
+                <h1>+300</h1>
+              </div>
+
+            </div>
+          </motion.div>
+
           <motion.div  
           className='service'
           layout
@@ -40,27 +73,14 @@ export default function Services() {
               <p>Impacto</p>
             </div>
             <div className='points'>
+             <div className='t1'>
               <p>Atuação Global</p>
-              <h1>06</h1>
+             </div>
+              <div className='t2'>
+                <h1>06</h1>
+              </div>
             </div>
           </motion.div >
-
-          <motion.div  
-          className='service'
-          layout
-          initial={{ height: "70px" }}
-          animate={{ height: "70px" }}
-          whileHover={{ height: "200px" }}
-          transition={{ type: "spring", stiffness: 200 }}
-          >
-            <div className='bullets'>
-              <p>Experiência</p>
-            </div>
-            <div className='points'>
-              <p>Projetos Realizados</p>
-              <h1>+300</h1>
-            </div>
-          </motion.div>
 
           <motion.div  
           className='service'
@@ -74,10 +94,14 @@ export default function Services() {
               <p>Chancela</p>
             </div>
             <div className='points'>
-              <p>Reconhecimentos Internacionais</p>
-              <h1>33</h1>
+              <div className='t1'>
+                <p>Reconhecimentos Internacionais</p>
+              </div>
+              <div className='t2'>
+                <h1>33</h1>
+              </div>
             </div>
-          </motion.div >
+          </motion.div>
 
 
         </div>

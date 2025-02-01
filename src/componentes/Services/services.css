@@ -35,12 +35,20 @@
     font-family: "neue-haas-grotesk-text";
 }
 .points{
-    width: 100%;
+    width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-end;
-    gap: 30px;
+    margin-left: 30%;
   
+}
+
+
+.t1{
+    width: 15.625rem;
+}
+.t2{
+    width: auto;
 }
 .service .points h1{
     max-width: 100%;
