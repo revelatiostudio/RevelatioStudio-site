@@ -87,7 +87,7 @@ const Home = () => {
  
 
   return (
-    <>
+    <section className='container-first-page'>
 
       <section className='home'>
         <img src={homeImg} alt='' />
@@ -141,7 +141,7 @@ const Home = () => {
       <Ambiente />
       <BottomHome />
 
-    </>
+    </section>
 
   )
 }
