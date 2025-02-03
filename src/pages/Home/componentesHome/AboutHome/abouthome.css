@@ -1,186 +1,78 @@
-.container_about{
-    background-color: var(--color-black);
-    color: var(--color-white);
-    padding-top: 4.75rem;
-    margin-top: 282px;
+.container-about{
+    width: 100%;
+    background-color: var(--color-bege);
+    padding-top: 100px;
 }
 
-.container_about h1{
-    font-family: "neue-haas-grotesk-display";
-    font-size: 64px;
-    font-weight: 450;
-    line-height: 72.96px;
+.container-manifesto{
     width: 100%;
-}
-.first_text span{
-    margin-right: 150px;
-}
-.first_text span:first-child {
-    margin-left: 150px;
-}
-.first_text-mobile{
-    display: none;
-}
-
-.about_home{
-    width: 100%;
-    max-width: 116.25rem;
-    height: auto;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    padding-top: 134px;
+    justify-content: center;
+    align-items: start;
+    position: relative;
 }
-
-.about_text{
-    width: 100%;
-    max-width: 50%;
+.manifesto{
+    position: absolute;
+    left: 0;
+}
+.manifesto h2{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--color-gray-600);
+}
+.manifesto-text{
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
-.about_text p{
-    font-family: "neue-haas-grotesk-text";
-    color: var(--color-gray-600);
-    font-size: 22px;
-    line-height: 30.8px;
-    font-weight: 400;
+
+
+.container-manifesto .manifesto-text h1{
+    color: var(--color-black);
+    font-size: 72px;
+    font-weight: 450;
+    line-height: 100%;
+    font-family: "neue-haas-grotesk-display"
+
 }
-.text_ladder{
+
+.squares{
+    width: 110%;
     display: flex;
     justify-content: space-between;
+    margin-top: 115px;
+    
 }
-.spacing{
-    margin-bottom: 20px;
+
+.square-one p, .square-two p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 135%;
+    font-family: "neue-haas-grotesk-text";
 }
-.text_ladder .p1{
-    padding-top: 20px;
+
+.square-one, .square-two{
+    padding-top: 28px;
+    border-top: 1px var(--color-gray-600) solid;
 }
-.text_ladder .p2{
-    padding-top: 60px;
-}
-.text_ladder .p3{
-    padding-top: 100px;
-    padding-bottom: 30px;
-}
-.about_text .text_white{
-    color: var(--color-white);
-}
+
+
 
 
 
 /* responsivo medias */
 
-@media(max-width: 1400px) {
-    /* home */
-    .container_about h1{
-        font-size: 55px;
+@media(max-width: 1400px) {}
+@media(max-width: 1280px) {}
 
-    }
-    
+@media(max-width: 1200px) {}
 
-}
-@media(max-width: 1280px) {
-    .container_about h1{
-        font-size: 50px;
+@media(max-width: 991px) {}
 
-    }
-    .about_text p{
-        font-size: 20px;
-    }
+@media(max-width: 768px) {}
 
-}
+@media(max-width: 600px) {}
 
-@media(max-width: 1200px) {
-    .container_about h1{
-        font-size: 40px;
-
-    }
-
-}
-
-@media(max-width: 991px) {
-    .about_home{
-        padding-top: 6.25rem;
-    }
-    .container_about{
-        margin-top: 8.125rem;
-    }
-    .container_about h1{
-        font-size: 20px;
-        line-height: 40px;
-    }
-    .about_text p{
-        font-size: 20px;
-        line-height: 25px;
-    }
-
-}
-
-@media(max-width: 768px) {
-    .container_about h1{
-        font-size: 30px;
-    }
-    .first_text span{
-        margin-right: 3.75rem;
-    }
-    .first_text span:first-child {
-        margin-left: 3.75rem;
-    }
-}
-
-@media(max-width: 600px) {
-    .first_text span{
-        margin-right: 3.75rem;
-    }
-    .first_text span:first-child {
-        margin-left: 3.75rem;
-    }
-    .about_home{
-        padding-top: 3rem;
-    }
-    .about_text p{
-        font-size: 15px;
-        line-height: 25px;
-    }
-
-    .text_ladder .p1{
-        padding-top: 1.25rem;
-    }
-    .text_ladder .p2{
-        padding-top: 40px;
-    }
-    .text_ladder .p3{
-        padding-top: 3.75rem;
-        padding-bottom: 1.25rem;
-    }
-    .spacing{
-        margin-bottom: 0.625rem;
-    }
-}
-
-@media(max-width: 480px) {
-    .container_about h1{
-        font-size: 25px;
-    }
-    .first_text-mobile span{
-        margin-right: 1rem;
-    }
-    .first_text-mobile span:first-child {
-        margin-left: 1rem;
-    }
-    .first_text{
-        display: none;
-    }
-    .first_text-mobile{
-        display: block;
-    }
-    .text_ladder .p1 {
-        padding-top: 1rem;
-    }
-    .text_ladder .p2 {
-        padding-top: 1.875rem;
-    }
-    .text_ladder .p3 {
-        padding-top: 3rem;
-    }
-
-}
+@media(max-width: 480px) {}
