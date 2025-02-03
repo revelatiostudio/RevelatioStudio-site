@@ -14,10 +14,10 @@ export default function Services() {
           <motion.div
            className='service'
            layout
-           initial={{ height: "70px" }}
-           animate={{ height: "70px" }}
-           whileHover={{ height: "223px" }}
-           whileTap={{ height: "223px" }}
+           initial={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
+           animate={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
+           whileHover={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
+           whileTap={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
            transition={{ type: "spring", stiffness: 200 }}
           >
             <div className='bullets'>
@@ -40,10 +40,10 @@ export default function Services() {
           <motion.div 
           className='service'
           layout
-          initial={{ height: "70px" }}
-          animate={{ height: "70px" }}
-          whileHover={{ height: "223px" }}
-          whileTap={{ height: "223px" }}
+          initial={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
+          animate={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
+          whileHover={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
+          whileTap={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
           transition={{ type: "spring", stiffness: 200 }}
           >
             <div className='bullets'>
@@ -64,10 +64,10 @@ export default function Services() {
           <motion.div  
           className='service'
           layout
-          initial={{ height: "70px" }}
-          animate={{ height: "70px" }}
-          whileHover={{ height: "223px" }}
-          whileTap={{ height: "223px"}}
+          initial={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
+          animate={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
+          whileHover={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
+          whileTap={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
           transition={{ type: "spring", stiffness: 200 }}
           >
             <div className='bullets'>
@@ -86,10 +86,10 @@ export default function Services() {
           <motion.div  
           className='service'
           layout
-          initial={{ height: "70px" }}
-          animate={{ height: "70px" }}
-          whileHover={{ height: "223px" }}
-          whileTap={{ height: "223px"}}
+          initial={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
+          animate={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
+          whileHover={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
+          whileTap={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
           transition={{ type: "spring", stiffness: 200 }}
           >
             <div className='bullets'>
