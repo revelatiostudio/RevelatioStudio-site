@@ -111,4 +111,29 @@
     }
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .service .points h1{
+        font-size: 100px;
+    }
+    .t1{
+        width: 50%;
+    }
+    .container-services{
+        margin-top: 4.375rem;
+    }
+    .service:last-child{
+        margin-bottom: 4.375rem;
+    }
+}
+@media(max-width: 390px) {
+    .service .points h1{
+        font-size: 90px;
+    }
+    .t1{
+        width: 10rem;
+    }
+    .bullets p, .points p {
+        font-size: 10px;
+    }
+    
+}
