@@ -6,6 +6,7 @@ import case3 from '../../../../assets/img/home/cases/case3.png'
 import seta from '../../../../assets/img/home/seta-branca.svg'
 import setac from '../../../../assets/img/home/cases/arrow-cases.svg'
 import setaBaixo from '../../../../assets/img/home/cases/arrow-down.svg'
+import gradiente from '../../../../assets/img/home/gradiente-2.png'
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -208,6 +209,7 @@ export default function ScrollCases() {
                     </div>
 
                     <div className='overlay-blur'>
+                        <img src={gradiente} alt='' />
                     </div>
                     <div>
 
@@ -281,6 +283,7 @@ export default function ScrollCases() {
                     </div>
 
                     <div className='overlay-blur bottom'>
+                    <img src={gradiente} alt='' />
                     </div>
                     <div className='see-cases'>
                         <div className='all-cases'>
