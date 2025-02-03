@@ -57,11 +57,10 @@ export default function ScrollCases() {
             }, 0)
         })
 
-
-        mm.add('(max-width: 1200px)', () => {
+        mm.add('(min-width: 1921px)', () => {
             cases.forEach((a) => {
                 gsap.to(a, {
-                    xPercent: gsap.utils.random(60, 20),
+                    xPercent: gsap.utils.random(10, 70),
                 });
             });
         });
@@ -73,6 +72,15 @@ export default function ScrollCases() {
                 });
             });
         });
+
+        mm.add('(max-width: 1200px)', () => {
+            cases.forEach((a) => {
+                gsap.to(a, {
+                    xPercent: gsap.utils.random(60, 20),
+                });
+            });
+        });
+
         mm.add('(max-width: 800px)', () => {
             cases.forEach((a) => {
                 gsap.to(a, {
