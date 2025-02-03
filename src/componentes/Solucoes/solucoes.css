@@ -279,10 +279,7 @@
 
 @media(max-width: 480px) {
     .container-solucoes{
-        height: 100vh;
-    }
-    .herofinal{
-
+        height: 100%;
     }
     .herofirst{
         margin-top: 6.25rem;
