@@ -16,9 +16,10 @@ export default function Services() {
            layout
            initial={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
            animate={{ height: window.innerWidth >= 601 ? "70px" : "40px" }}
-           whileHover={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
-           whileTap={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
-           transition={{ type: "spring", stiffness: 200 }}
+           //whileHover={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
+           onTapStart={{height: window.innerWidth >= 601 ? "223px" : "110px" }}
+           //whileTap={{ height: window.innerWidth >= 601 ? "223px" : "110px" }}
+           //transition={{ type: "spring", stiffness: 200 }}
           >
             <div className='bullets'>
               <p>Jornada</p>
