@@ -15,7 +15,8 @@
     font-weight: 500;
     line-height: 115.2px;
     vertical-align: middle;
-    font-family: "neue-haas-grotesk-display"
+    font-family: "neue-haas-grotesk-display";
+    color: var(--color-white);
 
 }
 
@@ -59,6 +60,7 @@
     color: var(--color-gray-700);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .project p{
     font-size: 12px;
@@ -68,7 +70,10 @@
 
 }
 .project-name :nth-child(1){
-    color: var(--color-gray-100);
+    color: var(--color-white);
+}
+.project-name :nth-child(2){
+    color: var(--color-gray-700);
 }
 
 .overlay-blur{
@@ -125,6 +130,7 @@
 }
 .all-cases a{
     font-weight: 450;
+    color: var(--color-white);
 }
 .explore{
     font-weight: 500;
@@ -132,10 +138,10 @@
 
 }
 .explore .p1{
-    color: var(--color-gray-100);
+    color: var(--color-white);
 }
 .see-cases .all-cases{
-    border-bottom: 1px var(--color-gray-100) solid;
+    border-bottom: 1px var(--color-white) solid;
 }
 
 /* Tablet */

@@ -3,7 +3,7 @@ import './scrollcases.css'
 import case1 from '../../../../assets/img/home/cases/case1.png'
 import case2 from '../../../../assets/img/home/cases/case2.png'
 import case3 from '../../../../assets/img/home/cases/case3.png'
-import seta from '../../../../assets/img/arrow-secs.svg'
+import seta from '../../../../assets/img/home/seta-branca.svg'
 import setac from '../../../../assets/img/home/cases/arrow-cases.svg'
 import setaBaixo from '../../../../assets/img/home/cases/arrow-down.svg'
 
@@ -198,7 +198,8 @@ export default function ScrollCases() {
 
                     <div className="progress-bar">
                         <Progress classNames={{
-                            base: 'h-[0.1rem]'
+                            base: 'h-[0.1rem]',
+                            indicator: 'bg-white'
 
                         }}
                             size="sm" aria-label="Loading..."
