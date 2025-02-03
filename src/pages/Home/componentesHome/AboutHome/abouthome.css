@@ -1,8 +1,8 @@
 .container-about{
     width: 100%;
     background-color: var(--color-bege);
-    padding-top: 100px;
-    padding-bottom: 180px;
+    padding-top: 6.25rem;
+    padding-bottom: 11.25rem;
 }
 
 .container-manifesto{
@@ -43,7 +43,7 @@
     width: 110%;
     display: flex;
     justify-content: space-between;
-    margin-top: 115px;
+    margin-top: 7.1875rem;
     
 }
 
@@ -55,7 +55,7 @@
 }
 
 .square-one, .square-two{
-    padding-top: 28px;
+    padding-top: 1.75rem;
     border-top: 1px var(--color-gray-600) solid;
 }
 
@@ -92,7 +92,7 @@
         width: max-content;
     }
     .square-one{
-        margin-bottom: 50px;
+        margin-bottom: 3.125rem;
     }
 }
 
@@ -104,7 +104,7 @@
         font-size: 16px;
     }
     .squares{
-        margin-top: 80px;
+        margin-top: 5rem;
     }
 }
 
@@ -113,10 +113,10 @@
         font-size: 30px;
     }
     .squares{
-        margin-top: 60px;
+        margin-top: 3.75rem;
     }
     .square-one, .square-two{
-        padding-top: 16.5px;
+        padding-top: 1.0313rem;
     }
     .square-one p, .square-two p{
         font-size: 14px;
