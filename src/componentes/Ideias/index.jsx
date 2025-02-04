@@ -19,6 +19,7 @@ export default function ideias({ color = 'black-ideias' }) {
                 trigger: sec,
                 start: "top center",
                 end: "bottom center",
+                //ease:"power4.inOut",
                 toggleClass: { targets: sec, className: "active" },
                 onEnter: () => sec.classList.add("active"),
                 onLeave: () => sec.classList.remove("active"),
@@ -33,6 +34,9 @@ export default function ideias({ color = 'black-ideias' }) {
     return (
         <section className={`container_ideias ${color}`}>
             <div className='grid-global'>
+                <div className='title-ideias'>
+                    <h1>CAPACIDADES</h1>
+                </div>
                 <div className={`sections ${color}`}>
                     <div className='options opt-number'>
                         <a>01</a>

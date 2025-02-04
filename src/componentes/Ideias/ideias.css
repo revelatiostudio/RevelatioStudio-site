@@ -1,13 +1,27 @@
 /* div principal */
 .container_ideias{
     color: var(--color-white);
-    padding-top: 14.5rem;
+    /* padding-top: 14.5rem; */
 }
 
 .black-ideias{
-    background-color: var(--color-black);
+    background-color: var(--color-bege);
 }
-
+.title-ideias{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6.25rem;
+    border: none;
+}
+.title-ideias h1{
+    font-size: 225px;
+    color: var(--color-white);
+    font-weight: 450;
+    line-height: 100%;
+    letter-spacing: -11px;
+    font-family: "neue-haas-grotesk-display"
+}
 
 /* cada divisao das secoes */
 .sections {
@@ -17,34 +31,46 @@
     justify-content: space-between;
     align-items: start;
     padding-top: 2rem;
-    border-top: 1px var(--color-gray-100) solid;
-    
+    /* border-top: 1px var(--color-gray-700) solid;
+     */
+}
+.sections:nth-child(3){
+    border-top: 1px var(--color-gray-700) solid;
+}
+.sections:nth-child(4){
+    border-top: 1px var(--color-gray-700) solid;
 }
 .sections p{
     font-size: 20px;
     font-weight: 500;
     line-height: 90%;
     color: var(--color-gray-200);
-    transition: color 0.5s ease;
+    opacity: 1;
+    transition: color 0.5s ease ;
 
 }
 
 .sections a{
     color: var(--color-gray-200);
-    transition: color 0.5s ease;
+    transition: color 0.5s ease ;
     font-size: 20px;
     font-weight: 500;
+    opacity: 1;
 }
 
 
 .sections.active p{
-    color: var(--color-gray-700); 
+    /* color: var(--color-gray-700);  */
+    /* opacity: 0.1; */
+    color: var(--color-gray-700);
 }
 
 
 
 .sections.active .options a{
-    color: var(--color-white);
+    /* color: var(--color-white); */
+    /* opacity: 0.1; */
+    color: var(--color-gray-700);
 }
 
 
@@ -112,17 +138,24 @@
     
 }
 .sections.white-ideias p{
-    color: var(--color-gray-800);
+    /* color: var(--color-gray-800); */
+    opacity: 0.5;
+    color: rebeccapurple;
 }
 .sections.white-ideias a{
-    color: var(--color-gray-800);
-    transition: color 0.5s ease;
+    /* color: var(--color-gray-800); */
+    transition: color 0.5s ease opacity 1s ease;
+    color: rebeccapurple;
 }
 .sections.white-ideias.active p{
-    color: var( --color-gray-1000); 
+    /* color: var( --color-gray-1000);  */
+    opacity: 0.5;
+    color: rebeccapurple;
 }
 .sections.white-ideias.active .options a{
-    color: var(--color-black);
+    /* color: var(--color-black); */
+    color: rebeccapurple;
+    opacity: 0.5;
 }
 .sections_last.white-ideias{
     border-bottom: 1px var(--color-gray-900) solid;
