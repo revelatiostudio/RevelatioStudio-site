@@ -278,6 +278,9 @@
     .cases-tablet{
         width: 100%;
     }
+    .case-tablet{
+        width: 100%;
+    }
     .projects-tablet .case-tablet img{
         width: 100%;
         max-width: 100%;
@@ -291,6 +294,12 @@
     }
     .see-cases{
         font-size: 0.875rem;
+    }
+    .all-casest{
+        margin-top: 5rem;
+    }
+    .all-cases{
+        margin-bottom: 4.375rem;
     }
 
 } 
