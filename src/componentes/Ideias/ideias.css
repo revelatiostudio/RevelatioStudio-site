@@ -16,7 +16,7 @@
     border: none;
 }
 .title-ideias h1{
-    font-size: 225px;
+    font-size: 15.7vw;
     color: var(--color-white);
     font-weight: 450;
     line-height: 100%;
@@ -178,31 +178,17 @@
 
 /* responsivo medias */
 
-@media(max-width: 1366px) {
-    .title-ideias h1{
-        font-size: 210px;
-    }
-}
+@media(max-width: 1366px) {}
 
 @media(max-width: 1280px) {
-    .title-ideias h1{
-        font-size: 200px;
-    }
     .sections h1{
         font-size: 30px;
     }
 }
 
-@media(max-width: 1150px) {
-    .title-ideias h1{
-        font-size: 180px;
-    }
-}
+@media(max-width: 1150px) {}
 
 @media(max-width: 991px) {
-    .container_ideias{
-        padding-top: 10rem;
-    }
     .sections{
         height: 6.25rem;
         padding-top: 1.5625rem;
@@ -217,9 +203,7 @@
         width: 6px;
         height: 6px;
     }
-    .title-ideias h1{
-        font-size: 160px;
-    }
+  
     .sections h1{
         font-size: 20px;
     }
@@ -233,11 +217,11 @@
     .options span{
         margin-right: 0.80rem;
     }
-    .title-ideias h1{
-        font-size: 130px;
-    }
     .sections h1{
         font-size: 18px;
+    }
+    .title-ideias h1{
+        font-size: 16.5vw;
     }
 }
 
@@ -263,7 +247,7 @@
         margin-right: 15px;
     }
     .title-ideias h1{
-        font-size: 100px;
+        letter-spacing: -8px;
     }
 
 }
@@ -296,11 +280,12 @@
         margin-bottom: 50px;
     }
     .title-ideias h1{
-        font-size: 70px;
-        letter-spacing: normal;
+        letter-spacing: -2px;
+        font-size: 15vw;
     }
-
-   
+ 
+}
+@media(max-width:370px){
 
 }
 

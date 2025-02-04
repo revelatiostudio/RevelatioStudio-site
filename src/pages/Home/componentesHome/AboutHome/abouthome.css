@@ -121,5 +121,8 @@
     .square-one p, .square-two p{
         font-size: 14px;
     }
+    .container-about{
+        padding-bottom: 4.375rem;
+    }
     
 }
