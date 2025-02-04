@@ -1,7 +1,7 @@
 import React from 'react'
 import './ideias.css'
 
-import arrow from '../../assets/img/home/arrow-ideias.svg'
+import arrow from '../../assets/img/home/arrow-capacidades.svg'
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
