@@ -116,6 +116,7 @@ export default function ScrollCases() {
                     start: 'top-=20% center',
                     end: 'bottom center',
                     ease:'none',
+                    pinSpacer: false
                 
                 }
             },0)
