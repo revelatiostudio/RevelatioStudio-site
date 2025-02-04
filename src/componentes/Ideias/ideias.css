@@ -2,6 +2,7 @@
 .container_ideias{
     color: var(--color-white);
     /* padding-top: 14.5rem; */
+    padding-bottom: 200px;
 }
 
 .black-ideias{
@@ -58,12 +59,27 @@
     opacity: 1;
 }
 
+.sections h2, .sections h1{
+    color: var(--color-gray-200);
+    transition: color 0.5s ease ;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 1;
+    font-family: "neue-haas-grotesk-display"
+}
+.sections h1{
+    font-size: 35px;
+    transform: translateY(-10%);
+}
 
-.sections.active p{
+
+
+.sections.active p, .sections.active h1, .sections.active h2{
     /* color: var(--color-gray-700);  */
     /* opacity: 0.1; */
     color: var(--color-gray-700);
 }
+
 
 
 
@@ -75,11 +91,16 @@
 
 
 /* cada div dentro de sections */
-.options{
+.options-opt-number{
     width: 100%;
-    max-width: 28.75rem;
+    max-width: 50px;
     /* border: 2px blue solid; */
 }
+.options-text{
+    width: 100%;
+    max-width: 28.75rem;
+}
+
 .options-list{
     /* border: 1px red solid; */
     width: 100%;
@@ -123,10 +144,6 @@
     margin-bottom: 0px;
 }
 
-.sections_last{
-    border-bottom: 1px var(--color-gray-100) solid;
-
-}
 
 
 /* section branca  */

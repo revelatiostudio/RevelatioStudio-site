@@ -38,11 +38,11 @@ export default function ideias({ color = 'black-ideias' }) {
                     <h1>CAPACIDADES</h1>
                 </div>
                 <div className={`sections ${color}`}>
-                    <div className='options opt-number'>
-                        <a>01</a>
+                    <div className='options-opt-number'>
+                        <h2>01</h2>
                     </div>
-                    <div className='options text'>
-                        <a>Ideias & Estratégias</a>
+                    <div className='options-text'>
+                        <h1>Ideias & Estratégias</h1>
                     </div>
 
 
@@ -91,11 +91,11 @@ export default function ideias({ color = 'black-ideias' }) {
 
                 </div>
                 <div className={`sections ${color}`}>
-                    <div className='options opt-number'>
-                        <a>02</a>
+                    <div className='options-opt-number'>
+                        <h2>02</h2>
                     </div>
-                    <div className='options text'>
-                        <a>Criação & Design</a>
+                    <div className='options-text'>
+                        <h1>Criação & Design</h1>
                     </div>
                     <div className='options-list options'>
                         <div className={`option ${color} `}>
@@ -144,11 +144,11 @@ export default function ideias({ color = 'black-ideias' }) {
 
                 </div>
                 <div className={`sections ${color} sections_last`}>
-                    <div className='options opt-number'>
-                        <a>03</a>
+                    <div className='options-opt-number'>
+                        <h2>03</h2>
                     </div>
-                    <div className='options text'>
-                        <a>Tecnologia</a>
+                    <div className='options-text'>
+                        <h1>Tecnologia</h1>
                     </div>
 
                     <div className='options-list options'>
