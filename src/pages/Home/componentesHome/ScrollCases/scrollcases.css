@@ -47,11 +47,13 @@
     position: relative;
     margin-bottom: 1em;
     will-change: transform;
+    
 }
 
 .case-1 img {
     width: 20.6875rem;
     height: 16.25rem;
+    border-radius: 4px;
 
 }
 .project{
@@ -194,6 +196,7 @@
     width: 100%;
     max-width: 20.68rem;
     height: 16.25rem;
+    border-radius: 4px;
 }
 .all-casest{
     width: 100%;
