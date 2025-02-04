@@ -178,6 +178,14 @@
 
 }
 
+/* Mobile */
+
+.capacidades-mobile-container{
+    width: 100%;
+    display: flex;
+    gap: 18px;
+}
+
 /* responsivo medias */
 
 @media(max-width: 1366px) {}
@@ -261,8 +269,9 @@
         text-indent: -10px;
     }
     .sections {
-        height: 9rem;
+        height: auto;
         padding-top: 2rem;
+        padding-bottom: 20px;
         gap: 0.5rem;
     }
     .options span{
@@ -284,6 +293,20 @@
     .title-ideias h1{
         letter-spacing: -2px;
         font-size: 15vw;
+    }
+    .options-opt-number{
+        display: none;
+    }
+    .options-text{
+        width: 100%;
+        max-width: 170px;
+        white-space: nowrap;
+    }
+    .options-list{
+        gap: 6px;
+    }
+    .options-list.options:last-child{
+        height: 11px;
     }
  
 }
