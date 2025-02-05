@@ -7,12 +7,28 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import SplitType from 'split-type'
+
 export default function ideias({ color = 'black-ideias' }) {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 
     useGSAP(() => {
         const sections = [...document.querySelectorAll('.sections')];
+        const title = new SplitType(".title-ideias h1")
+
+        gsap.set(title.chars,{
+            yPercent: 200,
+            ease: "none"
+        })
+        gsap.to(title.chars,{
+            yPercent: 0,
+            ease: "power1.out",
+            stagger: 0.03,
+            scrollTrigger:{
+                trigger: ".container_ideias"
+            }
+        })
 
         sections.forEach((sec) => {
             ScrollTrigger.create({
