@@ -1,0 +1,32 @@
+.container-nosso-universo{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-bege);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  */
+    overflow: hidden;
+}
+
+/* .universo-text{
+    width: 100%;
+    border: 1px blue solid;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); 
+    overflow: hidden;
+    
+} */
+
+
+.container-nosso-universo h1{
+    font-size: 52px;
+    font-weight: 450;
+    font-family: "neue-haas-grotesk-display";
+    color: var(--color-black);
+    text-align: center;
+}

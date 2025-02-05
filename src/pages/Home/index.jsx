@@ -14,6 +14,7 @@ import BottomHome from './componentesHome/BottomHome'
 import NavBar from '../../componentes/NavBar'
 import ScrollCases from './componentesHome/ScrollCases'
 import Transition from '../../transition'
+import NossoUniverso from './componentesHome/NossoUniverso'
 
 const Home = () => {
   const [horaRecife, setHoraRecife] = useState('');
@@ -138,6 +139,7 @@ const Home = () => {
       <ScrollCases/>
       <AboutHome />
       <Ideias />
+      <NossoUniverso/>
       <Ambiente />
       <BottomHome />
 
