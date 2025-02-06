@@ -10,16 +10,15 @@ import { useRef, useState } from 'react';
 export default function NossoUniverso() {
     gsap.registerPlugin(useGSAP, ScrollTrigger);
     const nossouniversoRef = useRef(null)
-    const [escala, setEscala] = useState(1)
 
 
-    function separaLetras() {
+    function separaLetrasDesktop() {
         const container = nossouniversoRef.current
         const title = new SplitType(".container-nosso-universo h1", { types: 'words, chars' })
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".container-nosso-universo",
-                end: () => "+=" + container.offsetHeight * 2.5,
+                end: () => "+=" + container.offsetHeight * 1,
                 markers: false,
                 scrub: 1,
                 pin: true,
@@ -36,7 +35,11 @@ export default function NossoUniverso() {
             letterSpacing: "5px",
             duration: 3,
             ease: "none",
-        }).to(".container-nosso-universo h1", {
+        }, 0)
+
+
+
+        tl.to(".container-nosso-universo h1", {
             transformOrigin: "48% 50%",
             scale: 500,
             stagger: 0.25,
@@ -49,11 +52,99 @@ export default function NossoUniverso() {
 
 
 
+    }
+
+   
+    function separaLetrasTablet() {
+        const container = nossouniversoRef.current
+        const title = new SplitType(".container-nosso-universo h1", { types: 'words, chars' })
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".container-nosso-universo",
+                end: () => "+=" + container.offsetHeight * 1,
+                markers: false,
+                scrub: 1,
+                pin: true,
+                ease: "none",
+
+            }
+        })
+
+        gsap.set(title.chars, {
+            letterSpacing: "160px",
+        })
+
+        tl.to(title.chars, {
+            letterSpacing: "5px",
+            duration: 3,
+            ease: "none",
+        }, 0).to(".container-nosso-universo h1", {
+            transformOrigin: "48% 50%",
+            scale: 500,
+            duration: 2,
+            fontSize: "52px",
+            ease: "expo.in",
+        })
+
+
+
+
+    }
+    function separaLetrasMobile() {
+        const container = nossouniversoRef.current
+        const title = new SplitType(".container-nosso-universo h1", { types: 'words, chars' })
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".container-nosso-universo",
+                end: () => "+=" + container.offsetHeight * 1,
+                markers: false,
+                scrub: 1,
+                pin: true,
+                ease: "none",
+
+            }
+        })
+
+        gsap.set(title.chars, {
+            letterSpacing: "160px",
+        })
+
+        tl.to(title.chars, {
+            letterSpacing: "5px",
+            duration: 3,
+            ease: "none",
+        }, 0)
+
+
+        tl.to(".container-nosso-universo h1", {
+            transformOrigin: "46.5% 50%",
+            scale: 600,
+            duration: 2,
+            ease: "expo.in",
+        })
+
+
+
 
     }
 
+
+
+
     useGSAP(() => {
-        separaLetras()
+        if (window.innerWidth <= 480) {
+            console.log("mobile")
+            separaLetrasMobile()
+        } else if (window.innerWidth <= 991) {
+            console.log("tablet")
+            separaLetrasTablet()
+        }
+        else if (window.innerWidth >= 1150) {
+            console.log("desktop")
+            separaLetrasDesktop()
+        }
+
+
     }, [])
 
 

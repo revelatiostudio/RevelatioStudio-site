@@ -18,3 +18,28 @@
     color: var(--color-black);
     text-align: center;
 }
+
+/* responsivo medias */
+
+@media(max-width: 1400px) {}
+@media(max-width: 1280px) {}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {
+    
+}
+
+@media(max-width: 800px) {
+    .container-nosso-universo h1{
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 600px) {}
+
+@media(max-width: 480px) {
+    .container-nosso-universo h1{
+        font-size: 20px;
+    }
+}
