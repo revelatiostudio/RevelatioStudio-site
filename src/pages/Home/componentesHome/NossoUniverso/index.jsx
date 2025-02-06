@@ -40,8 +40,8 @@ export default function NossoUniverso() {
             transformOrigin: "48% 50%",
             scale: 500,
             stagger: 0.25,
-            duration: 3,
-            ease: "none",
+            duration: 2,
+            ease: "expo.in",
 
 
         })
