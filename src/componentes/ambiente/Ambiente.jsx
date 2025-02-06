@@ -32,16 +32,6 @@ export default function Ambiente({color = 'black'}) {
   return (
     <section className={`container_ambiente ${color}`}>
       <div className='grid-global'>
-        <div className='head'>
-          <h1>Nosso Ambiente</h1>
-          { color === 'black' ? 
-          <img src={logo} alt='Logo Revelatio' />
-          :
-          <img src={logoPreto} alt='Logo preto Revelatio' />
-
-          }
-          
-        </div>
 
         <div className='galeria'>
           <Swiper
