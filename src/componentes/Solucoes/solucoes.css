@@ -326,6 +326,5 @@
 @media(max-width: 390px){
     .herofinal{
         flex-direction: column;
-        height: 80vh;
     }
 }
