@@ -96,7 +96,7 @@ export default function NossoUniverso() {
                 trigger: ".container-nosso-universo",
                 end: () => "+=" + container.offsetHeight * 2.5,
                 markers: false,
-                scrub: 1,
+                scrub: true,
                 pin: true,
                 ease: "none",
 
