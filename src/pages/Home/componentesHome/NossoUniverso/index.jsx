@@ -20,7 +20,7 @@ export default function NossoUniverso() {
                 trigger: ".container-nosso-universo",
                 end: () => "+=" + container.offsetHeight * 2.5,
                 markers: false,
-                scrub: 1,
+                scrub: 0.5,
                 pin: true,
                 ease: "none",
 
