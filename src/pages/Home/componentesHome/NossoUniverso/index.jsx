@@ -115,8 +115,8 @@ export default function NossoUniverso() {
 
 
         tl.to(".container-nosso-universo h1", {
-            transformOrigin: "46.4% 50%",
-            scale: 650,
+            transformOrigin: "47% 50%",
+            scale: 500,
             duration: 2,
             delay: 2,
             ease: "expo.in",
