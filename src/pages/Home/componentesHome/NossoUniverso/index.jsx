@@ -18,7 +18,7 @@ export default function NossoUniverso() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".container-nosso-universo",
-                end: () => "+=" + container.offsetHeight * 1,
+                end: () => "+=" + container.offsetHeight * 2.5,
                 markers: false,
                 scrub: 1,
                 pin: true,
@@ -35,15 +35,12 @@ export default function NossoUniverso() {
             letterSpacing: "5px",
             duration: 3,
             ease: "none",
-        }, 0)
-
-
-
-        tl.to(".container-nosso-universo h1", {
+        }).to(".container-nosso-universo h1", {
             transformOrigin: "48% 50%",
             scale: 500,
             stagger: 0.25,
             duration: 2,
+            delay: 2,
             ease: "expo.in",
         })
 
@@ -61,7 +58,7 @@ export default function NossoUniverso() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".container-nosso-universo",
-                end: () => "+=" + container.offsetHeight * 1,
+                end: () => "+=" + container.offsetHeight * 2.5,
                 markers: false,
                 scrub: 1,
                 pin: true,
@@ -84,6 +81,7 @@ export default function NossoUniverso() {
             duration: 2,
             fontSize: "52px",
             ease: "expo.in",
+            delay: 2,
         })
 
 
@@ -96,7 +94,7 @@ export default function NossoUniverso() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".container-nosso-universo",
-                end: () => "+=" + container.offsetHeight * 1,
+                end: () => "+=" + container.offsetHeight * 2.5,
                 markers: false,
                 scrub: 1,
                 pin: true,
@@ -120,6 +118,7 @@ export default function NossoUniverso() {
             transformOrigin: "46.5% 50%",
             scale: 600,
             duration: 2,
+            delay: 2,
             ease: "expo.in",
         })
 
