@@ -1,12 +1,11 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import './bottomhome.css'
 
-import prop from '../../../../assets/img/home/prop.png'
-import revelatio from '../../../../assets/img/home/name_revelatio.svg'
-import { Link, useLocation } from 'react-router-dom'
+import revelatio from '../../../../assets/img/home/revelatio-bottom.png'
+import { Link } from 'react-router-dom'
 
 export default function BottomHome() {
-   
+
 
     return (
         <div className='container_bottom'>
@@ -20,7 +19,8 @@ export default function BottomHome() {
                             <p>Recife,Brasil</p>
 
                         </div>
-                        <img src={prop} alt='cartão' />
+
+                        <p className='revelatio'>Revelatio © 2024 All rights reserved</p>
 
 
                     </div>
@@ -35,7 +35,6 @@ export default function BottomHome() {
                                 <Link to='/contato'><p>Contato</p></Link>
                                 <p>Galeria</p>
                             </div>
-                            <p className='revelatio'>Revelatio © 2024 All rights reserved</p>
 
                         </div>
                         <div className='social'>
@@ -53,9 +52,11 @@ export default function BottomHome() {
 
 
                 </div>
+                <div className='reve-mobile'>
+                    <p>Revelatio © 2024 All rights reserved</p>
+                </div>
                 <div className='final'>
                     <img src={revelatio} alt='' />
-
 
                 </div>
 
