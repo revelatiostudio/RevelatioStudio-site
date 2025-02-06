@@ -20,7 +20,7 @@ export default function NossoUniverso() {
             scrollTrigger: {
                 trigger: ".container-nosso-universo",
                 end: () => "+=" + container.offsetHeight * 2.5,
-                markers: true,
+                markers: false,
                 scrub: 1,
                 pin: true,
                 ease: "none",
@@ -42,8 +42,6 @@ export default function NossoUniverso() {
             stagger: 0.25,
             duration: 2,
             ease: "expo.in",
-
-
         })
 
 
