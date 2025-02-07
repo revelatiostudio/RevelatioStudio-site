@@ -18,8 +18,13 @@
     font-family: "neue-haas-grotesk-display";
     color: var(--color-black);
     text-align: center;
+   
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    will-change: font-size;
 }
 
 /* responsivo medias */
