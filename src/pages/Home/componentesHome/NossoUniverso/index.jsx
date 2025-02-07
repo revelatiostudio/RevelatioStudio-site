@@ -37,7 +37,7 @@ export default function NossoUniverso() {
             ease: "none",
         }).to(".container-nosso-universo h1", {
             transformOrigin: "48.2% 50%",
-            scale: 700,
+            scale: window.innerWidth <= 1920 ? 700 : 1000,
             stagger: 0.25,
             duration: 2,
             delay: 2,
