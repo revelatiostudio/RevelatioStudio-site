@@ -18,7 +18,7 @@
     overflow: hidden;
 }
 .title-ideias h1{
-    font-size: 14.7vw;
+    font-size: 14.6vw;
     color: var(--color-white);
     font-weight: 450;
     line-height: 100%;
@@ -189,6 +189,11 @@
 }
 
 /* responsivo medias */
+@media(min-width: 1921px) {
+    .title-ideias h1{
+        font-size: 13vw;
+    }
+}
 
 @media(max-width: 1440px) {
     .title-ideias h1{
