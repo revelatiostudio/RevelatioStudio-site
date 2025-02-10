@@ -30,6 +30,9 @@
 .nav-menu{
     cursor: pointer;
 }
+.en-eua{
+    color: var( --color-gray-1000);
+}
 
 /* Muda a cor da navbar */
 
@@ -360,9 +363,18 @@
     .links-img{
         display: none;
     }
+    .amago{
+        display: none;
+    }
     .links-container .links-menu{
         width: 100%;
+        padding-left: 0px;
     }
+    .links-menu .link-menu{
+        margin-left: 0px;
+
+    }
+    
     .navbar-menu{
         padding: 0px 15px;
     }
@@ -374,6 +386,9 @@
     }
     .footer-menu{
         align-items: end;
+    }
+    .img_revelatio{
+        margin-bottom: 15px;
     }
 }
 @media(max-width:360px){

@@ -145,12 +145,12 @@ export default function NavBar({ color }) {
 
                     </div>
 
-                    <div>
+                    <div className='amago'>
                         <p>Revelamos o âmago dos negócios.</p>
                     </div>
 
                     <div className={location.pathname == '/contato' ? "pt-br pt-br-contato" : "pt-br"}>
-                        <p>PT|EN</p>
+                        <p>PT<span className='en-eua'>|EN</span></p>
                     </div>
 
                     <div className={location.pathname == '/contato' ? "nav-menu nav-menu-contato" : "nav-menu"} onClick={verificaMenu}>
@@ -169,12 +169,12 @@ export default function NavBar({ color }) {
                             <a href='/'> <img src={logo_white} alt='' /></a>
                         </div>
 
-                        <div>
+                        <div className='amago'>
                             <p>Revelamos o âmago dos negócios.</p>
                         </div>
 
                         <div className='pt-br'>
-                            <p>PT|EN</p>
+                            <p>PT<span className='en-eua'>|EN</span></p>
                         </div>
 
                         <div className='nav-menu' onClick={verificaMenu}>
