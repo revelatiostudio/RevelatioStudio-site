@@ -64,6 +64,72 @@ export default function NavBar({ color }) {
     }, [isMenuOpen])
 
 
+    const [horaRecife, setHoraRecife] = useState('');
+    const [horaLocal, setHoraLocal] = useState('');
+    const [idioma, setIdioma] = useState('')
+    
+    
+  
+  
+      const obterHoraRecife = () => {
+        const horaRecife = new Date().toLocaleString("pt-BR", {
+          timeZone: "America/Recife",
+          timeZoneName: "short",
+          hour12: false
+        });
+  
+        var hora = horaRecife.split(' ')
+        hora = hora[1].split(':')
+        var horaCerta = hora[0] + ":" + hora[1]
+        const comparaHora = hora[0]
+  
+        
+        if( Number(comparaHora) <= 11){
+          setHoraRecife(horaCerta + " " + "AM")
+        }else{
+          setHoraRecife(horaCerta + " " + "PM")
+        }
+        
+      };
+  
+      const obterHoraLocal = () => {
+        const localTime = new Date().toLocaleString("pt-BR", {
+          timeZoneName: "short",
+          hour12: false
+        });
+  
+        var hora = localTime.split(' ')
+        hora = hora[1].split(':')
+        var horaCerta = hora[0] + ":" + hora[1]
+        const comparaHora = hora[0]
+  
+        
+        if( Number(comparaHora) <= 11){
+          setHoraLocal(horaCerta + " " + "AM")
+        }else{
+          setHoraLocal(horaCerta + " " + "PM")
+        }
+        let idioma = navigator.language || navigator.userLanguage;
+        const pcIdioma = idioma.split('-')[1]
+        setIdioma(pcIdioma)
+        
+      };
+  
+    
+      
+      useEffect(() => {
+        obterHoraRecife()
+        obterHoraLocal()
+  
+        const intervalo = setInterval(() => {
+          obterHoraRecife();
+        }, 30000); 
+    
+        return () => clearInterval(intervalo);
+  
+      },[horaRecife])
+
+
 
     return (
         <>
@@ -163,8 +229,8 @@ export default function NavBar({ color }) {
                             </div>
 
                             <div className='bottom_part'>
-                                <p>INSTAGRAM</p>
-                                <p>BEHANCE</p>
+                            <a href='https://www.instagram.com/revelatio.studio/' target='blank'><p>INSTAGRAM</p></a>
+                            <a href='https://www.behance.net/revelatiostudio' target='blank'><p>BEHANCE</p></a>
                             </div>
 
                         </div>
@@ -175,8 +241,8 @@ export default function NavBar({ color }) {
                             </div>
 
                             <div className='time'>
-                                <p>RECIFE,BRA <a>[12:46PM]</a></p>
-                                <p>NEW YORK,EUA <a>[12:46PM]</a></p>
+                                <p>RECIFE,BR<a>[{horaRecife}]</a></p>
+                                <p>LOCAL,{idioma}<a>[{horaLocal}]</a></p>
 
                             </div>
 
