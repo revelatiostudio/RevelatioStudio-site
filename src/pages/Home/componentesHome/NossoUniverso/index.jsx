@@ -133,14 +133,11 @@ export default function NossoUniverso() {
 
     useGSAP(() => {
         if (window.innerWidth <= 480) {
-            console.log("mobile")
             separaLetrasMobile()
         } else if (window.innerWidth <= 991) {
-            console.log("tablet")
             separaLetrasTablet()
         }
         else if (window.innerWidth >= 1150) {
-            console.log("desktop")
             separaLetrasDesktop()
         }
 
