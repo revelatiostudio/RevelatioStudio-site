@@ -33,29 +33,39 @@
     top: 50%;
     position: absolute;
     z-index: 1;
+    height: 6.25rem;
+    align-items: start;
 }
 .middle .left_part{
     width: 100%;
     max-width: 7.375rem;
-    height: 4.5625rem;
+    height: 6.25rem;
     color: var( --color-gray-500);
 }
+.top_part{
+    margin-bottom: 1.75rem;
+}
 .top_part p{
-    margin-bottom: 28px;
     font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+}
+.bottom_part{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.bottom_part p{
+.bottom_part a{
     color: var(--color-white);
     font-size: 16px;
     line-height: 100%;
-    margin-bottom: 12px;
     font-weight: 500;
 }
 .middle .right_part{
     width: 100%;
     max-width: 193px;
-    height: 73px;
+    height: 6.25rem;
     color: var(--color-gray-500);
     display: flex;
     flex-direction: column;
@@ -67,19 +77,29 @@
     color: var(--color-gray-900);
     margin-left: 5px;
 }
-.right_part .time_text{
-    margin-bottom: 28px;
-    font-weight: 500;
+.right_part .time-text-home {
+    margin-bottom: 1.75rem;
+}
 
+.right_part .time-text-home p{
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 500;
+    font-family: "neue-haas-grotesk-display"
 }
 .right_part .time{
     display: flex;
     flex-direction: column;
     align-items: end;
+    gap: 12px;
 }
 .right_part .time p{
     font-weight: 450;
+    line-height: 100%;
 
+}
+.img-revelatio-mobile{
+    display: none;
 }
  
 
@@ -133,7 +153,10 @@
     .middle .right_part p {
         font-size: 14px;
     }
-    .top_part p{
+    .top_part{
+        margin-bottom: 15px;
+    }
+    .right_part .time-text-home{
         margin-bottom: 15px;
     }
 }
@@ -141,13 +164,32 @@
 @media(max-width: 480px) {
     .home {
         width: 100vw;
-        height: 90vh;
+        height: 80vh;
     }
-    .middle .left_part p{
-        font-size: 10px;
+    .img_revelatio{
+        display: none;
     }
-    .middle .right_part p {
-        font-size: 10px;
+    .container-home{
+        height: 80vh;
+        z-index: 1;
+    }
+    .img-revelatio-mobile img{
+        width: 100%;
+        height: auto;
+    }
+
+    .img-revelatio-mobile{
+        display: flex;
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+        padding-bottom: 25%;
+        border-top: 1px var(--color-gray-200) solid; 
+        padding-top: 5%;
+
+    }
+    .middle{
+        top: 50%;
     }
    
 }
