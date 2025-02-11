@@ -46,6 +46,8 @@
     margin-bottom: 1.75rem;
 }
 .top_part p{
+    color: var(--color-white);
+    opacity: 0.5;
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
@@ -82,10 +84,12 @@
 }
 
 .right_part .time-text-home p{
+    color: var(--color-white);
     font-size: 16px;
     line-height: 100%;
     font-weight: 500;
-    font-family: "neue-haas-grotesk-display"
+    font-family: "neue-haas-grotesk-display";
+    opacity: 0.5;
 }
 .right_part .time{
     display: flex;
@@ -96,6 +100,7 @@
 .right_part .time p{
     font-weight: 450;
     line-height: 100%;
+    color: var(--color-gray-500);
 
 }
 .img-revelatio-mobile{
