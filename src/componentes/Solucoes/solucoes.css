@@ -144,6 +144,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
+    font-family: "neue-haas-grotesk-text";
 }
 
 .texts_studio a {
@@ -156,6 +157,7 @@
 .grid-left{
     height: 11.25rem;
 }
+
 
 .seecases{
     width: 100%;
@@ -214,6 +216,7 @@
 .studio_img img {
     width: 20.625rem;
     height: 16.125rem;
+    border-radius: 0.625rem;
 
 }
 .blour{
@@ -222,6 +225,7 @@
     right: 0;
     z-index: 1;
     opacity: 1;
+    border-radius: 0.625rem;
 }
 
 /* responsivo medias */
@@ -322,6 +326,10 @@
     .border-solucoes-bottom{
         display: none;
     }
+    .herofirst h1, .herosecond h1{
+        font-size: 36px;
+    }
+    
 }
 @media(max-width: 390px){
     .herofinal{
