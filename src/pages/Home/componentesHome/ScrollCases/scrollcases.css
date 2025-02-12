@@ -63,7 +63,7 @@
     color: var(--color-gray-700);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
 }
 .project p{
     font-size: 12px;
