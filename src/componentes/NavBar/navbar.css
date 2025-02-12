@@ -284,13 +284,16 @@
         font-size: 80px;
     }
     .branding{
-        display: none;
+        display: flex;
+        margin-top: 80px;
     }
+    
     .links-container{
-        margin-top: 10rem;
+        /* margin-top: 10rem; */
     }
     .footer-menu {
         bottom: 1rem;
+        display: none;
     }
 }
 
@@ -302,11 +305,13 @@
         display: none;
     }
     .links-container{
-        margin-top: 6.25rem;
+        height: 100%;
+        margin-top: 0;
     }
     .links-container .links-menu{
         padding-left: 3.125rem;
     }
+    
 }
 
 @media(max-width: 1200px) {}
