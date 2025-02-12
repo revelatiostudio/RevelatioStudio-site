@@ -36,7 +36,7 @@
     width: 200px;
     height: 200px;
     right: 0;
-    top:340px;
+    top:40%;
     transform: rotate(90deg);
 }
 
@@ -225,6 +225,11 @@
     .overlay-blur.bottom{
         bottom: 20%;
     }
+    .progress-bar{
+        top:35%;
+        
+    }
+    
     
 
 }
