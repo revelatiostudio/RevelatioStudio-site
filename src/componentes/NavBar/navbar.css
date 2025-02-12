@@ -265,7 +265,7 @@
 
 /* responsivo medias */
 
-@media(max-height: 650px){
+@media(max-height: 900px){
     .footer-menu{
         display: none;
     }
