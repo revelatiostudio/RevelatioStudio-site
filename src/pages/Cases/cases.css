@@ -351,6 +351,13 @@
     }
 } */
 
+@media(max-height: 600px){
+    .work-together{
+        margin-top: 3rem;
+    }
+
+}
+
 @media(max-width: 991px) {
     .quadrado-image:nth-child(2){
         right: 0;
@@ -385,6 +392,7 @@
     .menu-mobile {
         display: block;
         width: 40vw;
+        position: fixed;
     }
 
     .work-together {
