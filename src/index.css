@@ -55,7 +55,7 @@ a {
 
 html,
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   overscroll-behavior: none;
   -webkit-overflow-scrolling: auto;
   /* -webkit-overflow-scrolling: touch; */

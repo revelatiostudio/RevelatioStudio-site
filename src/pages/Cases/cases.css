@@ -3,7 +3,6 @@
     min-height: 100%;
     display: flex;
     /* position: relative; */
-    overflow: hidden;
 }
 
 .side-menu {
@@ -11,6 +10,8 @@
     max-width: 18.3125rem;
     height: 52.625rem;
     margin-top: 7.875rem;
+    position: sticky;
+    top: 1.25rem;
 
 }
 
