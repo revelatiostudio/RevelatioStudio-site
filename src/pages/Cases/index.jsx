@@ -128,10 +128,15 @@ const Cases = () => {
                 display: "block",
                 opacity: 0.7,
             })
-            .to(".menu-mobile", {
+            .fromTo(".menu-mobile", 
+                {
+                    clipPath: "inset(50% 50% 50% 50%)"
+                },{
                 display: "flex",
+                transformOrigin: "50% 50%",
                 opacity: 1,
                 yPercent: -3,
+                clipPath: "inset(0% 0% 0% 0%)",
                 ease: "power4.inOut",
             }, 0)
     })
