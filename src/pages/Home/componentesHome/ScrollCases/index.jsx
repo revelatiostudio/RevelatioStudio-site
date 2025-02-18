@@ -53,7 +53,7 @@ export default function ScrollCases() {
         cases.forEach((a) => {
             tl.to(a, {
                 //y: tam <= 650 ? -1400 : -1300,
-                y: -((imgHeigth) * 5)
+                y: -((imgHeigth) * 5.5)
             }, 0)
         })
 
