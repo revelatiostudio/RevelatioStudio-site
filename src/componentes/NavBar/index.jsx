@@ -45,13 +45,13 @@ export default function NavBar({ color }) {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 ease: "power4.inOut",
                 duration: 1,
-            },0).to([".link-menu p", ".link-menu h1", ".link-menu img"], {
+            }, 0).to([".link-menu p", ".link-menu h1", ".link-menu img"], {
                 y: 0,
                 duration: 0.5,
                 stagger: 0.1,
                 ease: "power4.inOut",
                 // delay: -0.75,
-            },0)
+            }, 0)
 
     })
 
@@ -67,67 +67,67 @@ export default function NavBar({ color }) {
     const [horaRecife, setHoraRecife] = useState('');
     const [horaLocal, setHoraLocal] = useState('');
     const [idioma, setIdioma] = useState('')
-    
-    
-  
-  
-      const obterHoraRecife = () => {
+
+
+
+
+    const obterHoraRecife = () => {
         const horaRecife = new Date().toLocaleString("pt-BR", {
-          timeZone: "America/Recife",
-          timeZoneName: "short",
-          hour12: false
+            timeZone: "America/Recife",
+            timeZoneName: "short",
+            hour12: false
         });
-  
+
         var hora = horaRecife.split(' ')
         hora = hora[1].split(':')
         var horaCerta = hora[0] + ":" + hora[1]
         const comparaHora = hora[0]
-  
-        
-        if( Number(comparaHora) <= 11){
-          setHoraRecife(horaCerta + " " + "AM")
-        }else{
-          setHoraRecife(horaCerta + " " + "PM")
+
+
+        if (Number(comparaHora) <= 11) {
+            setHoraRecife(horaCerta + " " + "AM")
+        } else {
+            setHoraRecife(horaCerta + " " + "PM")
         }
-        
-      };
-  
-      const obterHoraLocal = () => {
+
+    };
+
+    const obterHoraLocal = () => {
         const localTime = new Date().toLocaleString("pt-BR", {
-          timeZoneName: "short",
-          hour12: false
+            timeZoneName: "short",
+            hour12: false
         });
-  
+
         var hora = localTime.split(' ')
         hora = hora[1].split(':')
         var horaCerta = hora[0] + ":" + hora[1]
         const comparaHora = hora[0]
-  
-        
-        if( Number(comparaHora) <= 11){
-          setHoraLocal(horaCerta + " " + "AM")
-        }else{
-          setHoraLocal(horaCerta + " " + "PM")
+
+
+        if (Number(comparaHora) <= 11) {
+            setHoraLocal(horaCerta + " " + "AM")
+        } else {
+            setHoraLocal(horaCerta + " " + "PM")
         }
         let idioma = navigator.language || navigator.userLanguage;
         const pcIdioma = idioma.split('-')[1]
         setIdioma(pcIdioma)
-        
-      };
-  
-    
-      
-      useEffect(() => {
+
+    };
+
+
+
+    useEffect(() => {
         obterHoraRecife()
         obterHoraLocal()
-  
+
         const intervalo = setInterval(() => {
-          obterHoraRecife();
-        }, 30000); 
-    
+            obterHoraRecife();
+        }, 30000);
+
         return () => clearInterval(intervalo);
-  
-      },[horaRecife])
+
+    }, [horaRecife])
 
 
 
@@ -222,31 +222,32 @@ export default function NavBar({ color }) {
                     </div>
 
                     <div className='footer-menu'>
-                        <div className='social-mn'>
+                        <div className='left-part-menu'>
 
-                            <div className='top_part'>
-                                <p>[SOCIAL MEDIA]</p>
+                            <div className='top-part-menu'>
+                                <p>(SOCIAL MEDIA)</p>
                             </div>
 
-                            <div className='bottom_part'>
-                            <a href='https://www.instagram.com/revelatio.studio/' target='blank'><p>INSTAGRAM</p></a>
-                            <a href='https://www.behance.net/revelatiostudio' target='blank'><p>BEHANCE</p></a>
+                            <div className='bottom-part-menu'>
+                                <a href='https://www.instagram.com/revelatio.studio/' target='blank'><p>INSTAGRAM</p></a>
+                                <a href='https://www.behance.net/revelatiostudio' target='blank'><p>BEHANCE</p></a>
+                            </div>
+
+                        </div>
+
+                        <div className='right-part-menu'>
+                            <div className='time-text-menu'>
+                                <p>(CURRENTLY TIME)</p>
+                            </div>
+
+                            <div className='time-menu'>
+                                <p><a>RECIFE,BR</a> [{horaRecife}]</p>
+                                <p><a>LOCAL,{idioma}</a> [{horaLocal}]</p>
+
                             </div>
 
                         </div>
 
-                        <div className='right_part'>
-                            <div className='time_text'>
-                                <p>[CURRENTLY TIME]</p>
-                            </div>
-
-                            <div className='time'>
-                                <p>RECIFE,BR<a>[{horaRecife}]</a></p>
-                                <p>LOCAL,{idioma}<a>[{horaLocal}]</a></p>
-
-                            </div>
-
-                        </div>
 
                     </div>
 
