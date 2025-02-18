@@ -120,18 +120,18 @@ const Cases = () => {
     const tl = useRef();
 
     useGSAP(() => {
-        gsap.set(".menu-mobile", { xPercent: -100 });
+        gsap.set(".menu-mobile", { opacity: 0 });
         gsap.set(".menu-open-mobile-black", { opacity: 0, display: "none" })
 
         tl.current = gsap.timeline({ paused: true })
             .to(".menu-open-mobile-black", {
                 display: "block",
                 opacity: 0.7,
-            }).to(".menu-mobile", {
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                xPercent: 0,
-                duration: 1,
-                stagger: 0.1,
+            })
+            .to(".menu-mobile", {
+                display: "flex",
+                opacity: 1,
+                yPercent: -3,
                 ease: "power4.inOut",
             }, 0)
     })
@@ -223,13 +223,11 @@ const Cases = () => {
                     </div> */}
 
                 </div>
-                <div className="filtro-mobile" onClick={verificaMenu}>
-                    <img src={filtro} alt="filtro dos cases" />
-                </div>
+
+               
                 <div className="menu-mobile">
                     <div className="head-menu">
                         <h1>Filtre por:</h1>
-                        <img src={close} alt="close" onClick={verificaMenu} />
                     </div>
 
                     <ol className="filtros">
@@ -239,15 +237,9 @@ const Cases = () => {
                         <li onClick={() => filtraFotos("marca")}>Marca</li>
                     </ol>
 
-                    <div className="work-together">
-                        <img src={boxImg} alt="caixa branca com luz" />
-                        <Link to="/contato">
-                            <button>
-                                Entrar em contato
-                            </button>
-                        </Link>
-                    </div>
-
+                </div>
+                <div className="filtro-mobile" onClick={verificaMenu}>
+                    <img src={filtro} alt="filtro dos cases" />
                 </div>
                 <div className="menu-open-mobile-black"></div>
                 <div className="all-cases-container" style={{ display: "grid", ...gridStyle }}>
