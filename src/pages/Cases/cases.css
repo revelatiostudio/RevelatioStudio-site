@@ -243,9 +243,10 @@
 } */
 .change-page{
     position: absolute;
-    bottom: 0.625rem;
     gap: 1.25rem;
     display: flex;
+    margin-top: 3.125rem;
+   
 }
 .change-page img{
     width: 0.625rem;

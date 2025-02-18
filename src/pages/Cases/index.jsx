@@ -197,7 +197,18 @@ const Cases = () => {
                         <li onClick={() => filtraFotos("marca")}>Marca</li>
                     </ol>
 
-                    <div className="work-together">
+                    <div className="change-page">
+                        <button onClick={voltaPagina}><img src={previous} alt="" /></button>
+                        <div className="flex items-center gap-x-1">
+                            <span className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-100 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-300 dark:text-black dark:focus:bg-black/10">{currentPage + 1}</span>
+                            <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">of</span>
+                            <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">{pages}</span>
+                        </div>
+                        <button onClick={proxPagina}><img src={next} alt="" /></button>
+
+                    </div>
+
+                    {/* <div className="work-together">
                         <img src={boxImg} alt="caixa branca com luz" />
                         <Link to="/contato">
                             <button>
@@ -215,7 +226,7 @@ const Cases = () => {
                             <img src={logoCases} alt="Logo revelatio" />
                         </div>
 
-                    </div>
+                    </div> */}
 
                 </div>
                 <div className="filtro-mobile" onClick={verificaMenu}>
@@ -267,16 +278,7 @@ const Cases = () => {
 
 
                 </div>
-                <div className="change-page">
-                    <button onClick={voltaPagina}><img src={previous} alt="" /></button>
-                    <div className="flex items-center gap-x-1">
-                        <span className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-100 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-300 dark:text-black dark:focus:bg-black/10">{currentPage + 1}</span>
-                        <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">of</span>
-                        <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">{pages}</span>
-                    </div>
-                    <button onClick={proxPagina}><img src={next} alt="" /></button>
 
-                </div>
 
             </section>
 
