@@ -124,11 +124,11 @@ const Cases = () => {
         gsap.set(".menu-open-mobile-black", { opacity: 0, display: "none" })
 
         tl.current = gsap.timeline({ paused: true })
-            .to(".container-menu-mobile", {display: "flex"})
+            .to(".container-menu-mobile", { display: "flex" })
             .to(".menu-open-mobile-black", {
                 display: "block",
                 opacity: 0.7,
-            },0)
+            }, 0)
             .fromTo(".menu-mobile",
                 {
                     clipPath: "inset(50% 50% 50% 50%)"
@@ -213,25 +213,36 @@ const Cases = () => {
 
                 <div className="container-menu-mobile">
                     <div className="sla">
-                    <div className="menu-mobile">
-                        <div className="head-menu">
-                            <h1>Filtre por:</h1>
+                        <div className="menu-mobile">
+                            <div className="head-menu">
+                                <h1>Filtre por:</h1>
+                            </div>
+
+                            <ol className="filtros">
+                                <li onClick={() => setItens(data)}>Todos</li>
+                                <li onClick={() => filtraFotos("site")}>Site</li>
+                                <li onClick={() => filtraFotos("digital")}>Produto digital</li>
+                                <li onClick={() => filtraFotos("marca")}>Marca</li>
+                            </ol>
+
+                        </div>
+                        <div className="filtro-mobile" onClick={verificaMenu}>
+                            <img src={filtro} alt="filtro dos cases" />
                         </div>
 
-                        <ol className="filtros">
-                            <li onClick={() => setItens(data)}>Todos</li>
-                            <li onClick={() => filtraFotos("site")}>Site</li>
-                            <li onClick={() => filtraFotos("digital")}>Produto digital</li>
-                            <li onClick={() => filtraFotos("marca")}>Marca</li>
-                        </ol>
-
-                    </div>
-                    <div className="filtro-mobile" onClick={verificaMenu}>
-                        <img src={filtro} alt="filtro dos cases" />
                     </div>
 
+
+                </div>
+
+                <div className="change-page change-mobile">
+                    <button onClick={voltaPagina}><img src={previous} alt="" /></button>
+                    <div className="flex items-center gap-x-1">
+                        <span className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-100 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-300 dark:text-black dark:focus:bg-black/10">{currentPage + 1}</span>
+                        <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">of</span>
+                        <span className="min-h-[38px] flex justify-center items-center text-gray-500 py-2 px-1.5 text-sm dark:text-neutral-500">{pages}</span>
                     </div>
-                   
+                    <button onClick={proxPagina}><img src={next} alt="" /></button>
 
                 </div>
 

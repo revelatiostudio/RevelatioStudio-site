@@ -337,6 +337,9 @@
     display: none;
     z-index: 1;
 }
+.change-page.change-mobile{
+    display: none;
+}
 
 /* responsivo medias */
 
@@ -367,6 +370,11 @@
 }
 
 @media(max-width: 800px) {
+    .change-page.change-mobile{
+        display: flex;
+        bottom: 5px;
+        z-index: 6;
+    }
     .container-menu-mobile{
         display: flex;
     }
