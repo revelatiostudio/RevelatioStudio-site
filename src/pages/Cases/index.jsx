@@ -207,25 +207,6 @@ const Cases = () => {
 
                     </div>
 
-                    {/* <div className="work-together">
-                        <img src={boxImg} alt="caixa branca com luz" />
-                        <Link to="/contato">
-                            <button>
-                                Entrar em contato
-                            </button>
-                        </Link>
-                    </div>
-
-                    <div className="bottom-side-menu">
-                        <div>
-                            <h2>Projetos Realizados:</h2>
-                            <p>+200</p>
-                        </div>
-                        <div className="image-side-menu">
-                            <img src={logoCases} alt="Logo revelatio" />
-                        </div>
-
-                    </div> */}
 
                 </div>
 
