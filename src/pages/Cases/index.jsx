@@ -124,16 +124,17 @@ const Cases = () => {
         gsap.set(".menu-open-mobile-black", { opacity: 0, display: "none" })
 
         tl.current = gsap.timeline({ paused: true })
+            .to(".container-menu-mobile", {display: "flex"})
             .to(".menu-open-mobile-black", {
                 display: "block",
                 opacity: 0.7,
-            })
-            .fromTo(".menu-mobile", 
+            },0)
+            .fromTo(".menu-mobile",
                 {
                     clipPath: "inset(50% 50% 50% 50%)"
-                },{
+                }, {
                 display: "flex",
-                transformOrigin: "50% 50%",
+                // transformOrigin: "50% 50%",
                 opacity: 1,
                 yPercent: -3,
                 clipPath: "inset(0% 0% 0% 0%)",
@@ -210,24 +211,35 @@ const Cases = () => {
 
                 </div>
 
-               
-                <div className="menu-mobile">
-                    <div className="head-menu">
-                        <h1>Filtre por:</h1>
+                <div className="container-menu-mobile">
+                    <div className="sla">
+                    <div className="menu-mobile">
+                        <div className="head-menu">
+                            <h1>Filtre por:</h1>
+                        </div>
+
+                        <ol className="filtros">
+                            <li onClick={() => setItens(data)}>Todos</li>
+                            <li onClick={() => filtraFotos("site")}>Site</li>
+                            <li onClick={() => filtraFotos("digital")}>Produto digital</li>
+                            <li onClick={() => filtraFotos("marca")}>Marca</li>
+                        </ol>
+
+                    </div>
+                    <div className="filtro-mobile" onClick={verificaMenu}>
+                        <img src={filtro} alt="filtro dos cases" />
                     </div>
 
-                    <ol className="filtros">
-                        <li onClick={() => setItens(data)}>Todos</li>
-                        <li onClick={() => filtraFotos("site")}>Site</li>
-                        <li onClick={() => filtraFotos("digital")}>Produto digital</li>
-                        <li onClick={() => filtraFotos("marca")}>Marca</li>
-                    </ol>
+                    </div>
+                   
 
                 </div>
-                <div className="filtro-mobile" onClick={verificaMenu}>
-                    <img src={filtro} alt="filtro dos cases" />
-                </div>
+
+
+
                 <div className="menu-open-mobile-black"></div>
+
+
                 <div className="all-cases-container" style={{ display: "grid", ...gridStyle }}>
                     {
                         currentItens?.map((a) => (
