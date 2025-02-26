@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './abouthome.css'
+import { useLocation } from 'react-router-dom';
 
 export default function AboutHome() {
+    const location = useLocation();
+    useEffect(() => {
+
+    })
     return (
 
-        <section className='container-about'>
+        <section className={location.pathname == '/about' ? ' container-about container-about-ab ' : 'container-about'}>
             <div className='grid-global'>
-                <div className='container-manifesto'>
+                <div className={location.pathname == '/about' ? 'container-manifesto container-manifesto-ab' : 'container-manifesto'}>
                     <div className='manifesto'>
                         <h2>[ NOSSO MANIFESTO ]</h2>
                     </div>

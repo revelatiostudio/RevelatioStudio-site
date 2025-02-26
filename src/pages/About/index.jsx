@@ -17,6 +17,7 @@ import Destaques from './componentesAbout/Destaques'
 import Principios from './componentesAbout/Principios'
 import BottomHome from '../Home/componentesHome/BottomHome'
 import Transition from '../../transition'
+import AboutHome from '../Home/componentesHome/AboutHome'
 
 
 
@@ -43,7 +44,7 @@ const About = () => {
 
         </div>
       </header>
-
+      <AboutHome/>
       <Fundadores />
       <RoletaScroll />
       <ProjectsFeedBack />

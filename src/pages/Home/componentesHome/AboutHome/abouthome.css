@@ -1,3 +1,13 @@
+/* Quando estamos na rota 'about' */
+
+.container-about.container-about-ab{
+    background-color: var(--color-white);
+}
+.container-manifesto.container-manifesto-ab{
+    justify-content: end;
+    margin-right: 75px;
+}
+
 .container-about{
     width: 100%;
     background-color: var(--color-bege);
@@ -40,10 +50,11 @@
 }
 
 .squares{
-    width: 110%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 7.1875rem;
+    gap: 3.1875rem;
     
 }
 
@@ -116,8 +127,12 @@
         margin-top: 3.75rem;
     }
     .square-one, .square-two{
-        padding-top: 1.0313rem;
+        padding-top: 16.5008px;
     }
+    .square-one{
+        margin-bottom: 0;
+    }
+
     .square-one p, .square-two p{
         font-size: 14px;
     }
