@@ -26,25 +26,25 @@ const About = () => {
     <>
       <header>
         <div className='grid-global'>
-          <div className='aa'>
-            <div className='about-us'>
-              <div className='about-text-page'>
-                <h1>Sobre nós</h1>
-              </div>
-              <div className='about-right'>
-                <h2>Somos uma boutique de design focada <br />
-                  em soluções de <span>branding & tecnologia</span> <br /> para empresas em crescimento.</h2>
-              </div>
 
+          <div className='about-us'>
+            <div className='about-text-page'>
+              <h1>Sobre nós</h1>
             </div>
+            <div className='about-right'>
+              <h2>Somos uma boutique de design focada <br />
+                em soluções de <span>branding & tecnologia</span> <br /> para empresas em crescimento.</h2>
+            </div>
+
           </div>
+
         </div>
         <div className='img-about'>
           <img src={about_img} alt='' />
 
         </div>
       </header>
-      <AboutHome/>
+      <AboutHome />
       <Fundadores />
       <RoletaScroll />
       <ProjectsFeedBack />

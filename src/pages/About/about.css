@@ -63,7 +63,15 @@
 
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .about-us{
+        flex-direction: column;
+        align-items: start;
+    }
+    .about-right{
+        text-align: start;
+    }
+}
 
 @media(max-width: 600px) {
     .about-us h1{
@@ -73,7 +81,7 @@
         font-size: 18px;
     }
     .about-right {
-        padding-top: 15rem;
+        padding-top: 1rem;
     }
 
 }
