@@ -105,6 +105,11 @@
     .square-one{
         margin-bottom: 3.125rem;
     }
+    .container-manifesto.container-manifesto-ab{
+        justify-content: start;
+        margin-right: 0;
+    }
+    
 }
 
 @media(max-width: 600px) {
