@@ -14,10 +14,10 @@ import ProjectsFeedBack from './componentesAbout/ProjectsFeedBack'
 import InfinitTimeLine from '../../componentes/InfinitTimeLine'
 import Ambiente from '../../componentes/ambiente/Ambiente'
 import Destaques from './componentesAbout/Destaques'
-import Principios from './componentesAbout/Principios'
 import BottomHome from '../Home/componentesHome/BottomHome'
 import Transition from '../../transition'
 import AboutHome from '../Home/componentesHome/AboutHome'
+import Clientes from './componentesAbout/Principios'
 
 
 
@@ -48,13 +48,13 @@ const About = () => {
       <Fundadores />
       <RoletaScroll />
       <ProjectsFeedBack />
-      <InfinitTimeLine />
+      <Clientes/>
+      {/* <InfinitTimeLine /> */}
       <Ambiente color='white' />
       <Destaques />
       <section className='blour-image'>
         <img src={img_blour} alt='imagem com blour' />
       </section>
-      <Principios />
       <BottomHome />
 
 
