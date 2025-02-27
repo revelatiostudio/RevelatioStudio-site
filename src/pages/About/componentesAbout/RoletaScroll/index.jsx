@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import './roletaScroll.css'
 
+import gradiente from '../../../../assets/img/home/gradiente-2.png'
+
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -186,7 +188,9 @@ export default function RoletaScroll() {
               </div>
 
               <div className='middle-roulette'>
-                <div className='container-blur'></div>
+                <div className='container-blur'>
+                  <img src={gradiente} alt='gradiente' />
+                </div>
                 {
                   lugares.map((lugar, index) => (
                     <div className='country' key={lugar.estado} ref={(el) => itemsRef.current[index] = el}>
@@ -198,7 +202,9 @@ export default function RoletaScroll() {
                 }
 
 
-                <div className='container-blur bottom'></div>
+                <div className='container-blur bottom'>
+                  <img src={gradiente} alt='gradiente' />
+                </div>
 
 
               </div>

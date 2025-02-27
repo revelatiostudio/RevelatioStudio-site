@@ -43,7 +43,7 @@
     width: 100%;
     height: 30vh;
     position: absolute;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     z-index: 2;
     top: 0;
     
@@ -52,6 +52,9 @@
 .container-blur.bottom{
     top: auto; 
     bottom: 0;
+}
+.container-blur.bottom img{
+    transform: rotate(180deg)
 }
 /* meio da roleta */
 
