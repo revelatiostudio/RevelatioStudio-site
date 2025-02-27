@@ -1,5 +1,8 @@
 import React, { useRef } from 'react'
 import './clientes.css'
+import ibm from '../../../../assets/img/about/clientes/ibm-logo.svg'
+import navigator from '../../../../assets/img/about/clientes/navigator-logo.svg'
+import unileven from '../../../../assets/img/about/clientes/unileven-logo.svg'
 
 
 
@@ -28,7 +31,51 @@ export default function Clientes() {
                 </div>
 
                 <div className='grid-clients'>
-
+                    <div className='grid-item'>
+                        <img src={unileven} alt='unileven-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={navigator} alt='navigator-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={unileven} alt='unileven-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={navigator} alt='navigator-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={unileven} alt='unileven-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={navigator} alt='navigator-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={unileven} alt='unileven-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={navigator} alt='navigator-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={unileven} alt='unileven-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={navigator} alt='navigator-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={unileven} alt='unileven-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={navigator} alt='navigator-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={unileven} alt='unileven-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={navigator} alt='navigator-logo' />
+                    </div>
+                    <div className='grid-item'>
+                        <img src={unileven} alt='unileven-logo' />
+                    </div>
                 </div>
             </div>
         </section>
