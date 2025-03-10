@@ -265,6 +265,10 @@ const CaseUnico = () => {
         const categories = new SplitType(".category-bottom h3", { types: 'words' })
         const eachCategory = new SplitType(".category-bottom li", { types: 'words' })
 
+        console.log('categories: ',categories)
+        console.log('eachCategory: ',eachCategory)
+
+
         const about = new SplitType(".about-bottom h3", { types: "words" })
         const aboutText = new SplitType(".about-bottom p", { types: "words" })
 
@@ -289,16 +293,23 @@ const CaseUnico = () => {
             }
         })
 
-        tl.fromTo([categories.words, eachCategory.words], {
+        tl.fromTo(eachCategory.words, {  // [categories.words, eachCategory.words]
             yPercent: 200,
             ease: "none"
 
         }, {
             yPercent: 0,
             ease: "power1.out",
-            delay: 1
 
-        }).fromTo(".about-bottom", {
+        },0).fromTo(categories.words, {  // [categories.words, eachCategory.words]
+            yPercent: 200,
+            ease: "none"
+
+        }, {
+            yPercent: 0,
+            ease: "power1.out",
+
+        },0).fromTo(".about-bottom", {
             yPercent: 20,
             opacity: 0
         },{
