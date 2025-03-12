@@ -14,7 +14,16 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 5px 0px;
+    padding: 15px 0px;
+    transition: border 0.5s ease , color 0.5s ease;
+    border-bottom: 1.5px transparent solid;
+    color: rgba(0, 0, 0, 0.40);
+}
+
+.equipe ul li:hover{
+    border-color: var(--color-black);
+    cursor: pointer;
+    color: black;
 }
 .equipe-nome{
     width: 100%;
@@ -23,13 +32,20 @@
     
 }
 .equipe-nome span:nth-child(1){
-    width: 10%;
+    width: 20%;
     text-align: start;
 }
 .equipe-nome span:nth-child(2){
     width: 30%;
     text-align: end;
 }
+.equipe span{
+    font-size: 25.8px;
+    font-weight: 450;
+    line-height: 85%;
+    
+}
+
 .media-container{
     position: absolute;
     width: 15.625rem;

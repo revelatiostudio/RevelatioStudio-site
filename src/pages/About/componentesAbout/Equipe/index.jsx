@@ -9,10 +9,10 @@ export default function Equipe() {
         { numero: 5, nome: "Emilia Revoredo", func: "UX/UI Designer" },
         { numero: 6, nome: "Gabriel Barbosa", func: "Front-End Dev" },
         { numero: 7, nome: "Jeff Marcelo", func: "Front-End Dev" },
-        { numero: 7, nome: "João Dornelas", func: "Back-End Dev" },
-        { numero: 7, nome: "Vinicius Pereira", func: "Full-Stack Dev" },
-        { numero: 7, nome: "Breno Orapacen", func: "Full-Stack Dev" },
-        { numero: 7, nome: "Victoria Xavier", func: "Full-Stack Dev" },
+        { numero: 8, nome: "João Dornelas", func: "Back-End Dev" },
+        { numero: 9, nome: "Vinicius Pereira", func: "Full-Stack Dev" },
+        { numero: 10, nome: "Breno Orapacen", func: "Full-Stack Dev" },
+        { numero: 11, nome: "Victoria Xavier", func: "Full-Stack Dev" },
 
 
 
