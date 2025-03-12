@@ -17,6 +17,7 @@ import BottomHome from '../Home/componentesHome/BottomHome'
 import Transition from '../../transition'
 import AboutHome from '../Home/componentesHome/AboutHome'
 import Clientes from './componentesAbout/Principios'
+import Equipe from './componentesAbout/Equipe'
 
 
 
@@ -45,6 +46,7 @@ const About = () => {
       </header>
       <AboutHome />
       <Fundadores />
+      <Equipe/>
       <RoletaScroll />
       <ProjectsFeedBack />
       <Clientes/>
