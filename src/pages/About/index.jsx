@@ -52,9 +52,6 @@ const About = () => {
       <Clientes/>
       <Ambiente color='white' />
       <Destaques />
-      <section className='blour-image'>
-        <img src={img_blour} alt='imagem com blour' />
-      </section>
       <BottomHome />
 
 

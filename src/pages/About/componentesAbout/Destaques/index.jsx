@@ -137,7 +137,7 @@ export default function Destaques() {
                             <img src={dca} alt='' />
                             <p></p>
                             <p>WBDS</p>
-                            <p>...</p>
+                            <p>Listado</p>
                             <p>Branding</p>
                             <p>2024</p>
                         </div>
