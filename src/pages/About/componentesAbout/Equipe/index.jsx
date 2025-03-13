@@ -49,18 +49,17 @@ export default function Equipe() {
             let div = document.createElement("div")
             let image = document.createElement("img")
 
-            image.src = mediasUrl[index] // Url corresponding to the index parameter
+            image.src = mediasUrl[index] 
 
-            div.appendChild(image) // The created image becomes the child of div
-            mediaContainer.appendChild(div) // The div created becomes the child of media-container
+            div.appendChild(image) 
+            mediaContainer.appendChild(div)
 
             gsap.to([div, image], {
-                y: 0, // Move both elements to 0
-                duration: 0.6, // During 0.6s
-                ease: 'expo.inOut' // With an expo ease
+                y: 0, 
+                duration: 0.6, 
+                ease: 'expo.inOut' 
             })
             if (mediaContainer.children.length > 20) {
-                // I target the first image in the container and remove it from the DOM
                 mediaContainer.children[0].remove()
             }
         }
@@ -69,15 +68,12 @@ export default function Equipe() {
         })
 
         listElement.addEventListener('mouseenter', () => {
-            // I display the container on hover of the list
             mediaContainer.classList.add('on')
         })
 
         listElement.addEventListener('mouseleave', () => {
-            // I hide the container
             mediaContainer.classList.remove('on')
 
-            // I empty the content of media-container
             Array.from(mediaContainer.children).forEach(el => {
                 el.remove()
             })
@@ -85,10 +81,9 @@ export default function Equipe() {
 
         gsap.set(mediaContainer, { yPercent: -80 })
 
-        // yTo is attached to the y property of media-container
         const yTo = gsap.quickTo(mediaContainer, 'y', {
-            duration: 0.5, // duration of the update of the y value
-            ease: 'power4' // non-linear update
+            duration: 0.5, 
+            ease: 'power4' 
         })
 
       
