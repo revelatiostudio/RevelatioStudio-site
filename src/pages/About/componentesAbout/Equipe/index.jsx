@@ -5,6 +5,22 @@ import { useGSAP } from '@gsap/react';
 import carol from '../../../../assets/img/time-revelatio/carol.png'
 import pedro from '../../../../assets/img/time-revelatio/pedro.png'
 import rebeca from '../../../../assets/img/time-revelatio/rebeca.png'
+import caio from '../../../../assets/img/time-revelatio/caio.png'
+import emilia from '../../../../assets/img/time-revelatio/emilia.png'
+import gabriel from '../../../../assets/img/time-revelatio/gabriel.png'
+import jeff from '../../../../assets/img/time-revelatio/jeff.png'
+import joao from '../../../../assets/img/time-revelatio/joao.png'
+import vinicius from '../../../../assets/img/time-revelatio/vinicius.png'
+import breno from '../../../../assets/img/time-revelatio/breno.png'
+import victoria from '../../../../assets/img/time-revelatio/victoria.png'
+
+
+
+
+
+
+
+
 import { useEffect, useRef } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -139,6 +155,14 @@ export default function Equipe() {
                 <img src={pedro} alt="" />
                 <img src={carol} alt='' />
                 <img src={rebeca} alt="" />
+                <img src={caio} alt="" />
+                <img src={emilia} alt="" />
+                <img src={gabriel} alt="" />
+                <img src={jeff} alt="" />
+                <img src={joao} alt="" />
+                <img src={vinicius} alt="" />
+                <img src={breno} alt="" />
+                <img src={victoria} alt="" />
 
             </div>
             <div className='media-container'></div>
