@@ -48,6 +48,12 @@ export default function Equipe() {
                 createMedia(index)
             })
         })
+        listElement.addEventListener('mouseleave', () => {
+            mediaContainer.classList.remove('on') // I hide the container
+            Array.from(mediaContainer.children).forEach(el => {
+                el.remove() // I empty the content of media-container
+            })
+        })
         const createMedia = (index) => {
             let div = document.createElement("div")
             let image = document.createElement("img")
@@ -80,29 +86,19 @@ export default function Equipe() {
             })
         })
 
-        gsap.set(mediaContainer, { yPercent: -70 })
+        gsap.set(mediaContainer, { yPercent: -50 })
 
         const yTo = gsap.quickTo(mediaContainer, 'y', {
             duration: 0.5,
             ease: 'power4'
         })
 
-        const scrollTrigger = ScrollTrigger.create({
-            trigger: container,
-            start: "top top", 
-            end: "bottom top", 
-            scrub: true,
-        });
 
         listElement.addEventListener('mousemove', (e) => {
-            const relativeScroll = Math.round(scrollTrigger.progress * 10) * 100; 
-            console.log(relativeScroll)
-            const adjustedY = e.clientY + relativeScroll;
-            yTo(adjustedY);
+            const rect = container.getBoundingClientRect();
+            const adjustedY = e.clientY - rect.top; 
+            yTo(adjustedY * 0.85);
         })
-
-
-
 
 
     }, [])
