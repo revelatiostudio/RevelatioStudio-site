@@ -1,6 +1,6 @@
 .sec-equipe{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     margin-top: 100px;
     padding-top: 216px;
     position: relative;
@@ -57,8 +57,8 @@
 
 .media-container{
     position: absolute;
-    width: 15.625rem;
-    height: 22rem;
+    width: 15vw;
+    height: 20vw;
     top: 0;
     right: 65%;
     overflow: hidden;
@@ -100,4 +100,66 @@
     position: absolute;
     visibility: hidden;
     pointer-events: none;
+}
+
+/* responsivo medias */
+
+@media(max-width: 1400px) {}
+
+@media(max-width: 1280px) {
+    .equipe span{
+        font-size: 20px;
+    }
+    .equipe ul li{
+        padding: 10px 0px;
+    }
+}
+
+@media(max-width: 1200px) {}
+
+@media(max-width: 991px) {
+    .media-container{
+        right: 63%;
+    }
+    .sec-equipe{
+        width: 100%;
+        min-height: 100vh;
+        margin-top: 200px;
+        padding-top: 0px;
+        position: relative;
+    }
+}
+
+@media(max-width: 800px) {
+    .media-container{
+        width: 18vw;
+        height: 26vw;
+    }
+}
+
+@media(max-width: 600px) {
+    .equipe span{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 480px) {
+    .equipe span{
+        font-size: 14px;
+    }
+    .equipe-nome span:nth-child(1){
+        width: 30%;
+    }
+    .media-container{
+        right: 65%;
+    }
+    .sec-equipe {
+        margin-top: 100px;
+        min-height: 0;
+        height: 100%;
+        margin-bottom: 100px;
+    }
+}
+@media(max-width: 390px){
+   
 }

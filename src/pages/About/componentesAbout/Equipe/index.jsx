@@ -112,8 +112,9 @@ export default function Equipe() {
 
         listElement.addEventListener('mousemove', (e) => {
             const rect = container.getBoundingClientRect();
-            const adjustedY = e.clientY - rect.top; 
-            yTo(adjustedY * 0.85);
+            const ajuste = window.innerWidth < 480 ? 1 : 0.85
+            const adjustedY = e.clientY - (rect.top * ajuste); 
+            yTo(adjustedY );
         })
 
 
