@@ -6,11 +6,12 @@ import carol from '../../../../assets/img/time-revelatio/carol.png'
 import pedro from '../../../../assets/img/time-revelatio/pedro.png'
 import rebeca from '../../../../assets/img/time-revelatio/rebeca.png'
 import { useEffect, useRef } from 'react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 
 export default function Equipe() {
-    gsap.registerPlugin(useGSAP)
+    gsap.registerPlugin(useGSAP, ScrollTrigger)
     const mediasUrl = []
 
     const time = [
@@ -30,10 +31,12 @@ export default function Equipe() {
 
     ]
 
+
     useEffect(() => {
         const listElement = root.querySelector('.equipe ul')
         const rows = listElement.querySelectorAll('li')
         const mediaContainer = root.querySelector('.media-container')
+        const container = document.querySelector('.sec-equipe')
 
         document.querySelectorAll(".medias img").forEach(img => {
             mediasUrl.push(img.getAttribute('src'))
@@ -49,23 +52,21 @@ export default function Equipe() {
             let div = document.createElement("div")
             let image = document.createElement("img")
 
-            image.src = mediasUrl[index] 
+            image.src = mediasUrl[index]
 
-            div.appendChild(image) 
+            div.appendChild(image)
             mediaContainer.appendChild(div)
 
             gsap.to([div, image], {
-                y: 0, 
-                duration: 0.6, 
-                ease: 'expo.inOut' 
+                y: 0,
+                duration: 0.6,
+                ease: 'expo.inOut'
             })
             if (mediaContainer.children.length > 20) {
                 mediaContainer.children[0].remove()
             }
         }
-        listElement.addEventListener('mousemove', (e) => {
-            yTo(e.clientY )
-        })
+
 
         listElement.addEventListener('mouseenter', () => {
             mediaContainer.classList.add('on')
@@ -79,14 +80,29 @@ export default function Equipe() {
             })
         })
 
-        gsap.set(mediaContainer, { yPercent: -80 })
+        gsap.set(mediaContainer, { yPercent: -70 })
 
         const yTo = gsap.quickTo(mediaContainer, 'y', {
-            duration: 0.5, 
-            ease: 'power4' 
+            duration: 0.5,
+            ease: 'power4'
         })
 
-      
+        const scrollTrigger = ScrollTrigger.create({
+            trigger: container,
+            start: "top top", 
+            end: "bottom top", 
+            scrub: true,
+        });
+
+        listElement.addEventListener('mousemove', (e) => {
+            const relativeScroll = Math.round(scrollTrigger.progress * 10) * 100; 
+            console.log(relativeScroll)
+            const adjustedY = e.clientY + relativeScroll;
+            yTo(adjustedY);
+        })
+
+
+
 
 
     }, [])
