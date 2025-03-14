@@ -159,6 +159,9 @@
         height: 100%;
         margin-bottom: 100px;
     }
+    .equipe-nome span:nth-child(2) {
+        width: 35%;
+    }
 }
 @media(max-width: 390px){
    
