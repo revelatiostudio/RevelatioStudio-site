@@ -16,7 +16,7 @@ import Destaques from './componentesAbout/Destaques'
 import BottomHome from '../Home/componentesHome/BottomHome'
 import Transition from '../../transition'
 import AboutHome from '../Home/componentesHome/AboutHome'
-import Clientes from './componentesAbout/Principios'
+import Clientes from './componentesAbout/Clientes'
 import Equipe from './componentesAbout/Equipe'
 
 
