@@ -164,5 +164,7 @@
     }
 }
 @media(max-width: 390px){
-   
+    .media-container{
+        right: 68%;
+    }
 }
