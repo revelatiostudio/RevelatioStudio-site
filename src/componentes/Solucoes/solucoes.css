@@ -11,11 +11,12 @@
     align-items: end;
 }
 
-.herofirst h1 {
+.herofirst h1 , .herosecond h1{
     font-size: 88px;
     font-weight: 450;
     line-height: 100%;
     color: var(--color-white);
+    font-family: "neue-haas-grotesk-display"
 }
 
 /* texto da esquerda */
@@ -31,8 +32,8 @@
 
 .right_part_solucoes {
     width: 100%;
-    max-width: 592px;
-    height: 120px;
+    max-width: 37rem;
+    height: 7.5rem;
     color: var(--color-gray-900);
 }
 .time_text{
@@ -97,12 +98,7 @@
 
 }
 
-.herosecond h1 {
-    font-size: 88px;
-    font-weight: 500;
-    line-height: 100%;
-    color: var(--color-white);
-}
+
 
 /* parte final  */
 .herofinal {
