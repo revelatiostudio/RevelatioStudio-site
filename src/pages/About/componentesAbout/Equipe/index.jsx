@@ -7,16 +7,16 @@ import pedro from '../../../../assets/img/time-revelatio/pedro.png'
 import rebeca from '../../../../assets/img/time-revelatio/rebeca.png'
 import caio from '../../../../assets/img/time-revelatio/caio.png'
 import emilia from '../../../../assets/img/time-revelatio/emilia.png'
+import xico from '../../../../assets/img/time-revelatio/xico.png'
+import kae from '../../../../assets/img/time-revelatio/kae.png'
 import gabriel from '../../../../assets/img/time-revelatio/gabriel.png'
 import jeff from '../../../../assets/img/time-revelatio/jeff.png'
 import joao from '../../../../assets/img/time-revelatio/joao.png'
 import vinicius from '../../../../assets/img/time-revelatio/vinicius.png'
 import breno from '../../../../assets/img/time-revelatio/breno.png'
-import victoria from '../../../../assets/img/time-revelatio/victoria.png'
-
-
-
-
+import maike from '../../../../assets/img/time-revelatio/maike.png'
+import luan from '../../../../assets/img/time-revelatio/luan.png'
+import klayton from '../../../../assets/img/time-revelatio/klayton.png'
 
 
 
@@ -36,12 +36,19 @@ export default function Equipe() {
         { numero: 3, nome: "Rebeca Liberal", func: "UX/UI Designer" },
         { numero: 4, nome: "Caio Lopes", func: "UX/UI Designer" },
         { numero: 5, nome: "Emilia Revoredo", func: "UX/UI Designer" },
-        { numero: 6, nome: "Gabriel Barbosa", func: "Front-End Dev" },
-        { numero: 7, nome: "Jeff Marcelo", func: "Front-End Dev" },
-        { numero: 8, nome: "João Dornelas", func: "Back-End Dev" },
-        { numero: 9, nome: "Vinicius Pereira", func: "Full-Stack Dev" },
-        { numero: 10, nome: "Breno Orapacen", func: "Full-Stack Dev" },
-        { numero: 11, nome: "Victoria Xavier", func: "Full-Stack Dev" },
+        { numero: 6, nome: "Xico Libório", func: "Strategist & Brand Designer" },
+        { numero: 7, nome: "Kaê Leone", func: "Strategist & Brand Designer" },
+        { numero: 8, nome: "Gabriel Barbosa", func: "Front-End Dev" },
+        { numero: 9, nome: "Jeff Marcelo", func: "Front-End Dev" },
+        { numero: 10, nome: "João Dornelas", func: "Back-End Dev" },
+        { numero: 11, nome: "Vinicius Pereira", func: "Full-Stack Dev" },
+        { numero: 12, nome: "Breno Orapacen", func: "Full-Stack Dev" },
+        { numero: 13, nome: "Maike Menezes", func: "Full-Stack Dev" },
+        { numero: 14, nome: "Luan Leite", func: "Illustrator" },
+        { numero: 15, nome: "Klayton Fadul", func: "Motion Designer" },
+
+
+
 
 
 
@@ -158,13 +165,16 @@ export default function Equipe() {
                 <img src={rebeca} alt="" />
                 <img src={caio} alt="" />
                 <img src={emilia} alt="" />
+                <img src={xico} alt="" />
+                <img src={kae} alt="" />
                 <img src={gabriel} alt="" />
                 <img src={jeff} alt="" />
                 <img src={joao} alt="" />
                 <img src={vinicius} alt="" />
                 <img src={breno} alt="" />
-                <img src={victoria} alt="" />
-
+                <img src={maike} alt="" />
+                <img src={luan} alt="" />
+                <img src={klayton} alt="" />
             </div>
             <div className='media-container'></div>
         </section>

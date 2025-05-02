@@ -1,6 +1,6 @@
 .sec-equipe{
     width: 100%;
-    height: 100vh;
+    
     margin-top: 100px;
     padding-top: 216px;
     position: relative;
@@ -116,6 +116,17 @@
 }
 
 @media(max-width: 1200px) {}
+@media(max-width: 800px) {
+    /* .equipe-nome{
+        height: 40px;
+    } */
+    .equipe ul li{
+        height: 50px;
+    }
+    .sec-equipe{
+        height: 120vh;
+    }
+}
 
 @media(max-width: 991px) {
     .media-container{
@@ -151,7 +162,7 @@
         width: 30%;
     }
     .media-container{
-        right: 65%;
+        right: 68%;
     }
     .sec-equipe {
         margin-top: 100px;
@@ -161,6 +172,9 @@
     }
     .equipe-nome span:nth-child(2) {
         width: 35%;
+    }
+    .equipe ul li{
+        height: 40px;
     }
 }
 @media(max-width: 390px){
