@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/grid';
-import { Navigation, Grid, FreeMode, Pagination } from 'swiper/modules'
+import { FreeMode, Pagination, Autoplay } from 'swiper/modules'
 
 import video1 from '../../assets/videos/nossoAmbiente/video1.mp4'
 import video2 from '../../assets/videos/nossoAmbiente/video2.mp4'
@@ -28,6 +28,10 @@ export default function Ambiente({color = 'black'}) {
     { id: '6', image: video6 },
     { id: '7', image: video1 },
     { id: '8', image: video2 },
+    { id: '9', image: video3 },
+    { id: '10', image: video4 },
+    { id: '11', image: video5 },
+    { id: '12', image: video6 },
   ]
   return (
     <section className={`container_ambiente ${color}`}>
@@ -37,12 +41,15 @@ export default function Ambiente({color = 'black'}) {
           <Swiper
             slidesPerView={1.2}
             spaceBetween={30}
-            freeMode={true}
-            modules={[FreeMode, Pagination]}
-            autoHeight={false}
-            pagination={{
-              clickable: true,
+            loop = {true}
+            allowTouchMove={false}
+            loopedSlides={videos.length}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false
             }}
+            speed={6000}
+            modules={[Autoplay]}
             breakpoints={{
               480:{
                 slidesPerView: 1.2
@@ -61,7 +68,7 @@ export default function Ambiente({color = 'black'}) {
               },
               1200:{
                 spaceBetween: 10,
-                slidesPerView: 3.5
+                slidesPerView: 3.7
               }
               
             }}
@@ -71,8 +78,8 @@ export default function Ambiente({color = 'black'}) {
             {
               
               videos.map((video) => (
-                <SwiperSlide key={video.id}>
-                    <video autoPlay loop muted playsInline>
+                <SwiperSlide key={video.id} >
+                    <video autoPlay muted playsInline>
                       <source src={video.image} type='video/mp4'/>
                     </video>
                   </SwiperSlide>

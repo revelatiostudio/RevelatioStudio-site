@@ -43,11 +43,23 @@
     align-items: center;
 }
 
-.swiper-slide video {
+/* .swiper-slide video {
     width: 100%;
     max-width: 31.25rem;
     height: 50rem;
-}
+} */
+.swiper-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .swiper-wrapper {
+    -webkit-transition-timing-function:linear!important; 
+    -o-transition-timing-function:linear!important;
+    transition-timing-function:linear!important; 
+  }
 
 /* responsivo medias */
 
