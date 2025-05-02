@@ -32,11 +32,11 @@ export default function NossoUniverso() {
         })
 
         tl.to(title.chars, {
-            letterSpacing: "5px",
+            letterSpacing: "1px",
             duration: 3,
             ease: "none",
         }).to(".container-nosso-universo h1", {
-            transformOrigin: "48.2% 50%",
+            transformOrigin: "49.3% 50%",
             scale: window.innerWidth <= 1920 ? 700 : 1000,
             stagger: 0.25,
             duration: 2,
@@ -72,11 +72,11 @@ export default function NossoUniverso() {
         })
 
         tl.to(title.chars, {
-            letterSpacing: "5px",
+            letterSpacing: "1px",
             duration: 3,
             ease: "none",
         }, 0).to(".container-nosso-universo h1", {
-            transformOrigin: "48% 50%",
+            transformOrigin: "49% 50%",
             scale: 500,
             duration: 2,
             fontSize: "52px",
@@ -108,7 +108,7 @@ export default function NossoUniverso() {
         })
 
         tl.to(title.chars, {
-            letterSpacing: "5px",
+            letterSpacing: "1px",
             duration: 3,
             ease: "none",
         }, 0)
