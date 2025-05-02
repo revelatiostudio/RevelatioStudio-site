@@ -59,7 +59,7 @@ export default function ideias({ color = 'black-ideias' }) {
                             <h2>01</h2>
                         </div>
                         <div className='options-text'>
-                        {window.innerWidth >= 400 ? (
+                        {window.innerWidth >= 450 ? (
                              <h1>Ideias & Estratégia</h1>
                            ): (
                             <h1>Ideias & <br></br> Estratégia</h1>
@@ -171,7 +171,7 @@ export default function ideias({ color = 'black-ideias' }) {
                             <h2>02</h2>
                         </div>
                         <div className='options-text'>
-                           {window.innerWidth >= 400 ? (
+                           {window.innerWidth >= 450 ? (
                              <h1>Criação & Design</h1>
                            ): (
                             <h1>Criação & <br></br> Design</h1>
@@ -310,7 +310,7 @@ export default function ideias({ color = 'black-ideias' }) {
                             <h2>03</h2>
                         </div>
                         <div className='options-text'>
-                        {window.innerWidth >= 400 ? (
+                        {window.innerWidth >= 450 ? (
                              <h1>Desenvolvimento</h1>
                            ): (
                             <h1>Desenvol- <br></br>vimento</h1>

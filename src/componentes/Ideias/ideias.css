@@ -300,6 +300,13 @@
     }
 }
 
-@media(max-width:370px){}
+@media(max-width:370px){
+    .sections h1{
+        font-size: 16px;
+    }
+    .options-list.options p{
+        font-size: 11px;
+    }
+}
 
 
