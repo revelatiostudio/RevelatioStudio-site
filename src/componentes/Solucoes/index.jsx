@@ -130,7 +130,11 @@ export default function Solucoes() {
     }
 
     function createTextAnimation() {
-        const splitTypes = document.querySelectorAll('.studio_left .text-block')
+        if(window.innerWidth >= 1150){
+            var splitTypes = document.querySelectorAll('.studio_left .text-block')
+        }else {
+            var splitTypes = document.querySelectorAll('.studio-res')
+        }
 
         splitTypes.forEach((char, i) => {
 

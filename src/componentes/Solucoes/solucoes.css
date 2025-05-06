@@ -273,8 +273,9 @@
         display: none;
     }
     .studio_left.studio-res{
-        display: block;
+        display: flex;
         padding-top: 40px;
+        flex-direction: column;
     }
 }
 
