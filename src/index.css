@@ -29,6 +29,9 @@
   --color-black: #000000;
   --color-bege: #EEEEEE
 }
+.target {
+  font-kerning: none;
+}
 
 img {
   width: 100%;

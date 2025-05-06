@@ -12,6 +12,8 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from 'react-router-dom'
 
+import SplitType from 'split-type'
+
 export default function Solucoes() {
 
     const [horaRecife, setHoraRecife] = useState('');
@@ -40,11 +42,6 @@ export default function Solucoes() {
         tiraBlour();
 
     })
-
-
-
-
-
 
 
     const obterHoraRecife = () => {
@@ -105,6 +102,63 @@ export default function Solucoes() {
 
     }, [horaRecife])
 
+    useEffect(() => {
+        createIntro()
+        createTextAnimation()
+    })
+
+    function createIntro() {
+
+        const title1 = new SplitType(".left_text h1", { types: "words, chars"})
+        const title2 = new SplitType(".herosecond h1", { types: "words, chars"})
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".herofirst",
+                start: "top bottom-=200",
+                markers: false
+
+            }
+        })
+        tl.fromTo([title1.chars, title2.chars], {
+            yPercent: 100,
+            ease: "none"
+        }, {
+            yPercent: 0,
+            ease: "power1.out",
+
+        })
+    }
+
+    function createTextAnimation() {
+        const splitTypes = document.querySelectorAll('.studio_left .text-block')
+
+        splitTypes.forEach((char, i) => {
+
+            const text = new SplitType(char, { types: "words, chars" })
+
+            const bg = char.dataset.bgColor
+            const fg = char.dataset.fgColor
+
+            gsap.fromTo(text.chars,
+                {
+                color: bg,
+                },{
+                    color: fg,
+                    duration: 0.3,
+                    stagger: 0.02,
+                    scrollTrigger: {
+                        trigger: char,
+                        start: 'top 80%',
+                        end: 'top 20%',
+                        scrub: true,
+                        markers: false,
+                        toggleActions: 'play play reverse reverse'
+                    },
+                   
+                })
+        })
+    }
+
 
     return (
         <section className='container-solucoes'>
@@ -142,7 +196,7 @@ export default function Solucoes() {
                             <p>para mostrar pro mundo ao que vieram. </p>
 
 
-                            <div className='studio_left studio-res'>
+                            <div className='studio_left studio-res' data-bg-color="#666666" data-fg-color="white">
                                 <p className='p1'>Temos voracidade criativa e estratégica,</p>
                                 <p>concebendo cada entrega de modo único,</p>
                                 <p>entendendo a fundo as singularidades e</p>
@@ -159,13 +213,15 @@ export default function Solucoes() {
                         </div>
 
                         <div className='studio_left'>
-                            <p className='p1'>Temos voracidade criativa e estratégica,</p>
-                            <p>concebendo cada entrega de modo único,</p>
-                            <p>entendendo a fundo as singularidades e</p>
-                            <p>necessidades, revelando e dando luz à</p>
-                            <p>propósito, sentido e resultado para as</p>
-                            <p>mais diferentes empresas e modelos de</p>
-                            <p>negócios.</p>
+                            <div className='text-block' data-bg-color="#666666" data-fg-color="white">
+                                <p className='p1'>Temos voracidade criativa e estratégica,</p>
+                                <p>concebendo cada entrega de modo único,</p>
+                                <p>entendendo a fundo as singularidades e</p>
+                                <p>necessidades, revelando e dando luz à</p>
+                                <p>propósito, sentido e resultado para as</p>
+                                <p>mais diferentes empresas e modelos de</p>
+                                <p>negócios.</p>
+                            </div>
                         </div>
 
                     </div>
