@@ -26,7 +26,9 @@ export default function ideias({ color = 'black-ideias' }) {
             ease: "power1.out",
             stagger: 0.03,
             scrollTrigger: {
-                trigger: ".container_ideias"
+                trigger: ".container_ideias",
+                start: "top bottom-=150",
+                markers:false
             }
         })
 
