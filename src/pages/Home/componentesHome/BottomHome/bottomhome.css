@@ -85,6 +85,7 @@
     align-items: center;
     margin-top: 7.25rem;
     padding-bottom: 2.875rem;
+    overflow: hidden;
 }
 .reve-mobile{
     display: none;

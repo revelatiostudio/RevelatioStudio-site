@@ -1,14 +1,41 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './bottomhome.css'
 
 import revelatio from '../../../../assets/img/home/revelatio-bottom.png'
 import { Link } from 'react-router-dom'
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 export default function BottomHome() {
 
+    const finalRef = useRef(null)
+    console.log(finalRef.current)
+
+    useGSAP(() => {
+        bottomImageAnimation()
+    })
+
+    function bottomImageAnimation(){
+
+        gsap.fromTo(".final",{
+            yPercent:100
+        },{
+            yPercent:0,
+            ease: "power1.out",
+            scrollTrigger:{
+                trigger: finalRef.current,
+                start:"bottom+=400 bottom",
+                markers:false
+            }
+
+        })
+
+    }
 
     return (
-        <div className='container_bottom'>
+        <section className='container_bottom' ref={finalRef}>
             <div className='grid-global'>
                 <div className='hero_bottom'>
                     <div className='left_bottom'>
@@ -63,6 +90,6 @@ export default function BottomHome() {
 
             </div>
 
-        </div>
+        </section>
     )
 }
