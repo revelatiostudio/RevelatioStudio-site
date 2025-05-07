@@ -79,7 +79,7 @@ export default function Ambiente({color = 'black'}) {
               
               videos.map((video) => (
                 <SwiperSlide key={video.id} >
-                    <video autoPlay muted playsInline>
+                    <video autoPlay muted playsInline loop >
                       <source src={video.image} type='video/mp4'/>
                     </video>
                   </SwiperSlide>
