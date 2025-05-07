@@ -28,7 +28,7 @@
     height: 151px;
     
 }
-.word{
+.left_text .word, .herosecond .word{
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     line-height: 1.2em;
     overflow: visible;

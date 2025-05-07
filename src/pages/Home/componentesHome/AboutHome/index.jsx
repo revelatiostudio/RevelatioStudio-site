@@ -1,15 +1,63 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './abouthome.css'
 import { useLocation } from 'react-router-dom';
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import SplitType from 'split-type'
+
 export default function AboutHome() {
     const location = useLocation();
-    useEffect(() => {
+    const containerRef = useRef()
 
-    })
+    // gsap.set([".square-one", ".square-two"],{
+    //     opacity:0
+    // })
+    useGSAP(() => {
+        createText()
+        createPTextAnimation()
+    },[])
+    function createText(){
+        const text = new SplitType(".manifesto-text h1", { types: "words, chars"})
+        const tl = gsap.timeline({
+           scrollTrigger:{
+            trigger: containerRef.current,
+            start: "top bottom-=250",
+           }
+        })
+
+        tl.fromTo(text.chars,{
+            yPercent: 500,
+            ease: "none"
+        },{
+            yPercent: 0,
+            ease: "power1.out",
+        })
+    }
+    function createPTextAnimation(){
+        const tl = gsap.timeline({
+            scrollTrigger:{
+                trigger:containerRef.current,
+                start: "top+=200 bottom-=300",
+                markers:false
+            }
+        })
+        tl.fromTo([".square-one", ".square-two"],{
+            yPercent: 20,
+            opacity:0
+        },{
+            yPercent: 0,
+            opacity: 1,
+            ease: "power1.out",
+            delay:0.5
+        })
+
+    }
     return (
 
-        <section className={location.pathname == '/about' ? ' container-about container-about-ab ' : 'container-about'}>
+        <section className={location.pathname == '/about' ? ' container-about container-about-ab ' : 'container-about'} ref={containerRef}>
             <div className='grid-global'>
                 <div className={location.pathname == '/about' ? 'container-manifesto container-manifesto-ab' : 'container-manifesto'}>
                     <div className='manifesto'>
