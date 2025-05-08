@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     margin-top: 10.6875rem;
+    overflow: hidden;
 }
 .header-clients{
     width: 100%;

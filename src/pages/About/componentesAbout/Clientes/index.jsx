@@ -16,23 +16,51 @@ import serur from '../../../../assets/img/about/clientes/serur.svg'
 import singu from '../../../../assets/img/about/clientes/singu.svg'
 import trois from '../../../../assets/img/about/clientes/trois.svg'
 
-
-
-
-
-
-
-
-
-
-
-
-
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 export default function Clientes() {
+    const clientesRef = useRef(null)
+    gsap.registerPlugin(useGSAP)
+    useGSAP(() => {
+        textClients()
+    })
+
+    function textClients(){
+        const tl = gsap.timeline({
+            scrollTrigger:{
+                trigger: clientesRef.current,
+                start: "top bottom-=200",
+                markers:false
+            }
+        })
+        tl.fromTo(".title-clients",{
+            xPercent: -20,
+            opacity:0,
+            ease: "none"
+        },{
+            xPercent: 0,
+            opacity: 1,
+            stagger:0.4,
+            ease: "power1.out",
+        }).fromTo(".text-clients",{
+            xPercent: 20,
+            opacity:0,
+            ease: "none"
+
+        },{
+            xPercent: 0,
+            opacity: 1,
+            stagger:0.4,
+            ease: "power1.out",
+
+        },0)
+    }
+
     return (
-        <section className='clients-container'>
+        <section className='clients-container' ref={clientesRef}>
             <div className='grid-global'>
                 <div className='header-clients'>
                     <div className='title-clients'>
