@@ -35,7 +35,7 @@ const About = () => {
   useGSAP(() => {
     setTimeout(() => {
       createIntroAbout()
-    }, 500)
+    }, 300)
 
   })
 
