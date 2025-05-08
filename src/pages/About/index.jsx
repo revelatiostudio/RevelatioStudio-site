@@ -19,9 +19,49 @@ import AboutHome from '../Home/componentesHome/AboutHome'
 import Clientes from './componentesAbout/Clientes'
 import Equipe from './componentesAbout/Equipe'
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import SplitType from 'split-type'
+
+
 
 
 const About = () => {
+
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+  useGSAP(() => {
+    setTimeout(() => {
+      createIntroAbout()
+    }, 500)
+
+  })
+
+  function createIntroAbout() {
+    const textTitle = new SplitType(".about-text-page h1")
+    const text = new SplitType(".about-right h2")
+    const tl = gsap.timeline()
+
+    tl.fromTo([textTitle.chars, text.chars], {
+      yPercent: 300,
+      ease: "none"
+    }, {
+      yPercent: 0,
+      ease: "power1.out",
+
+    }).fromTo(".img-about", {
+      yPercent: 10,
+      opacity: 0,
+      ease: "none"
+    }, {
+      yPercent: 0,
+      opacity: 1,
+      ease: "power1.out",
+
+    }, 0.5)
+  }
   return (
     <>
       <header>
@@ -46,10 +86,10 @@ const About = () => {
       </header>
       <AboutHome />
       <Fundadores />
-      <Equipe/>
+      <Equipe />
       <RoletaScroll />
       <ProjectsFeedBack />
-      <Clientes/>
+      <Clientes />
       <Ambiente color='white' />
       <Destaques />
       <BottomHome />

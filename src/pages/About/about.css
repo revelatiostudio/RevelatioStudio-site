@@ -10,6 +10,9 @@
     font-weight: 500;
     line-height: 105.6px;
 }
+.about-text-page h1 .word, .about-right h2 .word{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
 .about-us h2{
     font-family: "neue-haas-grotesk-text";
     font-size: 22px;
