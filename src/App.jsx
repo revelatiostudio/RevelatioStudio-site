@@ -43,12 +43,26 @@ function App() {
 
 
 
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 1000)
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     window.scrollTo(0, 0);
+  //   }, 1000)
 
-  }, [location]);
+  // }, [location]);
+
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      const timeout = setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "auto" });
+      }, 500);
+  
+      return () => clearTimeout(timeout); 
+    }, [pathname]);
+  
+    return null;
+  }
 
 
 
@@ -60,6 +74,7 @@ function App() {
       </div>
 
       <ReactLenis root options={{autoRaf:false, smoothWheel: true}} ref={lenisRef}>
+        <ScrollToTop/>
         <AnimatePresence mode='wait'>
           <Routes location={location} key={location.pathname}>
             <Route path='/' element={<Home />} />

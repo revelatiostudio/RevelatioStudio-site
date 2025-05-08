@@ -34,6 +34,7 @@ export default function BottomHome() {
 
     }
 
+
     return (
         <section className='container_bottom' ref={finalRef}>
             <div className='grid-global'>
