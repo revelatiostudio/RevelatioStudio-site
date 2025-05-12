@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './home.css'
 
 import Solucoes from '../../componentes/Solucoes'
@@ -18,10 +18,24 @@ import ScrollCases from './componentesHome/ScrollCases'
 import Transition from '../../transition'
 import NossoUniverso from './componentesHome/NossoUniverso'
 
+import logo from '../../assets/img/home/logo.svg'
+import logoCinza from '../../assets/img/home/preloader/logo-cinza.svg'
+
+import revelatioCinza from '../../assets/img/home/preloader/revelatio-cinza.svg'
+import revelatioBranco from '../../assets/img/home/preloader/revelatio-branco.svg'
+
+
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react'
+
+let isInitialLoad = true;
+
 const Home = () => {
+  gsap.registerPlugin(useGSAP)
   const [horaRecife, setHoraRecife] = useState('');
   const [horaLocal, setHoraLocal] = useState('');
   const [idioma, setIdioma] = useState('')
+  const [showPreloader, setShowPreloader] = useState(isInitialLoad);
 
 
 
@@ -85,6 +99,53 @@ const Home = () => {
   }, [horaRecife])
 
 
+  useEffect(() => {
+    return () => {
+      isInitialLoad = false;
+    };
+  }, []);
+
+
+
+  useGSAP(() => {
+    createPreLoader();
+
+  }, { dependencies: [showPreloader] });
+
+  function createPreLoader() {
+
+    if (showPreloader) {
+
+
+
+
+      const tl = gsap.timeline({
+        onComplete: () => setShowPreloader(false),
+      })
+
+      tl.fromTo(".image-overlay img", {
+        yPercent: 150,
+        ease: "power1.inOut",
+      }, {
+        yPercent: 0,
+        ease: "power1.inOut",
+
+      }).to(".image-branca", {
+        clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)",
+        ease: "power1.inOut",
+        duration: 1
+      }, 0.5).to(".overlay", {
+        yPercent: -100,
+        duration: 1.5,
+        ease: "power3.inOut",
+      })
+    }
+
+
+  }
+
+
+
 
 
 
@@ -140,6 +201,21 @@ const Home = () => {
 
         </div>
 
+
+        {showPreloader &&
+          <div className='overlay'>
+            <div className='image-overlay'>
+              <div className='over-image'>
+                <img src={revelatioCinza} alt='' />
+                <img className='image-branca' src={revelatioBranco} alt='' />
+              </div>
+
+            </div>
+
+          </div>
+        }
+
+
       </section>
       <Solucoes />
       <Services />
@@ -147,7 +223,7 @@ const Home = () => {
       <AboutHome />
       <Ideias />
       <NossoUniverso />
-      <Ambiente />
+      {/* <Ambiente /> */}
       <BottomHome />
 
     </section>
