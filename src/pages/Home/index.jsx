@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import './home.css'
 
 import Solucoes from '../../componentes/Solucoes'
@@ -27,6 +27,7 @@ import revelatioBranco from '../../assets/img/home/preloader/revelatio-branco.sv
 
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react'
+import CustomEase from "gsap/CustomEase";
 
 let isInitialLoad = true;
 
@@ -36,6 +37,14 @@ const Home = () => {
   const [horaLocal, setHoraLocal] = useState('');
   const [idioma, setIdioma] = useState('')
   const [showPreloader, setShowPreloader] = useState(isInitialLoad);
+
+    useLayoutEffect(() => {
+    gsap.registerPlugin(CustomEase);
+    CustomEase.create(
+      "hop-main",
+      "M0,0 C0.354,0 0.464,0.133 0.498,0.502 0.532,0.872 0.651,1 1,1"
+    );
+  }, []);
 
 
 
@@ -137,7 +146,7 @@ const Home = () => {
       }, 0.5).to(".overlay", {
         yPercent: -100,
         duration: 1.5,
-        ease: "power3.inOut",
+        ease: "hop-main",
       })
     }
 
