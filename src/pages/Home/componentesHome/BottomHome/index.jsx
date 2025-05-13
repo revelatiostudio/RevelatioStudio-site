@@ -11,7 +11,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function BottomHome() {
 
     const finalRef = useRef(null)
-    console.log(finalRef.current)
 
     useGSAP(() => {
         bottomImageAnimation()

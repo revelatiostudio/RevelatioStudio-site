@@ -26,12 +26,6 @@ export default function Ambiente({color = 'black'}) {
     { id: '4', image: video4 },
     { id: '5', image: video5 },
     { id: '6', image: video6 },
-    { id: '7', image: video1 },
-    { id: '8', image: video2 },
-    { id: '9', image: video3 },
-    { id: '10', image: video4 },
-    { id: '11', image: video5 },
-    { id: '12', image: video6 },
   ]
   return (
     <section className={`container_ambiente ${color}`}>
@@ -43,7 +37,6 @@ export default function Ambiente({color = 'black'}) {
             spaceBetween={30}
             loop = {true}
             allowTouchMove={false}
-            loopedSlides={videos.length}
             autoplay={{
               delay: 0,
               disableOnInteraction: false
@@ -79,7 +72,7 @@ export default function Ambiente({color = 'black'}) {
               
               videos.map((video) => (
                 <SwiperSlide key={video.id} >
-                    <video autoPlay muted playsInline loop >
+                    <video autoPlay muted playsInline loop preload="metadata" >
                       <source src={video.image} type='video/mp4'/>
                     </video>
                   </SwiperSlide>

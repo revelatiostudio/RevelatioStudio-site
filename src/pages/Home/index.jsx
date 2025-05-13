@@ -28,6 +28,7 @@ import revelatioBranco from '../../assets/img/home/preloader/revelatio-branco.sv
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react'
 import CustomEase from "gsap/CustomEase";
+import SplitType from 'split-type'
 
 let isInitialLoad = true;
 
@@ -38,7 +39,7 @@ const Home = () => {
   const [idioma, setIdioma] = useState('')
   const [showPreloader, setShowPreloader] = useState(isInitialLoad);
 
-    useLayoutEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(CustomEase);
     CustomEase.create(
       "hop-main",
@@ -121,6 +122,10 @@ const Home = () => {
 
   }, { dependencies: [showPreloader] });
 
+  useGSAP(() => {
+    createHomeAnimation()
+  })
+
   function createPreLoader() {
 
     if (showPreloader) {
@@ -151,6 +156,18 @@ const Home = () => {
     }
 
 
+  }
+
+  function createHomeAnimation() {
+      const tl = gsap.timeline()
+
+    tl.fromTo(".img_revelatio img", {
+      yPercent: 120
+    }, {
+      yPercent: 0,
+      delay: showPreloader ? 2 : 0.3
+
+    })
   }
 
 
@@ -232,7 +249,7 @@ const Home = () => {
       <AboutHome />
       <Ideias />
       <NossoUniverso />
-      {/* <Ambiente /> */}
+      <Ambiente />
       <BottomHome />
 
     </section>

@@ -118,6 +118,10 @@
      display: none;
  }
 
+ .left_part .word, .right_part .word{
+    overflow: hidden;
+ }
+
 
 
  /* Texto revelatio */
